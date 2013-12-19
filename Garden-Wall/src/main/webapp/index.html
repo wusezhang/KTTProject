@@ -5,31 +5,40 @@
         <title>搜汇主页</title>
         <link href="scriptsPlugin/MetroJs/MetroJs.css" rel="stylesheet" type="text/css" />
         <link href="scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        
+        <link href="css/index/KtDefaultCss.css" />
         <script src="scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js" type="text/javascript"></script>
         <script src="scriptsPlugin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="scriptsPlugin/MetroJs/MetroJs.min.js" type="text/javascript"></script>
+        <script src="scriptsPlugin/MetroJs/MetroJs.js" type="text/javascript"></script>
         <script src="scriptsPlugin/echart/esl.js"></script>
         <script type="text/javascript" src="scripts/jsResource/EchartMainInit.js"></script>
         <script src="scripts/jsResource/MetroApplicationBar.js"></script>
-        <script src="scripts/jsResource/searchEventInit.js"></script>
+        <script src="scripts/jsIndexResource/jsIndexResource.js"></script>
     </head>
-    <body>
-        <div id="searchContext" align="center" style="margin-top:200px" class="input-group">
-            <span class="input-group-addon" style="margin-bottom:20px"> LOGO: </span>
-            <input type="text" class="form-control" placeholder="财经搜索信息" style="width:380px;height:25px" id="searchText">
-            &nbsp;
-            <button  id= "searchBtn" style="height:35px;width:100px;margin-bottom:10px" class="btn btn-info">
-                <span class="icon-white icon-search"> </span> 搜索一下
-            </button>
-            <div id="ssSearchTextValue" class="well well-small" style="width:373px;text-align:left">
-                <ul>
-                    <li><a href="#" >测试</a></li>
-                    <li><a href="#" >谷歌</a></li>
-                     <li><a href="#" >CPI数据</a></li>
-                </ul>
-            </div>
-        </div>
+    <body >
+              
+             <!--仿Win8风格的网站--> 
+              <div class="titles six-wide three-tall" id="metreBox">
+              	  <div class="live-tile two-wide  label-warning"  data-speed="500"  id="zckxBox" data-mode="carousel" data-direction="vertical">
+              	  	   <div>
+              	  	   	   <a class="full" href="#"><img class="full"  src="image/innerInfoemation.jpg"/></a>
+                           <span class="tile-title" style="background-image:url('scriptsPlugin/MetroJs/images/bkImage.png')">国内早财快讯（实时国内财经政策和财经要闻）</span>
+              	  	   </div>
+              	  	   <div>
+              	  	   	   <a class="full" href="#">
+              	  	   	   	 <img class="full"  src="image/outInformation.jpg"/>
+              	  	   	   </a>
+                           <span class="tile-title" style="background-image:url('scriptsPlugin/MetroJs/images/bkImage.png')">国外早财快讯（实时国外财经政策和财经要闻）</span>
+              	  	   </div>
+              	  </div>
+              	  <div class="live-tile two-wide label-warning "  id="cjxwBox" data-speed="1000">
+              	  	  
+              	  </div>
+              	  <div class="live-tile label-inverse" data-speed="2000" data-mode="carousel">
+              	     
+              	  </div>
+              	  
+              </div> 
+
         <!--工具栏相应的信息开始-->
         <div class="appbar">
             <div id="mooningdiv"  class="live-tile" style="width:250px;padding-left: 150px" align="left" >
@@ -101,63 +110,6 @@
                             </div>
                             </td>
                         </tr>
-                        
-                         <tr>
-                            <td>
-                            <div class="media">
-                                <a class="pull-left" href="#"> <img class="media-object" src="scriptsPlugin/imageSource/bar10.png" width="130" height="100"> </a>
-                                <div class="media-body">
-                                    <a class="media-heading">联重科AH股双双下跌，今年市值已蒸发超百亿</a>
-                                    <div class="media">
-                                        ，45家上市房企存在巨额应交而未交的土地增值税，
-                                        SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            
-                            <td>
-                            <div class="media">
-                                <a class="pull-left" href="#"> <img class="media-object" src="scriptsPlugin/imageSource/bar5.png" width="130" height="100"></a>
-                                <div class="media-body">
-                                    <a class="media-heading">百发8%收益违规内幕：百度被指免费贷款买货基</a>
-                                    <div class="media">
-                                        ，45家上市房企存在巨额应交而未交的土地增值税，
-                                        SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                        </tr>
-                        
-                         <tr>
-                            <td>
-                            <div class="media">
-                                <a class="pull-left" href="#"> <img class="media-object" src="scriptsPlugin/imageSource/bar8.png" width="130" height="100"> </a>
-                                <div class="media-body">
-                                    <a class="media-heading">联重科AH股双双下跌，今年市值已蒸发超百亿</a>
-                                    <div class="media">
-                                        ，45家上市房企存在巨额应交而未交的土地增值税，
-                                        SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            
-                            <td>
-                            <div class="media">
-                                <a class="pull-left" href="#"> <img class="media-object" src="scriptsPlugin/imageSource/dynamicPieRadar.png" width="130" height="100"></a>
-                                <div class="media-body">
-                                    <a class="media-heading">百发8%收益违规内幕：百度被指免费贷款买货基</a>
-                                    <div class="media">
-                                        ，45家上市房企存在巨额应交而未交的土地增值税，
-                                        SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                        </tr>
-                        
                         
                     </table>
                     <!--早财快讯显示框架结束-->
