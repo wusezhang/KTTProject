@@ -10,3 +10,22 @@
     text-align: center;
 	background-image:url('../../scriptsPlugin/MetroJs/images/bkImage.png');
 }
+.topappbar {
+  background-image:url('../../scriptsPlugin/MetroJs/images/bkImage.png');
+  top: 0px;
+  color: #fff;
+  font-size: .9em;
+  height: 30px;
+  left: 0px;
+  line-height: normal;
+  margin: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: fixed;
+  right: 0px;
+  text-align: left;
+  width: 100%;
+  z-index: 100;
+  -ms-touch-action: manipulation;
+}
