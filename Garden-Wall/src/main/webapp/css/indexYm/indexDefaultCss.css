@@ -29,3 +29,6 @@
   z-index: 100;
   -ms-touch-action: manipulation;
 }
+.inforBox{
+	 background: url('../../scriptsPlugin/MetroJs/images/bkImage.png');
+}

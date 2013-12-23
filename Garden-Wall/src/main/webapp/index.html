@@ -16,14 +16,16 @@
 	</head>
 	<body>
 		<!--导航菜单-->
-		<div class="topappbar"> </div>
+		<div class="topappbar">
+               <p>数据测试</p>
+		</div>
 
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
 		<div class="titles six-wide three-tall" id="metreBox">
 			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" data-mode="carousel">
-				<div>
-					<a class="full" href="#"><img class="full"  src="image/innerInfoemation.jpg"/></a>
+				<div id="gnzckxBoxDiv">
+					<a class="full" href="javascript:gnzckxBindEvent()"><img class="full"  src="image/innerInfoemation.jpg"/></a>
 					<div class="bottomshowInfor" >
 						国内早财快讯(实时国内财经政策和财经要闻)
 					</div>
@@ -54,15 +56,23 @@
 						财经数据分析
 					</div>
 				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-book"> </span>财经数据分析</span>
+					  提供及时影响汇市和股市的财经数据展示
+				</div>
 			</div>
 
 			<!--外汇日历--->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
+			<div class="live-tile label-inverse well-small" data-speed="800"  data-mode="carousel" data-direction="horizontal">
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/whrllogo.jpg"/></a>
 					<div class="bottomshowInfor" >
 						外汇日历
 					</div>
+				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-adjust"> </span>外汇日历</span>
+					  提供当前及时的外汇信息，实时更新
 				</div>
 			</div>
 			<!--技术分析-->
@@ -76,17 +86,19 @@
 			</div>
 
 			<!--风险警示牌-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
-				<div>
+			<div class="live-tile label-inverse well-small" data-speed="300"  data-mode="flip">
+				<div >
 					<a class="full" href="#"><img class="full"  src="image/fxjsplogo.jpg"/></a>
-					<div class="bottomshowInfor" >
-						(汇市股市)风险警示牌
-					</div>
+					<div class="bottomshowInfor" >(汇市股市)风险警示牌</div>
+				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-bell"> </span>风险警示牌</span>
+					  提供当前对汇市或者股市有重大影响的决策和数据
 				</div>
 			</div>
 
 			<!--名家慧眼-->
-			<div class="list-tile two-tall label-inverse  two-wide well-small" >
+			<div class="list-tile two-tall  two-wide" >
 				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" >
 				</ul>
 			</div>
