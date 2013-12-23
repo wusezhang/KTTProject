@@ -39,7 +39,7 @@ $(document).ready(function(){
 						    +" <a href='#'><img class='full' src='image/celeBlogImage/"+data[i].srclocation+" '/></a> "	
 						    +" <div class='bottomshowInfor'> "+data[i].bzname+" </div></div> "
 						    +" <div class='inforBox'> "
-						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span>"+data[i].bzname+"(简介)"+"</span> "
+						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span><span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
 						    + data[i].bzjs +" </div> </li>");
 	     	    } 
 	     }
