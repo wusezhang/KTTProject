@@ -20,13 +20,12 @@ $(document).ready(function(){
 	     	    	 flipListOnHover:true,
 	     	    	 flipListOnHoverEvent:'mouseover'
 	     	    });
-	     	   //移除相应的Class干扰
-	     	   $(".inforBox").removeAttr("flip-list");
 	     };
 	     
 	     //初始化相应的模板文件
 	     function bindEvent(){
-	     	 
+	     	       //绑定相应的鼠标移动事件
+              $("#cjfxLiveTitle") .bind("mouseover",mouseoverXJFXEvent);
 	     };
 	     
 	     function  initmjhyBox(){
@@ -39,10 +38,18 @@ $(document).ready(function(){
 						    +" <a href='#'><img class='full' src='image/celeBlogImage/"+data[i].srclocation+" '/></a> "	
 						    +" <div class='bottomshowInfor'> "+data[i].bzname+" </div></div> "
 						    +" <div class='inforBox'> "
-						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span><span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
+						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span>"
+						    +"<span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
 						    + data[i].bzjs +" </div> </li>");
 	     	    } 
 	     }
+	  //鼠标移动触发事件.   
+	  function  mouseoverXJFXEvent(){
+	  	  debugger;
+	  	   $('#cjfxLiveTitle').liveTile("goto",1);
+	  }   
+	     
+	     
 	
 });
 
