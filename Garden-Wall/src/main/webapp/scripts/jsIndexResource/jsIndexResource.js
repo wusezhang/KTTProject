@@ -15,12 +15,6 @@ $(document).ready(function(){
 	     	    $(".live-tile").removeClass("carousel");
 	            //初始化相应的名家慧眼
 	            initmjhyBox();
-	           //初始化相应的翻转List
-	     	    $("#mjhyBox").liveTile({
-	     	    	 startNow:false,
-	     	    	 flipListOnHover:true,
-	     	    	 flipListOnHoverEvent:'mouseover'
-	     	    });
 	     	   //初始化相应的财经慧眼的控制开关
 	     	   $("#mjhyControlBox").liveTile({
 	     	   	     startNow:false,
@@ -36,6 +30,7 @@ $(document).ready(function(){
               $("#cjfxLiveTitle") .bind("mouseover",mouseoverXJFXEvent);
 	     };
 	     
+	     //初始化名家慧眼模块
 	     function  initmjhyBox(){
 	     	     var  data =[{bzname:'沙黾农',bzjs:'股评专家，原现代快报副总编',srclocation:'shajingrong.jpg'},
 	     	                        {bzname:'谢百三',bzjs:'复旦大学教授，金融与资本市场研究中心主任',srclocation:'xiebaisan.jpg'},
@@ -50,11 +45,17 @@ $(document).ready(function(){
 						    +"<span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
 						    + data[i].bzjs +" </div> </li>");
 	     	    } 
+	     	    //初始化相应的翻转List
+	     	    $("#mjhyBox").liveTile({
+	     	    	 startNow:false,
+	     	    	 flipListOnHover:true,
+	     	    	 flipListOnHoverEvent:'mouseover'
+	     	    });
 	     }
+	     
 	  //鼠标移动触发事件.   
 	  function  mouseoverXJFXEvent(){
-	  	  debugger;
-	  	   $('#cjfxLiveTitle').liveTile("goto",1);
+	  	  
 	  }   
 	     
 	     
