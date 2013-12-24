@@ -22,8 +22,9 @@
 
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
-		<div class="titles six-wide three-tall" id="metreBox">
-			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" data-mode="carousel">
+		<div class="titles six-wide three-tall" id="metreBox" >
+			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" 
+			   data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div id="gnzckxBoxDiv">
 					<a class="full" href="javascript:gnzckxBindEvent()"><img class="full"  src="image/gnzckxlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -39,7 +40,7 @@
 			</div>
 
 			<!--财经新闻模块-->
-			<div class="live-tile two-wide  label-warning well-small"  data-speed="1000"  data-direction="vertical" data-mode="carousel">
+			<div class="live-tile two-wide  label-warning well-small"  data-speed="1000"  data-direction="vertical" data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/cjxwlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -49,9 +50,9 @@
 			</div>
 
 			<!--财经数据模块-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel" id="cjfxLiveTitle">
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="1000" >
 				<div>
-					<a class="full" href="#"><img class="full"  src="image/jsfxImage.jpg"/></a>
+					<a class="full metroLarger" href="#"><img class="full"  src="image/jsfxImage.jpg"/></a>
 					<div class="bottomshowInfor" >
 					     财经数据分析
 					</div>
@@ -65,7 +66,7 @@
 			</div>
 
 			<!--外汇日历--->
-			<div class="live-tile label-inverse well-small" data-speed="800"  data-mode="carousel" data-direction="horizontal">
+			<div class="live-tile label-inverse well-small " data-speed="1000"  data-mode="carousel" data-direction="horizontal" data-bounce="true" data-initdelay="3000" >
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/whrllogo.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -80,17 +81,23 @@
 				</div>
 			</div>
 			<!--技术分析-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="5000" >
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/jsfxlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
 						 (汇市股市)技术分析
 					</div>
 				</div>
+			   <div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-check"> </span>
+					 <span class="badge  badge-warning">技术分析</span>
+					 </span>
+					    提供当前对汇市和股市技术分析的详尽信息供参考
+				</div>
 			</div>
 
 			<!--风险警示牌-->
-			<div class="live-tile label-inverse well-small" data-speed="300"  data-mode="flip">
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="flip" data-bounce="true" data-initdelay="7000" >
 				<div >
 					<a class="full" href="#"><img class="full"  src="image/fxjsplogo.jpg"/></a>
 					<div class="bottomshowInfor" >(汇市股市)风险警示牌</div>
@@ -105,12 +112,20 @@
 
 			<!--名家慧眼-->
 			<div class="list-tile two-tall  two-wide" >
-				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" >
+				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" data-bounce="true" >
 				</ul>
 			</div>
             
-            <div class="list-tile two-tall  half-wide label-warning">
-                 
+            <!--名家慧眼控制开关-->
+            <div class="tile-strip one-tile">
+                <div class="live-tile half-tile prev " data-mode="none" data-bounce="true" >
+                	<div><img class="full"  src="image/arrow-right.png"/></div>
+               </div>
+                <div class="live-tile half-tile next " data-mode="none" data-bounce="true" >
+                	<div><img class="full" src="image/arrow-left.png" /></div>
+                </div>
+                <div class="live-tile half-tile info ">测试数据</div>
+                <div class="live-tile half-tile theme  ">测试数据</div>
             </div>
             
             

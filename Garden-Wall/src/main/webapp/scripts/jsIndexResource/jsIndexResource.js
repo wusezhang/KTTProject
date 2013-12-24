@@ -9,6 +9,7 @@ $(document).ready(function(){
 	     	    //定位相应的高宽比例.
 	     	    var  appbarHeight = $(".topappbar").css("height").replace("px","")*1+25;
 	     	    $("#metreBox").offset({top:appbarHeight,left:0});
+	     	    //初始化相应的WIN8模块.
 	     	    $(".live-tile").liveTile();
 	     	    //移除相应的Class属性
 	     	    $(".live-tile").removeClass("carousel");
@@ -20,6 +21,13 @@ $(document).ready(function(){
 	     	    	 flipListOnHover:true,
 	     	    	 flipListOnHoverEvent:'mouseover'
 	     	    });
+	     	   //初始化相应的财经慧眼的控制开关
+	     	   $("#mjhyControlBox").liveTile({
+	     	   	     startNow:false,
+	     	    	 flipListOnHover:true,
+	     	    	 flipListOnHoverEvent:'mouseover'
+	     	   });
+	     	    
 	     };
 	     
 	     //初始化相应的模板文件
