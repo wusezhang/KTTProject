@@ -758,7 +758,9 @@ a.full,
 }
 .flip-list > li > div {
   border: none;
+/* 
   background: white;
+ */
   height: 100%;
   left: 0px;
   margin: 0px;

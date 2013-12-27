@@ -16,14 +16,20 @@
 	</head>
 	<body>
 		<!--导航菜单-->
-		<div class="topappbar"> </div>
+		<div class="topappbar">
+            <div>
+              <img  src="image/logo.png" width="40" height="30"/>
+              <span class="label  label-warning">财汇网</span>
+            </div>
+		</div>
 
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
-		<div class="titles six-wide three-tall" id="metreBox">
-			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" data-mode="carousel">
-				<div>
-					<a class="full" href="#"><img class="full"  src="image/innerInfoemation.jpg"/></a>
+		<div class="titles six-wide three-tall" id="metreBox" >
+			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" 
+			   data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
+				<div id="gnzckxBoxDiv">
+					<a class="full" href="javascript:gnzckxBindEvent()"><img class="full"  src="image/gnzckxlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
 						国内早财快讯(实时国内财经政策和财经要闻)
 					</div>
@@ -31,66 +37,105 @@
 				<div>
 					<a class="full" href="#"> <img class="full"  src="image/outInformation.jpg"/> </a>
 					<div class="bottomshowInfor">
-						国外早财快讯(实时国外财经政策和财经要闻)
+						 国外早财快讯(实时国外财经政策和财经要闻)
 					</div>
 				</div>
 			</div>
 
 			<!--财经新闻模块-->
-			<div class="live-tile two-wide  label-warning well-small"  data-speed="1000"  data-direction="vertical" data-mode="carousel">
+			<div class="live-tile two-wide  label-warning well-small"  data-speed="1000"  data-direction="vertical" data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/cjxwlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
-						财经新闻(国内外财经新闻汇总)
+					     财经新闻(国内外财经新闻汇总)
 					</div>
 				</div>
 			</div>
 
 			<!--财经数据模块-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="1000" >
 				<div>
-					<a class="full" href="#"><img class="full"  src="image/jsfxImage.jpg"/></a>
+					<a class="full metroLarger" href="#"><img class="full"  src="image/jsfxImage.jpg"/></a>
 					<div class="bottomshowInfor" >
-						财经数据分析
+					     财经数据分析
 					</div>
+				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-book"> </span>
+		              <span class="badge  badge-warning"> 财经数据分析</span>
+					  </span>
+					  提供及时影响汇市和股市的财经数据展示
 				</div>
 			</div>
 
 			<!--外汇日历--->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
+			<div class="live-tile label-inverse well-small " data-speed="1000"  data-mode="carousel" data-direction="horizontal" data-bounce="true" data-initdelay="3000" >
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/whrllogo.jpg"/></a>
 					<div class="bottomshowInfor" >
-						外汇日历
+						 外汇日历
 					</div>
+				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-adjust"> </span>
+					 <span class="badge  badge-warning">外汇日历</span>
+					 </span>
+					  提供当前及时的外汇信息，实时更新
 				</div>
 			</div>
 			<!--技术分析-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="5000" >
 				<div>
 					<a class="full" href="#"><img class="full"  src="image/jsfxlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
-						(汇市股市)技术分析
+						 (汇市股市)技术分析
 					</div>
+				</div>
+			   <div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-check"> </span>
+					 <span class="badge  badge-warning">技术分析</span>
+					 </span>
+					    提供当前对汇市和股市技术分析的详尽信息供参考
 				</div>
 			</div>
 
 			<!--风险警示牌-->
-			<div class="live-tile label-inverse well-small" data-speed="2000"  data-mode="carousel">
-				<div>
+			<div class="live-tile label-inverse well-small" data-speed="1000"  data-mode="flip" data-bounce="true" data-initdelay="7000" >
+				<div >
 					<a class="full" href="#"><img class="full"  src="image/fxjsplogo.jpg"/></a>
-					<div class="bottomshowInfor" >
-						(汇市股市)风险警示牌
-					</div>
+					<div class="bottomshowInfor" >(汇市股市)风险警示牌</div>
+				</div>
+				<div class="inforBox">
+					 <span class="tile-title"><span class="icon-white icon-bell"> </span>
+					 <span class="badge  badge-warning">风险警示牌</span>
+					 </span>
+					  提供当前对汇市或者股市有重大影响的决策和数据
 				</div>
 			</div>
 
 			<!--名家慧眼-->
-			<div class="list-tile two-tall label-warning  two-wide well-small" >
-				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" >
+			<div class="list-tile two-tall  two-wide" >
+				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" data-bounce="true" >
 				</ul>
 			</div>
-
+            
+            <!--名家慧眼控制开关-->
+            <div class="tile-strip half-tile two-tall half-wide">
+                 <div class="live-tile half-tile info  cyan" data-mode="none" data-bounce="true" data-bounce-dir="edges">
+                	<div>股市名家</div>
+                </div>
+                <div class="live-tile half-tile theme cyan " data-mode="none" data-bounce="true" data-bounce-dir="edges">
+                	<div>外汇名家</div>
+                </div>
+                <div class="live-tile half-tile prev mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,r" id="mjhyControlNext">
+                	<div><img class="full"  src="image/arrow-right.png"/></div>
+               </div>
+                <div class="live-tile half-tile next mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,l" id="mjhyControlPre">
+                	<div><img class="full" src="image/arrow-left.png" /></div>
+                </div>
+            </div>
+            
+            
 		</div>
 
 		<!--工具栏相应的信息开始-->
