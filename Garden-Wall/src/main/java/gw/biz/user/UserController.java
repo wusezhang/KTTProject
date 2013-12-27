@@ -2,10 +2,11 @@ package gw.biz.user;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,22 +22,19 @@ import redis.clients.jedis.Jedis;
 @Controller
 @RequestMapping("/u")
 public class UserController {
-	
+	@Autowired
+	UserService service;
 	@ResponseBody//如果不加这个注解且方法返回一个String参数"xxx"，就会跳转到view/xxx.jsp(见springmvc.xml配置)
-//	@RequestMapping(value="/getu1")//即便没有写method和consumer下面由于是RequestBody注解已经默认是下面配置了
+//	@RequestMapping(value="/getu1")//即便没有写method和consumer下面由于上面的RequestBody注解存在，就相当于默认是下面配置了
 	@RequestMapping(value="/getu1",method=RequestMethod.POST,consumes="application/json",produces="application/json")
 	public List getUsers1(@RequestBody User user){ 
-		List<User> list = new ArrayList<User>();
-		list.add(user); 
-		return list;
+		return service.getUsers1(user);
 	}
 	
 	@ResponseBody
 	@RequestMapping(value="/getu2")
 	public List getUsers2(@ModelAttribute User user){ 
-		List<User> list = new ArrayList<User>();
-		list.add(user); 
-		return list;
+		return service.getUsers2(user);
 	}
 	
 	/**
@@ -45,7 +43,8 @@ public class UserController {
 	 * redis 数据库的数据结构为 key/value
 	 * 测试数据为
 	 * '123':'{"uid":"123","username":"billy","passwd":"pwd123456"}'
-	 * 
+	 * 你可以访问@http://localhost:8080/Garden-Wall/u/123/info 看看效果其中123就是用户id
+	 * 这就是restful风格的url设计，清晰明确
 	 */
 	/*
 		接下来讨论一下方法的返回值，主要有以下情况：
@@ -58,20 +57,17 @@ public class UserController {
 	        任何其他类型的对象。这个时候就会把该方法返回类型对象当做返回Model模型的一个属性返回给视图使用，这个属性名称可以通过
         在方法上给定@ModelAttribute注解来指定，否则将默认使用该返回类名称作为属性名称
 	 */
-	@RequestMapping(value="/{uids}/info")
-	public String getUser3(Map<String, String> map,@PathVariable("uids") String uid){
-		ObjectMapper om = new ObjectMapper();
-		Jedis jedis = new Jedis("127.0.0.1");
-		String json = jedis.get(uid);//set(a,b)就是给redis增加一个键值对
-		User user=null;
-		try {
-			user = om.readValue(json, User.class);
-		} catch (IOException e) {
-			e.printStackTrace();
+	@RequestMapping(value="/{uid}/info")
+	public String getUser3(Map<String, String> map,@PathVariable("uid") String uid){
+		//以下是错误的方式，只能往这个map中塞数据，不能重新指向一个新map
+		//map = service.getUser3(uid);
+		//以下是正确的方式
+		Map<String, String> getUserMap = service.getUser3(uid);
+		for(Iterator<String> it=getUserMap.keySet().iterator();it.hasNext();){
+			String key = it.next();
+			String value = getUserMap.get(key);
+			map.put(key, value);
 		}
-		map.put("uid", user.getUid());
-		map.put("username", user.getUsername());
-		map.put("passwd",user.getPasswd());
 		return "user/userinfo";
 	}
 }
