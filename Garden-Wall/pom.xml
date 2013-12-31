@@ -19,11 +19,19 @@
 			<artifactId>spring-web</artifactId>
 			<version>3.2.3.RELEASE</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>3.2.3.RELEASE</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-servlet_2.5_spec</artifactId>
