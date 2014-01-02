@@ -17,5 +17,5 @@
 	<import resource="spring/context-business-info-kaijiang.xml" />
 	<import resource="spring/context-newsinfo.xml" />
  -->
-    <import resource="spring/databaseConfig.xml"/>
+    <import resource="spring/databaseconfig-mysql.xml"/>
  </beans>
