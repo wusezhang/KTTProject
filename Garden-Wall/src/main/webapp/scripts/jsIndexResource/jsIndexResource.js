@@ -27,7 +27,7 @@ $(document).ready(function(){
 	     //初始化相应的模板文件
 	     function bindEvent(){
 	     	       //绑定相应的鼠标移动事件
-              $("#cjfxLiveTitle") .bind("mouseover",mouseoverXJFXEvent);
+             
 	     };
 	     
 	     //初始化名家慧眼模块
@@ -53,10 +53,7 @@ $(document).ready(function(){
 	     	    });
 	     }
 	     
-	  //鼠标移动触发事件.   
-	  function  mouseoverXJFXEvent(){
-	  	  
-	  }   
+	  
 	     
 	     
 	
