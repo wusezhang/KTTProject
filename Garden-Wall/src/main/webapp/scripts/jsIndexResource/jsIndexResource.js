@@ -26,8 +26,8 @@ $(document).ready(function(){
 	     
 	     //初始化相应的模板文件
 	     function bindEvent(){
-	     	       //绑定相应的鼠标移动事件
-             
+	     	  //绑定相应的鼠标移动事件
+              $("#mjhyControlNext").bind("click",mjhyControlNextEvent);
 	     };
 	     
 	     //初始化名家慧眼模块
@@ -53,7 +53,12 @@ $(document).ready(function(){
 	     	    });
 	     }
 	     
-	  
+	     //名家慧眼下一页
+	     function  mjhyControlNextEvent(){
+	     	 $.commonService("cjhy/queryCjhyResourceAll",'POST',{},function(data){
+	     	 	 
+	     	 });
+	     }
 	     
 	     
 	
