@@ -14,7 +14,7 @@ $(document).ready(function(){
 	     	    //移除相应的Class属性
 	     	    $(".live-tile").removeClass("carousel");
 	            //初始化相应的名家慧眼
-	            initmjhyBox();
+	            mjhyControlNextEvent();
 	     	   //初始化相应的财经慧眼的控制开关
 	     	   $("#mjhyControlBox").liveTile({
 	     	   	     startNow:false,
@@ -31,19 +31,16 @@ $(document).ready(function(){
 	     };
 	     
 	     //初始化名家慧眼模块
-	     function  initmjhyBox(){
-	     	     var  data =[{bzname:'沙黾农',bzjs:'股评专家，原现代快报副总编',srclocation:'shajingrong.jpg'},
-	     	                        {bzname:'谢百三',bzjs:'复旦大学教授，金融与资本市场研究中心主任',srclocation:'xiebaisan.jpg'},
-	     	                        {bzname:'叶荣添',bzjs:'股市分析家别人放弃，我坚持—叶荣添',srclocation:'yerongtian.jpg'},
-	     	                        {bzname:'郎咸平',bzjs:'资深经济学家',srclocation:'langxianping.jpg'}];
+	     function  initmjhyBox(data){
+	     	    $("#mjhyBox").empty();
 	     	    for(var i=0 ;i<data.length ;i++){
 	     	    	  $("#mjhyBox").append("<li> <div class='accent cobalt '>"
-						    +" <a href='#'><img class='full' src='image/celeBlogImage/"+data[i].srclocation+" '/></a> "	
+						    +" <a href='#'><img class='full' src='image/celeBlogImage/"+data[i].srcname+" '/></a> "	
 						    +" <div class='bottomshowInfor'> "+data[i].bzname+" </div></div> "
 						    +" <div class='inforBox'> "
 						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span>"
 						    +"<span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
-						    + data[i].bzjs +" </div> </li>");
+						    + data[i].bzintroduce +" </div> </li>");
 	     	    } 
 	     	    //初始化相应的翻转List
 	     	    $("#mjhyBox").liveTile({
@@ -56,7 +53,7 @@ $(document).ready(function(){
 	     //名家慧眼下一页
 	     function  mjhyControlNextEvent(){
 	     	 $.commonService("cjhy/queryCjhyResourceAll",'POST',{},function(data){
-	     	 	 
+	     	 	  initmjhyBox(data);
 	     	 });
 	     }
 	     
