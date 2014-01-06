@@ -19,5 +19,6 @@
 		scope="globalsession" /> global session只有应用在基于porlet的web应用程序中才有意义，他映射到porlet的global范围的session，如果普通的servlet的web 
 		应用中使用了这个scope，容器会把它作为普通的session的scope对待。 -->
 	<bean id="cjhyResourceService" class="com.ktproject.cjhy.service.impl.CjhyResourceServiceImpl" scope="prototype" />
+	<bean id="cjhyResourceDao"  class="com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl" scope="prototype"/>
 	 	
 </beans>
