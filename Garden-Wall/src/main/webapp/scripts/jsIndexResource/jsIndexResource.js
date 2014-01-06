@@ -28,6 +28,11 @@ $(document).ready(function(){
 	     function bindEvent(){
 	     	  //绑定相应的鼠标移动事件
               $("#mjhyControlNext").bind("click",mjhyControlNextEvent);
+              //股市名家按钮控制
+              $("#gsmjControl").bind("click",gsmjControlEvent);
+              //外汇名家按钮控制
+              $("#whmjControl").bind("click",whmjControlEvent);
+              
 	     };
 	     
 	     //初始化名家慧眼模块
@@ -57,7 +62,19 @@ $(document).ready(function(){
 	     	 });
 	     }
 	     
+	     //股市名家按钮控制事件.
+	     function  gsmjControlEvent(){
+	     	$.commonService("cjhy/queryCjhyResourceByCjxjType",'POST',{cjxjType:0},function(data){
+	     	 	  initmjhyBox(data);
+	     	 });
+	     }
 	     
+	    //外汇名家按钮控制事件.
+	    function  whmjControlEvent(){
+	    	$.commonService("cjhy/queryCjhyResourceByCjxjType",'POST',{cjxjType:1},function(data){
+	     	 	  initmjhyBox(data);
+	     	 });
+	    } 
 	
 });
 

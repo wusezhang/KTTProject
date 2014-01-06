@@ -17,6 +17,6 @@ public interface CjhyResourceDao {
 	    * @param id
 	    * @return
 	    */
-	   public  List  queryCjhyAuthorById(final int id);
+	   public  List<CjhyResourceModel>  queryCjhyAuthorById(final int bzfl);
 	 
 }

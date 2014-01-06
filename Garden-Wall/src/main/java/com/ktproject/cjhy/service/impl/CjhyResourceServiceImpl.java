@@ -16,5 +16,9 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 	public List<CjhyResourceModel> queryCjhyResourceAll() {
 		return cjhyResourceDao.queryCjhyAuthor();
 	}
+
+	public List<CjhyResourceModel> queryCjhyResourceByCjxjType(final int bzfl) {
+		return cjhyResourceDao.queryCjhyAuthorById(bzfl);
+	}
       
 }

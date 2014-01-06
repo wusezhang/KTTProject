@@ -17,8 +17,8 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthor");
 	}
 
-	public List queryCjhyAuthorById(int id) {
-		return null;
+	public List<CjhyResourceModel> queryCjhyAuthorById(final int bzfl) {
+		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthorById", bzfl);
 	}
 
 }
