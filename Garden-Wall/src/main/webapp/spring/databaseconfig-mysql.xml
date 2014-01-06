@@ -38,4 +38,11 @@
     <!--使用annotation定义事务,注解事物配置-->
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
     
+    <!--整合相应的MyBatis持久层相应的插件并注册相应的MyBatis模板 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource" />
+      <property name="mapperLocations" value="classpath*:com/ktproject/mappers/**/*.xml"/>
+    </bean>
+    
+    
 </beans>

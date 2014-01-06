@@ -20,9 +20,7 @@ public class CjhyResourceController {
 	 
 	 @RequestMapping(value="/queryCjhyResourceAll" , method=RequestMethod.POST)
 	 public  @ResponseBody List<CjhyResourceModel>  queryCjhyResourceAll(){
-		  System.out.print("调用成功！");
-		 
-		 return  null;
+		 return  cjhyResourceService.queryCjhyResourceAll();
 	 }
 	 
 }
