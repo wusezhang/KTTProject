@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ktproject.cjhy.dao.CjhyResourceDao">
+    
+    <resultMap type="com.ktproject.cjhy.model.CjhyResourceModel" id="ObjectResultMap">
+         <result column="BZNAME" property="bzname"/>
+         <result column="BZINTRODUCE" property="bzintroduce"/>
+         <result column="BZFL" property="bzfl"/>
+         <result column="SRCNAME" property="srcname"/>
+         <result column="ID" property="id"/>
+    </resultMap> 
+    
+    <select id="queryCjhyAuthor" resultMap="ObjectResultMap">
+          SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
+          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+          FROM  CJXJ_RESOURCE_TABLE  A
+    </select>
+    
+       
+      
+    
+    
+</mapper>

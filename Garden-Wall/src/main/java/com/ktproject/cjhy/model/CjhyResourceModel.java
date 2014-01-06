@@ -10,12 +10,12 @@ public class CjhyResourceModel {
 	/**
 	 * 财经学家介绍.
 	 */
-	private  String bzjs;
+	private  String bzintroduce;
 	
 	/**
 	 * 图标资源文件介绍.
 	 */
-    private  String  srclocation;
+    private  String  srcname;
     
     /**
      * 财经学家标志ID.
@@ -39,34 +39,6 @@ public class CjhyResourceModel {
 	 */
 	public void setBzname(String bzname) {
 		this.bzname = bzname;
-	}
-
-	/**
-	 * @return the bzjs
-	 */
-	public String getBzjs() {
-		return bzjs;
-	}
-
-	/**
-	 * @param bzjs the bzjs to set
-	 */
-	public void setBzjs(String bzjs) {
-		this.bzjs = bzjs;
-	}
-
-	/**
-	 * @return the srclocation
-	 */
-	public String getSrclocation() {
-		return srclocation;
-	}
-
-	/**
-	 * @param srclocation the srclocation to set
-	 */
-	public void setSrclocation(String srclocation) {
-		this.srclocation = srclocation;
 	}
 
 	/**
@@ -95,6 +67,34 @@ public class CjhyResourceModel {
 	 */
 	public void setBzfl(String bzfl) {
 		this.bzfl = bzfl;
+	}
+
+	/**
+	 * @return the bzintroduce
+	 */
+	public String getBzintroduce() {
+		return bzintroduce;
+	}
+
+	/**
+	 * @param bzintroduce the bzintroduce to set
+	 */
+	public void setBzintroduce(String bzintroduce) {
+		this.bzintroduce = bzintroduce;
+	}
+
+	/**
+	 * @return the srcname
+	 */
+	public String getSrcname() {
+		return srcname;
+	}
+
+	/**
+	 * @param srcname the srcname to set
+	 */
+	public void setSrcname(String srcname) {
+		this.srcname = srcname;
 	}
     
     

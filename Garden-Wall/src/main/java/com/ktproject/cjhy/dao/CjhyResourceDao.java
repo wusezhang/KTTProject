@@ -2,15 +2,15 @@ package com.ktproject.cjhy.dao;
 
 import java.util.List;
 
-import org.springframework.transaction.annotation.Transactional;
+import com.ktproject.cjhy.model.CjhyResourceModel;
 
 public interface CjhyResourceDao {
        
 	   /**
-	    * 获得财经慧眼财经学家列表
+	    * 获得财经慧眼财经学家列表.
 	    * @return
 	    */
-	   public  List  queryCjhyAuthor();
+	   public  List<CjhyResourceModel>  queryCjhyAuthor();
 	    
 	   /**
 	    * 根据相应的财经学家ID获得相应的财经详细信息.
