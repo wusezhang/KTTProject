@@ -16,13 +16,13 @@
           FROM  CJXJ_RESOURCE_TABLE  A
     </select>
     
-    <select id="queryCjhyAuthorById" resultMap="ObjectResultMap" parameterType="com.ktproject.cjhy.model.CjhyResourceModel">
+    <select id="queryCjhyAuthorById" resultMap="ObjectResultMap" parameterType="hashmap">
         SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
           A.SRC_NAME AS SRCNAME , A.ID AS ID 
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
         <if test="bzfl!='' and bzfl!=null">
-            A.BZ_FL=#{bzfl}
+           AND A.BZ_FL=#{bzfl}
         </if>  
     </select>   
       
