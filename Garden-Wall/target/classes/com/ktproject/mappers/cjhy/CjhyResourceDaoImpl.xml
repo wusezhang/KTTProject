@@ -24,6 +24,7 @@
         <if test="bzfl!='' and bzfl!=null">
            AND A.BZ_FL=#{bzfl}
         </if>  
+          ORDER BY  A.ID ASC
     </select>   
       
     
