@@ -8,7 +8,7 @@ $(document).ready(function(){
 	     function initModel(){
 	     	    //定位相应的高宽比例.
 	     	    var  appbarHeight = $(".topappbar").css("height").replace("px","")*1+25;
-	     	    $("#metreBox").offset({top:appbarHeight,left:0});
+	     	    $("#metreBox").offset({top:appbarHeight,left:5});
 	     	    //初始化相应的WIN8模块.
 	     	    $(".live-tile").liveTile();
 	     	    //移除相应的Class属性
@@ -38,10 +38,11 @@ $(document).ready(function(){
 	     //初始化名家慧眼模块
 	     function  initmjhyBox(data){
 	     	    $("#mjhyBox").empty();
+	     	    debugger;
 	     	    for(var i=0 ;i<data.length ;i++){
 	     	    	  $("#mjhyBox").append("<li> <div class='accent cobalt '>"
-						    +" <a href='#'><img class='full' src='image/celeBlogImage/"+data[i].srcname+" '/></a> "	
-						    +" <div class='bottomshowInfor'> "+data[i].bzname+" </div></div> "
+						    +" <a href='javascript:cjxjClickEvent("+data[i].id+")'><img class='full' src='image/celeBlogImage/"+data[i].srcname+" '/></a> "	
+						    +" <div class='bottomshowInfor'><span class='icon-white icon-bookmark'></span>"+data[i].bzname+" </div></div> "
 						    +" <div class='inforBox'> "
 						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span>"
 						    +"<span class='badge  badge-warning'>"+data[i].bzname+"(简介)"+"</span></span> "
@@ -81,6 +82,11 @@ $(document).ready(function(){
 //自定义相应的链接的处理方法
 function gnzckxBindEvent(){
 	  $("#gnzckxBoxDiv").liveTile('play');
+}
+
+//财经慧眼点击相应的作家相应相应的事件
+function cjxjClickEvent(cjxjId){
+	  window.location.href="views/cjhy/cjhyResourceList.html";
 }
 
 

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../jslib/jquery-1.10.2.min.js"/></script>
+<script type="text/javascript" src="jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 </head>
 <body>user
 	<script type="text/javascript">

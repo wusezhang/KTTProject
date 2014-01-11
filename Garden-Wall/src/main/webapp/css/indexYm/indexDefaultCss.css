@@ -8,7 +8,7 @@
     z-index: 30;
     height: 20px;
     text-align: center;
-	background-image:url('../../scriptsPlugin/MetroJs/images/bkImage.png');
+	background-image:url('../../image/bkImage.png');
 }
 .topappbar {
   background-image:url('../../image/black-Linen.png');
@@ -30,7 +30,7 @@
   -ms-touch-action: manipulation;
 }
 .inforBox{
-	 background: url('../../scriptsPlugin/MetroJs/images/bkImage.png');
+	 background: url('../../image/bkImage.png');
 }
 .indexYmBagroundImage{
 	 background: url('../../image/furley_bg.png')

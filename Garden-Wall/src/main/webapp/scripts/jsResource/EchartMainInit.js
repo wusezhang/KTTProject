@@ -67,7 +67,7 @@ $(document).ready(function() {
     function initConfig() {
         require.config({
             paths : {
-                echarts : 'scriptsPlugin/echart/echarts',
+                echarts : 'views/jslib/scriptsPlugin/echart/echarts',
                 'echarts/chart/bar' : 'echart/echarts',
                 'echarts/chart/line' : 'echart/echarts'
             }
