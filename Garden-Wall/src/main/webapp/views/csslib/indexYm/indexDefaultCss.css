@@ -8,10 +8,10 @@
     z-index: 30;
     height: 20px;
     text-align: center;
-	background-image:url('../../image/bkImage.png');
+	background-image:url('../../imagelib/bkImage.png');
 }
 .topappbar {
-  background-image:url('../../image/black-Linen.png');
+  background-image:url('../../imagelib/black-Linen.png');
   top: 0px;
   color: #fff;
   font-size: .9em;
@@ -30,8 +30,8 @@
   -ms-touch-action: manipulation;
 }
 .inforBox{
-	 background: url('../../image/bkImage.png');
+	 background: url('../../imagelib/bkImage.png');
 }
 .indexYmBagroundImage{
-	 background: url('../../image/furley_bg.png')
+	 background: url('../../imagelib/furley_bg.png')
 }
