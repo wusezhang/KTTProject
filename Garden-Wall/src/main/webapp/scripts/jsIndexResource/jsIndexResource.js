@@ -38,10 +38,9 @@ $(document).ready(function(){
 	     //初始化名家慧眼模块
 	     function  initmjhyBox(data){
 	     	    $("#mjhyBox").empty();
-	     	    debugger;
 	     	    for(var i=0 ;i<data.length ;i++){
 	     	    	  $("#mjhyBox").append("<li> <div class='accent cobalt '>"
-						    +" <a href='javascript:cjxjClickEvent("+data[i].id+")'><img class='full' src='image/celeBlogImage/"+data[i].srcname+" '/></a> "	
+						    +" <a href='javascript:cjxjClickEvent("+data[i].id+")'><img class='full' src='views/imagelib/celeBlogImage/"+data[i].srcname+" '/></a> "	
 						    +" <div class='bottomshowInfor'><span class='icon-white icon-bookmark'></span>"+data[i].bzname+" </div></div> "
 						    +" <div class='inforBox'> "
 						    +" <span class='tile-title'><span class='icon-white icon-bookmark'></span>"
