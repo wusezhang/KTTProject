@@ -85,6 +85,8 @@ function gnzckxBindEvent(){
 
 //财经慧眼点击相应的作家相应相应的事件
 function cjxjClickEvent(cjxjId){
+	  //判断Cookie是否存在，如果存在，则做相应的删除操作
+	  $.setCookie("resourceId",cjxjId);
 	  window.location.href="views/cjhy/cjhyResourceList.html";
 }
 
