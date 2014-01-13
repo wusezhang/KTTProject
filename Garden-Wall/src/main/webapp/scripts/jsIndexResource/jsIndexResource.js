@@ -32,7 +32,7 @@ $(document).ready(function(){
               $("#gsmjControl").bind("click",gsmjControlEvent);
               //外汇名家按钮控制
               $("#whmjControl").bind("click",whmjControlEvent);
-              
+                
 	     };
 	     
 	     //初始化名家慧眼模块
@@ -88,6 +88,18 @@ function cjxjClickEvent(cjxjId){
 	  //判断Cookie是否存在，如果存在，则做相应的删除操作
 	  $.setCookie("resourceId",cjxjId);
 	  window.location.href="views/cjhy/cjhyResourceList.html";
+}
+
+//背景色变换功能
+function changeBackGround(flag){
+	 if(flag==0){
+	 	$("#indexYmBody").css("background","url('views/imagelib/furley_bg.png')");
+	 }else if(flag==1){
+	 	$("#indexYmBody").css("background","url('views/imagelib/indexYM/windows8_metro_green.jpg')");
+	 }else if(flag==2){
+	 	$("#indexYmBody").css("background","url('views/imagelib/indexYM/In_Bloom.jpg')");
+	 }
+     
 }
 
 

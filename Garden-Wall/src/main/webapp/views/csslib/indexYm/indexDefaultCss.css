@@ -20,7 +20,6 @@
   line-height: normal;
   margin: 0;
   max-height: 100%;
-  overflow: hidden;
   padding: 10px 0;
   position: fixed;
   right: 0px;
@@ -35,3 +34,9 @@
 .indexYmBagroundImage{
 	 background: url('../../imagelib/furley_bg.png')
 }
+
+
+
+
+
+

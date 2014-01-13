@@ -18,10 +18,24 @@
 		<script src="scripts/jsResource/MetroApplicationBar.js"></script>
 		<script src="scripts/jsIndexResource/jsIndexResource.js" charset="UTF-8"></script>
 	</head>
-	<body class="indexYmBagroundImage">
+	<body class="indexYmBagroundImage" id="indexYmBody">
 		<!--导航菜单-->
 		<div class="topappbar">
-            
+              
+              
+              <!--菜单测试-->
+              <div class="btn-group pull-right">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">背景 
+                	<span class="caret"> </span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:changeBackGround(0)">系统默认</a></li>
+                  <li><a href="javascript:changeBackGround(1)">绿色丛林</a></li>
+                  <!--
+                  <li class="divider"> </li>
+                  -->
+                  <li><a href="javascript:changeBackGround(2)" >泫雅时光</a></li>
+                </ul>
+              </div>
 		</div>
 		
 		<!--仿Win8风格的网站-->
