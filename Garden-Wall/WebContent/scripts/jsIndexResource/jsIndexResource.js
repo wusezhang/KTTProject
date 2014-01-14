@@ -32,6 +32,8 @@ $(document).ready(function(){
               $("#gsmjControl").bind("click",gsmjControlEvent);
               //外汇名家按钮控制
               $("#whmjControl").bind("click",whmjControlEvent);
+              //股票池按钮控制
+              $("#gpcControl").bind("click",gpcControlEvent);
                 
 	     };
 	     
@@ -75,7 +77,11 @@ $(document).ready(function(){
 	     	 	  initmjhyBox(data);
 	     	 });
 	    } 
-	
+	   
+	   //股票池按钮控制
+	   function gpcControlEvent(){
+	   	   window.location.href="views/gpc/grcResource.html";
+	   }
 });
 
 //自定义相应的链接的处理方法
