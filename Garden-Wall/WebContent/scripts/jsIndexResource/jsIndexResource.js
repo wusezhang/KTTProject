@@ -34,6 +34,8 @@ $(document).ready(function(){
               $("#whmjControl").bind("click",whmjControlEvent);
               //股票池按钮控制
               $("#gpcControl").bind("click",gpcControlEvent);
+              //外汇日历控制
+              $("#whrlControl").bind("click",whrlControlEvent);
                 
 	     };
 	     
@@ -82,6 +84,12 @@ $(document).ready(function(){
 	   function gpcControlEvent(){
 	   	   window.location.href="views/gpc/grcResource.html";
 	   }
+	   
+	   //外汇日历按钮控制
+	   function  whrlControlEvent(){
+	   	   window.location.href="views/whrl/whrlResource.html";
+	   }
+	   
 });
 
 //自定义相应的链接的处理方法
