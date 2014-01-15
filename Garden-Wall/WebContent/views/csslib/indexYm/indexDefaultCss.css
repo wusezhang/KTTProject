@@ -34,6 +34,9 @@
 .indexYmBagroundImage{
 	 background: url('../../imagelib/furley_bg.png')
 }
+.textAlignPosition{
+	text-align: center;
+}
 
 
 

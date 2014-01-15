@@ -36,7 +36,19 @@ $(document).ready(function(){
               $("#gpcControl").bind("click",gpcControlEvent);
               //外汇日历控制
               $("#whrlControl").bind("click",whrlControlEvent);
-                
+              //股市评论鼠标移除的控制
+              $("#showGsplControl").bind("mouseover",function(){
+              	 $("#gxplBox").show();
+              }).bind("mouseout",function(){
+              	 $("#gxplBox").hide();
+              });
+              //外汇评论鼠标事件的控制
+              $("#showHsplControl").bind("mouseover",function(){
+              	 $("#hsplBox").show();
+              }).bind("mouseout",function(){
+              	 $("#hsplBox").hide();
+              });
+              
 	     };
 	     
 	     //初始化名家慧眼模块
