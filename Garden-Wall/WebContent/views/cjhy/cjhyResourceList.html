@@ -4,8 +4,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>财经学家文章列表</title>
 		<meta name="author" content="ZJJ" />
+		<!--CSS文件导入-->
 		<link href="../csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
 		<link href="../jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<!--js文件导入-->
 		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
@@ -17,49 +19,55 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container">
-					
+
 					<a class="brand"  href="../../index.html">财汇网</a>
-					
+
 					<div class="nav-collapse collapse">
-					  	  <form class="navbar-form pull-right">
-				              <input type="text" class="span2" placeholder="文章标题搜索">
-				              <a class="btn btn-primary pull-right"><span class="icon-white icon-search"> </span>搜索</a>
-			              </form>
+						<img src="../imagelib/celeBlogImage/langxianping.jpg" width="40px" height="40px" class="pull-left"/>
+						<form class="navbar-form pull-right">
+							<input type="text" class="span2" placeholder="文章标题搜索">
+							<a class="btn btn-primary pull-right"><span class="icon-white icon-search"> </span>搜索</a>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
-	  <!--文章标题显示-->
-		   <div >
-              <div id="articleTitleCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                	
-                  <div class="item active">
-                    <img src="../imagelib/cjxwlogo.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>文章标题1</h4>
-                      <p>文章标题显示详细信息2</p>
-                  </div>
-                  </div>
-                  
-                  <div class="item">
-                    <img src="../imagelib/outInformation.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>文章标题2</h4>
-                      <p>文章标题显示详细信息</p>
-                    </div>
-                  </div>
-                  
-                </div>
-                <a class="left carousel-control" href="#articleTitleCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="right carousel-control" href="#articleTitleCarousel" data-slide="next">&rsaquo;</a>
-              </div>
-            </div>
-		
-		
-		
+
+		<!--文章标题显示-->
+		<div class="well-small">
+			<div id="articleTitleCarousel" class="carousel slide">
+				<div class="carousel-inner">
+
+					<div class="item active">
+
+							<div class="media">
+								<a class="media-object">
+								<a class="pull-left thumbnail" href="#">
+								<img class="media-object" src="../imagelib/celeBlogImage/langxianping.jpg" width="130" height="100">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">文章标题</h4>
+									 文章创建时间：2014-03-12
+								</div>
+								</a>
+							</div>
+							
+							
+					   <!-- 注释脚本标题
+						<div class="carousel-caption">
+						<h4>文章标题2</h4>
+						<p>
+						文章标题显示详细信息
+						</p>
+						</div>
+						-->
+					</div>
+				</div>
+				<a class="left carousel-control" href="#articleTitleCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="right carousel-control" href="#articleTitleCarousel" data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+
 	</body>
 </html>
 
