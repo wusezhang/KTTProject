@@ -47,10 +47,11 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
      * @param authorId
      * @return 
      */
-	public List<CjhyResourceModel> queryArticleByAuthorId(int authorId) {
+	public CjhyResourceModel queryArticleByAuthorId(int authorId) {
 		log.info("根据作家ID查询相应的用户文章信息列表");
-		
-		return null;
+		Map<String, Integer>  mapParam = new HashMap<String, Integer>();
+		mapParam.put("authorId", authorId);
+		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryArticleByAuthorId",mapParam);
 	}
 
 }

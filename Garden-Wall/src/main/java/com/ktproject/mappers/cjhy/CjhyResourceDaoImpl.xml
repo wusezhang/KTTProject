@@ -27,9 +27,15 @@
           ORDER BY  A.ID ASC
     </select>   
       
-    <select id="queryArticleByAuthorId">
-       
-    
+      
+    <select id="queryArticleByAuthorId" resultMap="ObjectResultMap" parameterType="hashmap">
+       SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,
+          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+       FROM  CJXJ_RESOURCE_TABLE  A
+       WHERE  1=1
+     <if test="authorId!='' and authorId!=null">
+       AND  A.ID =#{authorId}
+     </if> 
     </select>
     
     

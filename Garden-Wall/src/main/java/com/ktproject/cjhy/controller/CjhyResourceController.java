@@ -35,4 +35,9 @@ public class CjhyResourceController {
 	 public  @ResponseBody List<CjhyResourceModel> queryCjhyResourceByCjxjType(@RequestParam("cjxjType") final int cjxjType){
 		 return cjhyResourceService.queryCjhyResourceByCjxjType(cjxjType);
 	 }
+	 
+	 @RequestMapping(value="queryArticleByAuthorId",method=RequestMethod.POST)
+	 public @ResponseBody CjhyResourceModel queryArticleByAuthorId(@RequestParam("authorId") final int authorId){
+		  return  cjhyResourceService.queryArticleByAuthorId(authorId);
+	 }
 }

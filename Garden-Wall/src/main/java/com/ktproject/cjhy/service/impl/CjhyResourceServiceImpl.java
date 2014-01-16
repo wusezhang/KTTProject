@@ -41,9 +41,8 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
      * @param authorId
      * @return 
      */
-	public List<CjhyResourceModel> queryArticleByAuthorId(int authorId) {
-		
-		return null;
+	public CjhyResourceModel queryArticleByAuthorId(int authorId) {		
+		return cjhyResourceDao.queryArticleByAuthorId(authorId);
 	}
       
 }

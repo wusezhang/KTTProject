@@ -23,5 +23,5 @@ public interface CjhyResourceService {
      * @param authorId
      * @return 
      */
-	List<CjhyResourceModel>  queryArticleByAuthorId(final int authorId);
+	CjhyResourceModel  queryArticleByAuthorId(final int authorId);
 }
