@@ -19,7 +19,11 @@ $(document).ready(function(){
 	function  initResourceList(){
 		//拿到相应存储的cook的值.
 		var resourceId = $.getCookie("resourceId");
-		
+		//如果相应的resourceId不为空，则做相应的调用的操作.
+		if(resourceId){
+		    
+			 
+		}
 	}
 	
 });

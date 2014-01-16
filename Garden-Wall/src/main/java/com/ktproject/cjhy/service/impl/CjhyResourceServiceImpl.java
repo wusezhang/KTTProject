@@ -19,12 +19,31 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 	@Autowired
 	CjhyResourceDao  cjhyResourceDao;
 	
+	/**
+	 * 查询所有的财经慧眼作家的信息.
+	 * @return
+	 */
 	public List<CjhyResourceModel> queryCjhyResourceAll() {
 		return cjhyResourceDao.queryCjhyAuthor();
 	}
-
+    
+	/**
+	 * 根据财经学家类别查找相应的财经学家信息.
+	 * @param cjxjType
+	 * @return
+	 */
 	public List<CjhyResourceModel> queryCjhyResourceByCjxjType(final int bzfl) {
 		return cjhyResourceDao.queryCjhyAuthorById(bzfl);
+	}
+    
+    /**
+     * 根据作家ID查询相应的用户文章信息列表.
+     * @param authorId
+     * @return 
+     */
+	public List<CjhyResourceModel> queryArticleByAuthorId(int authorId) {
+		
+		return null;
 	}
       
 }

@@ -21,18 +21,36 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 	@Autowired
 	SqlSession  sqlSession ;
 	
-
-	
+	/**
+	  * 获得财经慧眼财经学家列表.
+	  * @return
+	  */
 	public List<CjhyResourceModel> queryCjhyAuthor() {
 		log.info("查询所有财经学家信息");
 		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthor");
 	}
 
+    /**
+	  * 根据相应的财经学家ID获得相应的财经详细信息.
+	  * @param id
+	  * @return
+	  */
 	public List<CjhyResourceModel> queryCjhyAuthorById(final int bzfl) {
 		Map<String, Integer>  mapParam = new HashMap<String, Integer>();
 		mapParam.put("bzfl", bzfl);
 		log.info("根据分类查询相应的财经学家信息");
 		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthorById", mapParam);
+	}
+
+	/**
+     * 根据作家ID查询相应的用户文章信息列表.
+     * @param authorId
+     * @return 
+     */
+	public List<CjhyResourceModel> queryArticleByAuthorId(int authorId) {
+		log.info("根据作家ID查询相应的用户文章信息列表");
+		
+		return null;
 	}
 
 }

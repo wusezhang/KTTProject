@@ -17,4 +17,11 @@ public interface CjhyResourceService {
 	 * @return
 	 */
 	List<CjhyResourceModel>  queryCjhyResourceByCjxjType(final int bzfl);
+	
+    /**
+     * 根据作家ID查询相应的用户文章信息列表.
+     * @param authorId
+     * @return 
+     */
+	List<CjhyResourceModel>  queryArticleByAuthorId(final int authorId);
 }
