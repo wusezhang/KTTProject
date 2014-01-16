@@ -9,6 +9,7 @@ $(document).ready(function(){
 		 initResourceList();
 		 //轮播初始化
 		 $('#articleTitleCarousel').carousel();
+		 
 	}
 	
 	function bindEvent(){
