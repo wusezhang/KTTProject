@@ -7,6 +7,8 @@ $(document).ready(function(){
 	function initModel(){
 		 //初始化相应的作家列表信息. 
 		 initResourceList();
+		 //轮播初始化
+		 $('#articleTitleCarousel').carousel();
 	}
 	
 	function bindEvent(){

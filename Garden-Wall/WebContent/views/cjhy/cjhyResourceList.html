@@ -6,17 +6,57 @@
 		<meta name="author" content="ZJJ" />
 		<link href="../csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
 		<link href="../jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>	
+		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.cookie.plugin.js"></script>
 		<script type="text/javascript" src="../scriptslib/cjhy/cjhyResourceList.js"></script>
 	</head>
 	<body class="indexYmBagroundImage">
-        <div class="topappbar">
-             <a href="../../index.html" class="btn btn-primary pull-right" id="returnIndexBtn">返回主页</a> 
+		<!--菜单显示栏位-->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					
+					<a class="brand"  href="../../index.html">财汇网</a>
+					
+					<div class="nav-collapse collapse">
+					  	  <form class="navbar-form pull-right">
+				              <input type="text" class="span2" placeholder="文章标题搜索">
+				              <a class="btn btn-primary pull-right"><span class="icon-white icon-search"> </span>搜索</a>
+			              </form>
+					</div>
+				</div>
+			</div>
 		</div>
 		
+		
+	  <!--文章标题显示-->
+		   <div >
+              <div id="articleTitleCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                	
+                  <div class="item active">
+                    <img src="../imagelib/cjxwlogo.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>文章标题1</h4>
+                      <p>文章标题显示详细信息2</p>
+                  </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../imagelib/outInformation.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>文章标题2</h4>
+                      <p>文章标题显示详细信息</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <a class="left carousel-control" href="#articleTitleCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#articleTitleCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+            </div>
 		
 		
 		
