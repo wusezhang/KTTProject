@@ -22,9 +22,9 @@ $(document).ready(function(){
 		//如果相应的resourceId不为空，则做相应的调用的操作.
 		if(resourceId){
 		    $.commonService("../../cjhy/queryArticleByAuthorId",'POST',{authorId:resourceId},function(data){
-		    	 debugger;
+		    	 $("img").attr('src','../imagelib/celeBlogImage/'+data.srcname);
 		    });
-			 
+			
 		}
 	}
 	
