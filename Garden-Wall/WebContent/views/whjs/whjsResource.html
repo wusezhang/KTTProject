@@ -6,65 +6,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>whjsResource</title>
 		<meta name="author" content="zjj" />
-		<!--CSS文件导入-->
-		<link href="../csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
-		<link href="../jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<!--js文件导入-->
-		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
-		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
-		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.cookie.plugin.js"></script>
 	</head>
 	<body>
-<!--SAXO价SAXO图-外汇报价走势-->
-<!--
-<table align="center" border="0" width="700">
-<tbody>
-	<tr>
-	<td align="center" height="50"><script src="http://cs-quotes.iitech.dk/InstanceManagementServer/EmbedComponent.ashx?InstanceId=6277" type="text/javascript" charset="utf-8"></script>
-	<div id="csp_component6277" style="text-align:center;width:730px;overflow:hidden;">
-	<div id="csp_container6277" style="width:730px;height:630px">&nbsp;&nbsp; &nbsp;
-	<div id="csp_flash6277">&nbsp;</div>
-	</div>
-	</div>
-	<script src="http://cs-quotes.iitech.dk/InstanceManagementServer/EmbedComponent.ashx?InstanceId=6282" type="text/javascript" charset="utf-8"></script>
-	<div id="csp_component6282" style="text-align:center;width:730px;overflow:hidden;">
-	<div id="csp_container6282" style="width:730px;height:468px">
-	<div id="csp_flash6282">&nbsp;</div>
-	</div>
-	</div>
-	</td>
-	</tr>
-</tbody>
-</table>
--->
 
-<!--avafx价fxtrek图-外汇报价走势-->
-<iframe border="0" frameborder="0" height="780" id="StreamingDemo" marginheight="0" marginwidth="0" scrolling="no" src="http://media.avapartner.com/javatools/streamingrates/newtool.asp?lang=1&amp;currs=1;3;2;4;21;22;23;5;6;7;12;13;24;25;26;27;28;30;31;33;51;63;64&amp;HeadBc=336699&amp;HeadFc=FFFFFF&amp;CurrClr=ECF2F9&amp;FontClr=000000&amp;CurrClr2=FFFFFF&amp;FontClr2=000000&amp;Tag=27278&amp;Tag2=Default&amp;Th=780&amp;tw=726&amp;ViewChg=1&amp;ViewChgP=1&amp;ViewB=1&amp;ViewS=1&amp;ViewH=1&amp;ViewL=1&amp;HeadFnt=10&amp;CurrFS=10" width="730">
-</iframe>
+		<!--SAXO价TV图-外汇报价走势-->
+		<!-- TradingView Widget BEGIN -->
+		<script type="text/javascript" src="https://s3.amazonaws.com/tradingview/tv.js"></script>
+		<script type="text/javascript">
+			var tradingview_widget_options = {};
+			tradingview_widget_options.width = 800;
+			tradingview_widget_options.height = 550;
+			tradingview_widget_options.symbol = 'EURUSD';
+			tradingview_widget_options.interval = 'D';
+			tradingview_widget_options.toolbar_bg = '#E4E8EB';
+			tradingview_widget_options.allow_symbol_change = true;
+			new TradingView.widget(tradingview_widget_options);
+		</script>
 
-
-
-<!--Investing价SAXO图-->
-<iframe allowtransparency="true" frameborder="0" height="655" marginheight="0" marginwidth="0" scrolling="no" src="http://fxrates.investing.com/index.php?pairs_ids=1487;1623;156;44;148;117;1661;101;37;46;1689;1691;61;102;66;1751;1982;1;3;2;4;7;9;5;8;6;10;16;15;52;&amp;header-text-color=%23FFFFFF&amp;curr-name-color=%230059b0&amp;inner-text-color=%23000000&amp;green-text-color=%232A8215&amp;green-background=%23B7F4C2&amp;red-text-color=%23DC0001&amp;red-background=%23FFE2E2&amp;inner-border-color=%23CBCBCB&amp;border-color=%23cbcbcb&amp;bg1=%23F6F6F6&amp;bg2=%23ffffff&amp;bid=show&amp;ask=show&amp;last=show&amp;last_update=show" width="637">	
-</iframe>
-
-
-<!--SAXO价TV图-外汇报价走势-->
-<!-- TradingView Widget BEGIN -->
-<script type="text/javascript" src="https://s3.amazonaws.com/tradingview/tv.js"></script>
-<script type="text/javascript">
-  var tradingview_widget_options = {};
-      tradingview_widget_options.width = 800;
-      tradingview_widget_options.height = 600;
-      tradingview_widget_options.symbol = 'EURUSD';
-      tradingview_widget_options.interval = 'D';
-      tradingview_widget_options.toolbar_bg = '#E4E8EB';
-      tradingview_widget_options.allow_symbol_change = true;
-   new TradingView.widget(tradingview_widget_options);
-</script>
-
-<!-- TradingView Widget END -->
+		<!-- TradingView Widget END -->
 	</body>
 </html>
 
