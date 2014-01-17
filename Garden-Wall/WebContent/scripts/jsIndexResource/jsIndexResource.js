@@ -94,7 +94,7 @@ $(document).ready(function(){
 	   
 	   //股票池按钮控制
 	   function gpcControlEvent(){
-	   	   window.location.href="views/gpc/grcResource.html";
+	   	   window.location.href="views/gpc/gpcResource.html";
 	   }
 	   
 	   //外汇日历按钮控制
