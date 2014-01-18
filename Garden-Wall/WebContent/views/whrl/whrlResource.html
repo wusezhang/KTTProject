@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>外汇日历</title>
+		<meta name="author" content="zjj" />
+		<!--CSS文件导入-->
+		<link href="../csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
+		<link href="../jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../jslib/scriptsPlugin/fancyBox/csslib/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
+		<!--js文件导入-->
+		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/fancyBox/jslib/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.cookie.plugin.js"></script>
+	    <script type="text/javascript" src="../scriptslib/whrl/whrlResource.js"></script>
+	</head>
+	<body class="indexYmBagroundImage">
+		<!--菜单显示栏位-->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+
+					<a class="brand"  href="../../index.html">财汇网</a>
+					<div class="nav-collapse collapse">
+						<!--菜单展示控件-->
+						<ul class="nav nav-pills pull-right">
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown"  href="#"> 
+								  <span class="icon-white icon-time"> </span>实时外汇
+								  <b class="caret"> </b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+									    <a href="#sswhpjInforBox" class="fancybox">外汇价格列表</a>
+									</li>
+									<li class="divider"> </li>
+									<li>
+										<a class="fancybox fancybox.iframe" href="../whjs/whjsResource.html">实时外汇K线指标</a>
+									</li>
+								</ul>
+							</li>
+							<li class="active">
+								<a href="../../index.html"><span class="icon-white icon-home"> </span>主页</a>
+							</li>
+						</ul>
+						<!--菜单展示结束-->
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+        <!--菜单显示结束-->   
+        
+        
+       <!--实时外汇牌价列表-->
+       <div id="sswhpjInforBox" style="width:637px;display:none;">
+          <iframe allowtransparency="true" frameborder="0" height="665" marginheight="0" marginwidth="0" scrolling="no" src="http://fxrates.investing.com/index.php?pairs_ids=1487;1623;156;44;148;117;1661;101;37;46;1689;1691;61;102;66;1751;1982;1;3;2;4;7;9;5;8;6;10;16;15;52;&amp;header-text-color=%23FFFFFF&amp;curr-name-color=%230059b0&amp;inner-text-color=%23000000&amp;green-text-color=%232A8215&amp;green-background=%23B7F4C2&amp;red-text-color=%23DC0001&amp;red-background=%23FFE2E2&amp;inner-border-color=%23CBCBCB&amp;border-color=%23cbcbcb&amp;bg1=%23F6F6F6&amp;bg2=%23ffffff&amp;bid=show&amp;ask=show&amp;last=show&amp;last_update=show" 
+          width="637">
+	      </iframe>
+	   </div>
+          
+	</body>
+</html>
+

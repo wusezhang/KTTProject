@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl">
+    
+    <resultMap type="com.ktproject.cjhy.model.CjhyResourceModel" id="ObjectResultMap">
+         <result column="BZNAME" property="bzname"/>
+         <result column="BZINTRODUCE" property="bzintroduce"/>
+         <result column="BZFL" property="bzfl"/>
+         <result column="SRCNAME" property="srcname"/>
+         <result column="ID" property="id"/>
+    </resultMap> 
+    
+    <select id="queryCjhyAuthor" resultMap="ObjectResultMap">
+          SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
+          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+          FROM  CJXJ_RESOURCE_TABLE  A
+    </select>
+    
+    <select id="queryCjhyAuthorById" resultMap="ObjectResultMap" parameterType="hashmap">
+        SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
+          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+          FROM  CJXJ_RESOURCE_TABLE  A
+          WHERE  1=1 
+        <if test="bzfl!='' and bzfl!=null">
+           AND A.BZ_FL=#{bzfl}
+        </if>  
+          ORDER BY  A.ID ASC
+    </select>   
+      
+      
+    <select id="queryArticleByAuthorId" resultMap="ObjectResultMap" parameterType="hashmap">
+       SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,
+          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+       FROM  CJXJ_RESOURCE_TABLE  A
+       WHERE  1=1
+     <if test="authorId!='' and authorId!=null">
+       AND  A.ID =#{authorId}
+     </if> 
+    </select>
+    
+    
+</mapper>
