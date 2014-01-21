@@ -48,7 +48,6 @@ $(document).ready(function(){
               }).bind("mouseout",function(){
               	 $("#hsplBox").hide();
               });
-              
 	     };
 	     
 	     //初始化名家慧眼模块
@@ -125,7 +124,11 @@ function changeBackGround(flag){
 	 }else if(flag==2){
 	 	$("#indexYmBody").css("background","url('views/imagelib/indexYM/In_Bloom.jpg')");
 	 }
-     
+}
+
+//注册按钮绑定事件
+function  registerButtonEvent(){
+	alert("注册按钮事件！");
 }
 
 
