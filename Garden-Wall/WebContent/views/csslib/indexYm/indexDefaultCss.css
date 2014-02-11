@@ -1,45 +1,40 @@
-.bottomshowInfor{
-    bottom: 0;
-    font-size: 14px;
-    left: 0;
-    position: absolute;
-    text-decoration: none;
-    width: 100%;
-    z-index: 30;
-    height: 20px;
-    text-align: center;
-	background-image:url('../../imagelib/bkImage.png');
+.bottomshowInfor {
+	bottom: 0;
+	font-size: 14px;
+	left: 0;
+	position: absolute;
+	text-decoration: none;
+	width: 100%;
+	z-index: 30;
+	height: 20px;
+	text-align: center;
+	background-image: url('../../imagelib/bkImage.png');
 }
 .topappbar {
-  background-image:url('../../imagelib/black-Linen.png');
-  top: 0px;
-  color: #fff;
-  font-size: .9em;
-  height: 28px;
-  left: 0px;
-  line-height: normal;
-  margin: 0;
-  max-height: 100%;
-  padding: 8px 0;
-  position: fixed;
-  right: 0px;
-  text-align: left;
-  width: 100%;
-  z-index: 100;
-  -ms-touch-action: manipulation;
+	background-image: url('../../imagelib/black-Linen.png');
+	top: 0px;
+	color: #fff;
+	font-size: .9em;
+	height: 28px;
+	left: 0px;
+	line-height: normal;
+	margin: 0;
+	max-height: 100%;
+	padding: 8px 0;
+	position: fixed;
+	right: 0px;
+	text-align: left;
+	width: 100%;
+	z-index: 100;
+	-ms-touch-action: manipulation;
 }
-.inforBox{
-	 background: url('../../imagelib/bkImage.png');
+.inforBox {
+	background: url('../../imagelib/bkImage.png');
 }
-.indexYmBagroundImage{
-	 background: url('../../imagelib/furley_bg.png')
+.indexYmBagroundImage {
+	background: url('../../imagelib/furley_bg.png')
 }
-.textAlignPosition{
+.textAlignPosition {
 	text-align: center;
 }
-
-
-
-
-
 
