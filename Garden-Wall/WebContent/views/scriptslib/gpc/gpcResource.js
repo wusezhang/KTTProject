@@ -71,7 +71,7 @@ $(document).ready(function(){
                     }
                 ];
                 
-                var currentWidth = $(document).width()-$("#menuControlBar").css("height").replace("px","")*1+20;
+                var currentWidth = $(document).width()-$("#menuControlBar").css("height").replace("px","")*1+60;
                 var mmg = $('#gpc_grid').mmGrid({
                     height: 550, 
                     width:currentWidth,
