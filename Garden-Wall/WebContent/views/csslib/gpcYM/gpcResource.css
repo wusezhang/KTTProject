@@ -8,5 +8,15 @@
 .btnPrice:hover {
 	background: url('../../imagelib/gpcYM/botton_g2.gif') no-repeat;
 }
-
+.accordionWidth{
+	position:absolute;
+	left:0px;
+	top:45px; 
+	width:200px
+}
+.tablePosition{
+	position:absolute;
+    left:200px;
+    top:45px
+}
 

@@ -25,7 +25,7 @@ $(document).ready(function(){
                     return val.toFixed(2);
                 };
                 var cols = [
-                    {title:'行情',titleHtml: '<span title="下面图片按钮可点击" style="cursor:help;color: #b00;">行情</span>', name:'', width: 30, align: 'center',lockWidth:true,  renderer: function(val,item,rowIndex){
+                    {title:'行情',titleHtml: '<span style="cursor:help;color: #b00;">行情</span>', name:'', width: 30, align: 'center',lockWidth:true,  renderer: function(val,item,rowIndex){
                         return '<div class="btnPrice"></div>';
                     }},
                     {title:'股票信息',align: 'center', cols:[
@@ -70,10 +70,11 @@ $(document).ready(function(){
                         return '<button  class="btn btn-info">推荐理由</button>'}
                     }
                 ];
-
-
+                
+                var currentWidth = $(document).width()-$("#menuControlBar").css("height").replace("px","")*1+20;
                 var mmg = $('#gpc_grid').mmGrid({
                     height: 550, 
+                    width:currentWidth,
                     cols: cols, 
                     method: 'get', 
                     remoteSort:true, 
@@ -81,7 +82,7 @@ $(document).ready(function(){
                     sortName: 'SECUCODE',
                     sortStatus: 'asc',
                     multiSelect: false, 
-                    checkCol: true, 
+                    checkCol: false, 
                     fullWidthRows: true, 
                     autoLoad: false, 
                     plugins: [
@@ -95,7 +96,7 @@ $(document).ready(function(){
 	//初始化控件位置
 	function initGridPosition(){
 		 //定位相应的高宽比例.
-	     $("#showDataTable").offset({top:45,left:0});
+	     //$("#showDataTable").offset({top:45,left:100});
 	}
 	
 	
