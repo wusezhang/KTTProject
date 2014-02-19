@@ -64,11 +64,10 @@ $(document).ready(function(){
                         { title:'昨收盘', name:'PREVCLOSINGPRICE' ,width:60, align:'right', sortable: true, type: 'number', renderer: fixed2},
                         { title:'今开盘', name:'OPENINGPRICE',width:60, align:'right', sortable: true, type: 'number', renderer: fixed2}
                     ]},
-                    { title:'最高价', name:'HIGHESTPRICE' ,width:60, align:'right', hidden: true, sortable: true, type: 'number', renderer: fixed2},
-                    { title:'最低价', name:'LOWESTPRICE' ,width:60, align:'right', hidden: true, sortable: true, type: 'number', renderer: fixed2},
-                    { title:'推荐理由', name:'' ,width:150, align:'center', lockWidth:true, lockDisplay: true, renderer: function(val){
-                        return '<button  class="btn btn-info">推荐理由</button>'}
-                    }
+                    { title:'操盘周期', name:'CPZQ' ,width:80, align:'center', lockWidth:true, lockDisplay: true, renderer: function(val){
+                        return '<button  class="btn btn-inverse">短线</button>'}},
+                    { title:'推荐理由', name:'' ,width:100, align:'center', lockWidth:true, lockDisplay: true, renderer: function(val){
+                        return '<button  class="btn btn-info">推荐理由</button>'}}
                 ];
                 
                 var currentWidth = $(document).width()-$("#menuControlBar").css("height").replace("px","")*1+60;

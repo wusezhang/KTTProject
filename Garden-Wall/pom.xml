@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>gw</groupId>
-	<artifactId>Garden-Wall</artifactId>
+	<groupId>KTTProject</groupId>
+	<artifactId>KTTProject</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Garden-Wall Maven Webapp</name>
+	<name>KTTProject Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -97,6 +97,6 @@
         </dependency>
 	</dependencies>
 	<build>
-		<finalName>Garden-Wall</finalName>
+		<finalName>KTTProject</finalName>
 	</build>
 </project>
