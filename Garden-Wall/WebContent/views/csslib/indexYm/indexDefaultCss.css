@@ -37,4 +37,9 @@
 .textAlignPosition {
 	text-align: center;
 }
+.companyPosition{
+	position:absolute;
+	top:0px;
+	left:0px
+}
 
