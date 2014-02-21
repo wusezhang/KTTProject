@@ -1,7 +1,5 @@
 package com.ktproject.common.service.impl;
 
-
-
 /**
  * yahoo股票数据接口工具类
  * @author 张家将 2013.01.02
@@ -17,8 +15,6 @@ import java.util.Date;
 import java.util.List;
 import com.ktproject.common.model.StockServiceBO;
 import com.ktproject.common.service.StockGetDataFromYaHooService;
-
-
 
 
 public class StockGetDataFromYaHooServiceImpl  implements StockGetDataFromYaHooService{
