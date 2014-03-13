@@ -22,35 +22,38 @@
 	<body class="indexYmBagroundImage" id="indexYmBody">
 		<!--导航菜单-->
 		<div class="topappbar">
-			   
-			  <div class="companyPosition">
-			  	<a href="index.html">
-			  	<img src="views/imagelib/indexYM/Companeicon.jpg" border="0" height="43" class="img-rounded"/>
-			  	</a>
-			  </div> 
-              <!--菜单测试项目-->
-              <ul class="nav nav-pills pull-right">
-                 <li class="dropdown active">
-                   <a class="dropdown-toggle" data-toggle="dropdown"  href="#">
-                   	<span class="icon-white icon-share"> </span>背景设置
-                    <b class="caret"> </b>
-                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="javascript:changeBackGround(0)">系统默认</a></li>
-                    <li class="divider"> </li>
-                    <li><a href="javascript:changeBackGround(1)">绿色丛林</a></li>
-                    <li><a href="javascript:changeBackGround(2)" >泫雅时光</a></li>
-                  </ul>
-                 </li>
-                  <li><a href="javascript:registerButtonEvent()"><span class="icon-white icon-user"> </span>注册</a></li>
-              </ul>
+
+			<div class="companyPosition">
+				<a href="index.html"> <img src="views/imagelib/indexYM/Companeicon.jpg" border="0" height="43" class="img-rounded"/> </a>
+			</div>
+			<!--菜单测试项目-->
+			<ul class="nav nav-pills pull-right">
+				<li class="dropdown active">
+					<a class="dropdown-toggle" data-toggle="dropdown"  href="#"> <span class="icon-white icon-share"> </span>背景设置 <b class="caret"> </b> </a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="javascript:changeBackGround(0)">系统默认</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="javascript:changeBackGround(1)">绿色丛林</a>
+						</li>
+						<li>
+							<a href="javascript:changeBackGround(2)" >泫雅时光</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:registerButtonEvent()"><span class="icon-white icon-user"> </span>注册</a>
+				</li>
+			</ul>
 		</div>
-		
+
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
 		<div class="titles six-wide three-tall" id="metreBox" >
-			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical" 
-			   data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
+			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical"
+			data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div id="gnzckxBoxDiv">
 					<a class="full" href="javascript:gnzckxBindEvent()"><img class="full" src="views/imagelib/gnzckxlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -60,7 +63,7 @@
 				<div>
 					<a class="full" href="#"> <img class="full"  src="views/imagelib/outInformation.jpg"/> </a>
 					<div class="bottomshowInfor">
-						 国外早财快讯(实时国外财经政策和财经要闻)
+						国外早财快讯(实时国外财经政策和财经要闻)
 					</div>
 				</div>
 			</div>
@@ -70,7 +73,7 @@
 				<div>
 					<a class="full" href="#" ><img class="full"  src="views/imagelib/cjxwlogo.jpg"/></a>
 					<div class="bottomshowInfor" >
-					     财经新闻(国内外财经新闻汇总)
+						财经新闻(国内外财经新闻汇总)
 					</div>
 				</div>
 			</div>
@@ -80,14 +83,12 @@
 				<div>
 					<a class="full metroLarger" href="#"><img class="full"  src="views/imagelib/jsfxImage.jpg"/></a>
 					<div class="bottomshowInfor" >
-					     财经数据分析
+						财经数据分析
 					</div>
 				</div>
 				<div >
-					 <img class="full" src="views/imagelib/indexYM/cjsjicon.png" />
-					 <span class="tile-title">
-					 <span class="badge  badge-warning">财经数据分析</span>
-					 </span>
+					<img class="full" src="views/imagelib/indexYM/cjsjicon.png" />
+					<span class="tile-title"> <span class="badge  badge-warning">财经数据分析</span> </span>
 				</div>
 			</div>
 
@@ -100,10 +101,8 @@
 					</div>
 				</div>
 				<div>
-					 <img class="full" src="views/imagelib/indexYM/Calendar.png" />
-					 <span class="tile-title">
-					 <span class="badge  badge-warning">外汇日历</span>
-					 </span>
+					<img class="full" src="views/imagelib/indexYM/Calendar.png" />
+					<span class="tile-title"> <span class="badge  badge-warning">外汇日历</span> </span>
 				</div>
 			</div>
 			<!--技术分析-->
@@ -114,12 +113,9 @@
 						(汇市股市)技术分析
 					</div>
 				</div>
-			   <div>
-					 <img class="full" src="views/imagelib/indexYM/stockjsfx.png" />
-					 <span class="tile-title">
-					  <span class="icon-white icon-check"> </span>
-					 <span class="badge  badge-warning">(汇市股市)技术分析</span>
-					 </span>
+				<div>
+					<img class="full" src="views/imagelib/indexYM/stockjsfx.png" />
+					<span class="tile-title"> <span class="icon-white icon-check"> </span> <span class="badge  badge-warning">(汇市股市)技术分析</span> </span>
 				</div>
 			</div>
 
@@ -127,74 +123,88 @@
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="flip" data-bounce="true" data-initdelay="7000" >
 				<div >
 					<a class="full" href="#"><img class="full"  src="views/imagelib/fxjsplogo.jpg"/></a>
-					<div class="bottomshowInfor" >(汇市股市)风险警示牌</div>
+					<div class="bottomshowInfor" >
+						(汇市股市)风险警示牌
+					</div>
 				</div>
 				<div>
-					 <img class="full" src="views/imagelib/indexYM/fxjsicon.png" />
-					 <span class="tile-title">
-					  <span class="icon-white icon-check"> </span>
-					 <span class="badge  badge-warning">风险警示牌</span>
-					 </span>
+					<img class="full" src="views/imagelib/indexYM/fxjsicon.png" />
+					<span class="tile-title"> <span class="icon-white icon-check"> </span> <span class="badge  badge-warning">风险警示牌</span> </span>
 				</div>
 			</div>
 
 			<!--名家慧眼-->
 			<div class="list-tile two-tall  two-wide" >
-				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" data-bounce="true" >
-				</ul>
+				<ul class="flip-list fourTiles"  data-initdelay="1000" data-mode="flip-list" data-delay="500"   id="mjhyBox" data-bounce="true" ></ul>
 			</div>
-            
-            <!--名家慧眼控制开关-->
-            <div class="tile-strip half-tile two-tall half-wide">
-                 <div class="live-tile half-tile info  cyan" data-mode="flip" data-bounce="true" data-bounce-dir="edges" id="gsmjControl" data-initdelay="1500">
-                	<div><img class="full" src="views/imagelib/signature.png"/></div>
-                	<div id="showGsplControl">
-                		<img class="full" src="views/imagelib/indexYM/UserNoFrame.png"/>
-                		<div class="inforBox tile-title textAlignPosition" id="gxplBox" style="display:none">股市评论 </div>
-                	</div>
-                </div>
-                <div class="live-tile half-tile theme cyan " data-mode="flip" data-bounce="true" data-bounce-dir="edges" id="whmjControl" data-initdelay="2500">
-                	<div><img class="full" src="views/imagelib/banner.png"/></div>
-                	<div id="showHsplControl">
-                		<img class="full" src="views/imagelib/indexYM/UserNoFrame.png"/>
-                		<div class="inforBox tile-title textAlignPosition" id="hsplBox" style="display:none">汇市评论 </div>
-                	</div>
-                </div>
-                <div class="live-tile half-tile prev mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,r" id="mjhyControlNext">
-                	<div><img class="full"  src="views/imagelib/arrow-right.png"/></div>
-               </div>
-                <div class="live-tile half-tile next mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,l" id="mjhyControlPre">
-                	<div><img class="full" src="views/imagelib/arrow-left.png" /></div>
-                </div>
-            </div>
-            
-            <!--股票池展示-->
-            <div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="gpcControl" data-direction="horizontal">
-                <div >
+
+			<!--名家慧眼控制开关-->
+			<div class="tile-strip half-tile two-tall half-wide">
+				<div class="live-tile half-tile info  cyan" data-mode="flip" data-bounce="true" data-bounce-dir="edges" id="gsmjControl" data-initdelay="1500">
+					<div><img class="full" src="views/imagelib/signature.png"/>
+					</div>
+					<div id="showGsplControl">
+						<img class="full" src="views/imagelib/indexYM/UserNoFrame.png"/>
+						<div class="inforBox tile-title textAlignPosition" id="gxplBox" style="display:none">
+							股市评论
+						</div>
+					</div>
+				</div>
+				<div class="live-tile half-tile theme cyan " data-mode="flip" data-bounce="true" data-bounce-dir="edges" id="whmjControl" data-initdelay="2500">
+					<div><img class="full" src="views/imagelib/banner.png"/>
+					</div>
+					<div id="showHsplControl">
+						<img class="full" src="views/imagelib/indexYM/UserNoFrame.png"/>
+						<div class="inforBox tile-title textAlignPosition" id="hsplBox" style="display:none">
+							汇市评论
+						</div>
+					</div>
+				</div>
+				<div class="live-tile half-tile prev mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,r" id="mjhyControlNext">
+					<div><img class="full"  src="views/imagelib/arrow-right.png"/>
+					</div>
+				</div>
+				<div class="live-tile half-tile next mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,l" id="mjhyControlPre">
+					<div><img class="full" src="views/imagelib/arrow-left.png" />
+					</div>
+				</div>
+			</div>
+
+			<!--股票池展示-->
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="gpcControl" data-direction="horizontal">
+				<div >
 					<a class="full" href="#"><img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
-					<div class="bottomshowInfor" >(汇市股市)股票池</div>
+					<div class="bottomshowInfor" >
+						(汇市股市)股票池
+					</div>
 				</div>
 				<div>
-				    <img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
-				    <div class="bottomshowInfor" >(股票池)股吧社区</div>
+					<img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
+					<div class="bottomshowInfor" >
+						(股票池)股吧社区
+					</div>
 				</div>
-            </div>
-            
-            <!--股票池展示-->
-            <div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="kjqyControl" data-direction="horizontal">
-                <div >
+			</div>
+
+			<!--股票池展示-->
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="kjqyControl" data-direction="horizontal">
+				<div >
 					<a class="full" href="#"><img class="full"  src="views/imagelib/indexYM/kjqybk.jpg"/></a>
-					<div class="bottomshowInfor" >(汇市股市)科技前沿</div>
+					<div class="bottomshowInfor" >
+						(汇市股市)科技前沿
+					</div>
 				</div>
-            </div>
-            
-             <div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="cjzskControl" data-direction="horizontal">
-                <div >
+			</div>
+
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="cjzskControl" data-direction="horizontal">
+				<div >
 					<a class="full" href="#"><img class="full" src="views/imagelib/indexYM/Knowledge.png"/></a>
-					<div class="bottomshowInfor" >财经知识库</div>
+					<div class="bottomshowInfor" >
+						财经知识库
+					</div>
 				</div>
-            </div>
-            
+			</div>
+
 		</div>
 
 		<!--工具栏相应的信息开始-->
@@ -252,8 +262,7 @@
 										SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
 									</div>
 								</div>
-							</div>
-							</td>
+							</div></td>
 							<td>
 							<div class="media">
 								<a class="pull-left" href="#"> <img class="media-object" src="views/imagelib/indexYM/kjqybk.jpg" width="130" height="100"> </a>
@@ -264,21 +273,49 @@
 										SOHO中国、富力、万科、招商地产、合生创展、金地集团等知名房企均榜上有名。其中欠缴最多的雅居乐地产控股欠缴达83亿元
 									</div>
 								</div>
-							</div>
-							</td>
+							</div></td>
 						</tr>
-						
 
 					</table>
 					<!--早财快讯显示框架结束-->
 
 					<!--经济指标显示信息-->
-					<div id="showSSPM" style="height:300px;width:400px;display:none"> </div>
+					<div id="showSSPM" style="height:300px;width:400px;display:none"></div>
 					<!--经济指标显示信息结束-->
 				</div>
 				<!--信息列表显示-->
 			</div>
 			<a class="etc"><span class="icon-white icon-th" id="arrowUpButton"> </span></a>
 		</div>
+
+		<!--首页modal显示框-->
+		<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h4>用户注册</h4>
+			</div>
+			<div class="modal-body">
+				<label>用户名:</label>
+				<input type="text" name="username" id="username" placeholder="用户名" class="input-xlarge">
+				<label>密码:</label>
+				<input type="password" name="password" id="password" placeholder="密码" class="input-xlarge">
+				<label>初始密码:</label>
+				<input type="password" name="relpassword" id="relpassword" placeholder="初始密码" class="input-xlarge">
+				<label>邮箱:</label>
+				<input type="text" name="email" id="email" placeholder="邮箱" class="input-xlarge">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" id="editResourceBtn">
+					注册
+				</button>
+				<button class="btn" data-dismiss="modal" aria-hidden="true">
+					关闭
+				</button>
+			</div>
+		</div>
+		<!--首页Modal显示框结束-->
+
 	</body>
 </html>

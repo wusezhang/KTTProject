@@ -128,7 +128,7 @@ function changeBackGround(flag){
 
 //注册按钮绑定事件
 function  registerButtonEvent(){
-	alert("注册按钮事件！");
+	 $("#registerModal").modal('show');
 }
 
 
