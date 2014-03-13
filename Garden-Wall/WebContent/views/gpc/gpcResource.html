@@ -7,12 +7,12 @@
 		<title>股票池</title>
 		<meta name="author" content="vteamdell0723" />
 		<!--引入相应的CSS样式-->
-		<link  rel="stylesheet" type="text/css" href="../csslib/indexYm/indexDefaultCss.css"  />
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap-theme.min.css"/>
 
 		<!--引入股票池自定义的Css样式-->
 		<link rel="stylesheet" type="text/css" href="../csslib/gpcYM/gpcResource.css"/>
+
 		<!--导入相应的js插件-->
 		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap3/js/bootstrap.min.js"></script>
@@ -22,7 +22,7 @@
 		<!--导入股票池相应的js文件-->
 		<script type="text/javascript" src="../scriptslib/gpc/gpcResource.js"></script>
 	</head>
-	<body class="indexYmBagroundImage">
+	<body>
 		<!--菜单显示栏位-->
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="navbar-header">
@@ -44,17 +44,56 @@
 		<!--菜单显示结束-->
 
 		<!--股票、外汇、基金分类栏位-->
-		<div class="well-sm">
-			<div class="list-group  center-block pull-left">
-				<a href="#" class="list-group-item">大盘股 </a>
-				<a href="#" class="list-group-item">中小板</a>
-				<a href="#" class="list-group-item">创业板</a>
-				<a href="#" class="list-group-item">基金</a>
-				<a href="#" class="list-group-item">外汇</a>
-				<a href="#" class="list-group-item">贵金属</a>
-				<a href="#" class="list-group-item">期货</a>
+		<div class="container accordionWidth">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="list-group">
+						<a href="#" class="list-group-item active"><span class="glyphicon glyphicon-chevron-right"> </span> 大盘股 </a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>中小板</a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>创业板</a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>基金</a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>外汇</a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>贵金属</a>
+						<a href="#" class="list-group-item"><span class="glyphicon glyphicon-chevron-right"> </span>期货</a>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<table class="table  table-bordered table-striped table-hover list">
+						<thead>
+							<tr>
+								<th>股票代码</th>
+								<th>股票名称</th>
+								<th>昨日价码</th>
+								<th>推荐理由</th>
+								<th>长期持有理由</th>
+								<th>短期持有理由</th>
+							</tr>
+						</thead>
+						<tbody id="tabletbody">
+                            <tr>
+                            	<td>
+                            	        数据测试
+                            	</td>
+                            	<td>
+                            	      <a class="btn btn-info"> 华孚色纺</a>  
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            </tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-
 		</div>
 		<!--表格显示控件-->
 

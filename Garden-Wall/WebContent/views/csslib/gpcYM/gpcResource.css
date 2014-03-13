@@ -11,12 +11,11 @@
 .accordionWidth{
 	position:absolute;
 	left:0px;
-	top:45px; 
-	width:200px
+	top:55px; 
 }
 .tablePosition{
 	position:absolute;
-    left:190px;
-    top:45px
+    left:200px;
+    top:58px; 
 }
 
