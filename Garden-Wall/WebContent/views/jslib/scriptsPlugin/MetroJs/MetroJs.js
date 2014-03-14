@@ -136,8 +136,8 @@ var pubMethods = {
             $.fn.liveTile.contentModules.addContentModule("html", defaultModules.htmlSwap);
         // this is where the magic happens
         return $(this).each(function (tileIndex, ele) {
-                var $this = $(ele),
-                data = privMethods.initTileData($this, settings);
+            var $this = $(ele),
+            data = privMethods.initTileData($this, settings);
             // append back tiles and add appropriate classes to prepare tiles
             data.faces = privMethods.prepTile($this, data);
             // action methods
@@ -509,7 +509,7 @@ var privMethods = {
                 swap: this.getDataOrDefault($tile, "swap", stgs.swap),
                 appendBack: this.getDataOrDefault($tile, "appendback", stgs.appendBack),
                 currentIndex: this.getDataOrDefault($tile, "start-index", stgs.currentIndex),
-                animationDirection: this.getDataOrDefault($tile, "slide-direction", stgs.animationDirection),
+                animationDirection: this.getDataOrDefault($tile, "ani-direction", stgs.animationDirection),
                 startNow: this.getDataOrDefault($tile, "start-now", stgs.startNow),
                 tileSelector: this.getDataOrDefault($tile, "tile-selector", stgs.tileSelector),
                 tileFaceSelector: this.getDataOrDefault($tile, "face-selector", stgs.tileFaceSelector),
@@ -912,8 +912,10 @@ var privMethods = {
                     if (pauseIn) {
                         if (!isOver && !isPending)
                             return;
-                        if (data.runEvents)
-                            data.timer.start(data.hasRun ? data.delay : data.initDelay);
+                        if (data.runEvents) {
+                        	// todo: use a custom value if provided
+                        	data.timer.start(data.hasRun ? data.delay : data.initDelay);
+                        }
                     } else {
                         data.pOnHoverMethods.pause();
                     }                  
@@ -2417,14 +2419,14 @@ jQuery.fn.applicationBar = function (options) {
         if (stgs.shouldApplyTheme) {         
             theme.loadDefaultTheme(stgs);
         }
-        var themeContainer = stgs.accentListContainer + " a";
+        var themeContainer = stgs.accentListContainer.replace(",", " a,") + " a";
         var themeContainerClick = function () {
             var accent = jQuery(this).attr("class").replace("accent", "").replace(" ", "");
             theme.applyTheme(null, accent, stgs);
             if (typeof (stgs.accentPicked) == "function")
                 stgs.accentPicked(accent);
         };
-        var baseContainer = stgs.baseThemeListContainer + " a";
+        var baseContainer = stgs.baseThemeListContainer.replace(","," a,") + " a";
         var baseContainerClick = function () {
             var accent = jQuery(this).attr("class").replace("accent", '').replace(' ', '');
             theme.applyTheme(accent, null, stgs);
