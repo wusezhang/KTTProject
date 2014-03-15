@@ -42,4 +42,8 @@
 	top:0px;
 	left:0px
 }
-
+.metreBoxPosition{
+	position:absolute;
+	top:50px;
+	left:10px;
+}
