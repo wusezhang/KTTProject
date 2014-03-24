@@ -12,7 +12,7 @@
 	 http://www.springframework.org/schema/aop/spring-aop-2.5.xsd ">
 
    <!--加载Mysql数据源的属性文件 -->
-   <context:property-placeholder location="classpath*:database.properties"/>
+   <context:property-placeholder location="classpath:database.properties" ignore-unresolvable="true"/>
     
     <bean id="dataSource" class = "com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"> 
         <property name="driverClass" value="${jdbc.driver}" /> 
