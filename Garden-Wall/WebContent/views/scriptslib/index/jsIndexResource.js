@@ -31,8 +31,7 @@ $(document).ready(function() {
 		$("#whmjControl").bind("click", whmjControlEvent);
 		//股票池按钮控制
 		$("#gpcControl").bind("click", gpcControlEvent);
-		//外汇日历控制
-		$("#whrlControl").bind("click", whrlControlEvent);
+		
 		//股市评论鼠标移除的控制
 		$("#showGsplControl").bind("mouseover", function() {
 			$("#gxplBox").show();
@@ -47,7 +46,6 @@ $(document).ready(function() {
 		});
 
 		$('#registerBut').bind('click', registerButtonEvent);
-
 	};
 
 	//初始化名家慧眼模块
@@ -94,16 +92,12 @@ $(document).ready(function() {
 		window.location.href = "views/gpc/gpcResource.html";
 	}
 
-	//外汇日历按钮控制
-	function whrlControlEvent() {
-		window.location.href = "views/whrl/whrlResource.html";
-	}
 
 	//注册按钮绑定事件
 	function registerButtonEvent() {
 		$("#registerModal").modal('show');
 	}
-
+        
 });
 
 //自定义相应的链接的处理方法
