@@ -20,5 +20,10 @@
 		应用中使用了这个scope，容器会把它作为普通的session的scope对待。 -->
 	<bean id="cjhyResourceService" class="com.ktproject.cjhy.service.impl.CjhyResourceServiceImpl" scope="prototype" />
 	<bean id="cjhyResourceDao"  class="com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl" scope="prototype"/>
+	
+	<bean id="forexPicService" class="com.ktproject.forexpic.service.impl.ForexPicServiceImpl" scope="prototype"/>
+	<bean id="forexPicDAO" class="com.ktproject.forexpic.dao.impl.ForexPicDAOImpl" scope="prototype">
+		
+	</bean>
 	 	
 </beans>
