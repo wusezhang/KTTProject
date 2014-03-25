@@ -93,9 +93,9 @@
 		
 		<!--redis数据库连接依赖-->
 		<dependency>
-          <groupId>redis.clients</groupId>
-           <artifactId>jedis</artifactId>
-           <version>2.1.0</version>
+	        <groupId>redis.clients</groupId>
+	        <artifactId>jedis</artifactId>
+	        <version>2.4.1</version>
         </dependency>
 	    <!--Spring与redis整合-->
 		<dependency>
@@ -103,7 +103,7 @@
            <artifactId>spring-data-redis</artifactId>
            <version>1.2.0.RELEASE</version>
         </dependency>
-        
+		
 	</dependencies>
 	<build>
 		<finalName>KTTProject</finalName>
