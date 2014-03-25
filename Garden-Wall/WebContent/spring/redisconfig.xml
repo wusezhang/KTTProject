@@ -36,8 +36,8 @@
 	</bean>
 
 	<!--模板类： -->
-	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connection-factory-ref="jedisConnectionFactory">
-	    
-	</bean>
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" 
+		p:connection-factory-ref="jedisConnectionFactory" />
+
 	
 </beans>
