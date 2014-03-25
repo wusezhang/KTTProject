@@ -5,7 +5,9 @@ $(document).ready(function(){
 	 });
 	 
 	 function initModel(){
-	 	 
+	 	  $.commonService("../../forexpicController/queryAllForexPic",'POST',{},function(data){
+		    	 
+		   });
 	 }
 	 
 	 function  bindEvent(){

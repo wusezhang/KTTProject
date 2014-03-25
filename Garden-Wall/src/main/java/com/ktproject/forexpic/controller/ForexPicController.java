@@ -1,10 +1,16 @@
 package com.ktproject.forexpic.controller;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.ktproject.forexpic.service.ForexPicService;
 
 /**
@@ -12,7 +18,7 @@ import com.ktproject.forexpic.service.ForexPicService;
  * @author vteamdell0723
  */
 @Controller
-@RequestMapping("ForexpicController")
+@RequestMapping("forexpicController")
 public class ForexPicController {
          
 	private  Log  log = LogFactory.getLog(ForexPicController.class);
@@ -20,5 +26,8 @@ public class ForexPicController {
 	@Autowired
 	private  ForexPicService forexPicService;
 	
-	
+	@RequestMapping(value="/queryAllForexPic",method=RequestMethod.POST)
+	public @ResponseBody List<Map<String,String>> queryAllForexPic(){
+		 return forexPicService.queryAllForexPic();
+	} 
 }
