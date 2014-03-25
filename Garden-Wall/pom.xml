@@ -103,7 +103,7 @@
            <artifactId>spring-data-redis</artifactId>
            <version>1.2.0.RELEASE</version>
         </dependency>
- 
+        
 	</dependencies>
 	<build>
 		<finalName>KTTProject</finalName>

@@ -11,4 +11,5 @@
 	<!--redis数据库配置
     <import resource="spring/redisconfig.xml"/>
 	-->
+	
  </beans>
