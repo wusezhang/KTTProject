@@ -7,7 +7,7 @@
 
 	<!--Mysql数据库配置-->
     <import resource="spring/databaseconfig.xml"/>
-	
+
 	<!--redis数据库配置
     <import resource="spring/redisconfig.xml"/>
 	-->
