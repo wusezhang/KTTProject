@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface ForexPicService {
     
-	 List<Map<String,String>> queryAllForexPic(); 
+	 List<String> queryAllForexPic(); 
 }

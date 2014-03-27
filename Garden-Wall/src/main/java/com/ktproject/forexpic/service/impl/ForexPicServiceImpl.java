@@ -16,7 +16,7 @@ public class ForexPicServiceImpl implements ForexPicService {
 	
 	private  Log  log  = LogFactory.getLog(ForexPicServiceImpl.class);
 
-	public List<Map<String, String>> queryAllForexPic() {
+	public List<String> queryAllForexPic() {
 		return forexPicDAO.queryAllForexPic();
 	}
 	
