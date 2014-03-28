@@ -8,6 +8,8 @@ $(document).ready(function(){
 	 	  $.commonService('../../forexpicController/queryAllForexPic','POST',{},function(data){
 		    	initDataSet(data);
 		   });
+		  //初始化相应的box显示插件 
+		  $('.fancybox').fancybox();
 	 }
 	 
 	 function  bindEvent(){
@@ -36,7 +38,7 @@ $(document).ready(function(){
 	 }
 	
 	function  nextPageEvent(){
-		 initModel();
+		$('#imageModal').modal('show');
 	}
 	 
 });
