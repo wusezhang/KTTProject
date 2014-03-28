@@ -6,6 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.forexpic.dao.ForexPicDAO;
+import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
@@ -18,6 +19,10 @@ public class ForexPicServiceImpl implements ForexPicService {
 
 	public List<ForexPicVO> queryAllForexPic() {
 		return forexPicDAO.queryAllForexPic();
+	}
+
+	public List<ForexPicDetailVO> queryImageUrlById(final String id) {
+		return forexPicDAO.queryImageUrlById(id);
 	}
 	
 	

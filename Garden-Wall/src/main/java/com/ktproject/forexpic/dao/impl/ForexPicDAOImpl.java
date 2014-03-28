@@ -12,6 +12,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import com.ktproject.forexpic.dao.ForexPicDAO;
+import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -26,7 +27,11 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 	private RedisTemplate<String, String> template;
 
 	private Log log = LogFactory.getLog(ForexPicDAOImpl.class);
-
+    
+	/**
+	  * 查询所有的相关信息
+	  * @return
+	  */
 	public List<ForexPicVO> queryAllForexPic() {
 		log.info("查询外汇看图的所有信息。");
 		final ObjectMapper mapper = new ObjectMapper();
@@ -60,6 +65,34 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 					}
 				});
 		return list;
+	}
+    
+   /**
+	 * 通过ID做相应的搜索.
+	 */
+	public List<ForexPicDetailVO> queryImageUrlById(final String id) {
+		log.info("通过ID做相应的查询组信息。");
+		final ObjectMapper mapper = new ObjectMapper();
+		// 支持单引号转换
+		mapper.configure(Feature.ALLOW_SINGLE_QUOTES, true);
+		List<ForexPicDetailVO> resultList = template.execute(new RedisCallback<List<ForexPicDetailVO>>() {
+		  public List<ForexPicDetailVO> doInRedis(RedisConnection connection)
+				throws DataAccessException {
+			    byte[] bytes = template.getStringSerializer().serialize(id);     
+			    String value = template.getStringSerializer().deserialize(connection.get(bytes));
+			    ForexPicVO vo = null ;
+			    try {
+			    	vo = mapper.readValue(value, ForexPicVO.class);
+				} catch (JsonParseException e) {
+					e.printStackTrace();
+				} catch (JsonMappingException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			    return vo.getLinkImageList();
+		}});
+		return resultList;
 	}
 
 }
