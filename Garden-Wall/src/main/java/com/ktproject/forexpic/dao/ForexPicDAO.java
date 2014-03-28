@@ -1,9 +1,10 @@
 package com.ktproject.forexpic.dao;
 
 import  java.util.*;
+import com.ktproject.forexpic.model.ForexPicVO;
 
 public interface ForexPicDAO {
       
-	   List<String> queryAllForexPic(); 
+	   List<ForexPicVO> queryAllForexPic(); 
 	   
 } 

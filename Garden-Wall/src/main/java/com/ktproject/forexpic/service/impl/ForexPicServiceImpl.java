@@ -2,11 +2,11 @@ package com.ktproject.forexpic.service.impl;
 
 import java.util.List;
 import java.util.Map;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.forexpic.dao.ForexPicDAO;
+import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
 public class ForexPicServiceImpl implements ForexPicService {
@@ -16,7 +16,7 @@ public class ForexPicServiceImpl implements ForexPicService {
 	
 	private  Log  log  = LogFactory.getLog(ForexPicServiceImpl.class);
 
-	public List<String> queryAllForexPic() {
+	public List<ForexPicVO> queryAllForexPic() {
 		return forexPicDAO.queryAllForexPic();
 	}
 	
