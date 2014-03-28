@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
 /**
@@ -27,7 +28,7 @@ public class ForexPicController {
 	private  ForexPicService forexPicService;
 	
 	@RequestMapping(value="/queryAllForexPic",method=RequestMethod.POST)
-	public @ResponseBody List<String> queryAllForexPic(){
-		 return forexPicService.queryAllForexPic();
+	public @ResponseBody List<ForexPicVO> queryAllForexPic(){
+		 return forexPicService.queryAllForexPic(); 
 	} 
 }

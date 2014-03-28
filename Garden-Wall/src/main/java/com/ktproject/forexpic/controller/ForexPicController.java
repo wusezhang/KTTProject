@@ -29,6 +29,6 @@ public class ForexPicController {
 	
 	@RequestMapping(value="/queryAllForexPic",method=RequestMethod.POST)
 	public @ResponseBody List<ForexPicVO> queryAllForexPic(){
-		 return forexPicService.queryAllForexPic();
+		 return forexPicService.queryAllForexPic(); 
 	} 
 }
