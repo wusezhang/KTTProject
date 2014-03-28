@@ -11,7 +11,7 @@ $(document).ready(function(){
 	 }
 	 
 	 function  bindEvent(){
-	 	
+	 	  $('#nextPageButton').bind('click',nextPageEvent);
 	 }
 	
 	 function  initDataSet(data){
@@ -35,6 +35,8 @@ $(document).ready(function(){
 	 	   }
 	 }
 	
-	
+	function  nextPageEvent(){
+		 initModel();
+	}
 	 
 });
