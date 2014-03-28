@@ -35,7 +35,7 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 		List<ForexPicVO> list = template.execute(new RedisCallback<List<ForexPicVO>>() {
 					public List<ForexPicVO> doInRedis(RedisConnection connection) 
 							throws DataAccessException {
-						byte[] bytes = template.getStringSerializer().serialize("*");
+						byte[] bytes = template.getStringSerializer().serialize("*.cnforex");
 						Set<byte[]> dataset = connection.keys(bytes);
 						List<ForexPicVO> list = new ArrayList<ForexPicVO>();
 						for (Iterator<byte[]> iter = dataset.iterator(); iter.hasNext();) {
