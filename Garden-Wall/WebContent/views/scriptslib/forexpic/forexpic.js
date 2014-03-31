@@ -36,9 +36,15 @@ $(document).ready(function(){
 	 	   	    }
 	 	   }
 	 }
-	
+	 
+	//初始化相应的model
 	function  nextPageEvent(){
 		$('#imageModal').modal('show');
 	}
+	
+	function  showImageListModel(id){
+		alert(id);
+	}
+	
 	 
 });
