@@ -49,6 +49,28 @@ $(document).ready(function(){
 function  showImageListModel(id){
 	    $('#imageModal').modal('show');
 		$.commonService('../../forexpicController/queryImageListById','POST',{id:id},function(data){
-		    	alert(data);
+		    	initImageList(data);
 		});
 }
+//做相应的图片初始化操作.
+function  initImageList(data){
+	    $('#imageListContext').empty();
+	    for(var i =0 ; i< data.length ;i++){
+	    	 if(i%3==0){
+	    	 	   $('#imageListContext').append('<div class="row">'+
+	    	 	   initImageDiv(data[i])+initImageDiv(data[i+1])+initImageDiv(data[i+2])+'</div>');
+	    	 } 
+	    }
+}
+
+function  initImageDiv(data){
+	return  '<div class="col-xs-6 col-md-3">'
+						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data.imageUrl+'.cnforex'+ '\')">' 
+						+ '<img src="'+data.imageUrl+'" class="img-rounded"> '
+						+ '<div class="caption bottomshowInfor"> '
+						+ ' 2014/04/06    外汇视图 '
+						+ ' </div> </a> </div>';
+}
+
+
+
