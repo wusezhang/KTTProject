@@ -8,8 +8,6 @@ $(document).ready(function(){
 	 	  $.commonService('../../forexpicController/queryAllForexPic','POST',{},function(data){
 		    	initDataSet(data);
 		   });
-		  //初始化相应的box显示插件 
-		  $('.fancybox').fancybox();
 	 }
 	 
 	 function  bindEvent(){
@@ -57,10 +55,12 @@ function  initImageList(data){
 	    $('#imageListContext').empty();
 	    for(var i =0 ; i< data.length ;i++){
 	    	 if(i%3==0){
-	    	 	   $('#imageListContext').append('<div class="row">'+
+	    	 	   $('#imageListContext').append('<div>'+
 	    	 	   initImageDiv(data[i])+initImageDiv(data[i+1])+initImageDiv(data[i+2])+'</div>');
 	    	 } 
 	    }
+	    //初始化相应的box显示插件 
+		$('.fancybox').fancybox();
 }
 
 function  initImageDiv(data){
