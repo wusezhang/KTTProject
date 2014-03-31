@@ -46,7 +46,6 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 						for (Iterator<byte[]> iter = dataset.iterator(); iter.hasNext();) {
 							String value = template.getStringSerializer()
 									.deserialize(connection.get(iter.next()));
-							System.out.println(value);
 							ForexPicVO vo = null;
 							try {
 								vo = mapper.readValue(value, ForexPicVO.class);

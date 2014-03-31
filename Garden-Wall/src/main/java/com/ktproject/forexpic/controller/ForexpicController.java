@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
@@ -27,8 +28,21 @@ public class ForexPicController {
 	@Autowired
 	private  ForexPicService forexPicService;
 	
-	@RequestMapping(value="/queryAllForexPic",method=RequestMethod.POST)
+	/**
+	 * 查询所有的图片集合.
+	 * @return
+	 */
+	@RequestMapping(value="/queryAllForexPic",method = RequestMethod.POST)
 	public @ResponseBody List<ForexPicVO> queryAllForexPic(){
 		 return forexPicService.queryAllForexPic(); 
 	} 
+	
+	/**
+	 * 通过ID查询相应的图片集合.
+	 */
+	@RequestMapping(value="/queryImageListById",method = RequestMethod.POST)
+	public  @ResponseBody List<ForexPicDetailVO> queryImageListById(final String id){
+		 return  forexPicService.queryImageUrlById(id);
+	}
+	
 }
