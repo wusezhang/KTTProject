@@ -3,3 +3,8 @@
 	text-align: center;
 	background-image: url('../../imagelib/furley_bg.png');
 }
+
+.btnposition{
+	position:absolute;
+	padding-left:500px;
+}
