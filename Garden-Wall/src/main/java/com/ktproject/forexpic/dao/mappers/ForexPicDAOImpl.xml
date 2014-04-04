@@ -9,7 +9,7 @@
          <result column="ID" property="id"/>
     </resultMap> 
     
-    <select id="queryAllForexPic" resultMap="ObjectResultMap" parameterType="hashmap">
+    <select id="queryAllForexPic" resultMap="ObjectResultMap"  parameterType="hashmap">
 		SELECT WHKT.ID AS ID , WHKT.TITLE AS TITLE , WHKT.IMAGEURL AS IMAGEURL   
 		FROM   WHKT_RESOURCE_TABLE AS WHKT 
 		WHERE 1=1
