@@ -5,9 +5,14 @@ $(document).ready(function(){
 	 });
 	 
 	 function initModel(){
-	 	  $.commonService('../../forexpicController/queryAllForexPic','POST',{},function(data){
-		    	initDataSet(data);
-		   });
+		    var args = {
+		      url:'../../forexpicController/queryAllForexPic',
+		      params:{},
+		      callBack:function(data){
+		    	  initDataSet(data);
+		      }		
+		    };
+			$.showPage(0,args);
 	 }
 	 
 	 function  bindEvent(){

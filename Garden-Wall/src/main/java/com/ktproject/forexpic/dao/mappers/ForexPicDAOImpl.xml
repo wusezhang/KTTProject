@@ -9,12 +9,22 @@
          <result column="ID" property="id"/>
     </resultMap> 
     
-    <select id="queryAllForexPic" resultMap="ObjectResultMap">
+    <select id="queryAllForexPic" resultMap="ObjectResultMap" parameterType="hashmap">
 		SELECT WHKT.ID AS ID , WHKT.TITLE AS TITLE , WHKT.IMAGEURL AS IMAGEURL   
 		FROM   WHKT_RESOURCE_TABLE AS WHKT 
 		WHERE 1=1
 		ORDER BY  WHKT.CREATEDATE DESC
+		<if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>
     </select>
+	
+	<select id="queryAllForexPicCount" resultType="int">
+		SELECT COUNT(*)   
+		FROM   WHKT_RESOURCE_TABLE AS WHKT 
+		WHERE 1=1
+		ORDER BY  WHKT.CREATEDATE DESC
+	</select>
     
     
 </mapper>

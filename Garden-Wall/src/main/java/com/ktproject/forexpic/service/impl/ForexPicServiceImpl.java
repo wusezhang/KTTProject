@@ -1,6 +1,9 @@
 package com.ktproject.forexpic.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +19,11 @@ public class ForexPicServiceImpl implements ForexPicService {
 	
 	private  Log  log  = LogFactory.getLog(ForexPicServiceImpl.class);
 
-	public List<ForexPicVO> queryAllForexPic() {
-		return forexPicDAO.queryAllForexPic();
+	public Map<String,Object> queryAllForexPic(final Map map) {
+		Map<String,Object> hashmap = new  HashMap<String,Object>();
+		hashmap.put("data", forexPicDAO.queryAllForexPic(map));
+		hashmap.put("count", forexPicDAO.queryAllForexPicCount());
+		return  hashmap;
 	}
 
 	public List<ForexPicDetailVO> queryImageUrlById(final String id) {

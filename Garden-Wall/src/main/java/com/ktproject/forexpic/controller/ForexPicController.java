@@ -1,5 +1,6 @@
 package com.ktproject.forexpic.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ktproject.forexpic.model.ForexPicDetailVO;
@@ -33,8 +35,12 @@ public class ForexPicController {
 	 * @return
 	 */
 	@RequestMapping(value="/queryAllForexPic",method = RequestMethod.POST)
-	public @ResponseBody List<ForexPicVO> queryAllForexPic(){
-		 return forexPicService.queryAllForexPic(); 
+	public @ResponseBody Map<String,Object> queryAllForexPic(@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+		 Map<String,Object> map = new HashMap<String,Object>();
+		 map.put("start", start);
+		 map.put("start", limit);
+		 return forexPicService.queryAllForexPic(map); 
 	} 
 	
 	/**

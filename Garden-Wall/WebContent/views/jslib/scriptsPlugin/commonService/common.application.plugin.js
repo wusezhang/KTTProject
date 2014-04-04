@@ -5,9 +5,8 @@ jQuery.extend({
      * Notes: there is one method the parent js should be implement
      * 1---getArgs,to get the ajax arguments;
      */
-    showPage : function(currentPage) {
+    showPage : function(currentPage,args) {
         var countPerPage = 6;
-        var args = getArgs();
         var params = args.params;
         var pagesShow = 10;// The count for the links can be accepted.
         params.limit = countPerPage;
@@ -16,7 +15,7 @@ jQuery.extend({
             var data = result.data;
             var count = result.count;
             if (data.length == 0 && currentPage > 0) {
-                Application.showPage(currentPage - 1);
+                $.showPage(currentPage - 1);
             } else if (data.length == 0 && currentPage == 0) {
                 $("pages").html('');
                 args.callBack.call(this, data);
@@ -29,9 +28,9 @@ jQuery.extend({
                 var ul = $('<ul>');
                 if (currentPage > 0) {
                     ul.append($('<li>')
-                            .append($('<a>').html('首页').attr('href', 'javascript:Application.changePage(0)')));
+                            .append($('<a>').html('首页').attr('href', 'javascript:$.changePage(0)')));
                     ul.append($('<li>').append(
-                            $('<a>').html('上一页').attr('href', 'javascript:Application.changePage(\'-\')')));
+                            $('<a>').html('上一页').attr('href', 'javascript:$.changePage(\'-\')')));
                 }
 
                 var startIndex = Math.max(0, currentPage - Math.ceil(pagesShow / 2));
@@ -42,16 +41,16 @@ jQuery.extend({
                         ul.append($('<li class="active">').append($('<span>').html(i + 1)));
                     } else {
                         ul.append($('<li>').append(
-                                $('<a>').html(i + 1).attr('href', 'javascript:Application.changePage(' + i + ')')));
+                                $('<a>').html(i + 1).attr('href', 'javascript:$.changePage(' + i + ')')));
                     }
                 }
 
                 if (data.length == countPerPage && params.start + countPerPage < count) {
                     ul.append($('<li>').append(
-                            $('<a>').html('下一页').attr('href', 'javascript:Application.changePage(\'+\')')));
+                            $('<a>').html('下一页').attr('href', 'javascript:$.changePage(\'+\')')));
                     ul.append($('<li>').append(
                             $('<a>').html('末页').attr('href',
-                                    'javascript:Application.changePage(' + (countForPages - 1) + ')')));
+                                    'javascript:$.changePage(' + (countForPages - 1) + ')')));
                 }
                 $('#pages').html('').append(ul);
                 $('#pages').append($('<input id="currentPage">').val(currentPage).css('display', 'none'));

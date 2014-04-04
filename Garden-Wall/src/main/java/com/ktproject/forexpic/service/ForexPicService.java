@@ -12,7 +12,7 @@ public interface ForexPicService {
 	  * 查询所有的相关信息
 	  * @return
 	  */
-	 List<ForexPicVO> queryAllForexPic(); 
+	 Map<String,Object> queryAllForexPic(final Map map); 
 	 
 	 /**
 	  * 通过ID做相应的搜索.

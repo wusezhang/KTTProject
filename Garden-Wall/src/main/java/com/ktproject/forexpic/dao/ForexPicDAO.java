@@ -11,7 +11,12 @@ public interface ForexPicDAO {
 	    * 查询所有的Image信息.
 	    * @return
 	    */
-	   List<ForexPicVO> queryAllForexPic(); 
+	   List<ForexPicVO> queryAllForexPic(final Map map); 
+	   
+	   /**
+	    * 查询相应的记录条数.
+	    */
+	   int  queryAllForexPicCount();
 	   
 	   /**
 		 * 通过ID做相应的搜索.
