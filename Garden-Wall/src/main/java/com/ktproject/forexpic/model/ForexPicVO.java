@@ -1,8 +1,10 @@
 package com.ktproject.forexpic.model;
 
+import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
-public class ForexPicVO {
+public class ForexPicVO implements Serializable{
     
 	private static final long serialVersionUID = 5585389045105579860L;
 	
@@ -13,6 +15,8 @@ public class ForexPicVO {
 	private  String  imageUrl;
 	
 	private  String  imageDescription;
+	
+	private  Date    createDate;
 	
 	private  List<ForexPicDetailVO>  linkImageList;
 
@@ -55,6 +59,15 @@ public class ForexPicVO {
 	public void setLinkImageList(List<ForexPicDetailVO> linkImageList) {
 		this.linkImageList = linkImageList;
 	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
 	
 	
 }

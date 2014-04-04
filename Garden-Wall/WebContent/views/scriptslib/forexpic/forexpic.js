@@ -23,21 +23,21 @@ $(document).ready(function(){
 						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')" >'
 						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
 						+ '<div class="caption bottomshowInfor"> '
-						+ ' 2014/04/06    外汇视图 '
+						+ data[i].title
 						+ ' </div> </a> </div>');
 	 	   	    }else if(3<i&&i<8){
 	 	   	    	 $('#secondRow').append('<div class="col-xs-5 col-md-3">'
 						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')">' 
 						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
 						+ '<div class="caption bottomshowInfor"> '
-						+ ' 2014/04/06    外汇视图 '
+						+ data[i].title
 						+ ' </div> </a> </div>');
 	 	   	    }else{
 	 	   	    	$('#thirdRow').append('<div class="col-xs-5 col-md-3">'
 						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')">' 
 						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
 						+ '<div class="caption bottomshowInfor"> '
-						+ ' 2014/04/06    外汇视图 '
+						+ data[i].title
 						+ ' </div> </a> </div>');
 	 	   	    }
 	 	   }
