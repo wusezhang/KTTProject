@@ -25,7 +25,6 @@ function  showImageListModel(id){
 //做相应的图片初始化操作.
 function  initImageList(data){
 	    $('#imageListContext').empty();
-	    debugger;
 	    for(var i =0 ; i< data.length ;i++){
 	    	 	   $('#imageListContext').append('<div>'+
 	    	 	   initImageDiv(data[i])+'</div>');
