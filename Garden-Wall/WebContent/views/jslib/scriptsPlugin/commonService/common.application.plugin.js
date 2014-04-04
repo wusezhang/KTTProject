@@ -5,8 +5,9 @@ jQuery.extend({
      * Notes: there is one method the parent js should be implement
      * 1---getArgs,to get the ajax arguments;
      */
-    showPage : function(currentPage,args) {
-        var countPerPage = 6;
+    showPage : function(currentPage) {
+        var countPerPage = 8;
+        var args = initArgs();
         var params = args.params;
         var pagesShow = 10;// The count for the links can be accepted.
         params.limit = countPerPage;
@@ -14,7 +15,6 @@ jQuery.extend({
         $.commonService(args.url, 'POST', args.params, function(result) {
             var data = result.data;
             var count = result.count;
-            debugger;
             if (data.length == 0 && currentPage > 0) {
                 $.showPage(currentPage - 1);
             } else if (data.length == 0 && currentPage == 0) {
@@ -26,12 +26,12 @@ jQuery.extend({
                     pagesShow = countForPages;
                 }
 
-                var ul = $('<ul>');
+                var ul = $('#pages').empty();
                 if (currentPage > 0) {
                     ul.append($('<li>')
                             .append($('<a>').html('首页').attr('href', 'javascript:$.changePage(0)')));
                     ul.append($('<li>').append(
-                            $('<a>').html('上一页').attr('href', 'javascript:$.changePage(\'-\')')));
+                            $('<a>').html('<span class="glyphicon glyphicon-chevron-left"> </span>').attr('href', 'javascript:$.changePage(\'-\')')));
                 }
 
                 var startIndex = Math.max(0, currentPage - Math.ceil(pagesShow / 2));
@@ -48,12 +48,11 @@ jQuery.extend({
 
                 if (data.length == countPerPage && params.start + countPerPage < count) {
                     ul.append($('<li>').append(
-                            $('<a>').html('下一页').attr('href', 'javascript:$.changePage(\'+\')')));
+                            $('<a>').html('<span class="glyphicon glyphicon-chevron-right"> </span>').attr('href', 'javascript:$.changePage(\'+\')')));
                     ul.append($('<li>').append(
                             $('<a>').html('末页').attr('href',
                                     'javascript:$.changePage(' + (countForPages - 1) + ')')));
                 }
-                $('#pages').html('').append(ul);
                 $('#pages').append($('<input id="currentPage">').val(currentPage).css('display', 'none'));
                 args.callBack.call(this, data);
             }

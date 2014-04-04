@@ -19,7 +19,7 @@ import com.ktproject.forexpic.service.ForexPicService;
 
 /**
  * 汇市看图
- * @author vteamdell0723
+ * @author vteamdell0723 
  */
 @Controller
 @RequestMapping("forexpicController")
@@ -39,7 +39,7 @@ public class ForexPicController {
 			@RequestParam("limit") final int limit){
 		 Map<String,Object> map = new HashMap<String,Object>();
 		 map.put("start", start);
-		 map.put("start", limit);
+		 map.put("limit", limit);
 		 return forexPicService.queryAllForexPic(map); 
 	} 
 	
