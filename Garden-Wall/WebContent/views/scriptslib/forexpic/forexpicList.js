@@ -29,7 +29,7 @@ $(document).ready(function() {
 	function initImageModel(data) {
 		$('#showImageModel').empty();
 		for (var i = 0; i <data.length; i++) {
-			$('#showImageModel').append('<div class="col-xs-5 col-md-3"><a class="fancybox thumbnail" '
+			$('#showImageModel').append('<div class="col-xs-5 col-md-3"><a class="fancybox thumbnail" rel="group" '
 			+ ' href="'+data[i].imageUrl+'" '
 			+ ' title="测试样例"> '
 			+ ' <img src="'+data[i].imageUrl+'" alt="" /> </a></div>');
