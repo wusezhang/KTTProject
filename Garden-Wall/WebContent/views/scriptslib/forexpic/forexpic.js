@@ -36,14 +36,14 @@ function  initDataSet(data){
 	 	   	    	 $('#firstRow').append('<div class="col-xs-5 col-md-3">'
 						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')" >'
 						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
-						+ '<div class="caption bottomshowInfor"> '
+						+ '<div class="caption bottomshowInfor"> <span class="glyphicon glyphicon-calendar"> </span> '
 						+ data[i].title
 						+ ' </div> </a> </div>');
 	 	   	    }else if(3<i&&i<8){
 	 	   	    	 $('#secondRow').append('<div class="col-xs-5 col-md-3">'
 						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')">' 
 						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
-						+ '<div class="caption bottomshowInfor"> '
+						+ '<div class="caption bottomshowInfor"> <span class="glyphicon glyphicon-calendar"> </span> '
 						+ data[i].title
 						+ ' </div> </a> </div>');
 	 	   	    }
