@@ -23,6 +23,9 @@
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
           AND A.BZ_FL=#{bzfl}
+        <if test="bzname != null and bzname !='' ">
+           AND  A.BZ_NAME LIKE "%"#{bzname}"%"
+        </if> 
           ORDER BY  A.ID ASC
         <if test="limit != null and limit !='' ">
              LIMIT #{start},#{limit}
@@ -34,6 +37,9 @@
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
           AND A.BZ_FL=#{bzfl}
+        <if test="bzname != null and bzname !='' ">
+           AND  A.BZ_NAME LIKE "%"#{bzname}"%"
+        </if> 
     </select>   
       
       

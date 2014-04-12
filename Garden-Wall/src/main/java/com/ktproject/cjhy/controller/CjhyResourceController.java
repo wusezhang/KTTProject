@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,11 +38,15 @@ public class CjhyResourceController {
 	 
 	 @RequestMapping(value="queryCjhyResourceByCjxjType" , method=RequestMethod.POST)
 	 public  @ResponseBody Map<String,Object> queryCjhyResourceByCjxjType(@RequestParam("start") final int start,
-				@RequestParam("limit") final int limit,@RequestParam("cjxjType") final int cjxjType){
+				@RequestParam("limit") final int limit,@RequestParam("cjxjType") final int cjxjType,
+				@RequestParam("bzname") final String bzname){
 		 Map<String,Object> map = new  HashMap<String,Object>();
 		 map.put("start", start);
 		 map.put("limit", limit);
 		 map.put("bzfl", cjxjType);
+		 if(!StringUtils.isEmpty(bzname)){
+			 map.put("bzname", bzname);
+		 }
 		 return cjhyResourceService.queryCjhyResourceByCjxjType(map);
 	 }
 	 

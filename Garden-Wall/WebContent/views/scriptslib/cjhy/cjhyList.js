@@ -11,19 +11,19 @@ $(document).ready(function(){
 	}
 	
 	function bindEvent(){
-		
+		$('#btnAuthorSearch').bind('click',authorSearchEvent);
 	}
 	
 	//初始化相应的作家列表信息.
-	function  initResourceList(){
-		
+	function  authorSearchEvent(){
+		 $.showPage(0);
 	}
 	
 });
 
 function  initArgs(){
 	return {url:'../../cjhy/queryCjhyResourceByCjxjType',
-		      params:{cjxjType:0,countPerPage:12},
+		      params:{cjxjType:0,countPerPage:12,bzname:$.trim($('#bznameInput').val())},
 		      callBack:function(data){initAuthorModel(data);}		
 		    };
 }
