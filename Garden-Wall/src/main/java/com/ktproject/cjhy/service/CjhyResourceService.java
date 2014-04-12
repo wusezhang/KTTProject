@@ -20,6 +20,13 @@ public interface CjhyResourceService {
 	 */
 	Map<String,Object>  queryCjhyResourceByCjxjType(final Map map);
 	
+	/**
+	 * 根据作者ID查找相应的文章列表.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryCjhyResourceDetailById(final Map map);
+	
     /**
      * 根据作家ID查询相应的用户文章信息列表.
      * @param authorId

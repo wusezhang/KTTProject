@@ -1,57 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl">
-    
-    <resultMap type="com.ktproject.cjhy.model.CjhyResourceModel" id="ObjectResultMap">
-         <result column="BZNAME" property="bzname"/>
-         <result column="BZINTRODUCE" property="bzintroduce"/>
-         <result column="BZFL" property="bzfl"/>
-         <result column="SRCNAME" property="srcname"/>
-         <result column="ID" property="id"/>
-         <result column="CREATEDATE" property="createDate"/>
-    </resultMap> 
-    
-    <select id="queryCjhyAuthor" resultMap="ObjectResultMap">
-          SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
-          A.SRC_NAME AS SRCNAME , A.ID AS ID 
-          FROM  CJXJ_RESOURCE_TABLE  A
-    </select>
-    
-    <select id="queryCjhyAuthorById" resultMap="ObjectResultMap" parameterType="hashmap">
-        SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
-          A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE 
-          FROM  CJXJ_RESOURCE_TABLE  A
-          WHERE  1=1 
-          AND A.BZ_FL=#{bzfl}
-        <if test="bzname != null and bzname !='' ">
-           AND  A.BZ_NAME LIKE "%"#{bzname}"%"
-        </if> 
-          ORDER BY  A.ID ASC
-        <if test="limit != null and limit !='' ">
-             LIMIT #{start},#{limit}
-        </if>  
-    </select> 
-    
-    <select id="queryCjhyAuthorByIdCount"  resultType="int" parameterType="hashmap">
-        SELECT COUNT(*)
-          FROM  CJXJ_RESOURCE_TABLE  A
-          WHERE  1=1 
-          AND A.BZ_FL=#{bzfl}
-        <if test="bzname != null and bzname !='' ">
-           AND  A.BZ_NAME LIKE "%"#{bzname}"%"
-        </if> 
-    </select>   
-      
-      
-    <select id="queryArticleByAuthorId" resultMap="ObjectResultMap" parameterType="hashmap">
-       SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,
-          A.SRC_NAME AS SRCNAME , A.ID AS ID 
-       FROM  CJXJ_RESOURCE_TABLE  A
-       WHERE  1=1
-     <if test="authorId!='' and authorId!=null">
-       AND  A.ID =#{authorId}
-     </if> 
-    </select>
-    
-    
+
+	<resultMap type="com.ktproject.cjhy.model.CjhyResourceModel"
+		id="ObjectResultMap">
+		<result column="BZNAME" property="bzname" />
+		<result column="BZINTRODUCE" property="bzintroduce" />
+		<result column="BZFL" property="bzfl" />
+		<result column="SRCNAME" property="srcname" />
+		<result column="ID" property="id" />
+		<result column="CREATEDATE" property="createDate" />
+	</resultMap>
+
+	<resultMap type="com.ktproject.cjhy.model.CjhyResourceDetailModel"
+		id="detailResultMap">
+        <result column="TITLE" property="title" />
+        <result column="IMAGEURL" property="imageUrl" />
+        <result column="PUBDATE" property="pubDate" />
+        <result column="LINKURL" property="linkUrl" />
+	</resultMap>
+
+
+	<select id="queryCjhyAuthor" resultMap="ObjectResultMap">
+		SELECT A.BZ_NAME AS
+		BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL,
+		A.SRC_NAME AS
+		SRCNAME , A.ID AS ID
+		FROM CJXJ_RESOURCE_TABLE A
+	</select>
+
+	<select id="queryCjhyAuthorById" resultMap="ObjectResultMap"
+		parameterType="hashmap">
+		SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS
+		BZFL ,
+		A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE
+		FROM CJXJ_RESOURCE_TABLE A
+		WHERE 1=1
+		AND A.BZ_FL=#{bzfl}
+		<if test="bzname != null and bzname !='' ">
+			AND A.BZ_NAME LIKE "%"#{bzname}"%"
+		</if>
+		ORDER BY A.ID ASC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+
+	<select id="queryCjhyAuthorByIdCount" resultType="int"
+		parameterType="hashmap">
+		SELECT COUNT(*)
+		FROM CJXJ_RESOURCE_TABLE A
+		WHERE 1=1
+		AND A.BZ_FL=#{bzfl}
+		<if test="bzname != null and bzname !='' ">
+			AND A.BZ_NAME LIKE "%"#{bzname}"%"
+		</if>
+	</select>
+
+
+	<select id="queryArticleByAuthorId" resultMap="ObjectResultMap"
+		parameterType="hashmap">
+		SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,
+		A.SRC_NAME AS SRCNAME , A.ID AS ID
+		FROM CJXJ_RESOURCE_TABLE A
+		WHERE 1=1
+		<if test="authorId!='' and authorId!=null">
+			AND A.ID =#{authorId}
+		</if>
+	</select>
+
+	<select id="queryCjhyResourceDetailById" resultMap="detailResultMap"
+		parameterType="hashmap">
+		SELECT CJXJ_DETAIL.TITLE AS TITLE , CJXJ_DETAIL.IMAGEURL AS IMAGEURL ,
+		CJXJ_DETAIL.PUBDATE AS PUBDATE , CJXJ_DETAIL.LINKURL AS LINKURL
+		FROM
+		CJXJ_RESOURCE_DETAIL_TABLE CJXJ_DETAIL
+		WHERE 1=1
+		AND CJXJ_DETAIL.ID = #{id}
+		ORDER BY CJXJ_DETAIL.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+
+	<select id="queryCjhyResourceDetailByIdCount" resultType="int"
+		parameterType="hashmap">
+		SELECT COUNT(*)
+		FROM CJXJ_RESOURCE_DETAIL_TABLE CJXJ_DETAIL
+		WHERE 1=1
+		AND CJXJ_DETAIL.ID = #{id}
+	</select>
+
 </mapper>

@@ -50,5 +50,16 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 	public CjhyResourceModel queryArticleByAuthorId(int authorId) {		
 		return cjhyResourceDao.queryArticleByAuthorId(authorId);
 	}
+
+	/** 
+	 * 根据作者ID查找相应的文章列表.
+	 * @see com.ktproject.cjhy.service.CjhyResourceService#queryCjhyResourceDetailById(java.util.Map)
+	 */
+	public Map<String, Object> queryCjhyResourceDetailById(Map map) {
+		Map<String,Object> hashmap = new  HashMap<String,Object>();
+		hashmap.put("data", cjhyResourceDao.queryCjhyResourceDetailById(map));
+		hashmap.put("count", cjhyResourceDao.queryCjhyResourceDetailByIdCount(map));
+		return  hashmap;
+	}
       
 }

@@ -3,6 +3,7 @@ package com.ktproject.cjhy.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.ktproject.cjhy.model.CjhyResourceDetailModel;
 import com.ktproject.cjhy.model.CjhyResourceModel;
 
 public interface CjhyResourceDao {
@@ -27,6 +28,19 @@ public interface CjhyResourceDao {
 	    */
 	   public  int  queryCjhyAuthorByIdCount(final Map map);
 	   
+	   /**
+	    * 根据ID查询相应的文章列表.
+	    * @param map
+	    * @return
+	    */
+	   public  List<CjhyResourceDetailModel> queryCjhyResourceDetailById(final Map map);
+	   
+	   /**
+	    * 根据ID查询财经学家文章列表总数
+	    * @param map
+	    * @return
+	    */
+	   public  int  queryCjhyResourceDetailByIdCount(final Map map);
 	   
 	   /**
 	     * 根据作家ID查询相应的用户文章信息列表.

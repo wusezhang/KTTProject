@@ -1,9 +1,29 @@
+/**
+ * 创建于: 2014年4月12日 下午5:28:15<br>
+ * 所属项目:财汇网
+ * 文件名称:CjhyResourceModel.java
+ * 作者:ZJJ
+ * 版权信息: 版权所有 © 2001-2013 科投股份有限公司
+ */
 package com.ktproject.cjhy.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CjhyResourceModel {
+/**
+ * 类功能描述：
+ * CjhyResourceModel.java
+ * @author ZJJ
+ * @version 0.1.0
+ * @history 2014年4月12日 ZJJ 创建CjhyResourceModel.java
+ */
+public class CjhyResourceModel implements Serializable {
     
+	/**
+	 * model标识符.
+	 */
+	private static final long serialVersionUID = 3449181683491266901L;
+
 	/**
 	 * 财经学家名称.
 	 */
