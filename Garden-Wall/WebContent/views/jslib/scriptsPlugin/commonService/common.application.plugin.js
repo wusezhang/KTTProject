@@ -8,6 +8,9 @@ jQuery.extend({
     showPage : function(currentPage) {
         var countPerPage = 8;
         var args = initArgs();
+        if(args.params.countPerPage){
+        	countPerPage =args.params.countPerPage;
+        }
         var params = args.params;
         var pagesShow = 10;// The count for the links can be accepted.
         params.limit = countPerPage;

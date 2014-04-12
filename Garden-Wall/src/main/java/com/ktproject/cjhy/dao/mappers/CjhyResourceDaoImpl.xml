@@ -22,9 +22,7 @@
           A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE 
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
-        <if test="bzfl!='' and bzfl!=null">
-           AND A.BZ_FL=#{bzfl}
-        </if>
+          AND A.BZ_FL=#{bzfl}
           ORDER BY  A.ID ASC
         <if test="limit != null and limit !='' ">
              LIMIT #{start},#{limit}
@@ -35,9 +33,7 @@
         SELECT COUNT(*)
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
-        <if test="bzfl!='' and bzfl!=null">
-           AND A.BZ_FL=#{bzfl}
-        </if>
+          AND A.BZ_FL=#{bzfl}
     </select>   
       
       

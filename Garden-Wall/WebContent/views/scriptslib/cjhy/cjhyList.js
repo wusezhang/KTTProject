@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 function  initArgs(){
 	return {url:'../../cjhy/queryCjhyResourceByCjxjType',
-		      params:{cjxjType:0},
+		      params:{cjxjType:0,countPerPage:12},
 		      callBack:function(data){initAuthorModel(data);}		
 		    };
 }
@@ -35,7 +35,7 @@ function  initAuthorModel(data){
 		      +'<td>'+data[i].bzname+'</td>'
           	  +'<td> '+data[i].bzintroduce +'</td> '
           	  +'<td> '+$.formatLong(data[i].createDate)+'</td> '
-          	  +'<td><a href="#" class="btn btn-sm btn-primary">查看评论列表</a></td></tr>');
+          	  +'<td><a href="#" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-ok-sign"> </span>&nbsp;&nbsp;评论列表</a></td></tr>');
 	}
 	
 }
