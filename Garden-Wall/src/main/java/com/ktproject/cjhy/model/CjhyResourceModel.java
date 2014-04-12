@@ -1,5 +1,7 @@
 package com.ktproject.cjhy.model;
 
+import java.util.Date;
+
 public class CjhyResourceModel {
     
 	/**
@@ -26,6 +28,11 @@ public class CjhyResourceModel {
      * 财经学家分类.
      */
     private  String  bzfl;
+    
+    /**
+     * 搜录日期
+     */
+    private Date  createDate;
 
 	/**
 	 * @return the bzname
@@ -95,6 +102,20 @@ public class CjhyResourceModel {
 	 */
 	public void setSrcname(String srcname) {
 		this.srcname = srcname;
+	}
+
+	/**
+	 * @return the createDate
+	 */
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	/**
+	 * @param createDate the createDate to set
+	 */
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
     
     

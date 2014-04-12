@@ -17,14 +17,25 @@ $(document).ready(function(){
 	//初始化相应的作家列表信息.
 	function  initResourceList(){
 		
-		
 	}
 	
 });
 
 function  initArgs(){
-	 return {url:'../../cjhy/queryCjhyResourceByCjxjType',
+	return {url:'../../cjhy/queryCjhyResourceByCjxjType',
 		      params:{cjxjType:0},
-		      callBack:function(data){ }		
+		      callBack:function(data){initAuthorModel(data);}		
 		    };
+}
+
+function  initAuthorModel(data){
+	$('#authShowModel').empty();
+	for(var i=0 ;i<data.length;i++){
+		$('#authShowModel').append('<tr><td><img src="../imagelib/celeBlogImage/'+data[i].srcname+'" class="img-rounded imageShowModal"/></td>'
+		      +'<td>'+data[i].bzname+'</td>'
+          	  +'<td> '+data[i].bzintroduce +'</td> '
+          	  +'<td> '+$.formatLong(data[i].createDate)+'</td> '
+          	  +'<td><a href="#" class="btn btn-sm btn-primary">查看评论列表</a></td></tr>');
+	}
+	
 }

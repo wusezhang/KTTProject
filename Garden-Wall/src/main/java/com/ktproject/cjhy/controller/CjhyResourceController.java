@@ -41,7 +41,7 @@ public class CjhyResourceController {
 		 Map<String,Object> map = new  HashMap<String,Object>();
 		 map.put("start", start);
 		 map.put("limit", limit);
-		 map.put("cjxjType", cjxjType);
+		 map.put("bzfl", cjxjType);
 		 return cjhyResourceService.queryCjhyResourceByCjxjType(map);
 	 }
 	 

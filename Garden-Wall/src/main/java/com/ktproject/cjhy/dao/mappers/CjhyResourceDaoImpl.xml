@@ -8,6 +8,7 @@
          <result column="BZFL" property="bzfl"/>
          <result column="SRCNAME" property="srcname"/>
          <result column="ID" property="id"/>
+         <result column="CREATEDATE" property="createDate"/>
     </resultMap> 
     
     <select id="queryCjhyAuthor" resultMap="ObjectResultMap">
@@ -18,7 +19,7 @@
     
     <select id="queryCjhyAuthorById" resultMap="ObjectResultMap" parameterType="hashmap">
         SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS BZFL , 
-          A.SRC_NAME AS SRCNAME , A.ID AS ID 
+          A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE 
           FROM  CJXJ_RESOURCE_TABLE  A
           WHERE  1=1 
         <if test="bzfl!='' and bzfl!=null">
