@@ -23,8 +23,20 @@
           WHERE  1=1 
         <if test="bzfl!='' and bzfl!=null">
            AND A.BZ_FL=#{bzfl}
-        </if>  
+        </if>
           ORDER BY  A.ID ASC
+        <if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>  
+    </select> 
+    
+    <select id="queryCjhyAuthorByIdCount"  resultType="int" parameterType="hashmap">
+        SELECT COUNT(*)
+          FROM  CJXJ_RESOURCE_TABLE  A
+          WHERE  1=1 
+        <if test="bzfl!='' and bzfl!=null">
+           AND A.BZ_FL=#{bzfl}
+        </if>
     </select>   
       
       

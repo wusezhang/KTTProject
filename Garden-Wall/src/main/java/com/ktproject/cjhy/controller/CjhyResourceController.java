@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import com.ktproject.cjhy.model.CjhyResourceModel;
 import com.ktproject.cjhy.service.CjhyResourceService;
 
@@ -32,8 +36,13 @@ public class CjhyResourceController {
 	 
 	 
 	 @RequestMapping(value="queryCjhyResourceByCjxjType" , method=RequestMethod.POST)
-	 public  @ResponseBody List<CjhyResourceModel> queryCjhyResourceByCjxjType(@RequestParam("cjxjType") final int cjxjType){
-		 return cjhyResourceService.queryCjhyResourceByCjxjType(cjxjType);
+	 public  @ResponseBody Map<String,Object> queryCjhyResourceByCjxjType(@RequestParam("start") final int start,
+				@RequestParam("limit") final int limit,@RequestParam("cjxjType") final int cjxjType){
+		 Map<String,Object> map = new  HashMap<String,Object>();
+		 map.put("start", start);
+		 map.put("limit", limit);
+		 map.put("cjxjType", cjxjType);
+		 return cjhyResourceService.queryCjhyResourceByCjxjType(map);
 	 }
 	 
 	 @RequestMapping(value="queryArticleByAuthorId",method=RequestMethod.POST)

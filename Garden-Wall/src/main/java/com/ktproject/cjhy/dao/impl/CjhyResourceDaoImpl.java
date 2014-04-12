@@ -35,13 +35,20 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 	  * @param id
 	  * @return
 	  */
-	public List<CjhyResourceModel> queryCjhyAuthorById(final int bzfl) {
-		Map<String, Integer>  mapParam = new HashMap<String, Integer>();
-		mapParam.put("bzfl", bzfl);
+	public List<CjhyResourceModel> queryCjhyAuthorById(final Map mapParam) {
 		log.info("根据分类查询相应的财经学家信息");
 		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthorById", mapParam);
 	}
-
+    
+	/** 
+	 * 根据分类查询相应的财经学家信息条数
+	 * @see com.ktproject.cjhy.dao.CjhyResourceDao#queryCjhyAuthorByIdCount(java.util.Map)
+	 */
+	public int queryCjhyAuthorByIdCount(final Map map) {
+		log.info("根据分类查询相应的财经学家信息条数");
+		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyAuthorByIdCount", map);
+	}
+	
 	/**
      * 根据作家ID查询相应的用户文章信息列表.
      * @param authorId
@@ -53,5 +60,7 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 		mapParam.put("authorId", authorId);
 		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryArticleByAuthorId",mapParam);
 	}
+
+
 
 }

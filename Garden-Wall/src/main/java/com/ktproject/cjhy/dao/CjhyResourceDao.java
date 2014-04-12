@@ -1,6 +1,7 @@
 package com.ktproject.cjhy.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.ktproject.cjhy.model.CjhyResourceModel;
 
@@ -17,7 +18,14 @@ public interface CjhyResourceDao {
 	    * @param id
 	    * @return
 	    */
-	   public  List<CjhyResourceModel>  queryCjhyAuthorById(final int bzfl);
+	   public  List<CjhyResourceModel>  queryCjhyAuthorById(final Map map);
+	   
+	   /**
+	    * 根据相应的财经学家ID获得相应的财经详细信息的条数.
+	    * @param map
+	    * @return
+	    */
+	   public  int  queryCjhyAuthorByIdCount(final Map map);
 	   
 	   
 	   /**

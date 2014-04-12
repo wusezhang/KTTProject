@@ -1,6 +1,8 @@
 package com.ktproject.cjhy.service;
 
 import java.util.List;
+import java.util.Map;
+
 import com.ktproject.cjhy.model.CjhyResourceModel;
 
 public interface CjhyResourceService {
@@ -16,7 +18,7 @@ public interface CjhyResourceService {
 	 * @param cjxjType
 	 * @return
 	 */
-	List<CjhyResourceModel>  queryCjhyResourceByCjxjType(final int bzfl);
+	Map<String,Object>  queryCjhyResourceByCjxjType(final Map map);
 	
     /**
      * 根据作家ID查询相应的用户文章信息列表.

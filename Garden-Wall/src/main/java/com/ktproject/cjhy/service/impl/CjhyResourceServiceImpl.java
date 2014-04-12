@@ -1,10 +1,13 @@
 package com.ktproject.cjhy.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ktproject.cjhy.dao.CjhyResourceDao;
 import com.ktproject.cjhy.model.CjhyResourceModel;
 import com.ktproject.cjhy.service.CjhyResourceService;
@@ -32,8 +35,11 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 	 * @param cjxjType
 	 * @return
 	 */
-	public List<CjhyResourceModel> queryCjhyResourceByCjxjType(final int bzfl) {
-		return cjhyResourceDao.queryCjhyAuthorById(bzfl);
+	public Map<String,Object> queryCjhyResourceByCjxjType(final Map map) {
+		Map<String,Object> hashmap = new  HashMap<String,Object>();
+		hashmap.put("data", cjhyResourceDao.queryCjhyAuthorById(map));
+		hashmap.put("count", cjhyResourceDao.queryCjhyAuthorByIdCount(map));
+		return  hashmap;
 	}
     
     /**

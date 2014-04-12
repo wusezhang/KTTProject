@@ -5,8 +5,9 @@ $(document).ready(function(){
 	});
 	
 	function initModel(){
-		 //轮播初始化
-		 $('#articleTitleCarousel').carousel();
+	   
+	   //初始化相应的分页框架   
+	   $.showPage(0);
 	}
 	
 	function bindEvent(){
@@ -15,8 +16,15 @@ $(document).ready(function(){
 	
 	//初始化相应的作家列表信息.
 	function  initResourceList(){
-		//拿到相应存储的cook的值.
+		
 		
 	}
 	
 });
+
+function  initArgs(){
+	 return {url:'../../cjhy/queryCjhyResourceByCjxjType',
+		      params:{cjxjType:0},
+		      callBack:function(data){ }		
+		    };
+}
