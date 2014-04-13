@@ -7,6 +7,7 @@
  */
 package com.ktproject.cjhy.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -42,8 +43,11 @@ public class HshyResourceController {
 	public  @ResponseBody Map<String,Object> queryHshyResourceById(@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit,
 			@RequestParam("id") final int id){
-			
-		return null;
+		Map<String,Object> map = new HashMap<String,Object>();
+		map.put("start", start);
+		map.put("limit", limit);
+		map.put("id", id);
+		return hshyResourceService.queryHshyResourceById(map);
 	}
 	
 }

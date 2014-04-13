@@ -7,6 +7,10 @@
  */
 package com.ktproject.cjhy.dao;
 
+import java.util.List;
+import java.util.Map;
+import com.ktproject.cjhy.model.CjhyResourceDetailModel;
+
 /**
  * 类功能描述：
  * HshyResourceDao.java
@@ -15,5 +19,18 @@ package com.ktproject.cjhy.dao;
  * @history 2014年4月13日 ZJJ 创建HshyResourceDao.java
  */
 public interface HshyResourceDao {
-
+	
+	 /**
+	  * 根据ID做相应的明细记录查询.
+	  * @param map
+	  * @return
+	  */
+     public  List<CjhyResourceDetailModel> queryHshyResourceDetailById(final Map map);
+     
+     /**
+      * 根据过滤条件查询相应的总记录数.
+      * @param map
+      * @return
+      */
+     public  int  queryHshyResourceDetailCount(final Map map);
 }

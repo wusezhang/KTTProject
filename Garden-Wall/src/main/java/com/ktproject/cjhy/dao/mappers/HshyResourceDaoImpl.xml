@@ -10,6 +10,27 @@
         <result column="DESCRIPTCONTEXT" property="descriptContext" />
 	</resultMap>
 	
-	
+	<select id="queryHshyResourceDetailById" resultMap="detailResultMap"
+		parameterType="hashmap">
+		SELECT HSHY_RESOURCE.TITLE AS TITLE , CJXJ.SRC_NAME AS IMAGEURL ,
+		HSHY_RESOURCE.PUBDATE AS PUBDATE , HSHY_RESOURCE.LINKURL AS LINKURL,
+		HSHY_RESOURCE.DESCRIPTCONTEXT
+		FROM
+		HSHY_RESOURCE_DETAIL_TABLE HSHY_RESOURCE , CJXJ_RESOURCE_TABLE CJXJ
+		WHERE 1=1
+		AND HSHY_RESOURCE.ID = #{id}
+		AND  CJXJ.ID = HSHY_RESOURCE.ID
+		ORDER BY HSHY_RESOURCE.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+
+	<select id="queryHshyResourceDetailCount" resultType="int"
+		parameterType="hashmap">
+		SELECT COUNT(*) FROM  HSHY_RESOURCE_DETAIL_TABLE HSHY_RESOURCE
+		WHERE 1=1
+		AND HSHY_RESOURCE.ID = #{id}
+	</select>
 
 </mapper>

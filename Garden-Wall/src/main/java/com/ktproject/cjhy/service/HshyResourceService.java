@@ -7,6 +7,8 @@
  */
 package com.ktproject.cjhy.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：
  * HshyResourceService.java
@@ -15,5 +17,11 @@ package com.ktproject.cjhy.service;
  * @history 2014年4月13日 ZJJ 创建HshyResourceService.java
  */
 public interface HshyResourceService {
-
+	
+	/**
+	 * 根据ID查询相应的外汇名家文章.
+	 * @param map
+	 * @return
+	 */
+	public  Map<String,Object> queryHshyResourceById(final Map map);
 }
