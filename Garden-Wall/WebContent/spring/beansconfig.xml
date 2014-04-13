@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="userService" class="gw.biz.user.imp.UserBiz" scope="prototype"></bean>
+	<bean id="userService" class="gw.biz.user.imp.UserBiz" scope="prototype" />
 	<!-- 1. 什么是scope？ scope用来声明IOC容器中的对象应该处的限定场景或者说该对象的存活空间，即在IOC容器在对象进入相应的scope之前，生成并装配这些对象，在该对象不再处于这些scope的限定之后，容器通常会销毁这些对象。 
 		2. scope分类 目前，scope的取值有5种。 在Spring 2.0之前，有singleton和prototype两种； 在Spring 
 		2.0之后，为支持web应用的ApplicationContext，推出另外三种：request，session和global session类型。 
@@ -22,12 +22,9 @@
 	<bean id="cjhyResourceDao"  class="com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl" scope="prototype"/>
 	
 	<bean id="forexPicService" class="com.ktproject.forexpic.service.impl.ForexPicServiceImpl" scope="prototype"/>
-	<bean id="forexPicDAO" class="com.ktproject.forexpic.dao.impl.ForexPicDAOImpl" scope="prototype">
+	<bean id="forexPicDAO" class="com.ktproject.forexpic.dao.impl.ForexPicDAOImpl" scope="prototype" />
 	
 	<bean id="hshyResourceService" class="com.ktproject.cjhy.service.impl.HshyResourceServiceImpl" scope="prototype"/>
-	<bean id="hshyResourceDao" class="com.ktproject.cjhy.dao.impl.HshyResourceServiceImpl" scope="prototype"/> 
-	
-		
-	</bean>
+	<bean id="hshyResourceDao" class="com.ktproject.cjhy.dao.impl.HshyResourceDaoImpl" scope="prototype"/> 
 	 	
 </beans>
