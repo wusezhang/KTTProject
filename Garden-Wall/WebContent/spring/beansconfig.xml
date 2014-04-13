@@ -23,6 +23,10 @@
 	
 	<bean id="forexPicService" class="com.ktproject.forexpic.service.impl.ForexPicServiceImpl" scope="prototype"/>
 	<bean id="forexPicDAO" class="com.ktproject.forexpic.dao.impl.ForexPicDAOImpl" scope="prototype">
+	
+	<bean id="hshyResourceService" class="com.ktproject.cjhy.service.impl.HshyResourceServiceImpl" scope="prototype"/>
+	<bean id="hshyResourceDao" class="com.ktproject.cjhy.dao.impl.HshyResourceServiceImpl" scope="prototype"/> 
+	
 		
 	</bean>
 	 	

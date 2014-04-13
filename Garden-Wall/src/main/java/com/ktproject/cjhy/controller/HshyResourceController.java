@@ -7,6 +7,19 @@
  */
 package com.ktproject.cjhy.controller;
 
+import java.util.Map;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.ktproject.cjhy.service.HshyResourceService;
+
 /**
  * 类功能描述：
  * HshyResourceController.java
@@ -14,6 +27,23 @@ package com.ktproject.cjhy.controller;
  * @version 0.1.0
  * @history 2014年4月13日 ZJJ 创建HshyResourceController.java
  */
+@Controller
+@RequestMapping("hshy")
 public class HshyResourceController {
-
+	/**
+	 * 日志管理器，以便于跟踪错误.
+	 */
+	private Log log = LogFactory.getLog(HshyResourceController.class);
+	
+	@Autowired
+	private HshyResourceService hshyResourceService;
+	
+	@RequestMapping(value = "queryHshyResourceById", method = RequestMethod.POST)
+	public  @ResponseBody Map<String,Object> queryHshyResourceById(@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit,
+			@RequestParam("id") final int id){
+			
+		return null;
+	}
+	
 }

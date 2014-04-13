@@ -5,7 +5,7 @@ $(document).ready(function(){
 	});
 	
 	function initModel(){
-	    //$.showPage(0);
+	    $.showPage(0);
 	}
 	
 	function bindEvent(){
@@ -17,8 +17,8 @@ $(document).ready(function(){
 });
 
 function  initArgs(){
-	return {url:'../../cjhy/queryCjhyResourceDetailById',
-		      params:{bzfl:0,countPerPage:10,id:$.getParam('id')},
+	return {url:'../../hshy/queryHshyResourceById',
+		      params:{countPerPage:10,id:$.getParam('id')},
 		      callBack:function(data){initAuthorArticleList(data);}		
 		    };
 }

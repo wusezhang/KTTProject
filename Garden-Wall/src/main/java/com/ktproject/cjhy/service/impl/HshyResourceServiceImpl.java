@@ -7,6 +7,10 @@
  */
 package com.ktproject.cjhy.service.impl;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.ktproject.cjhy.dao.HshyResourceDao;
 import com.ktproject.cjhy.service.HshyResourceService;
 
 /**
@@ -16,6 +20,16 @@ import com.ktproject.cjhy.service.HshyResourceService;
  * @version 0.1.0
  * @history 2014年4月13日 ZJJ 创建HshyResourceServiceImpl.java
  */
-public class HshyResourceServiceImpl implements HshyResourceService{
-   
+public class HshyResourceServiceImpl implements HshyResourceService{ 
+	
+	/**
+	 * 日志管理器，以便于跟踪错误.
+	 */
+	 private  Log  log = LogFactory.getLog(HshyResourceServiceImpl.class);
+	
+	@Autowired
+	private HshyResourceDao  hshyResourceDao ;
+	 
+	 
+	 
 }

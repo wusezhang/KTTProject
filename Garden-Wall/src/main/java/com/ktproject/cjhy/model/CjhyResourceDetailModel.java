@@ -39,6 +39,10 @@ public class CjhyResourceDetailModel implements Serializable {
 	 */
 	private  String linkUrl;
 	/**
+	 * 文章描述.
+	 */
+	private  String descriptContext; 
+	/**
 	 * @return the title
 	 */
 	public String getTitle() {
@@ -85,6 +89,18 @@ public class CjhyResourceDetailModel implements Serializable {
 	 */
 	public void setLinkUrl(String linkUrl) {
 		this.linkUrl = linkUrl;
+	}
+	/**
+	 * @return the descriptContext
+	 */
+	public String getDescriptContext() {
+		return descriptContext;
+	}
+	/**
+	 * @param descriptContext the descriptContext to set
+	 */
+	public void setDescriptContext(String descriptContext) {
+		this.descriptContext = descriptContext;
 	}
 	
 	
