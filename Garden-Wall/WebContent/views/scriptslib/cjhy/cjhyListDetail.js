@@ -34,5 +34,5 @@ function  initAuthorArticleList(data){
 }
 
 function  clickGoodPointEvent(id){
-	alert(id);
+	
 }
