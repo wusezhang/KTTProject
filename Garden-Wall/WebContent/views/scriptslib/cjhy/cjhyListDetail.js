@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 function  initArgs(){
 	return {url:'../../cjhy/queryCjhyResourceDetailById',
-		      params:{bzfl:0,countPerPage:10,id:$.getParam('id')},
+		      params:{bzfl:0,countPerPage:8,id:$.getParam('id')},
 		      callBack:function(data){initAuthorArticleList(data);}		
 		    };
 }
