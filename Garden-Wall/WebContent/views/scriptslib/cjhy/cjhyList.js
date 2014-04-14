@@ -11,6 +11,13 @@ $(document).ready(function(){
 	}
 	
 	function bindEvent(){
+		
+		//ENTER 按钮绑定事件.
+		$(document).keydown(function(event){  
+              if(event.keyCode==13){  
+                  $('#btnAuthorSearch').click();  
+               }});
+
 		$('#btnAuthorSearch').bind('click',authorSearchEvent);
 	}
 	
