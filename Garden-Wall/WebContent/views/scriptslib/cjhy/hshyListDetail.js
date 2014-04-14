@@ -29,7 +29,6 @@ function  initAuthorArticleList(data){
 		  $('#authShowModel').append('<tr><td><img src="'+initImageShow(data[i])+'"  class="img-rounded imageShowModal"/></td>'
 		      +'<td><a href="'+data[i].linkUrl+'" class="btn btn-link" target="view_window">'+data[i].title+'</a></td>'
           	  +'<td> '+$.formatLong(data[i].pubDate)+'</td> '
-          	  +'<td>'+data[i].descriptContext+'</td> '
           	  +'</tr>');
 	}
 }
