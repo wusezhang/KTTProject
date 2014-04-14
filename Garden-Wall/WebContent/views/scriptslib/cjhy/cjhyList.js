@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 function  initArgs(){
 	return {url:'../../cjhy/queryCjhyResourceByCjxjType',
-		      params:{cjxjType:0,countPerPage:12,bzname:$.trim($('#bznameInput').val())},
+		      params:{cjxjType:0,countPerPage:11,bzname:$.trim($('#bznameInput').val())},
 		      callBack:function(data){initAuthorModel(data);}		
 		    };
 }
