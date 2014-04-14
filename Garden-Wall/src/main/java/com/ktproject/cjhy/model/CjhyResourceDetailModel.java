@@ -22,6 +22,10 @@ public class CjhyResourceDetailModel implements Serializable {
 	 * model标示符.
 	 */
 	private static final long serialVersionUID = 7672676389701885112L;
+	/**
+	 *唯一主键约束. 
+	 */
+	private  String  id ;
     /**
      * 文章标题.   
      */
@@ -118,6 +122,17 @@ public class CjhyResourceDetailModel implements Serializable {
 	public void setSrcName(String srcName) {
 		this.srcName = srcName;
 	}
-	
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 }
