@@ -26,11 +26,20 @@ function  initArgs(){
 function  initAuthorArticleList(data){
 	$('#authShowModel').empty();
 	for(var i = 0 ; i<data.length;i++){
-		  $('#authShowModel').append('<tr><td><img src="../imagelib/celeBlogImage/'+data[i].imageUrl+'"  class="img-rounded imageShowModal"/></td>'
+		  $('#authShowModel').append('<tr><td><img src="'+initImageShow(data[i])+'"  class="img-rounded imageShowModal"/></td>'
 		      +'<td><a href="'+data[i].linkUrl+'" class="btn btn-link" target="view_window">'+data[i].title+'</a></td>'
           	  +'<td> '+$.formatLong(data[i].pubDate)+'</td> '
           	  +'<td>'+data[i].descriptContext+'</td> '
           	  +'</tr>');
 	}
+}
+
+//展示图片做相应的初始化.
+function  initImageShow(data){
+	 if(data.imageUrl){
+	 	 return  data.imageUrl;
+	 }else{
+	 	 return '../imagelib/celeBlogImage/'+data.srcName;
+	 }
 }
 

@@ -43,6 +43,10 @@ public class CjhyResourceDetailModel implements Serializable {
 	 */
 	private  String descriptContext; 
 	/**
+	 * 财经学家图片名字.
+	 */
+	private  String  srcName;
+	/**
 	 * @return the title
 	 */
 	public String getTitle() {
@@ -101,6 +105,18 @@ public class CjhyResourceDetailModel implements Serializable {
 	 */
 	public void setDescriptContext(String descriptContext) {
 		this.descriptContext = descriptContext;
+	}
+	/**
+	 * @return the srcName
+	 */
+	public String getSrcName() {
+		return srcName;
+	}
+	/**
+	 * @param srcName the srcName to set
+	 */
+	public void setSrcName(String srcName) {
+		this.srcName = srcName;
 	}
 	
 	
