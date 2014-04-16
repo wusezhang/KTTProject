@@ -7,22 +7,57 @@
 		<!--CSS文件导入-->
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap-theme.min.css"/>
+		<link  rel="stylesheet" type="text/css" href="../csslib/cjhyYM/mjtjModal.css"/>
 		<!--js文件导入-->
 		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap3/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
 	</head>
 	<body>
-			<div class="col-xs-6">
-				<div class="input-group">
-					<span class="input-group-addon">推荐名家</span>
-					<input type="text" class="form-control" placeholder="推荐名家">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon">名家介绍</span>
-					<input type="text" class="form-control" placeholder="名家介绍">
-				</div>
-			</div>
+		<table class="table table-striped table-condensed table-hover">
+			<tbody>
+				<tr>
+					<td>
+					<div class="input-group modalposition">
+						<span class="input-group-addon">推荐名家</span>
+						<input type="text" class="form-control" placeholder="推荐名家">
+					</div></td>
+				</tr>
+				<tr>
+					<td>
+					<div class="input-group modalposition">
+						<span class="input-group-addon">名家形象</span>
+						<input type="file" id="uploadFile" class="fileinput">
+					</div></td>
+				</tr>
+				<tr>
+					<td>
+					<div class="input-group modalposition">
+						<span class="input-group-addon">名家介绍</span>
+						<input type="text" class="form-control" placeholder="名家介绍">
+					</div></td>
+				</tr>
+				<tr>
+					<td>
+					<div class="input-group modalposition">
+						<span class="input-group-addon">名家博客网址</span>
+						<input type="text" class="form-control" placeholder="名家博客网址">
+					</div></td>
+				</tr>
+				<tr>
+					<td>
+					<div class="input-group buttonposition">
+						<a type="submit" class="btn btn-primary">
+					      <span class="glyphicon glyphicon-share"> </span> 推荐
+						</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary">
+					     <span class="glyphicon glyphicon-remove"> </span> 取消
+						</a>
+					</div></td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>
 
