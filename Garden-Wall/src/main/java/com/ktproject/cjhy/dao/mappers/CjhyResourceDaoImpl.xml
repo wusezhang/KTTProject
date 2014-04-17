@@ -93,5 +93,24 @@
 		WHERE 1=1
 		AND CJXJ_DETAIL.ID = #{id}
 	</select>
+	
+	<select id="queryDailyCjhyResource" resultMap="detailResultMap"  parameterType="hashmap">
+		SELECT CJXJ_DETAIL.TITLE AS TITLE , CJXJ.SRC_NAME AS IMAGEURL ,
+		CJXJ_DETAIL.PUBDATE AS PUBDATE , CJXJ_DETAIL.LINKURL AS LINKURL,
+		CJXJ.ID AS ID
+		FROM
+		CJXJ_RESOURCE_DETAIL_TABLE CJXJ_DETAIL , CJXJ_RESOURCE_TABLE CJXJ
+		WHERE 1=1
+		AND  CJXJ.ID = CJXJ_DETAIL.ID
+		AND  DATE(CJXJ_DETAIL.PUBDATE) = CURDATE()
+		ORDER BY CJXJ_DETAIL.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+	
+	<select id="queryDailyCjhyResourceCount" resultType="int"  parameterType="hashmap">
+		SELECT  COUNT(*) FROM  CJXJ_RESOURCE_DETAIL_TABLE CJXJ_DETAIL  WHERE DATE(CJXJ_DETAIL.PUBDATE) = CURDATE()
+	</select>
 
 </mapper>

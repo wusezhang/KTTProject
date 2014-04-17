@@ -21,6 +21,7 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 	 */
 	private Log  log  = LogFactory.getLog(CjhyResourceDaoImpl.class);
 	
+	
 	@Autowired
 	SqlSession  sqlSession ;
 	
@@ -80,6 +81,26 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 	public int queryCjhyResourceDetailByIdCount(Map map) {
 		log.info("根据ID查询财经学家文章列表总数");
 		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryCjhyResourceDetailByIdCount", map);
+	}
+    
+	/**
+	 * 查询当天的财经慧眼品论.
+	 * @param map
+	 * @return
+	 */
+	public List<CjhyResourceDetailModel> queryDailyCjhyResource(final Map map) {
+		log.info("查询当天的财经慧眼品论!");
+		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryDailyCjhyResource", map);
+	}
+
+	/**
+	  * 查询当天的财经慧眼品论总条数.
+	  * @param map
+	  * @return
+	  */
+	public int queryDailyCjhyResourceCount(final Map map) {
+		log.info("查询当天的财经慧眼品论总条数!");
+		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryDailyCjhyResourceCount", map);
 	}
 
 

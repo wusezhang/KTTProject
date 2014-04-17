@@ -39,5 +39,5 @@ public interface CjhyResourceService {
 	 * @param map
 	 * @return
 	 */
-	Map<String, Object> queryDailyCjhyResource(final Map  map);
+	Map<String, Object> queryDailyCjhyResource(final  Map  map);
 }

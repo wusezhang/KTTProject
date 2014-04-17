@@ -48,4 +48,18 @@ public interface CjhyResourceDao {
 	     * @return 
 	     */
 	   public  CjhyResourceModel  queryArticleByAuthorId(final int authorId);
+	   
+	   /**
+		 * 查询当天的财经慧眼品论.
+		 * @param map
+		 * @return
+		 */
+	   public  List<CjhyResourceDetailModel>   queryDailyCjhyResource(final  Map map);
+	   
+	   /**
+	    * 查询当天的财经慧眼品论总条数.
+	    * @param map
+	    * @return
+	    */
+	   public  int  queryDailyCjhyResourceCount(final  Map  map);
 }

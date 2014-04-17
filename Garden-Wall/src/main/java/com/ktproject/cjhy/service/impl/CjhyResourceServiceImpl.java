@@ -68,8 +68,10 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 	 * @return
 	 */
 	public Map<String, Object> queryDailyCjhyResource(Map map) {
-		
-		return null;
+		Map<String,Object> hashmap = new  HashMap<String,Object>();
+		hashmap.put("data", cjhyResourceDao.queryDailyCjhyResource(map));
+		hashmap.put("count",cjhyResourceDao.queryDailyCjhyResourceCount(map));
+		return  hashmap;
 	}
       
 }
