@@ -81,6 +81,6 @@ public class CjhyResourceController {
 		map.put("start", start);
 		map.put("limit", limit);
 		map.put("today", "");
-		return cjhyResourceService.queryCjhyResourceDetailById(map);
+		return cjhyResourceService.queryDailyCjhyResource(map);
 	}
 }

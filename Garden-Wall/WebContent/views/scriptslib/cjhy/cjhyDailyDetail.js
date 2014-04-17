@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 function  initArgs(){
 	return {url:'../../cjhy/queryDailyCjhyResource',
-		      params:{bzfl:0,countPerPage:8,id:$.getParam('id')},
+		      params:{},
 		      callBack:function(data){initAuthorArticleList(data);}		
 		    };
 }
@@ -26,7 +26,7 @@ function  initAuthorArticleList(data){
 	for(var i = 0 ; i<data.length;i++){
 		  $('#authShowModel').append('<tr><td><img src="../imagelib/celeBlogImage/'+data[i].imageUrl+'"  class="img-rounded imageShowModal"/></td>'
 		      +'<td><a href="'+data[i].linkUrl+'" class="btn btn-link" target="view_window">'+data[i].title+'</a></td>'
-          	  +'<td> '+$.formatLong(data[i].pubDate)+'</td> '
+          	  +'<td> '+$.timeAgo(data[i].pubDate)+'</td> '
           	  +'</tr>');
 	}
 }
