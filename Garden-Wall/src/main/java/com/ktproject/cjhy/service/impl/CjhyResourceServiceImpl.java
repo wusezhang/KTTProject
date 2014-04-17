@@ -61,5 +61,15 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 		hashmap.put("count", cjhyResourceDao.queryCjhyResourceDetailByIdCount(map));
 		return  hashmap;
 	}
+
+	/**
+	 * 查询当天的财经慧眼品论.
+	 * @param map
+	 * @return
+	 */
+	public Map<String, Object> queryDailyCjhyResource(Map map) {
+		
+		return null;
+	}
       
 }

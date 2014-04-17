@@ -51,15 +51,14 @@ public class CjhyResourceController {
 		}
 		return cjhyResourceService.queryCjhyResourceByCjxjType(map);
 	}
-    
-	
+
 	@RequestMapping(value = "queryCjhyResourceDetailById", method = RequestMethod.POST)
 	public @ResponseBody
 	Map<String, Object> queryCjhyResourceDetailById(
 			@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit,
 			@RequestParam("id") final int id) {
-		Map<String,Object> map = new HashMap<String,Object>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", start);
 		map.put("limit", limit);
 		map.put("id", id);
@@ -71,5 +70,17 @@ public class CjhyResourceController {
 	CjhyResourceModel queryArticleByAuthorId(
 			@RequestParam("authorId") final int authorId) {
 		return cjhyResourceService.queryArticleByAuthorId(authorId);
+	}
+     
+	@RequestMapping(value ="queryDailyCjhyResource", method = RequestMethod.POST)
+	public @ResponseBody
+	Map<String, Object> queryDailyCjhyResource(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("start", start);
+		map.put("limit", limit);
+		map.put("today", "");
+		return null;
 	}
 }

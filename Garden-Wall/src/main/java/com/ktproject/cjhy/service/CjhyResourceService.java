@@ -33,4 +33,11 @@ public interface CjhyResourceService {
      * @return 
      */
 	CjhyResourceModel  queryArticleByAuthorId(final int authorId);
+	
+	/**
+	 * 查询当天的财经慧眼品论.
+	 * @param map
+	 * @return
+	 */
+	Map<String, Object> queryDailyCjhyResource(final Map  map);
 }
