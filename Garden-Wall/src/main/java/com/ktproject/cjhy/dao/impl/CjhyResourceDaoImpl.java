@@ -103,6 +103,14 @@ public class CjhyResourceDaoImpl implements CjhyResourceDao {
 		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.queryDailyCjhyResourceCount", map);
 	}
 
+	/**
+	 *  更新相应的博客关注度.
+	 * @see com.ktproject.cjhy.dao.CjhyResourceDao#addDailyPopulateById(java.lang.String)
+	 */
+	public int addDailyPopulateById(final Map map) {
+		return sqlSession.update("com.ktproject.cjhy.dao.impl.CjhyResourceDaoImpl.addDailyPopulateById", map);
+	}
+
 
 
 }

@@ -73,5 +73,13 @@ public class CjhyResourceServiceImpl implements CjhyResourceService {
 		hashmap.put("count",cjhyResourceDao.queryDailyCjhyResourceCount(map));
 		return  hashmap;
 	}
+
+	/**
+	 *  更新相应的博客关注度.
+	 * @see com.ktproject.cjhy.service.CjhyResourceService#addDailyPopulateById(java.lang.String)
+	 */
+	public int addDailyPopulateById(final Map map) {
+		return cjhyResourceDao.addDailyPopulateById(map);
+	}
       
 }

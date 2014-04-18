@@ -3,6 +3,8 @@ package com.ktproject.cjhy.service;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.ktproject.cjhy.model.CjhyResourceModel;
 
 public interface CjhyResourceService {
@@ -40,4 +42,11 @@ public interface CjhyResourceService {
 	 * @return
 	 */
 	Map<String, Object> queryDailyCjhyResource(final  Map  map);
+	
+	/**
+	 * 更新相应的博客关注度.
+	 * @param id
+	 * @return
+	 */
+	int  addDailyPopulateById(final Map map);
 }

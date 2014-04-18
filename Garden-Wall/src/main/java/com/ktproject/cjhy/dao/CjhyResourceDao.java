@@ -62,4 +62,11 @@ public interface CjhyResourceDao {
 	    * @return
 	    */
 	   public  int  queryDailyCjhyResourceCount(final  Map  map);
+	   
+	   /**
+	    * 更新相应的博客关注度.
+	    * @param id
+	    * @return
+	    */
+	   int  addDailyPopulateById(final Map map);
 }

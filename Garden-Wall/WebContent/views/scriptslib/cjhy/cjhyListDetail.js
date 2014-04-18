@@ -32,6 +32,10 @@ function  initAuthorArticleList(data){
 	}
 }
 
-function  clickGoodPointEvent(id){
-	 alert(id);
+function  clickGoodPointEvent(param){
+	$.commonService('../../cjhy/addDailyPopulateById', 'POST', {id:param}, function(data) {
+		 if(data==1){
+		 	$('#myModal').modal('show');
+		 }
+	});
 }

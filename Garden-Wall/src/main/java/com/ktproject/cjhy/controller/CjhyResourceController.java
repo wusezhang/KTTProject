@@ -80,7 +80,13 @@ public class CjhyResourceController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", start);
 		map.put("limit", limit);
-		map.put("today", "");
 		return cjhyResourceService.queryDailyCjhyResource(map);
+	}
+	
+	@RequestMapping(value ="addDailyPopulateById", method = RequestMethod.POST)
+	public  @ResponseBody int  addDailyPopulateById(@RequestParam("id") final String id){
+		 Map<String,Object> map = new HashMap<String,Object>();
+		 map.put("id", id);
+		 return cjhyResourceService.addDailyPopulateById(map) ;
 	}
 }

@@ -112,5 +112,11 @@
 	<select id="queryDailyCjhyResourceCount" resultType="int"  parameterType="hashmap">
 		SELECT  COUNT(*) FROM  CJXJ_RESOURCE_DETAIL_TABLE CJXJ_DETAIL  WHERE DATE(CJXJ_DETAIL.PUBDATE) = CURDATE()
 	</select>
+	
+	<update id="addDailyPopulateById"  parameterType="hashmap">
+	    UPDATE  CJXJ_RESOURCE_TABLE CJXJ_RESOURCE  
+	    SET  CJXJ_RESOURCE.POPULATION_FLAG = CJXJ_RESOURCE.POPULATION_FLAG + 1 
+	    WHERE CJXJ_RESOURCE.ID =#{id}
+	</update>
 
 </mapper>
