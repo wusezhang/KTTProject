@@ -58,7 +58,7 @@ public class HshyResourceDaoImpl implements HshyResourceDao {
 	 */
 	public List<CjhyResourceDetailModel> queryHshyDailyResource(final Map map) {
 		log.info("查询外汇品论当天的记录");
-		return sqlSession.selectList("", map);
+		return sqlSession.selectList("com.ktproject.cjhy.dao.impl.HshyResourceDaoImpl.queryHshyDailyResource", map);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class HshyResourceDaoImpl implements HshyResourceDao {
 	 */
 	public int queryHshyDailyResourceCount(final Map map) {
 		log.info("查询外汇品论当天的记录的总条数");
-		return sqlSession.selectOne("", map);
+		return sqlSession.selectOne("com.ktproject.cjhy.dao.impl.HshyResourceDaoImpl.queryHshyDailyResourceCount", map);
 	}
 
 }

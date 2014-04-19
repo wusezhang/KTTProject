@@ -35,5 +35,27 @@
 		WHERE 1=1
 		AND HSHY_RESOURCE.ID = #{id}
 	</select>
+	
+	<select id="queryHshyDailyResource" resultMap="detailResultMap"
+		 parameterType="hashmap">
+	   SELECT HSHY_DETAIL.TITLE AS TITLE , CJXJ.SRC_NAME AS IMAGEURL ,
+		HSHY_DETAIL.PUBDATE AS PUBDATE , HSHY_DETAIL.LINKURL AS LINKURL,
+		CJXJ.ID AS ID
+		FROM
+		HSHY_RESOURCE_DETAIL_TABLE HSHY_DETAIL , CJXJ_RESOURCE_TABLE CJXJ
+		WHERE 1=1
+		AND  CJXJ.ID = HSHY_DETAIL.ID
+		AND  CJXJ.BZ_FL = 1
+		AND  DATE(HSHY_DETAIL.PUBDATE) = CURDATE()
+		ORDER BY HSHY_DETAIL.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+	
+	<select id="queryHshyDailyResourceCount" resultType="int"
+		parameterType="hashmap">
+	    SELECT  COUNT(*) FROM  HSHY_RESOURCE_DETAIL_TABLE HSHY_DETAIL  WHERE DATE(HSHY_DETAIL.PUBDATE) = CURDATE()
+	</select>
 
 </mapper>
