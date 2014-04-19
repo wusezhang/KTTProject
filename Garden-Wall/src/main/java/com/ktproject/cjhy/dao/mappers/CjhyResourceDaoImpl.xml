@@ -10,6 +10,7 @@
 		<result column="SRCNAME" property="srcname" />
 		<result column="ID" property="id" />
 		<result column="CREATEDATE" property="createDate" />
+		<result column="POPULATION" property="population"/>
 	</resultMap>
 
 	<resultMap type="com.ktproject.cjhy.model.CjhyResourceDetailModel"
@@ -34,7 +35,8 @@
 		parameterType="hashmap">
 		SELECT A.BZ_NAME AS BZNAME , A.BZ_INTRODUCE AS BZINTRODUCE ,A.BZ_FL AS
 		BZFL ,
-		A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE
+		A.SRC_NAME AS SRCNAME , A.ID AS ID , A.CREATEDATE AS CREATEDATE ,
+		A.POPULATION_FLAG/(SELECT  MAX(RESOURCE.POPULATION_FLAG)  FROM CJXJ_RESOURCE_TABLE   RESOURCE)*100 AS POPULATION
 		FROM CJXJ_RESOURCE_TABLE A
 		WHERE 1=1
 		AND A.BZ_FL=#{bzfl}

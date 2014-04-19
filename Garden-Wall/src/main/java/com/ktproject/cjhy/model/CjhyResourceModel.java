@@ -53,7 +53,11 @@ public class CjhyResourceModel implements Serializable {
      * 搜录日期
      */
     private Date  createDate;
-
+    /**
+     * 关注度.
+     */
+    private  Double  population;
+    
 	/**
 	 * @return the bzname
 	 */
@@ -137,6 +141,18 @@ public class CjhyResourceModel implements Serializable {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-    
-    
+
+	/**
+	 * @return the population
+	 */
+	public Double getPopulation() {
+		return population;
+	}
+
+	/**
+	 * @param population the population to set
+	 */
+	public void setPopulation(Double population) {
+		this.population = population;
+	}
 }
