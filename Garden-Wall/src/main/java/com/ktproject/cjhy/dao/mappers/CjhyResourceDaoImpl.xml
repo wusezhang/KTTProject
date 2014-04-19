@@ -43,7 +43,7 @@
 		<if test="bzname != null and bzname !='' ">
 			AND A.BZ_NAME LIKE "%"#{bzname}"%"
 		</if>
-		ORDER BY A.ID ASC
+		ORDER BY  POPULATION DESC 
 		<if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
 		</if>

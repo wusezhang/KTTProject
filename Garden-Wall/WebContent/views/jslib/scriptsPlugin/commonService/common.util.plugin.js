@@ -1,4 +1,5 @@
 jQuery.extend({
+	//检查是否图片插件.
 	checkPicture:function(id){
 		 var fileInputId = $.trim($(id).val());
 		 if(!/\.(gif|jpg|jpeg|png|tif|bmp|TIF|BMP|GIF|JPG|PNG)$/.test(fileInputId)) {
@@ -16,4 +17,5 @@ jQuery.extend({
 			return decodeURI(RegExp.$2.replace(/\+/g, " "));
 		return "";
 	}
+	
 });
