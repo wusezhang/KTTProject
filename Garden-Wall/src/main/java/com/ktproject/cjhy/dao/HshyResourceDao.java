@@ -33,4 +33,18 @@ public interface HshyResourceDao {
       * @return
       */
      public  int  queryHshyResourceDetailCount(final Map map);
+     
+     /**
+      * 查询外汇品论当天的记录.
+      * @param map
+      * @return
+      */
+     public  List<CjhyResourceDetailModel> queryHshyDailyResource(final Map map);
+     
+     /**
+      * 查询外汇品论当天的记录的总条数.
+      * @param map
+      * @return
+      */
+     public  int  queryHshyDailyResourceCount(final  Map  map);
 }

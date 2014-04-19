@@ -44,6 +44,17 @@ public class HshyResourceServiceImpl implements HshyResourceService{
 		hashmap.put("count",hshyResourceDao.queryHshyResourceDetailCount(map));
 		return hashmap;
 	}
+
+	/**
+	 * 查询外汇品论当天的记录.
+	 * @see com.ktproject.cjhy.service.HshyResourceService#queryHshyDailyResource(java.util.Map)
+	 */
+	public Map<String, Object> queryHshyDailyResource(Map map) {
+		Map<String,Object> hashmap = new  HashMap<String,Object>();
+		hashmap.put("data", hshyResourceDao.queryHshyDailyResource(map));
+		hashmap.put("count", hshyResourceDao.queryHshyDailyResourceCount(hashmap));
+		return hashmap;
+	}
 	 
 	 
 	 

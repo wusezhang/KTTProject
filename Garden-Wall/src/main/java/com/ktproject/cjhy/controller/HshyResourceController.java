@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.ktproject.cjhy.service.HshyResourceService;
 
 /**
- * 类功能描述：
- * HshyResourceController.java
+ * 类功能描述： HshyResourceController.java
+ * 
  * @author ZJJ
  * @version 0.1.0
  * @history 2014年4月13日 ZJJ 创建HshyResourceController.java
@@ -35,19 +35,32 @@ public class HshyResourceController {
 	 * 日志管理器，以便于跟踪错误.
 	 */
 	private Log log = LogFactory.getLog(HshyResourceController.class);
-	
+
 	@Autowired
 	private HshyResourceService hshyResourceService;
-	
+
 	@RequestMapping(value = "queryHshyResourceById", method = RequestMethod.POST)
-	public  @ResponseBody Map<String,Object> queryHshyResourceById(@RequestParam("start") final int start,
+	public @ResponseBody
+	Map<String, Object> queryHshyResourceById(
+			@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit,
-			@RequestParam("id") final int id){
-		Map<String,Object> map = new HashMap<String,Object>();
+			@RequestParam("id") final int id) {
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", start);
 		map.put("limit", limit);
 		map.put("id", id);
 		return hshyResourceService.queryHshyResourceById(map);
 	}
-	
+     
+	@RequestMapping(value = "queryHshyDailyResource", method = RequestMethod.POST)
+	public @ResponseBody
+	Map<String, Object> queryHshyDailyResource(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit) {
+            Map<String,Object> map  = new  HashMap<String,Object>();
+            map.put("start", start);
+            map.put("limit", limit);
+		    return  hshyResourceService.queryHshyDailyResource(map);
+	}
+
 }

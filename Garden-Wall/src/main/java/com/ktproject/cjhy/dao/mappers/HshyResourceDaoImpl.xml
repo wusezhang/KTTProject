@@ -8,6 +8,7 @@
         <result column="PUBDATE" property="pubDate" />
         <result column="LINKURL" property="linkUrl" />
 		<result column="SRCNAME" property="srcName"></result>
+		<result column="ID" property="id"/>
         <result column="DESCRIPTCONTEXT" property="descriptContext" />
 	</resultMap>
 	
@@ -15,7 +16,8 @@
 		parameterType="hashmap">
 		SELECT HSHY_RESOURCE.TITLE AS TITLE , CJXJ.SRC_NAME AS SRCNAME ,
 		HSHY_RESOURCE.PUBDATE AS PUBDATE , HSHY_RESOURCE.LINKURL AS LINKURL,
-		HSHY_RESOURCE.DESCRIPTCONTEXT,HSHY_RESOURCE.IMAGEURL AS IMAGEURL
+		HSHY_RESOURCE.DESCRIPTCONTEXT,HSHY_RESOURCE.IMAGEURL AS IMAGEURL,
+		HSHY_RESOURCE.ID AS ID
 		FROM
 		HSHY_RESOURCE_DETAIL_TABLE HSHY_RESOURCE , CJXJ_RESOURCE_TABLE CJXJ
 		WHERE 1=1

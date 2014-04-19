@@ -24,4 +24,11 @@ public interface HshyResourceService {
 	 * @return
 	 */
 	public  Map<String,Object> queryHshyResourceById(final Map map);
+	
+	/**
+	 * 查询外汇品论当天的记录.
+	 * @param map
+	 * @return
+	 */
+	public  Map<String, Object> queryHshyDailyResource(final Map map);
 }
