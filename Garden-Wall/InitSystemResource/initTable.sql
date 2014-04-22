@@ -1,4 +1,4 @@
-CREATE DATABASE 'ktproject';USE 'ktproject';DROP TABLE IF EXISTS 'cjxj_resource_table';
+CREATE DATABASE 'ktproject';USE 'ktproject';DROP TABLE IF EXISTS 'cjxj_resource_table';  
 
 CREATE TABLE 'cjxj_resource_table' (
   'BZ_NAME' VARCHAR(30) NOT NULL,
