@@ -7,6 +7,8 @@
  */
 package com.ktproject.cjhy.model;
 
+import java.util.Date;
+
 /**
  * 类功能描述：
  * MjtjResourceModel.java
@@ -32,6 +34,14 @@ public class MjtjResourceModel {
          * 网站分类.
          */
         private  String  netFl;
+        /**
+         * 文件名字.
+         */
+        private String srcName ;
+        /**
+         * 创建日期.
+         */
+        private  Date createDate;
 		/**
 		 * @return the bzName
 		 */
@@ -79,6 +89,30 @@ public class MjtjResourceModel {
 		 */
 		public void setNetFl(String netFl) {
 			this.netFl = netFl;
+		}
+		/**
+		 * @return the srcName
+		 */
+		public String getSrcName() {
+			return srcName;
+		}
+		/**
+		 * @param srcName the srcName to set
+		 */
+		public void setSrcName(String srcName) {
+			this.srcName = srcName;
+		}
+		/**
+		 * @return the createDate
+		 */
+		public Date getCreateDate() {
+			return createDate;
+		}
+		/**
+		 * @param createDate the createDate to set
+		 */
+		public void setCreateDate(Date createDate) {
+			this.createDate = createDate;
 		}
         
         

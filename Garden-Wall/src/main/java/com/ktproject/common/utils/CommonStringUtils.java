@@ -1,12 +1,14 @@
 package com.ktproject.common.utils;
 
+import org.springframework.util.StringUtils;
+
 /**
  * 类功能描述:字符串处理相关工具类 StringUtils.java
  * 
  * 创建StringUtils.java
  * @version 1.0.0
  */
-public class CommonStringUtils extends org.apache.commons.CommonStringUtils.StringUtils {
+public class CommonStringUtils  {
 
     /**
      * 对字符串填补指定字符
@@ -53,7 +55,7 @@ public class CommonStringUtils extends org.apache.commons.CommonStringUtils.Stri
         if (len <= 0) {
             return "";
         }
-        if (CommonStringUtils.isBlank(filler)) {
+        if (StringUtils.isEmpty(filler)) {
             filler = " ";
         }
         StringBuffer buff = new StringBuffer();

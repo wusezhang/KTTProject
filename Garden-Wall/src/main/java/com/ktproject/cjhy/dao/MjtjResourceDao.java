@@ -7,6 +7,10 @@
  */
 package com.ktproject.cjhy.dao;
 
+import java.util.Map;
+
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 /**
  * 类功能描述：
  * MjtjResourceDao.java
@@ -15,5 +19,10 @@ package com.ktproject.cjhy.dao;
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceDao.java
  */
 public interface MjtjResourceDao {
-
+	   /**
+	    * 名家推荐模块代码.
+	    * @param file
+	    * @param map
+	    */
+	   public  void  addMjtjResource(final  Map<String,Object> map); 
 }

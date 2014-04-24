@@ -9,6 +9,9 @@ package com.ktproject.cjhy.service.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
+import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.FileCopyUtils;
@@ -16,6 +19,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.ktproject.cjhy.dao.MjtjResourceDao;
 import com.ktproject.cjhy.service.MjtjResourceService;
+import com.ktproject.common.utils.CommonFilesUtils;
 
 /**
  * 类功能描述：
@@ -30,34 +34,60 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
       private  MjtjResourceDao  mjtjResourceDao;
 	  
 	  
-	  
-	  
-	  
-	  
-	  
-	  
 
-	 private  void  FileUploadMethod(final CommonsMultipartFile file,
+	   /**
+	     * 名家推荐模块代码.
+		 * @see com.ktproject.cjhy.service.MjtjResourceService#addMjtjResource(org.springframework.web.multipart.commons.CommonsMultipartFile, java.util.Map)
+		 */
+	   public void addMjtjResource(final CommonsMultipartFile file,
+				final Map<String, Object> map , final String  serverPath) {
+			    String  srcname = fileUploadMethod(file,serverPath);
+			    map.put("srcName", srcname);
+		        map.put("createDate", new Date());
+		        mjtjResourceDao.addMjtjResource(map);
+		}
+	  
+	    /**
+	     * 文件处理功能方法.
+	     * @param file
+	     * @param serverPath
+	     * @return
+	     */
+	    private  String  fileUploadMethod(final CommonsMultipartFile file,
 				final String serverPath) {
 			File newFile = new File(serverPath);
+			File uploadFile = null;
+			String  newFileName = "";
 			if (!newFile.exists()) {
 				newFile.mkdir();
 			}
-			File uploadFile = new File(serverPath + file.getOriginalFilename());
-			//如果文件不存在，则先创建文件
-			if (!uploadFile.exists()) {
-				try {
-					uploadFile.createNewFile();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-				try {
-					FileCopyUtils.copy(file.getBytes(), uploadFile);
-				} catch (IOException e) {
-					e.printStackTrace();
+			if(!file.isEmpty()){
+				newFileName =  UUID.randomUUID() +"."+ CommonFilesUtils.obtainFileSuffix(file.getOriginalFilename());
+				uploadFile = new File(serverPath + newFileName);
+				//如果文件不存在，则先创建文件
+				if (!uploadFile.exists()) {
+					try {
+						uploadFile.createNewFile();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					try {
+						FileCopyUtils.copy(file.getBytes(), uploadFile);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
 			}
-			
-			
+			//返回相应的文件名.
+			return  newFileName;
 	  }
+
+
+
+
+
+
+
+
+
 }

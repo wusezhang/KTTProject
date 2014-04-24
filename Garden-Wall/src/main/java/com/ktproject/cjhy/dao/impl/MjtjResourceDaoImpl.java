@@ -7,6 +7,8 @@
  */
 package com.ktproject.cjhy.dao.impl;
 
+import java.util.Map;
+
 import com.ktproject.cjhy.dao.MjtjResourceDao;
 
 /**
@@ -17,5 +19,16 @@ import com.ktproject.cjhy.dao.MjtjResourceDao;
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceDaoImpl.java
  */
 public class MjtjResourceDaoImpl implements MjtjResourceDao {
+
+	/** 
+	 * 名家推荐模块代码.
+	 * @param file
+	 * @param map
+	 * @see com.ktproject.cjhy.dao.MjtjResourceDao#addMjtjResource(java.util.Map)
+	 */
+	public void addMjtjResource(final Map<String, Object> map) {
+		      
+		      
+	}
     
 }

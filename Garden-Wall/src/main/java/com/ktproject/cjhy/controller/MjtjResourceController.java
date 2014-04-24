@@ -8,9 +8,10 @@
 package com.ktproject.cjhy.controller;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -25,7 +26,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ktproject.cjhy.service.MjtjResourceService;
 
 /**
- * 类功能描述： MjtjResourceController.java
+ * 类功能描述：名家推荐模块
+ * 
  * @author ZJJ
  * @version 0.1.0
  * @history 2014年4月13日 ZJJ 创建MjtjResourceController.java
@@ -33,24 +35,32 @@ import com.ktproject.cjhy.service.MjtjResourceService;
 @Controller
 @RequestMapping("mjtj")
 public class MjtjResourceController {
-	    
-	   /**
-	    * 设置相应的Log项.
-	    */
-	   private  Log  log  = LogFactory.getLog(MjtjResourceController.class);
-	   
-	   @Autowired
-	   private MjtjResourceService  mjtjResourceService;
-	   
-	   @RequestMapping(value = "addMjtjResource", method = RequestMethod.POST)
-       public  ModelAndView   addMjtjResource(@RequestParam("file") CommonsMultipartFile file,
-    		   @RequestParam("bzname") final String name, 
-    		   HttpServletRequest request){
-			   final  String serverPath = request.getSession().getServletContext().getRealPath("/")
-					        +File.separator+"views"+File.separator+"imagelib"+File.separator+"celeBlogImage"+File.separator;
-		       
-		       
-		       
-		       return null;
-       }  
+
+	/**
+	 * 设置相应的Log项.
+	 */
+	private Log log = LogFactory.getLog(MjtjResourceController.class);
+
+	@Autowired
+	private MjtjResourceService mjtjResourceService;
+
+	@RequestMapping(value = "addMjtjResource", method = RequestMethod.POST)
+	public ModelAndView addMjtjResource(
+			@RequestParam("file") CommonsMultipartFile file,
+			@RequestParam("bzname") final String bzname,
+			@RequestParam("bzintroduce") final String bzintroduce,
+			@RequestParam("linkurl") final String linkurl,
+			@RequestParam("netfl") final String netfl,
+			HttpServletRequest request) {
+		final String serverPath = request.getSession().getServletContext().getRealPath("/")
+				+ File.separator+ "views"+ File.separator+ "imagelib"
+				+ File.separator + "celeBlogImage" + File.separator;
+		final Map<String, Object> map = new HashMap<String, Object>();
+		      map.put("bzName", bzname);
+		      map.put("bzIntroduce", bzintroduce);
+		      map.put("linkUrl", linkurl);
+		      map.put("netFl", netfl);
+		mjtjResourceService.addMjtjResource(file, map ,serverPath);
+		return null;
+	}
 }

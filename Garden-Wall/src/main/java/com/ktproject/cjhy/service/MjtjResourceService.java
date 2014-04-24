@@ -8,6 +8,10 @@
 
 package com.ktproject.cjhy.service;
 
+import java.util.Map;
+
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 /**
  * 类功能描述：
  * MjtjResourceService.java
@@ -16,5 +20,11 @@ package com.ktproject.cjhy.service;
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceService.java
  */
 public interface MjtjResourceService {
-      
+        
+	   /**
+	    * 名家推荐模块代码.
+	    * @param file
+	    * @param map
+	    */
+	   public  void  addMjtjResource(final CommonsMultipartFile file , final  Map<String,Object> map , final String  serverPath); 
 }

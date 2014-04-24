@@ -17,6 +17,8 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import org.springframework.util.StringUtils;
+
 /**
  * 类功能描述:日期处理工具类
  * 
@@ -26,7 +28,7 @@ import java.util.TimeZone;
  * 
  * @version 1.0.0
  */
-public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.DateUtils {
+public class CommonDateUtils {
 
 	public static final String TO_MONTH = "yyyy-MM";
 
@@ -95,8 +97,8 @@ public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.Dat
 	 */
 	public static int getMonthBetween(String startDate, String endDate) {
 		int monthDiff = 0;
-		if ((CommonStringUtils.isNotBlank(startDate))
-				&& (CommonStringUtils.isNotBlank(endDate))) {
+		if ((StringUtils.isEmpty(startDate))
+				&& (StringUtils.isEmpty(endDate))) {
 			int startYear = Integer.parseInt(startDate.split("-")[0]);
 			int startMonth = Integer.parseInt(startDate.split("-")[1]);
 			int endYear = Integer.parseInt(endDate.split("-")[0]);
@@ -134,8 +136,8 @@ public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.Dat
 	 */
 	public static int getYearBetween(String startDate, String endDate) {
 		int yearDiff = 0;
-		if ((CommonStringUtils.isNotBlank(startDate))
-				&& (CommonStringUtils.isNotBlank(endDate))) {
+		if ((!StringUtils.isEmpty(startDate))
+				&& (!StringUtils.isEmpty(endDate))) {
 			int startYear = Integer.parseInt(startDate.split("-")[0]);
 			int endYear = Integer.parseInt(endDate.split("-")[0]);
 			yearDiff = (endYear - startYear) + 1;
@@ -197,7 +199,7 @@ public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.Dat
 	 * @return
 	 */
 	public static Date parseDate(String dateStr, String pattern) {
-		if (CommonStringUtils.isBlank(dateStr) || CommonStringUtils.isBlank(pattern)) {
+		if (StringUtils.isEmpty(dateStr) || StringUtils.isEmpty(pattern)) {
 			return null;
 		}
 		DateFormat dateFormat = null;
@@ -259,7 +261,7 @@ public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.Dat
 	 */
 	public static Date parseStringToDate(String dateStr) {
 		String pattern = getDateFormat(dateStr);
-		if (CommonStringUtils.isNotBlank(pattern)) {
+		if (!StringUtils.isEmpty(pattern)) {
 			return parseDate(dateStr, pattern);
 		} else {
 			return null;
@@ -302,7 +304,7 @@ public class CommonDateUtils extends org.apache.commons.CommonDateUtils.time.Dat
 	public static Timestamp parseStringToTime(String dateStr, String pattern) {
 		Timestamp timestamp = null;
 		if (isDate(dateStr)) {
-			if (CommonStringUtils.isBlank(pattern)) {
+			if (!StringUtils.isEmpty(pattern)) {
 				pattern = TO_DATE;
 			}
 			Date date = parseDate(dateStr, pattern);
