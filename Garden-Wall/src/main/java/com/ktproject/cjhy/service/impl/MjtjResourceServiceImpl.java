@@ -7,7 +7,13 @@
  */
 package com.ktproject.cjhy.service.impl;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 import com.ktproject.cjhy.dao.MjtjResourceDao;
 import com.ktproject.cjhy.service.MjtjResourceService;
 
@@ -24,4 +30,33 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
       private  MjtjResourceDao  mjtjResourceDao;
 	  
 	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+	 private  void  FileUploadMethod(final CommonsMultipartFile file,
+				final String serverPath) {
+			File newFile = new File(serverPath);
+			if (!newFile.exists()) {
+				newFile.mkdir();
+			}
+			File uploadFile = new File(serverPath + file.getOriginalFilename());
+			//如果文件不存在，则先创建文件
+			if (!uploadFile.exists()) {
+				try {
+					uploadFile.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			
+			try {
+				FileCopyUtils.copy(file.getBytes(), uploadFile);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+	  }
 }

@@ -7,6 +7,11 @@
  */
 package com.ktproject.cjhy.controller;
 
+import java.io.File;
+
+import javax.servlet.http.HttpServletRequest;
+
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +44,12 @@ public class MjtjResourceController {
 	   
 	   @RequestMapping(value = "addMjtjResource", method = RequestMethod.POST)
        public  ModelAndView   addMjtjResource(@RequestParam("file") CommonsMultipartFile file,
-    		   @RequestParam("bzname") final String name){
-			   
-		   
-		   
+    		   @RequestParam("bzname") final String name, 
+    		   HttpServletRequest request){
+			   final  String serverPath = request.getSession().getServletContext().getRealPath("/")
+					        +File.separator+"views"+File.separator+"imagelib"+File.separator+"celeBlogImage"+File.separator;
+		       
+		       
 		       
 		       return null;
        }  
