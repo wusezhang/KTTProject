@@ -51,12 +51,13 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				try {
+					FileCopyUtils.copy(file.getBytes(), uploadFile);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 			
-			try {
-				FileCopyUtils.copy(file.getBytes(), uploadFile);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			
 	  }
 }
