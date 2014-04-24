@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.cjhy.dao.impl.MjtjResourceDaoImpl">
+     
+	  <insert id="addMjtjResource" parameterType="hashmap">
+		  INSERT  INTO  CJXJ_RESOURCE_TEMP_TABLE (ID,BZ_NAME,BZ_INTRODUCE,SRC_NAME,BZ_FL,CREATEDATE,LINKURL,NET_FL)
+          VALUES ()
+	  </insert>
+	 
+</mapper>

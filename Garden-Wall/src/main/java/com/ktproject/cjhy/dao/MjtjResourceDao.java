@@ -24,5 +24,5 @@ public interface MjtjResourceDao {
 	    * @param file
 	    * @param map
 	    */
-	   public  void  addMjtjResource(final  Map<String,Object> map); 
+	   public  int  addMjtjResource(final  Map<String,Object> map); 
 }

@@ -9,6 +9,11 @@ package com.ktproject.cjhy.dao.impl;
 
 import java.util.Map;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ktproject.cjhy.dao.MjtjResourceDao;
 
 /**
@@ -20,15 +25,24 @@ import com.ktproject.cjhy.dao.MjtjResourceDao;
  */
 public class MjtjResourceDaoImpl implements MjtjResourceDao {
 
+	@Autowired
+	private  SqlSession  sqlSession ;
+	
+	/**
+	 * 日志管理器，以便于跟踪错误.
+	 */
+	private Log  log  = LogFactory.getLog(MjtjResourceDaoImpl.class);
+	
 	/** 
 	 * 名家推荐模块代码.
 	 * @param file
 	 * @param map
 	 * @see com.ktproject.cjhy.dao.MjtjResourceDao#addMjtjResource(java.util.Map)
 	 */
-	public void addMjtjResource(final Map<String, Object> map) {
-		      
-		      
+	public int addMjtjResource(final Map<String, Object> map) {
+		log.info("名家推荐模块新增相应的数据集操作！");
+		sqlSession.insert("com.ktproject.cjhy.dao.impl.MjtjResourceDaoImpl", map);
+	    return  0;      
 	}
     
 }
