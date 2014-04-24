@@ -13,7 +13,7 @@ $(document).ready(function(){
 	 } 
 	 
 	 function  removeFunctionEvent(){
-	 	window.close();
+	 	 
 	 }
 	
 });

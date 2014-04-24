@@ -17,32 +17,33 @@
 	<body>
 		<table class="table table-striped table-condensed table-hover">
 			<tbody>
+				<form id="dataSetForm" enctype="multipart/form-data" action=" " method="post">
 				<tr>
 					<td>
 					<div class="input-group modalposition">
 						<span class="input-group-addon">推荐名家</span>
-						<input type="text" class="form-control" placeholder="推荐名家">
+						<input type="text" class="form-control" placeholder="推荐名家" name="bzname">
 					</div></td>
 				</tr>
 				<tr>
 					<td>
 					<div class="input-group modalposition">
 						<span class="input-group-addon">名家形象</span>
-						<input type="file" id="uploadFile" class="fileinput">
+						<input type="file" id="uploadFile" class="fileinput" id="file">
 					</div></td>
 				</tr>
 				<tr>
 					<td>
 					<div class="input-group modalposition">
 						<span class="input-group-addon">名家介绍</span>
-						<input type="text" class="form-control" placeholder="名家介绍">
+						<input type="text" class="form-control" placeholder="名家介绍" name="bzintroduce">
 					</div></td>
 				</tr>
 				<tr>
 					<td>
 					<div class="input-group modalposition">
 						<span class="input-group-addon">名家博客网址</span>
-						<input type="text" class="form-control" placeholder="名家博客网址">
+						<input type="text" class="form-control" placeholder="名家博客网址" name="linkurl">
 					</div></td>
 				</tr>
 				<tr>
@@ -62,6 +63,7 @@
 						<a class="btn btn-primary" id="removeBtn"> <span class="glyphicon glyphicon-remove"> </span> 取消 </a>
 					</div></td>
 				</tr>
+			   </form>
 			</tbody>
 		</table>
 	</body>
