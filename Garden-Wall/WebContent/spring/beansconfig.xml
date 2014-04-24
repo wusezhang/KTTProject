@@ -26,5 +26,10 @@
 	
 	<bean id="hshyResourceService" class="com.ktproject.cjhy.service.impl.HshyResourceServiceImpl" scope="prototype"/>
 	<bean id="hshyResourceDao" class="com.ktproject.cjhy.dao.impl.HshyResourceDaoImpl" scope="prototype"/> 
+	
+	<bean id="mjtjResourceService" class="com.ktproject.cjhy.service.impl.MjtjResourceServiceImpl" scope="prototype"/>
+	<bean id="mjtjResourceDao"  class="com.ktproject.cjhy.dao.impl.MjtjResourceDaoImpl" scope="prototype">
+		
+	</bean>
 	 	
 </beans>

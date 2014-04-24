@@ -17,5 +17,5 @@ import com.ktproject.cjhy.dao.MjtjResourceDao;
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceDaoImpl.java
  */
 public class MjtjResourceDaoImpl implements MjtjResourceDao {
-
+    
 }

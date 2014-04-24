@@ -7,6 +7,8 @@
  */
 package com.ktproject.cjhy.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import com.ktproject.cjhy.dao.MjtjResourceDao;
 import com.ktproject.cjhy.service.MjtjResourceService;
 
 /**
@@ -17,5 +19,9 @@ import com.ktproject.cjhy.service.MjtjResourceService;
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceServiceImpl.java
  */
 public class MjtjResourceServiceImpl implements MjtjResourceService {
-    
+	  
+	  @Autowired
+      private  MjtjResourceDao  mjtjResourceDao;
+	  
+	  
 }

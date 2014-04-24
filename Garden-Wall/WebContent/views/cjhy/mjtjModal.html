@@ -17,7 +17,7 @@
 	<body>
 		<table class="table table-striped table-condensed table-hover">
 			<tbody>
-				<form id="dataSetForm" enctype="multipart/form-data" action=" " method="post">
+				<form id="dataSetForm" enctype="multipart/form-data" action="../../mjtj/addMjtjResource" method="post">
 				<tr>
 					<td>
 					<div class="input-group modalposition">
@@ -29,7 +29,7 @@
 					<td>
 					<div class="input-group modalposition">
 						<span class="input-group-addon">名家形象</span>
-						<input type="file" id="uploadFile" class="fileinput" id="file">
+						<input type="file" id="uploadFile" class="fileinput" id="file" name="file">
 					</div></td>
 				</tr>
 				<tr>
@@ -58,7 +58,7 @@
 				<tr>
 					<td>
 					<div class="input-group buttonposition">
-						<a class="btn btn-primary"> <span class="glyphicon glyphicon-share"> </span> 推荐 </a>
+						<a class="btn btn-primary" id="dataSubmitBtn"> <span class="glyphicon glyphicon-share"> </span> 推荐 </a>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<a class="btn btn-primary" id="removeBtn"> <span class="glyphicon glyphicon-remove"> </span> 取消 </a>
 					</div></td>

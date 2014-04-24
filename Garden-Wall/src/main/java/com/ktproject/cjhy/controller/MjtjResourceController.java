@@ -39,8 +39,11 @@ public class MjtjResourceController {
 	   
 	   @RequestMapping(value = "addMjtjResource", method = RequestMethod.POST)
        public  ModelAndView   addMjtjResource(@RequestParam("file") CommonsMultipartFile file,
-    		   @RequestParam("name") final String name){
-				
+    		   @RequestParam("bzname") final String name){
+			   
+		   
+		   
+		       
 		       return null;
        }  
 }
