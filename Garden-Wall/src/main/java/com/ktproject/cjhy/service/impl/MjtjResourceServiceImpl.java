@@ -12,11 +12,9 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
 import com.ktproject.cjhy.dao.MjtjResourceDao;
 import com.ktproject.cjhy.service.MjtjResourceService;
 import com.ktproject.common.utils.CommonFilesUtils;
@@ -42,7 +40,7 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
 			    String  srcname = fileUploadMethod(file,serverPath);
 			    map.put("srcName", srcname);
 		        map.put("createDate", new Date());
-		        map.put("id", UUID.randomUUID());
+		        map.put("id", UUID.randomUUID().toString());
 		        map.put("bzFl", "0");
 		        mjtjResourceDao.addMjtjResource(map);
 		}

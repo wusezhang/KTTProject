@@ -42,7 +42,7 @@ public class CjhyResourceModel implements Serializable {
     /**
      * 财经学家标志ID.
      */
-    private  int  id ;
+    private  String  id ;
     
     /**
      * 财经学家分类.
@@ -75,14 +75,14 @@ public class CjhyResourceModel implements Serializable {
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
