@@ -41,8 +41,7 @@ public class MjtjResourceDaoImpl implements MjtjResourceDao {
 	 */
 	public int addMjtjResource(final Map<String, Object> map) {
 		log.info("名家推荐模块新增相应的数据集操作！");
-		sqlSession.insert("com.ktproject.cjhy.dao.impl.MjtjResourceDaoImpl", map);
-	    return  0;      
+	    return  sqlSession.insert("com.ktproject.cjhy.dao.impl.MjtjResourceDaoImpl.addMjtjResource", map);
 	}
     
 }
