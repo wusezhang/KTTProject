@@ -57,7 +57,7 @@ public class CjhyResourceController {
 	Map<String, Object> queryCjhyResourceDetailById(
 			@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit,
-			@RequestParam("id") final int id) {
+			@RequestParam("id") final String id) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", start);
 		map.put("limit", limit);
