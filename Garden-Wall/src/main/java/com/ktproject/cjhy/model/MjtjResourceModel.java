@@ -22,26 +22,37 @@ public class MjtjResourceModel {
 	     * 名家名字. 
 	     */
         private  String  bzName;
+        
         /**
          * 名家介绍.
          */
         private  String  bzIntroduce;
+        
         /**
          * 名家链接地址.
          */
         private  String  linkUrl;
+        
         /**
          * 网站分类.
          */
         private  String  netFl;
+        
         /**
          * 文件名字.
-         */
+         */        
         private String srcName ;
+        
         /**
          * 创建日期.
          */
         private  Date createDate;
+        
+        /**
+         * 名家推荐标志.
+         */
+        private  String bzFl;
+        
 		/**
 		 * @return the bzName
 		 */
@@ -113,6 +124,18 @@ public class MjtjResourceModel {
 		 */
 		public void setCreateDate(Date createDate) {
 			this.createDate = createDate;
+		}
+		/**
+		 * @return the bzFl
+		 */
+		public String getBzFl() {
+			return bzFl;
+		}
+		/**
+		 * @param bzFl the bzFl to set
+		 */
+		public void setBzFl(String bzFl) {
+			this.bzFl = bzFl;
 		}
         
         

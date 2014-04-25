@@ -33,8 +33,6 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
 	  @Autowired
       private  MjtjResourceDao  mjtjResourceDao;
 	  
-	  
-
 	   /**
 	     * 名家推荐模块代码.
 		 * @see com.ktproject.cjhy.service.MjtjResourceService#addMjtjResource(org.springframework.web.multipart.commons.CommonsMultipartFile, java.util.Map)
@@ -44,6 +42,8 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
 			    String  srcname = fileUploadMethod(file,serverPath);
 			    map.put("srcName", srcname);
 		        map.put("createDate", new Date());
+		        map.put("id", UUID.randomUUID());
+		        map.put("bzFl", "0");
 		        mjtjResourceDao.addMjtjResource(map);
 		}
 	  
@@ -81,13 +81,6 @@ public class MjtjResourceServiceImpl implements MjtjResourceService {
 			//返回相应的文件名.
 			return  newFileName;
 	  }
-
-
-
-
-
-
-
 
 
 }

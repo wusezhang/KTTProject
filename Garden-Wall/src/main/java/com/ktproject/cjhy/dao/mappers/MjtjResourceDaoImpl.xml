@@ -4,7 +4,7 @@
      
 	  <insert id="addMjtjResource" parameterType="hashmap">
 		  INSERT  INTO  CJXJ_RESOURCE_TEMP_TABLE (ID,BZ_NAME,BZ_INTRODUCE,SRC_NAME,BZ_FL,CREATEDATE,LINKURL,NET_FL)
-          VALUES ()
+          VALUES (#{id},#{bzName},#{bzIntroduce},#{srcName},#{bzFl},#{createDate},#{linkUrl},#{netFl})
 	  </insert>
 	 
 </mapper>
