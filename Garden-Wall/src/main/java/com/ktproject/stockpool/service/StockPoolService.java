@@ -8,6 +8,7 @@
 package com.ktproject.stockpool.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.ktproject.stockpool.model.StockPoolVO;
 
@@ -23,5 +24,5 @@ public interface StockPoolService {
 	 * 查询股票池主要的题材.
 	 * @return
 	 */
-	public  List<StockPoolVO>  queryMainStockPoolResource();
+	 Map<String,Object>  queryMainStockPoolResource(final Map<String,Object> map);
 }

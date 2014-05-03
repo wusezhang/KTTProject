@@ -8,6 +8,7 @@
 package com.ktproject.stockpool.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.ktproject.stockpool.model.StockPoolVO;
 
@@ -23,5 +24,12 @@ public interface StockPoolDao {
      * 查询股票池主要的题材.
      * @return
      */
-	public List<StockPoolVO> queryMainStockPoolResource();
+	List<StockPoolVO> queryMainStockPoolResource(final Map<String,Object> map);
+	
+	/**
+	 * 查询相应的结果数.
+	 * @param map
+	 * @return
+	 */
+	int  queryMainStockPoolResourceCount(final  Map<String,Object> map);
 }

@@ -7,15 +7,17 @@
  */
 package com.ktproject.stockpool.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.ktproject.stockpool.model.StockPoolVO;
 import com.ktproject.stockpool.service.StockPoolService;
 
@@ -40,9 +42,14 @@ public class StockPoolController {
 	  * @return
 	  */
 	 @RequestMapping(value = "/queryMainStockPoolResource", method = RequestMethod.POST)
-	 public @ResponseBody List<StockPoolVO>  queryMainStockPoolResource(){
+	 public @ResponseBody Map<String,Object>  queryMainStockPoolResource(
+			    @RequestParam("start") final int start,
+				@RequestParam("limit") final int limit){
 		  log.info("查询股票池主要的题材!");
-		  return  stockPoolService.queryMainStockPoolResource();
+		  Map<String,Object> map = new HashMap<String,Object>();
+		  map.put("start", start);
+		  map.put("limit", limit);
+		  return  stockPoolService.queryMainStockPoolResource(map);
 	  }
 	
 	

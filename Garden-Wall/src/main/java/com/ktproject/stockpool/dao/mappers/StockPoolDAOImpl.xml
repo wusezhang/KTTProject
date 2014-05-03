@@ -7,8 +7,16 @@
 			<result column="STOCKPOOLID" property="stockPoolId" />
 	   </resultMap>
 	  
-	   <select id="queryMainStockPoolResource" resultMap="objectMap">
-		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID  FROM  STOCK_POOL_MAIN_TABLE  MAIN 
+	   <select id="queryMainStockPoolResource" resultMap="objectMap" parameterType="hashmap">
+		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID 
+		   FROM  STOCK_POOL_MAIN_TABLE  MAIN 
+		   <if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+           </if>
+	   </select>
+	   
+	   <select id="queryMainStockPoolResourceCount" parameterType="hashmap" resultType="int">
+		    SELECT  COUNT(*) FROM  STOCK_POOL_MAIN_TABLE  MAIN 
 	   </select>
 	  
 </mapper>

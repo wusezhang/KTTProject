@@ -8,6 +8,7 @@
 package com.ktproject.stockpool.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,17 @@ public class StockPoolDaoImpl implements StockPoolDao {
 	/**
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResource()
 	 */
-	public List<StockPoolVO> queryMainStockPoolResource() {
-		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResource");
+	public List<StockPoolVO> queryMainStockPoolResource(final Map<String,Object> map) {
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResource",map);
+	}
+
+	/**
+	 * 查询股票池相应的结果数.
+	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResourceCount(java.util.Map)
+	 */
+	public int queryMainStockPoolResourceCount(Map<String, Object> map) {
+		
+		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResourceCount", map);
 	}
 
 }
