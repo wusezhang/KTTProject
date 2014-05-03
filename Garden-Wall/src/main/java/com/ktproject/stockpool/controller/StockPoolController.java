@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.ktproject.stockpool.model.StockPoolThemeVO;
 import com.ktproject.stockpool.model.StockPoolVO;
 import com.ktproject.stockpool.service.StockPoolService;
 
@@ -52,5 +54,12 @@ public class StockPoolController {
 		  return  stockPoolService.queryMainStockPoolResource(map);
 	  }
 	
-	
+	 @RequestMapping(value = "/queryThemeStockPoolResource", method = RequestMethod.POST)
+	 public  @ResponseBody List<StockPoolThemeVO> queryThemeStockPoolResource(
+			 @RequestParam("stockPoolId") final String stockPoolId){
+		    Map<String,Object> map = new HashMap<String,Object>();
+		    map.put("stockPoolId", stockPoolId);
+		    return  stockPoolService.queryThemeStockPoolResource(map);
+	 } 
+	 
 }

@@ -14,6 +14,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ktproject.stockpool.dao.StockPoolDao;
+import com.ktproject.stockpool.model.StockPoolThemeVO;
 import com.ktproject.stockpool.model.StockPoolVO;
 
 /**
@@ -40,8 +41,14 @@ public class StockPoolDaoImpl implements StockPoolDao {
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResourceCount(java.util.Map)
 	 */
 	public int queryMainStockPoolResourceCount(Map<String, Object> map) {
-		
 		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResourceCount", map);
+	}
+
+	/**
+	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryThemeStockPoolResource(java.util.Map)
+	 */
+	public List<StockPoolThemeVO> queryThemeStockPoolResource(Map<String, Object> map) {
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryThemeStockPoolResource", map);
 	}
 
 }

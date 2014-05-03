@@ -10,10 +10,9 @@ package com.ktproject.stockpool.service.impl;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.stockpool.dao.StockPoolDao;
-import com.ktproject.stockpool.model.StockPoolVO;
+import com.ktproject.stockpool.model.StockPoolThemeVO;
 import com.ktproject.stockpool.service.StockPoolService;
 
 /**
@@ -36,6 +35,13 @@ public class StockPoolServiceImpl implements StockPoolService {
 		resultMap.put("data", stockPoolDao.queryMainStockPoolResource(map));
 		resultMap.put("count", stockPoolDao.queryMainStockPoolResourceCount(map));
 	    return resultMap;
+	}
+
+	/**
+	 * @see com.ktproject.stockpool.service.StockPoolService#queryThemeStockPoolResource(java.util.Map)
+	 */
+	public List<StockPoolThemeVO> queryThemeStockPoolResource(final Map<String, Object> map) {
+		return stockPoolDao.queryThemeStockPoolResource(map);
 	}
 
 }

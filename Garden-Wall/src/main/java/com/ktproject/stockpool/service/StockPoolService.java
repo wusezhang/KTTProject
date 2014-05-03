@@ -9,8 +9,8 @@ package com.ktproject.stockpool.service;
 
 import java.util.List;
 import java.util.Map;
+import com.ktproject.stockpool.model.StockPoolThemeVO;
 
-import com.ktproject.stockpool.model.StockPoolVO;
 
 /**
  * 类功能描述：股票池操作类.
@@ -25,4 +25,11 @@ public interface StockPoolService {
 	 * @return
 	 */
 	 Map<String,Object>  queryMainStockPoolResource(final Map<String,Object> map);
+	 
+	 /**
+	  * 查询股票板块明细.
+	  * @param map
+	  * @return
+	  */
+	 List<StockPoolThemeVO> queryThemeStockPoolResource(final Map<String,Object> map);
 }

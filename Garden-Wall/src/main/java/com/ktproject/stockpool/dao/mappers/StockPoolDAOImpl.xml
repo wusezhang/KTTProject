@@ -6,6 +6,13 @@
 		    <result column="STOCKMAIN" property="stockMain" />
 			<result column="STOCKPOOLID" property="stockPoolId" />
 	   </resultMap>
+	   
+	   <resultMap id="themeObjectMap" type="com.ktproject.stockpool.model.StockPoolThemeVO">
+		     <result column="STOCKSECTOR" property="stockSector" />
+			 <result column="LINKURL" property="linkUrl" />
+			 <result column="STOCKFORUMDESCRIPTION" property="stockForumDescription" />
+			 <result column="STOCKSETID" property="stockSetId"/>
+	   </resultMap>
 	  
 	   <select id="queryMainStockPoolResource" resultMap="objectMap" parameterType="hashmap">
 		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID 
@@ -17,6 +24,15 @@
 	   
 	   <select id="queryMainStockPoolResourceCount" parameterType="hashmap" resultType="int">
 		    SELECT  COUNT(*) FROM  STOCK_POOL_MAIN_TABLE  MAIN 
+	   </select>
+	  
+	   <select id="queryThemeStockPoolResource" resultMap="themeObjectMap" parameterType="hashmap">
+		    SELECT THEME.LINKURL AS LINKURL, THEME.STOCKSECTOR AS STOCKSECTOR, 
+			  THEME.STOCKFORUMDESCRIPTION AS STOCKFORUMDESCRIPTION,THEME.STOCKSETID AS STOCKSETID
+            FROM
+	          STOCK_POOL_MAIN_THEME_TABLE THEME
+            WHERE
+	          THEME.STOCKPOOL_ID =#{stockPoolId}
 	   </select>
 	  
 </mapper>
