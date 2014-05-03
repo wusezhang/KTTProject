@@ -63,4 +63,25 @@ public class MjtjResourceController {
 		mjtjResourceService.addMjtjResource(file, map ,serverPath);
 		return null;
 	}
+	
+	@RequestMapping(value = "addHshyMjtjResource", method = RequestMethod.POST)
+	public  ModelAndView  addHshyMjtjResource(
+			@RequestParam("file") CommonsMultipartFile file,
+			@RequestParam("bzname") final String bzname,
+			@RequestParam("bzintroduce") final String bzintroduce,
+			@RequestParam("linkurl") final String linkurl,
+			@RequestParam("netfl") final String netfl,
+			HttpServletRequest request){
+		final String serverPath = request.getSession().getServletContext().getRealPath("/")
+				+ File.separator+ "views"+ File.separator+ "imagelib"
+				+ File.separator + "celeBlogImage" + File.separator;
+		final Map<String, Object> map = new HashMap<String, Object>();
+		      map.put("bzName", bzname);
+		      map.put("bzIntroduce", bzintroduce);
+		      map.put("linkUrl", linkurl);
+		      map.put("netFl", netfl);
+		mjtjResourceService.addHshyMjtjResource(file, map, serverPath);
+		return  null;
+	} 
+	
 }

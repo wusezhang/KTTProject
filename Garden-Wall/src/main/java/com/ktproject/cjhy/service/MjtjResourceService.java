@@ -27,4 +27,12 @@ public interface MjtjResourceService {
 	    * @param map
 	    */
 	   public  void  addMjtjResource(final CommonsMultipartFile file , final  Map<String,Object> map , final String  serverPath); 
+	   
+	   /**
+	    * 外汇名家推荐模块.
+	    * @param file
+	    * @param map
+	    * @param serverPath
+	    */
+	   public  void  addHshyMjtjResource(final CommonsMultipartFile file , final  Map<String,Object> map , final String  serverPath); 
 }

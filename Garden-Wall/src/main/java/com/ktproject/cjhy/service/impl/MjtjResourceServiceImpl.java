@@ -20,65 +20,84 @@ import com.ktproject.cjhy.service.MjtjResourceService;
 import com.ktproject.common.utils.CommonFilesUtils;
 
 /**
- * 类功能描述：
- * MjtjResourceServiceImpl.java
+ * 类功能描述： MjtjResourceServiceImpl.java
+ * 
  * @author vteamdell0723
  * @version 0.1.0
  * @history 2014-4-24 vteamdell0723 创建MjtjResourceServiceImpl.java
  */
 public class MjtjResourceServiceImpl implements MjtjResourceService {
-	  
-	  @Autowired
-      private  MjtjResourceDao  mjtjResourceDao;
-	  
-	   /**
-	     * 名家推荐模块代码.
-		 * @see com.ktproject.cjhy.service.MjtjResourceService#addMjtjResource(org.springframework.web.multipart.commons.CommonsMultipartFile, java.util.Map)
-		 */
-	   public void addMjtjResource(final CommonsMultipartFile file,
-				final Map<String, Object> map , final String  serverPath) {
-			    String  srcname = fileUploadMethod(file,serverPath);
-			    map.put("srcName", srcname);
-		        map.put("createDate", new Date());
-		        map.put("id", UUID.randomUUID().toString());
-		        map.put("bzFl", "0");
-		        mjtjResourceDao.addMjtjResource(map);
+
+	@Autowired
+	private MjtjResourceDao mjtjResourceDao;
+
+	/**
+	 * 名家推荐模块代码.
+	 * 
+	 * @see com.ktproject.cjhy.service.MjtjResourceService#addMjtjResource(org.springframework.web.multipart.commons.CommonsMultipartFile,
+	 *      java.util.Map)
+	 */
+	public void addMjtjResource(final CommonsMultipartFile file,
+			final Map<String, Object> map, final String serverPath) {
+		String srcname = fileUploadMethod(file, serverPath);
+		map.put("srcName", srcname);
+		map.put("createDate", new Date());
+		map.put("id", UUID.randomUUID().toString());
+		map.put("bzFl", "0");
+		mjtjResourceDao.addMjtjResource(map);
+	}
+
+	/**
+	 * 文件处理功能方法.
+	 * 
+	 * @param file
+	 * @param serverPath
+	 * @return
+	 */
+	private String fileUploadMethod(final CommonsMultipartFile file,
+			final String serverPath) {
+		File newFile = new File(serverPath);
+		File uploadFile = null;
+		String newFileName = "";
+		if (!newFile.exists()) {
+			newFile.mkdir();
 		}
-	  
-	    /**
-	     * 文件处理功能方法.
-	     * @param file
-	     * @param serverPath
-	     * @return
-	     */
-	    private  String  fileUploadMethod(final CommonsMultipartFile file,
-				final String serverPath) {
-			File newFile = new File(serverPath);
-			File uploadFile = null;
-			String  newFileName = "";
-			if (!newFile.exists()) {
-				newFile.mkdir();
-			}
-			if(!file.isEmpty()){
-				newFileName =  UUID.randomUUID() +"."+ CommonFilesUtils.obtainFileSuffix(file.getOriginalFilename());
-				uploadFile = new File(serverPath + newFileName);
-				//如果文件不存在，则先创建文件
-				if (!uploadFile.exists()) {
-					try {
-						uploadFile.createNewFile();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-					try {
-						FileCopyUtils.copy(file.getBytes(), uploadFile);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+		if (!file.isEmpty()) {
+			newFileName = UUID.randomUUID()
+					+ "."
+					+ CommonFilesUtils.obtainFileSuffix(file
+							.getOriginalFilename());
+			uploadFile = new File(serverPath + newFileName);
+			// 如果文件不存在，则先创建文件
+			if (!uploadFile.exists()) {
+				try {
+					uploadFile.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				try {
+					FileCopyUtils.copy(file.getBytes(), uploadFile);
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
 			}
-			//返回相应的文件名.
-			return  newFileName;
-	  }
+		}
+		// 返回相应的文件名.
+		return newFileName;
+	}
 
+	/**
+	 * @see com.ktproject.cjhy.service.MjtjResourceService#addHshyMjtjResource(org.springframework.web.multipart.commons.CommonsMultipartFile,
+	 *      java.util.Map, java.lang.String)
+	 */
+	public void addHshyMjtjResource(CommonsMultipartFile file,
+			Map<String, Object> map, String serverPath) {
+		String srcname = fileUploadMethod(file, serverPath);
+		map.put("srcName", srcname);
+		map.put("createDate", new Date());
+		map.put("id", UUID.randomUUID().toString());
+		map.put("bzFl", "1");
+		mjtjResourceDao.addMjtjResource(map);
+	}
 
 }
