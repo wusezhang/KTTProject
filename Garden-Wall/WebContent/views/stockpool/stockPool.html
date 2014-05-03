@@ -5,16 +5,20 @@
 		<title>股票池</title>
 		<meta name="author" content="ZJJ" />
 		<!--CSS文件导入-->
+		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/MetroJs/MetroJs.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap-theme.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/fancyBox/csslib/jquery.fancybox.css"/>
+		<!--引入自定义的css样式-->
+		<link rel="stylesheet"  type="text/css" href="../csslib/stockpoolYM/stockpool.css"/>
 
 		<!--js文件导入-->
 		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/MetroJs/MetroJs.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap3/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/fancyBox/jslib/jquery.fancybox.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
-
+		<script type="text/javascript" src="../scriptslib/stockpool/stockpool.js"></script>
 	</head>
 	<body class="indexYmBagroundImage">
 		<!--菜单显示栏位-->
@@ -50,14 +54,31 @@
 
 		</nav>
 		<!--菜单显示结束-->
+		<div class="well well-sm">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-th"> </span> 股票池列表
+				</div>
+				<div class="panel-body" id="showStockPoolModal">
 
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				股票池列表
+					<div class="live-tile half-tall mango"  data-speed="1000"  data-direction="vertical" data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
+						<div class="labelposition labenfont text-info">
+							智能装备
+						</div>
+					</div>
+
+				</div>
 			</div>
-			<div class="panel-body">
-				股票信息列表
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-paperclip"> </span> 股票题材详情
+				</div>
+				<div class="panel-body">
+
+				</div>
 			</div>
+
 		</div>
 
 	</body>

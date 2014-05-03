@@ -1,0 +1,14 @@
+.panelposition{
+	 position:absolute;
+	 top:50px; 
+}
+.labelposition{
+	position:relative;
+	padding-top:20px;
+	padding-left:40px;
+}
+.labenfont{
+	font-family: "Microsoft YaHei" ! important;
+	font-weight:800;
+	font-size:large;
+}
