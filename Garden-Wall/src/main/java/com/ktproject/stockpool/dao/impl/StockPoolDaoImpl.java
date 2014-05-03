@@ -24,14 +24,14 @@ import com.ktproject.stockpool.model.StockPoolVO;
  */
 public class StockPoolDaoImpl implements StockPoolDao {
     
-	  @Autowired
-	  private  SqlSession  sqlSession ;
+	@Autowired
+	private  SqlSession  sqlSession ;
 	
 	/**
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResource()
 	 */
 	public List<StockPoolVO> queryMainStockPoolResource() {
-		return sqlSession.selectList("");
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResource");
 	}
 
 }

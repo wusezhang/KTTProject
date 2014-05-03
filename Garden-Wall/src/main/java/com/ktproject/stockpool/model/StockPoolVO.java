@@ -15,5 +15,39 @@ package com.ktproject.stockpool.model;
  * @history 2014-5-3 vteamdell0723 创建StockPoolModal.java
  */
 public class StockPoolVO {
-      
+	    /**
+	     * 股票池描述.
+	     */
+        private  String  stockMain ;
+        /**
+         * 股票池ID号.
+         */
+        private  String  stockPoolId;
+        
+		/**
+		 * @return the stockMain
+		 */
+		public String getStockMain() {
+			return stockMain;
+		}
+		/**
+		 * @param stockMain the stockMain to set
+		 */
+		public void setStockMain(String stockMain) {
+			this.stockMain = stockMain;
+		}
+		/**
+		 * @return the stockPoolId
+		 */
+		public String getStockPoolId() {
+			return stockPoolId;
+		}
+		/**
+		 * @param stockPoolId the stockPoolId to set
+		 */
+		public void setStockPoolId(String stockPoolId) {
+			this.stockPoolId = stockPoolId;
+		}
+         
+        
 }

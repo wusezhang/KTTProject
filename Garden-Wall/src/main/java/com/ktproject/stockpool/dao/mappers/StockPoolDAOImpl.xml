@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="">
-	
-	
+<mapper namespace="com.ktproject.stockpool.dao.impl.StockPoolDaoImpl">
+	   
+		<resultMap id="objectMap" type="com.ktproject.stockpool.model.StockPoolVO">
+		    <result column="STOCKMAIN" property="stockMain" />
+			<result column="STOCKPOOLID" property="stockPoolId" />
+	   </resultMap>
+	  
+	   <select id="queryMainStockPoolResource" resultMap="objectMap">
+		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID  FROM  STOCK_POOL_MAIN_TABLE  MAIN 
+	   </select>
+	  
 </mapper>

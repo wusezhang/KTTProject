@@ -5,10 +5,13 @@
 .labelposition{
 	position:relative;
 	padding-top:20px;
-	padding-left:40px;
+	padding-left:10px;
 }
 .labenfont{
 	font-family: "Microsoft YaHei" ! important;
 	font-weight:800;
 	font-size:large;
+}
+.textformat{
+	text-decoration: none;
 }

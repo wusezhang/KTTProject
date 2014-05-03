@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ktproject.stockpool.model.StockPoolVO;
 import com.ktproject.stockpool.service.StockPoolService;
@@ -39,7 +40,7 @@ public class StockPoolController {
 	  * @return
 	  */
 	 @RequestMapping(value = "/queryMainStockPoolResource", method = RequestMethod.POST)
-	 public  List<StockPoolVO>  queryMainStockPoolResource(){
+	 public @ResponseBody List<StockPoolVO>  queryMainStockPoolResource(){
 		  log.info("查询股票池主要的题材!");
 		  return  stockPoolService.queryMainStockPoolResource();
 	  }
