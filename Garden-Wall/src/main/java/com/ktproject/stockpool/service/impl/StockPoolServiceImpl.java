@@ -7,6 +7,14 @@
  */
 package com.ktproject.stockpool.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.stockpool.dao.StockPoolDao;
+import com.ktproject.stockpool.model.StockPoolVO;
+import com.ktproject.stockpool.service.StockPoolService;
+
 /**
  * 类功能描述：股票池相应的实现类.
  * StockPoolServiceImpl.java
@@ -14,6 +22,16 @@ package com.ktproject.stockpool.service.impl;
  * @version 0.1.0
  * @history 2014-5-2 vteamdell0723 创建StockPoolServiceImpl.java
  */
-public class StockPoolServiceImpl {
+public class StockPoolServiceImpl implements StockPoolService {
+    
+	@Autowired
+    private	  StockPoolDao  stockPoolDao;
+	
+	/**
+	 * @see com.ktproject.stockpool.service.StockPoolService#queryMainStockPoolResource()
+	 */
+	public List<StockPoolVO> queryMainStockPoolResource() {
+		return stockPoolDao.queryMainStockPoolResource();
+	}
 
 }

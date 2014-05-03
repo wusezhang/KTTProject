@@ -7,6 +7,10 @@
  */
 package com.ktproject.stockpool.service;
 
+import java.util.List;
+
+import com.ktproject.stockpool.model.StockPoolVO;
+
 /**
  * 类功能描述：股票池操作类.
  * StockPoolService.java
@@ -15,5 +19,9 @@ package com.ktproject.stockpool.service;
  * @history 2014-5-2 vteamdell0723 创建StockPoolService.java
  */
 public interface StockPoolService {
-
+	/**
+	 * 查询股票池主要的题材.
+	 * @return
+	 */
+	public  List<StockPoolVO>  queryMainStockPoolResource();
 }

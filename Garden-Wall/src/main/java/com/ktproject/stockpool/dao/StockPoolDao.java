@@ -7,6 +7,10 @@
  */
 package com.ktproject.stockpool.dao;
 
+import java.util.List;
+
+import com.ktproject.stockpool.model.StockPoolVO;
+
 /**
  * 类功能描述：股票池标准接口
  * StockPoolDao.java
@@ -15,5 +19,9 @@ package com.ktproject.stockpool.dao;
  * @history 2014-5-2 vteamdell0723 创建StockPoolDao.java
  */
 public interface StockPoolDao {
-
+    /**
+     * 查询股票池主要的题材.
+     * @return
+     */
+	public List<StockPoolVO> queryMainStockPoolResource();
 }

@@ -7,7 +7,13 @@
  */
 package com.ktproject.stockpool.dao.impl;
 
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ktproject.stockpool.dao.StockPoolDao;
+import com.ktproject.stockpool.model.StockPoolVO;
 
 /**
  * 类功能描述：股票池功能类.
@@ -17,5 +23,15 @@ import com.ktproject.stockpool.dao.StockPoolDao;
  * @history 2014-5-2 vteamdell0723 创建StockPoolDaoImpl.java
  */
 public class StockPoolDaoImpl implements StockPoolDao {
+    
+	  @Autowired
+	  private  SqlSession  sqlSession ;
+	
+	/**
+	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResource()
+	 */
+	public List<StockPoolVO> queryMainStockPoolResource() {
+		return sqlSession.selectList("");
+	}
 
 }

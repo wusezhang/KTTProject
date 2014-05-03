@@ -7,6 +7,17 @@
  */
 package com.ktproject.stockpool.controller;
 
+import java.util.List;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.ktproject.stockpool.model.StockPoolVO;
+import com.ktproject.stockpool.service.StockPoolService;
+
 /**
  * 类功能描述：股票池功能描述.
  * StockPoolController.java
@@ -14,6 +25,24 @@ package com.ktproject.stockpool.controller;
  * @version 0.1.0
  * @history 2014-5-2 vteamdell0723 创建StockPoolController.java
  */
+@Controller
+@RequestMapping("stockPoolController")
 public class StockPoolController {
-
+     
+	 private Log log = LogFactory.getLog(StockPoolController.class);
+	 
+	 @Autowired
+	 private  StockPoolService stockPoolService;
+	 
+	 /**
+	  * 查询股票池主要的题材.
+	  * @return
+	  */
+	 @RequestMapping(value = "/queryMainStockPoolResource", method = RequestMethod.POST)
+	 public  List<StockPoolVO>  queryMainStockPoolResource(){
+		  log.info("查询股票池主要的题材!");
+		  return  stockPoolService.queryMainStockPoolResource();
+	  }
+	
+	
 }
