@@ -13,6 +13,10 @@
 			 <result column="STOCKFORUMDESCRIPTION" property="stockForumDescription" />
 			 <result column="STOCKSETID" property="stockSetId"/>
 	   </resultMap>
+	   
+	   <resultMap id="detailObjectMap" type="com.ktproject.stockpool.model.StockPoolThemeDetailVO">
+		    
+	   </resultMap>
 	  
 	   <select id="queryMainStockPoolResource" resultMap="objectMap" parameterType="hashmap">
 		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID 
@@ -28,11 +32,29 @@
 	  
 	   <select id="queryThemeStockPoolResource" resultMap="themeObjectMap" parameterType="hashmap">
 		    SELECT THEME.LINKURL AS LINKURL, THEME.STOCKSECTOR AS STOCKSECTOR, 
-			  THEME.STOCKFORUMDESCRIPTION AS STOCKFORUMDESCRIPTION,THEME.STOCKSETID AS STOCKSETID
+			SUBSTRING(THEME.STOCKFORUMDESCRIPTION,1,75) AS STOCKFORUMDESCRIPTION,THEME.STOCKSETID AS STOCKSETID
             FROM
 	          STOCK_POOL_MAIN_THEME_TABLE THEME
             WHERE
 	          THEME.STOCKPOOL_ID =#{stockPoolId}
+	   </select>
+	   
+	   <select id="queryThemeStockPoolDetailResource" resultMap="detailObjectMap" parameterType="hashmap">
+		    SELECT RESOURCE.STOCKNAME, RESOURCE.STOCKNUMBER
+            FROM
+	               STOCK_POOL_MAIN_THEME_RESOURCE_TABLE RESOURCE
+            WHERE
+	               RESOURCE.STOCKSETID = #{stockSetId}
+		   <if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+           </if>
+	   </select>
+	   
+	   <select id="queryThemeStockPoolDetailCount" resultType="int" parameterType="hashmap">
+		   SELECT  COUNT(*) 
+		         FROM STOCK_POOL_MAIN_THEME_RESOURCE_TABLE RESOURCE
+           WHERE
+	             RESOURCE.STOCKSETID = #{stockSetId}
 	   </select>
 	  
 </mapper>

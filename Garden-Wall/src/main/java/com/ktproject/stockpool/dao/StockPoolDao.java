@@ -10,6 +10,7 @@ package com.ktproject.stockpool.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.ktproject.stockpool.model.StockPoolThemeDetailVO;
 import com.ktproject.stockpool.model.StockPoolThemeVO;
 import com.ktproject.stockpool.model.StockPoolVO;
 
@@ -23,14 +24,12 @@ import com.ktproject.stockpool.model.StockPoolVO;
 public interface StockPoolDao {
 	/**
 	 * 查询股票池主要的题材.
-	 * 
 	 * @return
 	 */
 	List<StockPoolVO> queryMainStockPoolResource(final Map<String, Object> map);
 
 	/**
 	 * 查询相应的结果数.
-	 * 
 	 * @param map
 	 * @return
 	 */
@@ -38,9 +37,22 @@ public interface StockPoolDao {
 
 	/**
 	 * 查询股票板块明细.
-	 * 
 	 * @param map
 	 * @return
 	 */
 	List<StockPoolThemeVO> queryThemeStockPoolResource(final Map<String, Object> map);
+	
+	/**
+	 * 根据股票集合码查询对应的股票信息.
+	 * @param map
+	 * @return
+	 */
+	List<StockPoolThemeDetailVO> queryThemeStockPoolDetailResource(final Map<String,Object> map);
+	
+	/**
+	 * 根据股票集合码查询对应的股票信息总条数.
+	 * @param map
+	 * @return
+	 */
+	int  queryThemeStockPoolDetailCount(final Map<String,Object> map);
 }

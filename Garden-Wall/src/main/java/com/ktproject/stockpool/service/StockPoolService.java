@@ -32,4 +32,11 @@ public interface StockPoolService {
 	  * @return
 	  */
 	 List<StockPoolThemeVO> queryThemeStockPoolResource(final Map<String,Object> map);
+	 
+	 /**
+	  * 通过相应的股票集合ID查找相应的股票信息.
+	  * @param map
+	  * @return
+	  */
+	 Map<String,Object> queryThemeStockPoolListDetail(final  Map<String,Object> map);
 }

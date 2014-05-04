@@ -62,4 +62,22 @@ public class StockPoolController {
 		    return  stockPoolService.queryThemeStockPoolResource(map);
 	 } 
 	 
+	/**
+	 * 通过相应的股票集合ID查找相应的股票信息 
+	 * @param start
+	 * @param limit
+	 * @param stockSetId
+	 * @return
+	 */
+	@RequestMapping(value = "/queryThemeStockPoolListDetail", method = RequestMethod.POST)
+	public  @ResponseBody Map<String,Object> queryThemeStockPoolListDetail(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit,
+			@RequestParam("stockSetId") final String stockSetId){
+		    Map<String,Object> map = new  HashMap<String,Object>();
+		    map.put("start", start);
+		    map.put("limit", limit);
+		    map.put("stockSetId", stockSetId);
+		    return  stockPoolService.queryThemeStockPoolListDetail(map);
+	} 
 }

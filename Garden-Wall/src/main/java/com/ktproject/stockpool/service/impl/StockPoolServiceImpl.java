@@ -44,4 +44,15 @@ public class StockPoolServiceImpl implements StockPoolService {
 		return stockPoolDao.queryThemeStockPoolResource(map);
 	}
 
+	/**
+	 * @see com.ktproject.stockpool.service.StockPoolService#queryThemeStockPoolListDetail(java.util.Map)
+	 */
+	public Map<String, Object> queryThemeStockPoolListDetail(
+			Map<String, Object> map) {
+		Map<String,Object> resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", stockPoolDao.queryThemeStockPoolDetailResource(map));
+		resultMap.put("count", stockPoolDao.queryThemeStockPoolDetailCount(map));
+		return resultMap;
+	}
+
 }
