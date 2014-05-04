@@ -41,30 +41,29 @@ public class StockPoolDaoImpl implements StockPoolDao {
 	 * 查询股票池相应的结果数.
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryMainStockPoolResourceCount(java.util.Map)
 	 */
-	public int queryMainStockPoolResourceCount(Map<String, Object> map) {
+	public int queryMainStockPoolResourceCount(final Map<String, Object> map) {
 		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryMainStockPoolResourceCount", map);
 	}
 
 	/**
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryThemeStockPoolResource(java.util.Map)
 	 */
-	public List<StockPoolThemeVO> queryThemeStockPoolResource(Map<String, Object> map) {
+	public List<StockPoolThemeVO> queryThemeStockPoolResource(final Map<String, Object> map) {
 		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryThemeStockPoolResource", map);
 	}
 
 	/**
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryThemeStockPoolDetailResource(java.util.Map)
 	 */
-	public List<StockPoolThemeDetailVO> queryThemeStockPoolDetailResource(
-			Map<String, Object> map) {
-		return null;
+	public List<StockPoolThemeDetailVO> queryThemeStockPoolDetailResource(final Map<String, Object> map) {
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryThemeStockPoolDetailResource", map);
 	}
 
 	/**
 	 * @see com.ktproject.stockpool.dao.StockPoolDao#queryThemeStockPoolDetailCount(java.util.Map)
 	 */
-	public int queryThemeStockPoolDetailCount(Map<String, Object> map) {
-		return 0;
+	public int queryThemeStockPoolDetailCount(final Map<String, Object> map) {
+		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockPoolDaoImpl.queryThemeStockPoolDetailCount", map);
 	}
 
 }
