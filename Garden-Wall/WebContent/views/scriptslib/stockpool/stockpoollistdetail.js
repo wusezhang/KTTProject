@@ -32,7 +32,7 @@ function initListDetailModal(data) {
 	  $('#stockPoolListDetailModel').empty();
 	  for(var i=0;i<data.length;i++){
 	  	 $('#stockPoolListDetailModel').append('<tr>'
-	  	 +'<td>'+data[i].stockName+'</td>'
-	  	 +'<td>'+data[i].stockNumber+'</td></tr>');
+	  	 +'<td class="text-success">'+data[i].stockName+'</td>'
+	  	 +'<td class="text-warning">'+data[i].stockNumber+'</td></tr>');
 	  }
 }
