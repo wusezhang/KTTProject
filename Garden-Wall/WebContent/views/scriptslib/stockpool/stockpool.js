@@ -34,7 +34,7 @@ function initMainModel(data) {
 	for (var i = 0; i < data.length; i++) {
 		$('#showStockPoolModal').append('<div class="live-tile half-tall '+$.createRandomCssModel()
 		+' well-sm"  data-speed="1000"  data-direction="vertical" data-mode="carousel" data-bounce="true" data-bounce-dir="edges">' 
-		+ '<a class="" href="javascript:initMainModalList(\'' + data[i].stockPoolId + '\')"><div class="labelposition labenfont">'
+		+ '<a class="metroLarge" href="javascript:initMainModalList(\'' + data[i].stockPoolId + '\')"><div class="labelposition labenfont">'
 		+ data[i].stockMain 
 		+ '</div></a></div>');
 	}
