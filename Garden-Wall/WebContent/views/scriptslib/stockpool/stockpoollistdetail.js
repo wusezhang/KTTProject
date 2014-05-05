@@ -33,6 +33,6 @@ function initListDetailModal(data) {
 	  for(var i=0;i<data.length;i++){
 	  	 $('#stockPoolListDetailModel').append('<tr>'
 	  	 +'<td class="text-success">'+data[i].stockName+'</td>'
-	  	 +'<td class="text-warning">'+data[i].stockNumber+'</td></tr>');
+	  	 +'<td><a class="btn btn-sm btn-danger">'+data[i].stockNumber+'</a></td></tr>');
 	  }
 }
