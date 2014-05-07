@@ -53,7 +53,7 @@ function  initModalListDetail(data){
 	for(var i=0 ; i<data.length ;i++){
 		$('#showStockPoolModalList').append('<tr>'
 		   + '<td><span class="label label-info">'+data[i].stockSector+'</span></td>'
-           + '<td class="text-info">'+data[i].stockForumDescription+'...</td>'
+           + '<td class="text-info"><a href="#">'+data[i].stockForumDescription+'...</a></td>'
            + '<td><a href="stockPoolListDetail.html?id='+data[i].stockSetId+'" class="btn btn-sm btn-primary fancybox fancybox.iframe">'
            +'<span class="glyphicon glyphicon-briefcase"></span>  股票明细</a></td> '
            +'</tr>');
