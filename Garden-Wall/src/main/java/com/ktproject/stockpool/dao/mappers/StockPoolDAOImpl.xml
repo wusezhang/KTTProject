@@ -15,10 +15,9 @@
 	   </resultMap>
 	   
 	   <resultMap id="detailObjectMap" type="com.ktproject.stockpool.model.StockPoolThemeDetailVO">
-		    
 	   </resultMap>
 	  
-	   <select id="queryMainStockPoolResource" resultMap="objectMap" parameterType="hashmap">
+	   <select id="queryMainStockPoolResource" resultMap="objectMap" parameterType="hashmap" useCache="true">
 		   SELECT  MAIN.STOCK_MAIN AS STOCKMAIN , MAIN.STOCKPOOL_ID  AS  STOCKPOOLID 
 		   FROM  STOCK_POOL_MAIN_TABLE  MAIN 
 		   <if test="limit != null and limit !='' ">
@@ -26,11 +25,11 @@
            </if>
 	   </select>
 	   
-	   <select id="queryMainStockPoolResourceCount" parameterType="hashmap" resultType="int">
+	   <select id="queryMainStockPoolResourceCount" parameterType="hashmap" resultType="int" useCache="true">
 		    SELECT  COUNT(*) FROM  STOCK_POOL_MAIN_TABLE  MAIN 
 	   </select>
-	  
-	   <select id="queryThemeStockPoolResource" resultMap="themeObjectMap" parameterType="hashmap">
+	   
+	   <select id="queryThemeStockPoolResource" resultMap="themeObjectMap" parameterType="hashmap" useCache="true">
 		    SELECT THEME.LINKURL AS LINKURL, THEME.STOCKSECTOR AS STOCKSECTOR, 
 			SUBSTRING(THEME.STOCKFORUMDESCRIPTION,1,65) AS STOCKFORUMDESCRIPTION,THEME.STOCKSETID AS STOCKSETID
             FROM
@@ -39,7 +38,7 @@
 	          THEME.STOCKPOOL_ID =#{stockPoolId}
 	   </select>
 	   
-	   <select id="queryThemeStockPoolDetailResource" resultMap="detailObjectMap" parameterType="hashmap">
+	   <select id="queryThemeStockPoolDetailResource" resultMap="detailObjectMap" parameterType="hashmap" useCache="true">
 		    SELECT RESOURCE.STOCKNAME, RESOURCE.STOCKNUMBER
             FROM
 	               STOCK_POOL_MAIN_THEME_RESOURCE_TABLE RESOURCE
@@ -50,7 +49,7 @@
            </if>
 	   </select>
 	   
-	   <select id="queryThemeStockPoolDetailCount" resultType="int" parameterType="hashmap">
+	   <select id="queryThemeStockPoolDetailCount" resultType="int" parameterType="hashmap" useCache="true">
 		   SELECT  COUNT(*) 
 		         FROM STOCK_POOL_MAIN_THEME_RESOURCE_TABLE RESOURCE
            WHERE
