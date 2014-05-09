@@ -27,7 +27,6 @@ import com.ktproject.cjhy.service.MjtjResourceService;
 
 /**
  * 类功能描述：名家推荐模块
- * 
  * @author ZJJ
  * @version 0.1.0
  * @history 2014年4月13日 ZJJ 创建MjtjResourceController.java
