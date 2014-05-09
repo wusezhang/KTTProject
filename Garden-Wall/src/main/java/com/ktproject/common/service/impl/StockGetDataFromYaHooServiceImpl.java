@@ -2,7 +2,7 @@ package com.ktproject.common.service.impl;
 
 /**
  * yahoo股票数据接口工具类
- * @author 张家将 2013.01.02
+ * @author wusezhang  2014.01.02
  * @version 1.0
  */
 import java.io.BufferedReader;
@@ -21,10 +21,10 @@ public class StockGetDataFromYaHooServiceImpl  implements StockGetDataFromYaHooS
 
     /**
      * 根据 股票编码、开始日期、结束日期 获取股票数据
-     * @author 祁丛生
+     * @author wusezhang
      * @param stockName  沪市：000000.ss 深市：000000.sz
-     * @param fromDate    开始日期
-     * @param toDate         结束日期
+     * @param fromDate 开始日期
+     * @param toDate   结束日期
      * @return List<StockData>
      */
     public List<StockServiceBO> getStockCsvData(String stockName, String fromDate,String toDate) {
@@ -80,7 +80,7 @@ public class StockGetDataFromYaHooServiceImpl  implements StockGetDataFromYaHooS
     }
     /**
      * 根据 股票编码、日期 获取股票数据
-     * @author 张家将
+     * @author wusezhang
      * @param stockName   沪市：000000.ss 深市：000000.sz
      * @param date 日期
      * @return StockServiceBO
@@ -91,7 +91,7 @@ public class StockGetDataFromYaHooServiceImpl  implements StockGetDataFromYaHooS
     }
     /**
      * 根据 股票编码 获取当天股票数据
-     * @author 张家将
+     * @author wusezhang
      * @param stockName   沪市：000000.ss 深市：000000.sz
      * @return StockServiceBO
      */
