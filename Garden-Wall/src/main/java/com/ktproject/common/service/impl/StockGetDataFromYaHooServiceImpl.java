@@ -31,7 +31,7 @@ public class StockGetDataFromYaHooServiceImpl  implements StockGetDataFromYaHooS
         List<StockServiceBO> list = new ArrayList<StockServiceBO>();
         String[] datefromInfo= fromDate.split("-");
         String[] toDateInfo = toDate.split("-");
-        String code = stockName.substring(0, 6);;
+        String code = stockName.substring(0, 6);
         
         String a = (Integer.valueOf(datefromInfo[1])-1)+"";// a – 起始时间，月
         String b = datefromInfo[2];// b – 起始时间，日
