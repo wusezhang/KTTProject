@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.ktproject.forexpic.model.ForexNewsPicVO;
 import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
@@ -51,4 +52,11 @@ public class ForexPicController {
 		 return  forexPicService.queryImageUrlById(id);
 	}
 	
+	/**
+	 * 外汇信息图汇信息查询.
+	 */
+	@RequestMapping(value="/queryForexNewsPic",method = RequestMethod.POST)
+	public @ResponseBody List<ForexNewsPicVO> queryForexNewsPic(){
+		return  null;
+	}
 }

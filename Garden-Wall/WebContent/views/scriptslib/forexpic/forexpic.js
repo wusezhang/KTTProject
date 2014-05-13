@@ -23,30 +23,20 @@ function  initImageDiv(data){
 
 function  initArgs(){
 	 return {url:'../../forexpicController/queryAllForexPic',
-		      params:{},
+		      params:{countPerPage:6},
 		      callBack:function(data){initDataSet(data);}		
 		    };
 }
 
 function  initDataSet(data){
 	 	   $('#firstRow').empty();
-	 	   $('#secondRow').empty();
-	 	   for(var i =0 ; i<8 ; i++){
-	 	   	    if(0<=i&&i<=3){
-	 	   	    	 $('#firstRow').append('<div class="col-xs-5 col-md-3">'
-						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')" >'
-						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
-						+ '<div class="caption bottomshowInfor"> <span class="glyphicon glyphicon-calendar"> </span>'
-						+ data[i].title
-						+ '</div> </a> </div>');
-	 	   	    }else if(3<i&&i<8){
-	 	   	    	 $('#secondRow').append('<div class="col-xs-5 col-md-3">'
-						+ '<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')">' 
-						+ '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
-						+ '<div class="caption bottomshowInfor"> <span class="glyphicon glyphicon-calendar"> </span> '
-						+ data[i].title
-						+ ' </div> </a> </div>');
-	 	   	    }
+	 	   for(var i =0 ; i<data.length ; i++){
+	 	   	$('#firstRow').append('<div class="col-xs-5 col-md-2">'
+			 +'<a  class="thumbnail" href="javascript:showImageListModel(\''+ data[i].imageUrl+'.cnforex'+ '\')" >'
+			 + '<img src="'+data[i].imageUrl+'" class="img-rounded"> '
+			 + '<div class="caption bottomshowInfor"> <span class="glyphicon glyphicon-calendar"> </span>'
+			 + data[i].title
+			 + '</div> </a> </div>');
 	 	   }
 	 }
 

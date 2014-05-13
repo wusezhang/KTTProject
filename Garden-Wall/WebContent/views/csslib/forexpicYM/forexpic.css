@@ -1,6 +1,7 @@
 .bottomshowInfor {
 	height: 40px;
 	text-align: center;
+	font-size:small;
 	background-image: url('../../imagelib/furley_bg.png');
 }
 
