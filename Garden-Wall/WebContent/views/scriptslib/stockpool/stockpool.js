@@ -9,6 +9,11 @@ $(document).ready(function() {
 	}
 
 	function bindEvent() {
+		//ENTER 按钮绑定事件.
+		$(document).keydown(function(event){  
+              if(event.keyCode==13){  
+                  $('#btnPlateSearch').click();  
+               }});
         $('#btnPlateSearch').bind('click',plateSearchEvent);
 	}
 
