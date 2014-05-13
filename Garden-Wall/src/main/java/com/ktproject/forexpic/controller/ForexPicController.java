@@ -32,7 +32,7 @@ public class ForexPicController {
 	private  ForexPicService forexPicService;
 	   
 	/**
-	 * 查询所有的图片集合.
+	 * 查询所有的图片集合.  
 	 * @return
 	 */
 	@RequestMapping(value="/queryAllForexPic",method = RequestMethod.POST)
