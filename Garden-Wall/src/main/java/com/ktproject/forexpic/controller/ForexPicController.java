@@ -23,16 +23,11 @@ import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
 /**
- * 类功能描述：
+ * 类功能描述：汇市看图
  * ForexPicController.java
  * @author vteamdell0723
  * @version 0.1.0
  * @history 2014-5-13 vteamdell0723 创建ForexPicController.java
- */
-/**
- * 汇市看图
- * 
- * @author vteamdell0723
  */
 @Controller
 @RequestMapping("forexpicController")
