@@ -44,8 +44,7 @@ public class ForexPicController {
 	 * @return
 	 */
 	@RequestMapping(value = "/queryAllForexPic", method = RequestMethod.POST)
-	public @ResponseBody
-	Map<String, Object> queryAllForexPic(
+	public @ResponseBody Map<String, Object> queryAllForexPic(
 			@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit) {
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -58,8 +57,7 @@ public class ForexPicController {
 	 * 通过ID查询相应的图片集合.
 	 */
 	@RequestMapping(value = "/queryImageListById", method = RequestMethod.POST)
-	public @ResponseBody
-	List<ForexPicDetailVO> queryImageListById(final String id) {
+	public @ResponseBody List<ForexPicDetailVO> queryImageListById(final String id) {
 		return forexPicService.queryImageUrlById(id);
 	}
 
@@ -67,8 +65,7 @@ public class ForexPicController {
 	 * 外汇信息图汇信息查询.
 	 */
 	@RequestMapping(value = "/queryForexNewsPic", method = RequestMethod.POST)
-	public @ResponseBody
-	List<ForexNewsPicVO> queryForexNewsPic() {
-		return null;
+	public @ResponseBody List<ForexNewsPicVO> queryForexNewsPic() {
+		return forexPicService.queryForexNewsPic();
 	}
 }

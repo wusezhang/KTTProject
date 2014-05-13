@@ -3,11 +3,11 @@ package com.ktproject.forexpic.service.impl;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.forexpic.dao.ForexPicDAO;
+import com.ktproject.forexpic.model.ForexNewsPicVO;
 import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import com.ktproject.forexpic.service.ForexPicService;
@@ -28,6 +28,13 @@ public class ForexPicServiceImpl implements ForexPicService {
 
 	public List<ForexPicDetailVO> queryImageUrlById(final String id) {
 		return forexPicDAO.queryImageUrlById(id);
+	}
+
+	/**
+	 * @see com.ktproject.forexpic.service.ForexPicService#queryForexNewsPic()
+	 */
+	public List<ForexNewsPicVO> queryForexNewsPic() {		
+		return forexPicDAO.queryForexNewsPic();
 	}
 	
 	

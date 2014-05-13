@@ -13,6 +13,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import com.ktproject.forexpic.dao.ForexPicDAO;
+import com.ktproject.forexpic.model.ForexNewsPicVO;
 import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.model.ForexPicVO;
 import org.apache.commons.logging.Log;
@@ -81,6 +82,14 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 					}
 				});
 		return resultList;
+	}
+
+	/**
+	 * @see com.ktproject.forexpic.dao.ForexPicDAO#queryForexNewsPic()
+	 */
+	public List<ForexNewsPicVO> queryForexNewsPic() {
+		log.info("外汇信息图汇信息查询."); 
+		return sqlSession.selectList("com.ktproject.forexpic.dao.impl.ForexPicDAOImpl.queryForexNewsPic");
 	}
 
 	
