@@ -24,7 +24,7 @@ $(document).ready(function(){
 					  +	'<a class="pull-left" href="'+data[i].link+'" target="view_window">'
 					  +	'<img class="media-object img-rounded imgsize" src="'+data[i].imageUrl+'"> </a>'
 					  +	'<div class="media-body"> '
-					  +	'<h4 class="media-heading">'+data[i].title+'</h4> '
+					  +	'<h4 class="media-heading text-danger">'+data[i].title+'</h4> '
 					  + data[i].description +'   <span class="label label-info">'+data[i].pubDate+'</span>'
 					  +	'</div> '
 					  +	'</div></td></tr>');
