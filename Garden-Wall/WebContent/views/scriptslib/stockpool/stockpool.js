@@ -9,8 +9,13 @@ $(document).ready(function() {
 	}
 
 	function bindEvent() {
-        
+        $('#btnPlateSearch').bind('click',plateSearchEvent);
 	}
+
+    //查询按钮点击事件
+    function  plateSearchEvent(){
+    	alert($('#plateInput').val());
+    }
 
 });
 

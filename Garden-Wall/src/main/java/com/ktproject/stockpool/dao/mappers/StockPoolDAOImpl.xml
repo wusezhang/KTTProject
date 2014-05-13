@@ -34,8 +34,14 @@
 			SUBSTRING(THEME.STOCKFORUMDESCRIPTION,1,75) AS STOCKFORUMDESCRIPTION,THEME.STOCKSETID AS STOCKSETID
             FROM
 	          STOCK_POOL_MAIN_THEME_TABLE THEME
-            WHERE
-	          THEME.STOCKPOOL_ID =#{stockPoolId}
+            WHERE 1=1
+			<if test="stockPoolId != null and stockPoolId !='' ">
+				THEME.STOCKPOOL_ID =#{stockPoolId}
+			</if>
+			<if test="stockSector != null and stockSector !='' ">
+				
+			</if>
+	          
 	   </select>
 	   
 	   <select id="queryThemeStockPoolDetailResource" resultMap="detailObjectMap" parameterType="hashmap" useCache="true">
