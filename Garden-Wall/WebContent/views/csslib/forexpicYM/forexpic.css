@@ -9,3 +9,8 @@
 	position:absolute;
 	padding-left:500px;
 }
+
+.imgsize{
+	max-width:150px;
+	max-height:100px;
+}

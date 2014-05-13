@@ -47,6 +47,10 @@ public class ForexNewsPicVO  implements Serializable{
 	 */
 	private  String  description;
 	/**
+	 * 发出日期.
+	 */
+	private  String  pubDate;
+	/**
 	 * @return the link
 	 */
 	public String getLink() {
@@ -117,6 +121,18 @@ public class ForexNewsPicVO  implements Serializable{
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	/**
+	 * @return the pubDate
+	 */
+	public String getPubDate() {
+		return pubDate;
+	}
+	/**
+	 * @param pubDate the pubDate to set
+	 */
+	public void setPubDate(String pubDate) {
+		this.pubDate = pubDate;
 	}
 	
 	
