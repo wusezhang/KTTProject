@@ -14,7 +14,18 @@ $(document).ready(function() {
 
     //查询按钮点击事件
     function  plateSearchEvent(){
-    	alert($('#plateInput').val());
+    	var plateInput =  $('#plateInput').val();
+    	if(plateInput){
+    	   $('#stockThemeList').hide(); 	
+           $.commonService('../../stockPoolController/queryThemeStockPoolResource', 'POST',
+            {stockPoolId:'',stockSector:plateInput}, function(data) {
+		       initModalListDetail(data);
+	        }); 
+    	}else{
+    	   $('#stockThemeList').show();
+    	}
+    	
+    	
     }
 
 });
@@ -47,7 +58,7 @@ function initMainModel(data) {
 
 //初始化相应的列表信息.
 function initMainModalList(id) {
-	 $.commonService('../../stockPoolController/queryThemeStockPoolResource', 'POST', {stockPoolId:id}, function(data) {
+	 $.commonService('../../stockPoolController/queryThemeStockPoolResource', 'POST', {stockPoolId:id,stockSector:''}, function(data) {
 		 initModalListDetail(data);
 	 });
 }
@@ -58,7 +69,7 @@ function  initModalListDetail(data){
 	for(var i=0 ; i<data.length ;i++){
 		$('#showStockPoolModalList').append('<tr>'
 		   + '<td><span class="label label-info">'+data[i].stockSector+'</span></td>'
-           + '<td class="text-info"><a href="#">'+data[i].stockForumDescription+'...</a></td>'
+           + '<td class="text-info"><a href="'+data[i].linkUrl+'" target="view_window">'+data[i].stockForumDescription+'...</a></td>'
            + '<td><a href="stockPoolListDetail.html?id='+data[i].stockSetId+'" class="btn btn-sm btn-primary fancybox fancybox.iframe">'
            +'<span class="glyphicon glyphicon-briefcase"></span>  股票明细</a></td> '
            +'</tr>');

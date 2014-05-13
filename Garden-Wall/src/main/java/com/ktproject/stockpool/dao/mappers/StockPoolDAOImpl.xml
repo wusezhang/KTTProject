@@ -36,10 +36,10 @@
 	          STOCK_POOL_MAIN_THEME_TABLE THEME
             WHERE 1=1
 			<if test="stockPoolId != null and stockPoolId !='' ">
-				THEME.STOCKPOOL_ID =#{stockPoolId}
+				AND THEME.STOCKPOOL_ID =#{stockPoolId}
 			</if>
 			<if test="stockSector != null and stockSector !='' ">
-				
+				AND  THEME.STOCKSECTOR  LIKE  "%"#{stockSector}"%"
 			</if>
 	          
 	   </select>

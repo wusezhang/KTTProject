@@ -54,9 +54,11 @@ public class StockPoolController {
 	
 	 @RequestMapping(value = "/queryThemeStockPoolResource", method = RequestMethod.POST)
 	 public  @ResponseBody List<StockPoolThemeVO> queryThemeStockPoolResource(
-			 @RequestParam("stockPoolId") final String stockPoolId){
+			 @RequestParam("stockPoolId") final String stockPoolId,
+			 @RequestParam("stockSector") final String stockSector){
 		    Map<String,Object> map = new HashMap<String,Object>();
 		    map.put("stockPoolId", stockPoolId);
+		    map.put("stockSector", stockSector);
 		    return  stockPoolService.queryThemeStockPoolResource(map);
 	 } 
 	 
