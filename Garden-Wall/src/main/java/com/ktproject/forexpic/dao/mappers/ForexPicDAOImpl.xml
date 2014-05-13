@@ -31,7 +31,7 @@
 		ORDER BY  WHKT.CREATEDATE DESC
 	</select>
     
-    <select id="queryForexNewsPic" resultMap="newsResultMap">
+    <select id="queryForexNewsPic" resultMap="newsResultMap" useCache="true">
 		 SELECT NEWS.LINK AS LINK, NEWS.AUTHOR AS AUTHOR, NEWS.TITLE AS TITLE,
 	         NEWS.IMAGEURL AS IMAGEURL,NEWS.DESCRIPTION AS DESCRIPTION,NEWS.PUBDATE AS PUBDATE
          FROM
