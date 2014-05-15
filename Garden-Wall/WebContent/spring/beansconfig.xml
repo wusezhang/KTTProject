@@ -32,5 +32,9 @@
 	 	
 	<bean id="stockPoolService" class="com.ktproject.stockpool.service.impl.StockPoolServiceImpl" scope="prototype" />	
 	<bean id="stockPoolDao" class="com.ktproject.stockpool.dao.impl.StockPoolDaoImpl" scope="prototype"/>
+	
+	<bean id="ForexCalendarService" class="com.ktproject.forexpic.service.impl.ForexCalendarServiceImpl" scope="prototype"/>
+	<bean id="ForexCalendarDAO"  class="com.ktproject.forexpic.dao.impl.ForexCalendarDAOImpl" scope="prototype"/>
+	
 		
 </beans>
