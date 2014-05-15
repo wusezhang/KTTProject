@@ -5,6 +5,9 @@ $(document).ready(function(){
 	});
 	
 	function initModel(){
+		
+		
+		
 		//初始化fancybox
 		$('.fancybox').fancybox();
 		
