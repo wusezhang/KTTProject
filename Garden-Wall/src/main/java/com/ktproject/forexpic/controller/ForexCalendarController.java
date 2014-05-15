@@ -40,6 +40,12 @@ public class ForexCalendarController {
 	@Autowired
 	private ForexCalendarService  forexCalendarService;
 	
+	/**
+	 * 查询相应的外汇日历信息.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
 	@RequestMapping(value = "/queryForexCalendarResource", method = RequestMethod.POST)
 	public  @ResponseBody  Map<String,Object> queryForexCalendarResource(@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit){

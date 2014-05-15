@@ -7,9 +7,13 @@
  */
 package com.ktproject.forexpic.dao.impl;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.forexpic.dao.ForexCalendarDAO;
+import com.ktproject.forexpic.model.ForexCalendarVO;
 
 /**
  * 类功能描述：外汇日历数据层.
@@ -22,6 +26,20 @@ public class ForexCalendarDAOImpl implements ForexCalendarDAO {
 	
 	@Autowired
 	private  SqlSession  sqlSession ;
+
+	/**
+	 * @see com.ktproject.forexpic.dao.ForexCalendarDAO#queryForexCalendarList(java.util.Map)
+	 */
+	public List<ForexCalendarVO> queryForexCalendarList(final Map map) {
+		return sqlSession.selectList("com.ktproject.forexpic.dao.impl.ForexCalendarDAOImpl.queryForexCalendarList", map);
+	}
+
+	/**
+	 * @see com.ktproject.forexpic.dao.ForexCalendarDAO#queryForexCalendarCount(java.util.Map)
+	 */
+	public int queryForexCalendarCount(final Map map) {
+		return sqlSession.selectOne("com.ktproject.forexpic.dao.impl.ForexCalendarDAOImpl.queryForexCalendarCount",map);
+	}
 	
 	
 	

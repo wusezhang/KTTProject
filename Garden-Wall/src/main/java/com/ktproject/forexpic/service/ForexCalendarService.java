@@ -7,6 +7,8 @@
  */
 package com.ktproject.forexpic.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：外汇日历服务层
  * ForexCalendarService.java
@@ -15,5 +17,11 @@ package com.ktproject.forexpic.service;
  * @history 2014-5-15 vteamdell0723 创建ForexCalendarService.java
  */
 public interface ForexCalendarService {
-
+	
+	/**
+	 * 查询相应的外汇日历信息.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object> queryForexCalendarResource(final Map map);
 }

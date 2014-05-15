@@ -9,9 +9,7 @@
          <result column="ID" property="id"/>
     </resultMap> 
 	
-	<resultMap id="newsResultMap" type="com.ktproject.forexpic.model.ForexNewsPicVO">
-		 
-	</resultMap>
+	<resultMap id="newsResultMap" type="com.ktproject.forexpic.model.ForexNewsPicVO"> </resultMap>
 	
     
     <select id="queryAllForexPic" resultMap="ObjectResultMap"  parameterType="hashmap">

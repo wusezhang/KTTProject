@@ -7,6 +7,10 @@
  */
 package com.ktproject.forexpic.dao;
 
+import java.util.List;
+import java.util.Map;
+import com.ktproject.forexpic.model.ForexCalendarVO;
+
 /**
  * 类功能描述：外汇日历数据层.
  * ForexCalendarDAO.java
@@ -15,5 +19,18 @@ package com.ktproject.forexpic.dao;
  * @history 2014-5-15 vteamdell0723 创建ForexCalendarDAO.java
  */
 public interface ForexCalendarDAO {
-
+	  
+	  /**
+	   * 查询外汇日历信息.
+	   * @param map
+	   * @return
+	   */
+	  List<ForexCalendarVO>  queryForexCalendarList(final  Map  map);
+	  
+	  /**
+	   * 查询外汇日历信息条数.
+	   * @param map
+	   * @return
+	   */
+	  int  queryForexCalendarCount(final Map map);
 }
