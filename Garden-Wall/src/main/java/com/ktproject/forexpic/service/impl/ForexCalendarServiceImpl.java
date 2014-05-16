@@ -45,7 +45,7 @@ public class ForexCalendarServiceImpl implements ForexCalendarService {
 			bean.setDescriptContext(vo.getDescriptContext());
 			String  descriptDetails = vo.getDescriptDetails();
 			if(!StringUtils.isEmpty(descriptDetails)){
-				bean.setDescriptDetails(descriptDetails.replaceAll("<br>","").replaceAll("\n","").replaceAll(" ", ""));
+				bean.setDescriptDetails(descriptDetails.replaceAll("<br>","").replaceAll("\n","").replaceAll(" ", "").replaceAll("<a","<a "));
 			}else{
 				bean.setDescriptDetails("");
 			}
