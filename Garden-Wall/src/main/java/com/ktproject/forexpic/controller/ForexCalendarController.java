@@ -7,6 +7,7 @@
  */
 package com.ktproject.forexpic.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -49,8 +50,11 @@ public class ForexCalendarController {
 	@RequestMapping(value = "/queryForexCalendarResource", method = RequestMethod.POST)
 	public  @ResponseBody  Map<String,Object> queryForexCalendarResource(@RequestParam("start") final int start,
 			@RequestParam("limit") final int limit){
-		
-		return  null;
+		final  Map<String,Object>  mapdata = new  HashMap<String,Object>();
+		mapdata.put("start", start);
+		mapdata.put("limit", limit);
+		log.info("系统查询外汇日历信息");
+		return  forexCalendarService.queryForexCalendarResource(mapdata);
 	}
 	
 }

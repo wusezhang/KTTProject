@@ -13,6 +13,9 @@
 	          1 = 1
         ORDER BY
 	          FOREXNEWS.TITLETIME DESC
+		<if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>	  
 	</select>
 	
 	<select id="queryForexCalendarCount" resultType="int">
