@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	$(function() {
 		initModel();
-		bindEvent();
 	});
 
 	function initModel() {
@@ -13,10 +12,6 @@ $(document).ready(function() {
         
         //定时任务机制. 
         timerCountDownEvent(); 
-	}
-
-	function bindEvent() {
-
 	}
 
 });
@@ -37,7 +32,7 @@ function initCurrentModel(data) {
 	$('#forexNewsTable').empty();
 	for (var i = 0; i < data.length; i++)
 		$('#forexNewsTable').append('<tr>' 
-		+ '<td>' + data[i].titleTime + '<td>' 
+		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
 		+ '<td>' + data[i].descriptContext + '<td>'
 		// + '<td>'+data[i].descriptDetails+'<td>'
 		+'</tr>');
@@ -45,14 +40,13 @@ function initCurrentModel(data) {
 
 //时间戳 定义的调用时间为2分钟.
 function timerCountDownEvent(time) {
-	if (typeof time == 'undefined') {
-		time = 120;
-	   }
+	if(typeof time == 'undefined'){
+		time = 120; }
 	time = time - 1;
 	var value = ((120-time)/120)*100 +'%';
-	$('#showBar').css('width',value);
+	$('#showBar').css('width',value);	
 	if (time >= 0) {
-		setTimeout("timerCountDownEvent(" + time + ")", 1000);
+		setTimeout("timerCountDownEvent("+time+")", 1000);
 	}else{
 		$.showPage(0);
 		timerCountDownEvent();
