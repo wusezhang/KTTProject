@@ -29,7 +29,6 @@ public class ForexCalendarServiceImpl implements ForexCalendarService {
 
 	/**
 	 * 查询相应的外汇日历信息.
-	 * 
 	 * @see com.ktproject.forexpic.service.ForexCalendarService#queryForexCalendarResource(java.util.Map)
 	 */
 	public Map<String, Object> queryForexCalendarResource(final Map map) {

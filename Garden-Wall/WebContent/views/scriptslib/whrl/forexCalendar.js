@@ -12,6 +12,9 @@ $(document).ready(function(){
 		//初始化fancybox
 		$('.fancybox').fancybox();
 		
+		//定时任务机制.
+		setInterval('alert("---!")',60000);
+		
 	}
 	
 	function bindEvent(){
