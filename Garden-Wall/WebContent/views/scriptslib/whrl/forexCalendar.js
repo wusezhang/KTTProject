@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$('.fancybox').fancybox();
 		
 		//定时任务机制.
-		setInterval('alert("---!")',60000);
+		setInterval('$.showPage(0)',120000);
 		
 	}
 	
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 function  initArgs(){
 	 return {url:'../../forexCalendarController/queryForexCalendarResource',
-		      params:{},
+		      params:{countPerPage:25},
 		      callBack:function(data){initCurrentModel(data);}		
 		    };
 }
