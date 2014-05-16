@@ -30,15 +30,17 @@ function initArgs() {
 
 function initCurrentModel(data) {
 	$('#forexNewsTable').empty();
-	for (var i = 0; i < data.length; i++)
-	    if(data[i].descriptDetails != ''){
-	    	list.push(data);
-	    }
+	for (var i = 0; i < data.length; i++){
 		$('#forexNewsTable').append('<tr>' 
 		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
 		+ '<td>' + data[i].descriptContext + '<td>'
-		+ '<td><a href="" class="btn btn-info">详情查看</a>'+'<td>'
+		+ '<td>'+initPopModal(data[i].keyId,data[i].descriptDetails)+'<td>'
 		+'</tr>');
+		if(data[i].descriptDetails != ''){
+	    	list.push(data);
+	    }
+	}
+	    
 }
 
 //时间戳 定义的调用时间为2分钟.
@@ -57,10 +59,16 @@ function timerCountDownEvent(time) {
 }
 
 function  initPopModal(key,description){
-	 
+	 if(description){
+	 	return '<a href="javascript:showModalEvent(\''+key+'\')" class="btn btn-small btn-info">详情查看</a>';
+	 }else {
+	 	return  ' ';
+	 };
 }
 
-
+function showModalEvent(data){
+	alert(data);
+}
 
 
 

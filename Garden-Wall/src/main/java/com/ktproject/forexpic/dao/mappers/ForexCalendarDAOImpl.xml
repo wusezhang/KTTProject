@@ -5,7 +5,9 @@
 	<resultMap id="foreNewsResultMap" type="com.ktproject.forexpic.model.ForexCalendarVO"> </resultMap>
 	
 	<select id="queryForexCalendarList" resultMap="foreNewsResultMap" useCache="true" parameterType="hashmap">
-		SELECT FOREXNEWS.TITLETIME AS TITLETIME, FOREXNEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT,
+		SELECT FOREXNEWS.TITLETIME AS TITLETIME, 
+		       FOREXNEWS.KEYID AS KEYID , 
+			   FOREXNEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT,
                FOREXNEWS.DESCRIPTDETAILS  AS DESCRIPTDETAILS
         FROM
 	          DAILY_FOREX_NEWS_RESOURCE_TABLE FOREXNEWS
