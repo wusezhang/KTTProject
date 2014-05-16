@@ -7,12 +7,16 @@
  */
 package com.ktproject.forexpic.service.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 
 import com.ktproject.forexpic.dao.ForexCalendarDAO;
+import com.ktproject.forexpic.model.ForexCalendarVO;
 import com.ktproject.forexpic.service.ForexCalendarService;
 
 /**
@@ -33,7 +37,21 @@ public class ForexCalendarServiceImpl implements ForexCalendarService {
 	 */
 	public Map<String, Object> queryForexCalendarResource(final Map map) {
 		final Map<String, Object> hashMap = new HashMap<String, Object>();
-		hashMap.put("data", forexCalendarDAO.queryForexCalendarList(map));
+		List<ForexCalendarVO>  dataList = forexCalendarDAO.queryForexCalendarList(map);
+		List<ForexCalendarVO>  formatList = new  ArrayList<ForexCalendarVO>();
+		for(ForexCalendarVO vo : dataList){
+			ForexCalendarVO bean  = new  ForexCalendarVO();
+			bean.setTitleTime(vo.getTitleTime());
+			bean.setDescriptContext(vo.getDescriptContext());
+			String  descriptDetails = vo.getDescriptDetails();
+			if(!StringUtils.isEmpty(descriptDetails)){
+				bean.setDescriptDetails(descriptDetails.replaceAll("<br>","").replaceAll("\n","").replaceAll(" ", ""));
+			}else{
+				bean.setDescriptDetails("");
+			}
+			formatList.add(bean);
+		}
+		hashMap.put("data", formatList);
 		hashMap.put("count", forexCalendarDAO.queryForexCalendarCount(map));
 		return hashMap;
 	}

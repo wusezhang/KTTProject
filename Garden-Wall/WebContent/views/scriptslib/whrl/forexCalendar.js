@@ -34,7 +34,7 @@ function initCurrentModel(data) {
 		$('#forexNewsTable').append('<tr>' 
 		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
 		+ '<td>' + data[i].descriptContext + '<td>'
-		// + '<td>'+data[i].descriptDetails+'<td>'
+		+ '<td>'+data[i].descriptDetails+'<td>'
 		+'</tr>');
 }
 
