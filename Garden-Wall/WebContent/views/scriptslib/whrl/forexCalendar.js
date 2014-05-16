@@ -7,16 +7,16 @@ $(document).ready(function() {
 		//初始化分页相应的控件.
 		$.showPage(0);
 
-		//初始化fancybox
-		$('.fancybox').fancybox();
-        
         //定时任务机制. 
         timerCountDownEvent(); 
+        
+        //初始化fancybox
+		$('.fancybox').fancybox();
 	}
 
 });
 
-var  list = new Array;
+var  list = [];
 
 function initArgs() {
 	return {
@@ -30,17 +30,24 @@ function initArgs() {
 
 function initCurrentModel(data) {
 	$('#forexNewsTable').empty();
+	list = [];
 	for (var i = 0; i < data.length; i++){
-		$('#forexNewsTable').append('<tr>' 
+		$('#forexNewsTable').append('<tr class="'+initCurrentTr(data[i].descriptDetails)+'">' 
 		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
 		+ '<td>' + data[i].descriptContext + '<td>'
 		+ '<td>'+initPopModal(data[i].keyId,data[i].descriptDetails)+'<td>'
 		+'</tr>');
 		if(data[i].descriptDetails != ''){
-	    	list.push(data);
+	    	list.push(data[i]);
 	    }
 	}
 	    
+}
+
+function initCurrentTr(key){
+	if(key){
+		return 'info';
+	}
 }
 
 //时间戳 定义的调用时间为2分钟.
@@ -66,8 +73,16 @@ function  initPopModal(key,description){
 	 };
 }
 
-function showModalEvent(data){
-	alert(data);
+function showModalEvent(key){
+	var descripttion = '';
+	$.each(list,function(i,obj){
+		if(obj.keyId==key){
+		   descripttion = obj.descriptDetails;
+		   return false;
+		 }
+    });
+    $("#showModal").modal('show');
+    $('#inforModal').html(descripttion);
 }
 
 

@@ -42,6 +42,7 @@ public class ForexCalendarServiceImpl implements ForexCalendarService {
 		for(ForexCalendarVO vo : dataList){
 			ForexCalendarVO bean  = new  ForexCalendarVO();
 			bean.setTitleTime(vo.getTitleTime());
+			bean.setKeyId(vo.getKeyId());
 			bean.setDescriptContext(vo.getDescriptContext());
 			String  descriptDetails = vo.getDescriptDetails();
 			if(!StringUtils.isEmpty(descriptDetails)){
