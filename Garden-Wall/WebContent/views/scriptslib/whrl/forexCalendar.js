@@ -16,12 +16,12 @@ $(document).ready(function() {
 
 });
 
+var  list = new Array;
+
 function initArgs() {
 	return {
 		url : '../../forexCalendarController/queryForexCalendarResource',
-		params : {
-			countPerPage : 25
-		},
+		params:{countPerPage:25},
 		callBack : function(data) {
 			initCurrentModel(data);
 		}
@@ -31,10 +31,13 @@ function initArgs() {
 function initCurrentModel(data) {
 	$('#forexNewsTable').empty();
 	for (var i = 0; i < data.length; i++)
+	    if(data[i].descriptDetails != ''){
+	    	list.push(data);
+	    }
 		$('#forexNewsTable').append('<tr>' 
 		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
 		+ '<td>' + data[i].descriptContext + '<td>'
-		+ '<td>'+data[i].descriptDetails+'<td>'
+		+ '<td><a href="" class="btn btn-info">详情查看</a>'+'<td>'
 		+'</tr>');
 }
 
@@ -53,7 +56,9 @@ function timerCountDownEvent(time) {
 	}
 }
 
-
+function  initPopModal(key,description){
+	 
+}
 
 
 

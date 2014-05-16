@@ -29,6 +29,11 @@ public class ForexCalendarVO  implements Serializable{
 	private  String  titleTime ;
 	
 	/**
+	 * 主键.
+	 */
+	private  String  keyId;
+	
+	/**
 	 * 信息主体描述.
 	 */
 	private  String  descriptContext;
@@ -78,6 +83,20 @@ public class ForexCalendarVO  implements Serializable{
 	 */
 	public void setDescriptDetails(String descriptDetails) {
 		this.descriptDetails = descriptDetails;
+	}
+
+	/**
+	 * @return the keyId
+	 */
+	public String getKeyId() {
+		return keyId;
+	}
+
+	/**
+	 * @param keyId the keyId to set
+	 */
+	public void setKeyId(String keyId) {
+		this.keyId = keyId;
 	}
 	
 	
