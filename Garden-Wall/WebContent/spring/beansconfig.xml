@@ -36,5 +36,8 @@
 	<bean id="ForexCalendarService" class="com.ktproject.forexpic.service.impl.ForexCalendarServiceImpl" scope="prototype"/>
 	<bean id="ForexCalendarDAO"  class="com.ktproject.forexpic.dao.impl.ForexCalendarDAOImpl" scope="prototype"/>
 	
+	<bean id="stockThemeService" class="com.ktproject.stockpool.service.impl.StockThemeServiceImpl" scope="prototype" />
+	<bean id="stockThemeDao" class="com.ktproject.stockpool.dao.impl.StockThemeDaoImpl" scope="prototype">
 		
+	</bean>	
 </beans>
