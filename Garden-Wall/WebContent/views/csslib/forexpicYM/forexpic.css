@@ -14,3 +14,8 @@
 	max-width:150px;
 	max-height:100px;
 }
+.newsposition{
+  position:absolute;
+  top:45px;
+  width:100%;
+}
