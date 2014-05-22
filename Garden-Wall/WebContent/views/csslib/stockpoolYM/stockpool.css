@@ -15,3 +15,8 @@
 .textformat{
 	text-decoration:none;
 }
+.newsposition{
+  position:absolute;
+  top:50px;
+  width:100%;
+}
