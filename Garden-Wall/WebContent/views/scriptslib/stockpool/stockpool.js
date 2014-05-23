@@ -22,7 +22,7 @@ $(document).ready(function() {
     	var plateInput =  $('#plateInput').val();
     	if(plateInput){
     	   $('#stockThemeList').hide(); 	
-           $.commonService('../../stockPoolController/queryThemeStockPoolResource', 'POST',
+           $.commonService('../../stockThemeController/queryThemeStockPoolResource', 'POST',
             {stockPoolId:'',stockSector:plateInput}, function(data) {
 		       initModalListDetail(data);
 	        }); 

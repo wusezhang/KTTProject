@@ -50,6 +50,7 @@ public class StockThemeController {
      public  @ResponseBody  List<StockThemeMessageVO>  queryCurrentThemeNews(
     		    @RequestParam("start") final int start,
 				@RequestParam("limit") final int limit){
+		     log.info("查询当前的主体板块新闻!");
 		     Map<String,Object>  map = new  HashMap<String,Object>();
 		     map.put("start", start);
 		     map.put("limit", limit);
