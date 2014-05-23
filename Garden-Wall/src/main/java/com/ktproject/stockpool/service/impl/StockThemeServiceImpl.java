@@ -7,8 +7,13 @@
  */
 package com.ktproject.stockpool.service.impl;
 
+import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.stockpool.dao.StockThemeDao;
+import com.ktproject.stockpool.model.StockThemeMessageVO;
 import com.ktproject.stockpool.service.StockThemeService;
 
 /**
@@ -20,10 +25,13 @@ import com.ktproject.stockpool.service.StockThemeService;
  */
 public class StockThemeServiceImpl implements StockThemeService {
 
+	@Autowired
+	private  StockThemeDao  stockThemeDao ;
+	
 	/**
 	 * @see com.ktproject.stockpool.service.StockThemeService#queryCurrentThemeNews(java.util.Map)
 	 */
-	public Map<String, Object> queryCurrentThemeNews(Map<String, Object> map) {
+	public List<StockThemeMessageVO> queryCurrentThemeNews(Map<String, Object> map) {
 		
 		return null;
 	}

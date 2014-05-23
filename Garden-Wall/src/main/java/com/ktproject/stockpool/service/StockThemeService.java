@@ -7,7 +7,10 @@
  */
 package com.ktproject.stockpool.service;
 
+import java.util.List;
 import java.util.Map;
+
+import com.ktproject.stockpool.model.StockThemeMessageVO;
 
 /**
  * 类功能描述：题材新闻详情处理类.
@@ -22,5 +25,5 @@ public interface StockThemeService {
 	  * @param map
 	  * @return
 	  */
-	 Map<String,Object>  queryCurrentThemeNews(final  Map<String,Object> map);
+	List<StockThemeMessageVO>  queryCurrentThemeNews(final  Map<String,Object> map);
 }
