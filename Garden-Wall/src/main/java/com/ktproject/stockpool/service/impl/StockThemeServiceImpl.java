@@ -7,6 +7,8 @@
  */
 package com.ktproject.stockpool.service.impl;
 
+import java.util.Map;
+
 import com.ktproject.stockpool.service.StockThemeService;
 
 /**
@@ -17,5 +19,13 @@ import com.ktproject.stockpool.service.StockThemeService;
  * @history 2014-5-22 vteamdell0723 创建StockThemeServiceImpl.java
  */
 public class StockThemeServiceImpl implements StockThemeService {
+
+	/**
+	 * @see com.ktproject.stockpool.service.StockThemeService#queryCurrentThemeNews(java.util.Map)
+	 */
+	public Map<String, Object> queryCurrentThemeNews(Map<String, Object> map) {
+		
+		return null;
+	}
 
 }

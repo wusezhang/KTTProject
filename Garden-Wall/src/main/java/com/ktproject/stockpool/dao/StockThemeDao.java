@@ -7,6 +7,11 @@
  */
 package com.ktproject.stockpool.dao;
 
+import java.util.List;
+import java.util.Map;
+
+import com.ktproject.stockpool.model.StockThemeMessageVO;
+
 /**
  * 类功能描述：题材新闻详情处理类.
  * StockThemeDao.java
@@ -15,5 +20,10 @@ package com.ktproject.stockpool.dao;
  * @history 2014-5-22 vteamdell0723 创建StockThemeDao.java
  */
 public interface StockThemeDao {
-
+	/**
+	  * 查询当前的主体板块新闻.
+	  * @param map
+	  * @return
+	  */
+	 List<StockThemeMessageVO>  queryCurrentThemeNews(final  Map<String,Object> map);
 }

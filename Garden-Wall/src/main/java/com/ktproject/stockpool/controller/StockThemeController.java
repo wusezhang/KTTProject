@@ -7,10 +7,15 @@
  */
 package com.ktproject.stockpool.controller;
 
+import java.util.Map;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * 类功能描述：题材新闻详情处理类.
  * StockThemeController.java
@@ -25,7 +30,19 @@ public class StockThemeController {
       * LOG日志信息处理类. 	 
       */
 	 private Log log = LogFactory.getLog(StockThemeController.class);
-
      
+	 /**
+	  * 查询当前的主体板块新闻.
+	  * @param start
+	  * @param limit
+	  * @return
+	  */
+	 @RequestMapping(value = "/queryCurrentThemeNews", method = RequestMethod.POST)
+     public  @ResponseBody  Map<String,Object>  queryCurrentThemeNews(
+    		    @RequestParam("start") final int start,
+				@RequestParam("limit") final int limit){
+		 
+    	     return  null;
+     }
       
 }

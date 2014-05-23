@@ -7,6 +7,8 @@
  */
 package com.ktproject.stockpool.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：题材新闻详情处理类.
  * StockThemeService.java
@@ -15,5 +17,10 @@ package com.ktproject.stockpool.service;
  * @history 2014-5-22 vteamdell0723 创建StockThemeService.java
  */
 public interface StockThemeService {
-
+	 /**
+	  * 查询当前的主体板块新闻.
+	  * @param map
+	  * @return
+	  */
+	 Map<String,Object>  queryCurrentThemeNews(final  Map<String,Object> map);
 }

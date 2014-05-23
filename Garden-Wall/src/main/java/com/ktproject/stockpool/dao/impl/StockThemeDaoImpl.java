@@ -7,7 +7,14 @@
  */
 package com.ktproject.stockpool.dao.impl;
 
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ktproject.stockpool.dao.StockThemeDao;
+import com.ktproject.stockpool.model.StockThemeMessageVO;
 
 /**
  * 类功能描述：
@@ -17,5 +24,17 @@ import com.ktproject.stockpool.dao.StockThemeDao;
  * @history 2014-5-22 vteamdell0723 创建StockThemeDaoImpl.java
  */
 public class StockThemeDaoImpl implements  StockThemeDao {
+    
+	@Autowired
+	private  SqlSession  sqlSession ;
+	
+	/**
+	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCurrentThemeNews(java.util.Map)
+	 */
+	public List<StockThemeMessageVO> queryCurrentThemeNews(
+			Map<String, Object> map) {
+		
+		return null;
+	}
       
 }
