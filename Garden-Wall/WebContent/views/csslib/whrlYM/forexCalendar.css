@@ -1,3 +1,8 @@
 .indexYmBagroundImage {
 	background: url('../../imagelib/furley_bg.png')
 }
+.newsposition{
+  position:absolute;
+  top:50px;
+  width:100%;
+}

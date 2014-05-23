@@ -46,7 +46,7 @@ function initCurrentModel(data) {
 
 function initCurrentTr(key){
 	if(key){
-		return 'info';
+		return 'warning';
 	}
 }
 
@@ -67,7 +67,7 @@ function timerCountDownEvent(time) {
 
 function  initPopModal(key,description){
 	 if(description){
-	 	return '<a href="javascript:showModalEvent(\''+key+'\')" class="btn btn-small btn-info">详情查看</a>';
+	 	return '<a href="javascript:showModalEvent(\''+key+'\')" class="btn btn-primary btn-sm">详情查看</a>';
 	 }else {
 	 	return  ' ';
 	 };
