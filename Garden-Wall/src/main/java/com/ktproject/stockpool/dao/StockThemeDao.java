@@ -26,4 +26,18 @@ public interface StockThemeDao {
 	  * @return
 	  */
 	 List<StockThemeMessageVO>  queryCurrentThemeNews(final  Map<String,Object> map);
+	 
+	 /**
+	  * 查询当前上市公司的新闻信息.
+	  * @param map
+	  * @return
+	  */
+	 List<StockThemeMessageVO>   queryCompanyNews(final Map<String,Object> map);
+	 
+	 /**
+	  * 查询当前记录的所有条数.
+	  * @param map
+	  * @return
+	  */
+	 int  queryCompanyNewsCount(final Map<String,Object> map);
 }

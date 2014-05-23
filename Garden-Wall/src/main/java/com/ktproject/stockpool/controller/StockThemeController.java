@@ -56,5 +56,20 @@ public class StockThemeController {
 		     map.put("limit", limit);
     	     return  stockThemeService.queryCurrentThemeNews(map);
      }
-      
+	 
+	 /**
+	  * 分页查询相应的上市公司信息.
+	  * @param start
+	  * @param limit
+	  * @return
+	  */
+	 @RequestMapping(value = "/queryCompanyNews", method = RequestMethod.POST)
+	 public   @ResponseBody  Map<String,Object>  queryCompanyNews(
+			  @RequestParam("start") final int start,
+			  @RequestParam("limit") final int limit){
+		      Map<String,Object> map = new HashMap<String,Object>();
+		      map.put("start", start);
+		      map.put("limit", limit);
+		     return  stockThemeService.queryCompanyNews(map); 
+	 }
 }

@@ -35,5 +35,19 @@ public class StockThemeDaoImpl implements  StockThemeDao {
 			Map<String, Object> map) {
 		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCurrentThemeNews", map);
 	}
+
+	/**
+	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCompanyNews(java.util.Map)
+	 */
+	public List<StockThemeMessageVO> queryCompanyNews(final Map<String, Object> map) {
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCompanyNews", map);
+	}
+
+	/**
+	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCompanyNewsCount(java.util.Map)
+	 */
+	public int queryCompanyNewsCount(final Map<String, Object> map) {
+		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCompanyNewsCount");
+	}
       
 }

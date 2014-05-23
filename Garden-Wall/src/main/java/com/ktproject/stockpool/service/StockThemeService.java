@@ -26,4 +26,11 @@ public interface StockThemeService {
 	  * @return
 	  */
 	List<StockThemeMessageVO>  queryCurrentThemeNews(final  Map<String,Object> map);
+	
+	/**
+	 * 查询当前上市公司信息.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryCompanyNews(final  Map<String,Object> map);
 }

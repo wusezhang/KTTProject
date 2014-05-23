@@ -7,6 +7,7 @@
  */
 package com.ktproject.stockpool.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,6 +34,16 @@ public class StockThemeServiceImpl implements StockThemeService {
 	 */
 	public List<StockThemeMessageVO> queryCurrentThemeNews(Map<String, Object> map) {
 		return stockThemeDao.queryCurrentThemeNews(map);
+	}
+
+	/**
+	 * @see com.ktproject.stockpool.service.StockThemeService#queryCompanyNews(java.util.Map)
+	 */
+	public Map<String, Object> queryCompanyNews(Map<String, Object> map) {
+		Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", stockThemeDao.queryCompanyNews(map));
+		resultMap.put("count", stockThemeDao.queryCompanyNewsCount(map));
+		return resultMap;
 	}
 
 }

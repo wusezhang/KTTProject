@@ -2,8 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ktproject.stockpool.dao.impl.StockThemeDaoImpl">
 	<resultMap id="objectResult" type="com.ktproject.stockpool.model.StockThemeMessageVO"> </resultMap>   
+	
 	<select id="queryCurrentThemeNews"  resultMap="objectResult" parameterType="hashmap">
 		 SELECT
+		     THEMENEWS.KEYID,
 	         THEMENEWS.LINKURL,
 	         THEMENEWS.PUBDATE,
 	         THEMENEWS.TITLE
@@ -16,5 +18,23 @@
         </if>
 	</select>   
 	   
+	<select id="queryCompanyNews" resultMap="objectResult" parameterType="hashmap">
+		SELECT
+		     COMPANYNEWS.KEYID,
+	         COMPANYNEWS.LINKURL,
+	         COMPANYNEWS.PUBDATE,
+	         COMPANYNEWS.TITLE
+         FROM
+	         STOCK_POOL_COMPANY_NEWS_TABLE  COMPANYNEWS
+         WHERE
+           1=1   
+		<if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>
+	</select>
+	
+	<select id="queryCompanyNewsCount" resultType="int">
+		 SELECT  COUNT(*) AS COUNT  FROM STOCK_POOL_COMPANY_NEWS_TABLE  COMPANYNEWS
+	</select>
 		
 </mapper>
