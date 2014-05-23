@@ -32,8 +32,7 @@ public class StockThemeServiceImpl implements StockThemeService {
 	 * @see com.ktproject.stockpool.service.StockThemeService#queryCurrentThemeNews(java.util.Map)
 	 */
 	public List<StockThemeMessageVO> queryCurrentThemeNews(Map<String, Object> map) {
-		
-		return null;
+		return stockThemeDao.queryCurrentThemeNews(map);
 	}
 
 }

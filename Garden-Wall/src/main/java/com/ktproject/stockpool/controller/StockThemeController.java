@@ -7,6 +7,7 @@
  */
 package com.ktproject.stockpool.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -49,8 +50,10 @@ public class StockThemeController {
      public  @ResponseBody  List<StockThemeMessageVO>  queryCurrentThemeNews(
     		    @RequestParam("start") final int start,
 				@RequestParam("limit") final int limit){
-		 
-    	     return  null;
+		     Map<String,Object>  map = new  HashMap<String,Object>();
+		     map.put("start", start);
+		     map.put("limit", limit);
+    	     return  stockThemeService.queryCurrentThemeNews(map);
      }
       
 }

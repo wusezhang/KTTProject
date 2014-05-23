@@ -33,8 +33,7 @@ public class StockThemeDaoImpl implements  StockThemeDao {
 	 */
 	public List<StockThemeMessageVO> queryCurrentThemeNews(
 			Map<String, Object> map) {
-		
-		return null;
+		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCurrentThemeNews", map);
 	}
       
 }
