@@ -32,5 +32,5 @@ public interface StockThemeService {
 	 * @param map
 	 * @return
 	 */
-	Map<String,Object>  queryCompanyNews(final  Map<String,Object> map);
+	List<StockThemeMessageVO>  queryCompanyNews(final  Map<String,Object> map);
 }

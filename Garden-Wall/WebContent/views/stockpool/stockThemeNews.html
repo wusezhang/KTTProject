@@ -46,11 +46,25 @@
 		<!--菜单显示结束-->
         <!--板块信息--> 
 		<div class="well well-sm newsposition">
-			<div class="list-group" id="companyNewsModal">
-			</div>
-			<div class="row" align="center">
-				<ul id="pages" class="pagination"> </ul>
-		    </div>
+			<div class="panel panel-primary"> 
+              <div class="panel-heading">公司信息</div>
+                 <div class="panel-body">
+                    <table class="table table-condensed table-hover table-striped">
+                        <thead>
+							<th>公司信息</th>
+							<th>收录日期</th>
+						</thead>
+						<tbody id="companyNewsModalList">
+                            
+						</tbody>
+                    </table>
+                    <div align="center">
+					   <a class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+					   &nbsp;&nbsp;&nbsp;
+					   <a class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
+                 </div>
+             </div>    
 		</div>
 		
 		<!--公司信息-->

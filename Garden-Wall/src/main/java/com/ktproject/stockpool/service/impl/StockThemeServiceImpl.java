@@ -39,11 +39,8 @@ public class StockThemeServiceImpl implements StockThemeService {
 	/**
 	 * @see com.ktproject.stockpool.service.StockThemeService#queryCompanyNews(java.util.Map)
 	 */
-	public Map<String, Object> queryCompanyNews(Map<String, Object> map) {
-		Map<String,Object>  resultMap = new  HashMap<String,Object>();
-		resultMap.put("data", stockThemeDao.queryCompanyNews(map));
-		resultMap.put("count", stockThemeDao.queryCompanyNewsCount(map));
-		return resultMap;
+	public List<StockThemeMessageVO> queryCompanyNews(Map<String, Object> map) {
+		return stockThemeDao.queryCompanyNews(map);
 	}
 
 }

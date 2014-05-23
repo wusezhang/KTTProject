@@ -64,7 +64,7 @@ public class StockThemeController {
 	  * @return
 	  */
 	 @RequestMapping(value = "/queryCompanyNews", method = RequestMethod.POST)
-	 public   @ResponseBody  Map<String,Object>  queryCompanyNews(
+	 public   @ResponseBody  List<StockThemeMessageVO>  queryCompanyNews(
 			  @RequestParam("start") final int start,
 			  @RequestParam("limit") final int limit){
 		      Map<String,Object> map = new HashMap<String,Object>();
