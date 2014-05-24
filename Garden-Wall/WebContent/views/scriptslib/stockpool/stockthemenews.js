@@ -21,7 +21,13 @@ $(document).ready(function() {
     } 
 
     function  companyNewsDownEvent(){
-    	$('#companyNewsCount').val(Number($('#companyNewsCount').val())+13);
+    	currentCount = 0 ;
+    	if((Number($('#companyNewsCount').val())+13)>Number($('#companyNewsTotalCount').val())){
+    		currentCount = Number($('#companyNewsCount').val());
+    	}else{
+    		currentCount = Number($('#companyNewsCount').val())+13;
+    	}
+    	$('#companyNewsCount').val(currentCount);
     	initCompanyNews();
     }
     
@@ -35,7 +41,13 @@ $(document).ready(function() {
     }
     
     function themeNewsDownEvent(){
-    	$('#themeNewsCount').val(Number($('#themeNewsCount').val())+13);
+    	currentCount = 0 ;
+    	if((Number($('#themeNewsCount').val())+13)>Number($('#themeNewsTotalCount').val())){
+    		currentCount = Number($('#themeNewsCount').val());
+    	}else{
+    		currentCount = Number($('#themeNewsCount').val())+13;
+    	}
+    	$('#themeNewsCount').val(currentCount);
     	initThemeNews();
     }
     
@@ -52,8 +64,9 @@ $(document).ready(function() {
 	function initThemeNews(){
 	   startNum = Number($('#themeNewsCount').val())+0;
 	   $.commonService('../../stockThemeController/queryCurrentThemeNews', 'POST',
-            {start:startNum,limit:13}, function(data) {
-		       initThemeTableInfor(data);
+            {start:startNum,limit:13}, function(map) {
+               $('#themeNewsTotalCount').val(map.count);	
+		       initThemeTableInfor(map.data);
 	        }); 
 	}
 	//初始化题材信息模块.
@@ -71,8 +84,9 @@ $(document).ready(function() {
 	function  initCompanyNews(){
 		startNum = Number($('#companyNewsCount').val())+0;
 	    $.commonService('../../stockThemeController/queryCompanyNews', 'POST',
-            {start:startNum,limit:13}, function(data) {
-		       initCompanyThemeNews(data);
+            {start:startNum,limit:13}, function(map) {
+               $('#companyNewsTotalCount').val(map.count);	
+		       initCompanyThemeNews(map.data);
 	        }); 
 	   
 	}
