@@ -47,7 +47,7 @@ public class StockThemeController {
 	  * @return
 	  */
 	 @RequestMapping(value = "/queryCurrentThemeNews", method = RequestMethod.POST)
-     public  @ResponseBody  List<StockThemeMessageVO>  queryCurrentThemeNews(
+     public  @ResponseBody  Map<String,Object>  queryCurrentThemeNews(
     		    @RequestParam("start") final int start,
 				@RequestParam("limit") final int limit){
 		     log.info("查询当前的主体板块新闻!");
@@ -64,7 +64,7 @@ public class StockThemeController {
 	  * @return
 	  */
 	 @RequestMapping(value = "/queryCompanyNews", method = RequestMethod.POST)
-	 public   @ResponseBody  List<StockThemeMessageVO>  queryCompanyNews(
+	 public   @ResponseBody  Map<String,Object>  queryCompanyNews(
 			  @RequestParam("start") final int start,
 			  @RequestParam("limit") final int limit){
 		      Map<String,Object> map = new HashMap<String,Object>();

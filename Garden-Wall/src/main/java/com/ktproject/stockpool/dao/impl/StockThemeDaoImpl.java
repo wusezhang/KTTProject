@@ -32,10 +32,18 @@ public class StockThemeDaoImpl implements  StockThemeDao {
 	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCurrentThemeNews(java.util.Map)
 	 */
 	public List<StockThemeMessageVO> queryCurrentThemeNews(
-			Map<String, Object> map) {
+		final	Map<String, Object> map) {
 		return sqlSession.selectList("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCurrentThemeNews", map);
 	}
 
+	
+	/**
+	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCurrentThemeNewsCount(java.util.Map)
+	 */
+	public int queryCurrentThemeNewsCount(final Map<String, Object> map) {
+		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCurrentThemeNewsCount");
+	}
+	
 	/**
 	 * @see com.ktproject.stockpool.dao.StockThemeDao#queryCompanyNews(java.util.Map)
 	 */
@@ -49,5 +57,5 @@ public class StockThemeDaoImpl implements  StockThemeDao {
 	public int queryCompanyNewsCount(final Map<String, Object> map) {
 		return sqlSession.selectOne("com.ktproject.stockpool.dao.impl.StockThemeDaoImpl.queryCompanyNewsCount");
 	}
-      
+
 }

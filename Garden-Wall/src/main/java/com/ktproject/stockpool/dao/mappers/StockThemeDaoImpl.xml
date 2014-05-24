@@ -17,6 +17,16 @@
              LIMIT #{start},#{limit}
         </if>
 	</select>   
+	
+	<select id="queryCurrentThemeNewsCount" resultType="int">
+		SELECT
+		     COUNT(*) AS COUNT
+         FROM
+	         STOCK_POOL_THEME_NEWS_TABLE THEMENEWS
+         WHERE
+	         1 = 1
+	</select>
+	
 	   
 	<select id="queryCompanyNews" resultMap="objectResult" parameterType="hashmap">
 		SELECT

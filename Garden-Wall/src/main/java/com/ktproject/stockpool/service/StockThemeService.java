@@ -25,12 +25,12 @@ public interface StockThemeService {
 	  * @param map
 	  * @return
 	  */
-	List<StockThemeMessageVO>  queryCurrentThemeNews(final  Map<String,Object> map);
+	Map<String,Object>  queryCurrentThemeNews(final  Map<String,Object> map);
 	
 	/**
 	 * 查询当前上市公司信息.
 	 * @param map
 	 * @return
 	 */
-	List<StockThemeMessageVO>  queryCompanyNews(final  Map<String,Object> map);
+	Map<String,Object>  queryCompanyNews(final  Map<String,Object> map);
 }
