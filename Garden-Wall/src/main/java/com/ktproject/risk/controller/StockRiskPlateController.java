@@ -7,6 +7,9 @@
  */
 package com.ktproject.risk.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 /**
  * 类功能描述：
  * StockRiskPlate.java
@@ -14,6 +17,8 @@ package com.ktproject.risk.controller;
  * @version 0.1.0
  * @history 2014-5-26 vteamdell0723 创建StockRiskPlate.java
  */
+@Controller
+@RequestMapping("stockRiskPlateController")
 public class StockRiskPlateController {
-
+    
 }
