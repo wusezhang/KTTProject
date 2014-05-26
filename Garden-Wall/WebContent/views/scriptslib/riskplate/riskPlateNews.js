@@ -47,10 +47,10 @@ $(document).ready(function() {
     function  initCompanyRiskNewsModal(map){
     	$('#companylist').empty();
 	    $.each(map.data,function(i,obj){
-	       $('#companylist').append('<a href="'+obj.linkUrl+'" class="list-group-item">'
+	       $('#companylist').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
 	             +'<h5 class="list-group-item-heading">'
 	             +obj.pubDate+'</h5>'
-				 +'<p class="list-group-item-text">'
+				 +'<p class="list-group-item-text text-danger">'
 				 + obj.title
 				 +'</p></a>');
 	    });
