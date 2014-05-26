@@ -12,7 +12,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.ktproject.risk.service.StockRiskPlateService;
 
 /**
@@ -35,7 +38,8 @@ public class StockRiskPlateController {
 	  * @param limit
 	  * @return
 	  */
-	 public  Map<String,Object>  queryCompanyRiskPlateNews(
+	 @RequestMapping(value = "/queryCompanyRiskPlateNews", method = RequestMethod.POST)
+	 public @ResponseBody  Map<String,Object>  queryCompanyRiskPlateNews(
 			    @RequestParam("start") final int start,
 				@RequestParam("limit") final int limit){
 		 final  Map<String,Object> filterMap = new  HashMap<String,Object>();
