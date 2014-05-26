@@ -36,7 +36,13 @@
 	         WHKT_NEWS_RESOURCE_TABLE NEWS
          WHERE 1=1
              ORDER BY NEWS.PUBDATE DESC 
-         LIMIT 0,8
+        <if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>
     </select>
+	
+	<select id="queryForexNewsPicCount" resultType="int">
+		SELECT  COUNT(*) AS COUNT  FROM  WHKT_NEWS_RESOURCE_TABLE  NEWS
+	</select>
 	
 </mapper>

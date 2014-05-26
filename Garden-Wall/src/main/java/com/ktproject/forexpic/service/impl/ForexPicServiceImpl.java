@@ -33,8 +33,11 @@ public class ForexPicServiceImpl implements ForexPicService {
 	/**
 	 * @see com.ktproject.forexpic.service.ForexPicService#queryForexNewsPic()
 	 */
-	public List<ForexNewsPicVO> queryForexNewsPic() {		
-		return forexPicDAO.queryForexNewsPic();
+	public Map<String,Object> queryForexNewsPic(final  Map<String,Object> map) {		
+		Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", forexPicDAO.queryForexNewsPic(map));
+		resultMap.put("count",forexPicDAO.queryForexNewsPicCount(map));
+		return resultMap;
 	}
 	
 	

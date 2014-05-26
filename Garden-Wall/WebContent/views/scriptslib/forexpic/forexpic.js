@@ -4,15 +4,30 @@ $(document).ready(function(){
 	 });
 	 
 	 function initModel(){
-		 
 		 //初始化相应的分页框架   
 		 $.showPage(0);
-		 
-		 //初始化相应的外汇图信息.
-		 $.commonService('../../forexpicController/queryForexNewsPic','POST',{}, function(data) {
-		    initForexNewsList(data);
+		 //初始化相应的外汇图信息
+		 initForexNewsModal();
+	 }
+	 
+	 function  bindEvent(){
+	 	$('#newsBtnDown').bind('click',forexNewsNextEvent);
+	 	$('#newsBtnUp').bind('click',forexNewsUpEvent);
+	 }
+	 
+	 function  forexNewsNextEvent(){
+	 	alert('...!');
+	 }
+	 
+	 function  forexNewsUpEvent(){
+	 	alert('...!');
+	 }
+	 
+	 function  initForexNewsModal(){
+	 	 //初始化相应的外汇图信息.
+		 $.commonService('../../forexpicController/queryForexNewsPic','POST',{start:0,limit:4}, function(map) {
+		    initForexNewsList(map.data);
 	     }); 
-		 
 	 }
 	 	 
 	 //初始化相应的图汇信息列表.

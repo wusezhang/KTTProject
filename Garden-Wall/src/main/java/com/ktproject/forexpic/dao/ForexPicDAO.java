@@ -27,5 +27,12 @@ public interface ForexPicDAO {
 	   /**
 		* 外汇信息图汇信息查询.
 	    */
-	   List<ForexNewsPicVO> queryForexNewsPic();
+	   List<ForexNewsPicVO> queryForexNewsPic(final  Map<String,Object> map);
+	   
+	   /**
+	    * 查询所有的外汇信息目录
+	    * @param map
+	    * @return
+	    */
+	   int  queryForexNewsPicCount(final  Map<String,Object> map);
 } 

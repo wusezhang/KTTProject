@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.ktproject.forexpic.model.ForexNewsPicVO;
 import com.ktproject.forexpic.model.ForexPicDetailVO;
 import com.ktproject.forexpic.service.ForexPicService;
 
@@ -65,7 +64,12 @@ public class ForexPicController {
 	 * 外汇信息图汇信息查询.
 	 */
 	@RequestMapping(value = "/queryForexNewsPic", method = RequestMethod.POST)
-	public @ResponseBody List<ForexNewsPicVO> queryForexNewsPic() {
-		return forexPicService.queryForexNewsPic();
+	public @ResponseBody Map<String,Object> queryForexNewsPic(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit) {
+		final  Map<String,Object>  filterMap = new  HashMap<String,Object>();
+		filterMap.put("start", start);
+		filterMap.put("limit", limit);
+		return forexPicService.queryForexNewsPic(filterMap);
 	}
 }

@@ -23,5 +23,5 @@ public interface ForexPicService {
 	 /**
 	   * 外汇信息图汇信息查询.
 	   */
-	 List<ForexNewsPicVO> queryForexNewsPic();
+	 Map<String,Object> queryForexNewsPic(final  Map<String,Object> map);
 }

@@ -87,9 +87,16 @@ public class ForexPicDAOImpl implements ForexPicDAO {
 	/**
 	 * @see com.ktproject.forexpic.dao.ForexPicDAO#queryForexNewsPic()
 	 */
-	public List<ForexNewsPicVO> queryForexNewsPic() {
+	public List<ForexNewsPicVO> queryForexNewsPic(final  Map<String,Object> map) {
 		log.info("外汇信息图汇信息查询."); 
-		return sqlSession.selectList("com.ktproject.forexpic.dao.impl.ForexPicDAOImpl.queryForexNewsPic");
+		return sqlSession.selectList("com.ktproject.forexpic.dao.impl.ForexPicDAOImpl.queryForexNewsPic",map);
+	}
+
+	/**
+	 * @see com.ktproject.forexpic.dao.ForexPicDAO#queryForexNewsPicCount(java.util.Map)
+	 */
+	public int queryForexNewsPicCount(Map<String, Object> map) {
+		return sqlSession.selectOne("com.ktproject.forexpic.dao.impl.ForexPicDAOImpl.queryForexNewsPicCount");
 	}
 
 	
