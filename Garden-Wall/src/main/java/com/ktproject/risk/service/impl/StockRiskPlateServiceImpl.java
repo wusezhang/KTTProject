@@ -7,6 +7,9 @@
  */
 package com.ktproject.risk.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ktproject.risk.dao.StockRiskPlateDAO;
@@ -23,6 +26,17 @@ public class StockRiskPlateServiceImpl implements StockRiskPlateService {
       
 	    @Autowired
 	    private  StockRiskPlateDAO  stockRiskPlateDAO ;
+
+		/**
+		 * @see com.ktproject.risk.service.StockRiskPlateService#queryCompanyRiskPlateNews(java.util.Map)
+		 */
+		public Map<String, Object> queryCompanyRiskPlateNews(
+			 final	Map<String, Object> map) {
+			final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+			resultMap.put("data", stockRiskPlateDAO.queryCompanyRiskPlateNews(map));
+			resultMap.put("count", stockRiskPlateDAO.queryCompanyRiskPlateNewsCount(map));
+			return resultMap;
+		}
 	    
 	    
 }

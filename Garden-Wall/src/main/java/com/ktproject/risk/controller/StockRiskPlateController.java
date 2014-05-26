@@ -7,10 +7,12 @@
  */
 package com.ktproject.risk.controller;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 import com.ktproject.risk.service.StockRiskPlateService;
 
 /**
@@ -27,5 +29,18 @@ public class StockRiskPlateController {
 	 @Autowired
 	 private  StockRiskPlateService stockRiskPlateService;
 	 
-	 
+	 /**
+	  * 查询上市公司的利空信息.
+	  * @param start
+	  * @param limit
+	  * @return
+	  */
+	 public  Map<String,Object>  queryCompanyRiskPlateNews(
+			    @RequestParam("start") final int start,
+				@RequestParam("limit") final int limit){
+		 final  Map<String,Object> filterMap = new  HashMap<String,Object>();
+		 filterMap.put("start", start);
+		 filterMap.put("limit", limit);
+		 return  stockRiskPlateService.queryCompanyRiskPlateNews(filterMap);
+	 }
 }

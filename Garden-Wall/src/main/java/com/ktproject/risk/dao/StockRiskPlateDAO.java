@@ -7,6 +7,11 @@
  */
 package com.ktproject.risk.dao;
 
+import java.util.List;
+import java.util.Map;
+
+import com.ktproject.risk.model.StockRiskPlateVO;
+
 /**
  * 类功能描述：
  * StockRiskPlateDao.java
@@ -15,5 +20,18 @@ package com.ktproject.risk.dao;
  * @history 2014-5-26 vteamdell0723 创建StockRiskPlateDao.java
  */
 public interface StockRiskPlateDAO {
-
+      
+	   /**
+	    * 查询上市公司的利空信息.
+	    * @param map
+	    * @return
+	    */
+	   List<StockRiskPlateVO> queryCompanyRiskPlateNews(final Map<String,Object> map);
+	   
+	   /**
+	    * 查询上市公司的利空信息总条数.
+	    * @param map
+	    * @return
+	    */
+	   int  queryCompanyRiskPlateNewsCount(final Map<String,Object> map);
 }

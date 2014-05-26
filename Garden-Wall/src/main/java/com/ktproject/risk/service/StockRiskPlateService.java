@@ -7,6 +7,8 @@
  */
 package com.ktproject.risk.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：
  * StockRiskPlateService.java
@@ -15,5 +17,11 @@ package com.ktproject.risk.service;
  * @history 2014-5-26 vteamdell0723 创建StockRiskPlateService.java
  */
 public interface StockRiskPlateService {
-
+	
+	/**
+	 * 查询上市公司的利空信息.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryCompanyRiskPlateNews(final Map<String,Object> map);
 }
