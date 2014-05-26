@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	 $(function(){
 	 	  initModel();
+	 	  bindEvent();
 	 });
 	 
 	 function initModel(){
@@ -16,16 +17,30 @@ $(document).ready(function(){
 	 }
 	 
 	 function  forexNewsNextEvent(){
-	 	alert('...!');
+	 	currentCount = 0 ;
+    	if((Number($('#firexNewsCount').val())+5)>Number($('#firexNewsTotalCount').val())){
+    		currentCount = Number($('#firexNewsCount').val());
+    	}else{
+    		currentCount = Number($('#firexNewsCount').val())+5;
+    	}
+    	$('#firexNewsCount').val(currentCount);
+    	initForexNewsModal();
 	 }
 	 
 	 function  forexNewsUpEvent(){
-	 	alert('...!');
+	 	currentData = 0;
+    	if((Number($('#firexNewsCount').val())-5)>0){
+    		currentData = Number($('#firexNewsCount').val())-5;
+    	}
+    	$('#firexNewsCount').val(currentData);
+    	initForexNewsModal();
 	 }
 	 
 	 function  initForexNewsModal(){
+	 	 var startNum = Number($('#firexNewsCount').val())+0; 
 	 	 //初始化相应的外汇图信息.
-		 $.commonService('../../forexpicController/queryForexNewsPic','POST',{start:0,limit:4}, function(map) {
+		 $.commonService('../../forexpicController/queryForexNewsPic','POST',{start:startNum,limit:5}, function(map) {
+		    $('#firexNewsTotalCount').val(map.count);
 		    initForexNewsList(map.data);
 	     }); 
 	 }
