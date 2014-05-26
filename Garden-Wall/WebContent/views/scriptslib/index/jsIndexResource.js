@@ -22,16 +22,8 @@ $(document).ready(function() {
 
 	//初始化相应的模板文件
 	function bindEvent() {
-		//股票池按钮控制
-		$("#gpcControl").bind("click", gpcControlEvent);
-		
 		$('#registerBut').bind('click', registerButtonEvent);
 	};
-
-	//股票池按钮控制
-	function gpcControlEvent() {
-		window.location.href = "views/gpc/gpcResource.html";
-	}
 
 
 	//注册按钮绑定事件
