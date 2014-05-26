@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>股票池</title>
+		<meta name="author" content="vteamdell0723" />
+		<!--引入相应的CSS样式-->
+		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap.min.css"/>
+		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap-theme.min.css"/>
+
+		<!--引入股票池自定义的Css样式-->
+		<link rel="stylesheet" type="text/css" href="../csslib/stockrecomYM/stockrecom.css"/>
+
+		<!--导入相应的js插件-->
+		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap3/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.service.plugin.js"></script>
+		<script type="text/javascript" src="../jslib/scriptsPlugin/commonService/common.cookie.plugin.js"></script>
+
+		<!--导入股票池相应的js文件-->
+		<script type="text/javascript" src="../scriptslib/stockrecom/stockrecom.js"></script>
+	</head>
+	<body>
+		<!--菜单显示栏位-->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="bs-infor">
+					<span class="sr-only"> </span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+				</button>
+				<a  href="../../index.html"><img src="../imagelib/indexYM/Companeicon.jpg" border="0" height="40" class="img-rounded"/></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-infor">
+				<ul class="nav navbar-nav">
+					<span class="label label-info">股票池</span>
+				</ul>
+			</div>
+		</nav>
+		<!--菜单显示结束-->
+
+		<!--股票、外汇、基金分类栏位-->
+		<div class="container accordionWidth">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="list-group">
+						<a href="#" class="list-group-item active">大盘股 <span class="glyphicon glyphicon-chevron-right pull-right"> </span> </a>
+						<a href="#" class="list-group-item">中小板 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+						<a href="#" class="list-group-item">创业板 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+						<a href="#" class="list-group-item">基金 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+						<a href="#" class="list-group-item">外汇 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+						<a href="#" class="list-group-item">贵金属 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+						<a href="#" class="list-group-item">期货 <span class="glyphicon glyphicon-chevron-right pull-right"> </span></a>
+					</div>
+				</div>
+				<div class="col-md-10 well well-sm">
+					<table class="table  table-bordered table-striped table-hover list">
+						<thead>
+							<tr>
+								<th>行情</th>
+								<th>股票代码</th>
+								<th>股票名称</th>
+								<th>昨日价码</th>
+								<th>推荐理由</th>
+								<th>长期持有理由</th>
+								<th>短期持有理由</th>
+							</tr>
+						</thead>
+						<tbody id="tabletbody">
+                            <tr>
+                            	<td>
+                            	   <a class="btnPrice"> </a>
+                            	</td>
+                            	<td>
+                            	       华孚色纺
+                            	</td>
+                            	<td>
+                            	   <a class="btn btn-info">华孚色纺</a>  
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            	<td>
+                            	     华孚色纺
+                            	</td>
+                            </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--表格显示控件-->
+
+	</body>
+</html>
+
