@@ -7,6 +7,9 @@
  */
 package com.ktproject.risk.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.risk.dao.StockRiskPlateDAO;
 import com.ktproject.risk.service.StockRiskPlateService;
 
 /**
@@ -17,5 +20,9 @@ import com.ktproject.risk.service.StockRiskPlateService;
  * @history 2014-5-26 vteamdell0723 创建StockRiskPlateServiceImpl.java
  */
 public class StockRiskPlateServiceImpl implements StockRiskPlateService {
-
+      
+	    @Autowired
+	    private  StockRiskPlateDAO  stockRiskPlateDAO ;
+	    
+	    
 }

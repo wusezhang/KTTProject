@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
-<mapper namespace="com.ktproject.forexpic.dao.impl.ForexPicDAOImpl">
+<mapper namespace="com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl">
     
-    <resultMap type="com.ktproject.forexpic.model.ForexPicVO" id="ObjectResultMap">
-         <result column="CREATEDATE" property="createdate"/>
-         <result column="TITLE" property="title"/>
-         <result column="IMAGEURL" property="imageUrl"/>
-         <result column="ID" property="id"/>
-    </resultMap> 
-	
-	<resultMap id="newsResultMap" type="com.ktproject.forexpic.model.ForexNewsPicVO"> </resultMap>
-	
-    
-    <select id="queryAllForexPic" resultMap="ObjectResultMap"  parameterType="hashmap">
-		SELECT WHKT.ID AS ID , WHKT.TITLE AS TITLE , WHKT.IMAGEURL AS IMAGEURL   
-		FROM   WHKT_RESOURCE_TABLE AS WHKT 
-		WHERE 1=1
-		ORDER BY  WHKT.CREATEDATE DESC
-		<if test="limit != null and limit !='' ">
-             LIMIT #{start},#{limit}
-        </if>
-    </select>
-	
-	<select id="queryAllForexPicCount" resultType="int">
-		SELECT COUNT(*)   
-		FROM   WHKT_RESOURCE_TABLE AS WHKT 
-		WHERE 1=1
-		ORDER BY  WHKT.CREATEDATE DESC
-	</select>
-    
-    <select id="queryForexNewsPic" resultMap="newsResultMap" useCache="true">
-		 SELECT NEWS.LINK AS LINK, NEWS.AUTHOR AS AUTHOR, NEWS.TITLE AS TITLE,
-	         NEWS.IMAGEURL AS IMAGEURL,NEWS.DESCRIPTION AS DESCRIPTION,NEWS.PUBDATE AS PUBDATE
-         FROM
-	         WHKT_NEWS_RESOURCE_TABLE NEWS
-         WHERE 1=1
-             ORDER BY NEWS.PUBDATE DESC 
-         LIMIT 0,8
-    </select>
-	
+   
 </mapper>

@@ -7,8 +7,11 @@
  */
 package com.ktproject.risk.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ktproject.risk.service.StockRiskPlateService;
 
 /**
  * 类功能描述：
@@ -21,4 +24,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("stockRiskPlateController")
 public class StockRiskPlateController {
     
+	 @Autowired
+	 private  StockRiskPlateService stockRiskPlateService;
+	 
+	 
 }
