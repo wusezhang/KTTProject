@@ -10,13 +10,36 @@ $(document).ready(function() {
     }
     //绑定事件.
     function  bindEvent(){
-    	
+    	$('#companyRiskBtnDown').bind('click',companyRiskNextEvent);
+    	$('#companyRiskBtnUp').bind('click',companyRiskUpEvent);
+    }
+    
+    function  companyRiskNextEvent(){
+    	currentCount = 0 ;
+    	if((Number($('#companyRiskNewsCount').val())+8)>Number($('#companyRiskNewsTotalCount').val())){
+    		currentCount = Number($('#companyRiskNewsCount').val());
+    	}else{
+    		currentCount = Number($('#companyRiskNewsCount').val())+8;
+    	}
+    	$('#companyRiskNewsCount').val(currentCount);
+    	initCompanyRiskPlateNewsEvent();
+    }
+    
+    function  companyRiskUpEvent(){
+    	currentData = 0;
+    	if((Number($('#companyRiskNewsCount').val())-8)>0){
+    		currentData = Number($('#companyRiskNewsCount').val())-8;
+    	}
+    	$('#companyRiskNewsCount').val(currentData);
+    	initCompanyRiskPlateNewsEvent();
     }
     
     function  initCompanyRiskPlateNewsEvent(){
+    	startNum = Number($('#companyRiskNewsCount').val())+0;
     	 //初始化相应的外汇图信息.
 		 $.commonService('../../stockRiskPlateController/queryCompanyRiskPlateNews',
-		 'POST',{start:0,limit:8}, function(map) {
+		 'POST',{start:startNum,limit:8}, function(map) {
+		 	$('#companyRiskNewsTotalCount').val(map.count);
 		    initCompanyRiskNewsModal(map);
 	     }); 
     }
