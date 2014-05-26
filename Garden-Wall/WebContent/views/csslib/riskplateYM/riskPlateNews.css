@@ -1,0 +1,11 @@
+.companynewsposition{
+  position:absolute;
+  top:50px;
+  width:50%;
+}
+.forexnewsposition{
+  position:absolute;
+  top:50px;
+  right:0px;
+  width:50%;
+}
