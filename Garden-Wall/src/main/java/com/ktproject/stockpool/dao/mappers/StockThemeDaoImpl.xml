@@ -37,7 +37,8 @@
          FROM
 	         STOCK_POOL_COMPANY_NEWS_TABLE  COMPANYNEWS
          WHERE
-           1=1   
+           1=1 
+		 ORDER  BY  COMPANYNEWS.PUBDATE DESC 
 		<if test="limit != null and limit !='' ">
              LIMIT #{start},#{limit}
         </if>
