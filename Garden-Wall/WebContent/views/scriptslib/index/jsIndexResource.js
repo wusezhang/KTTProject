@@ -23,25 +23,26 @@ $(document).ready(function() {
 	//初始化相应的模板文件
 	function bindEvent() {
 		$('#registerBut').bind('click', registerButtonEvent);
+		$('#addFavoritesBtn').bind('click',addFavoritesEvent);
 	};
 
-
+    
+    //加入收藏夹按钮事件
+    function addFavoritesEvent(){
+    	var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd':'CTRL';
+        if (document.all) {
+            window.external.addFavorite('http://localhost:8080/KTTProject/', '财汇.NET');
+        } else if (window.sidebar) {
+            window.sidebar.addPanel('财汇.NET', 'http://localhost:8080/KTTProject/', "");
+        }else{
+        	alert('添加失败/n您可以尝试通过快捷键'+ctrl+' + D 加入到收藏夹！');
+        }
+    };
+    
 	//注册按钮绑定事件
 	function registerButtonEvent() {
 		$("#registerModal").modal('show');
 	}
         
 });
-
-
-//背景色变换功能
-function changeBackGround(flag) {
-	if (flag == 0) {
-		$("#indexYmBody").css("background", "url('views/imagelib/furley_bg.png')");
-	} else if (flag == 1) {
-		$("#indexYmBody").css("background", "url('views/imagelib/indexYM/windows8_metro_green.jpg')");
-	} else if (flag == 2) {
-		$("#indexYmBody").css("background", "url('views/imagelib/indexYM/In_Bloom.jpg')");
-	}
-}
 

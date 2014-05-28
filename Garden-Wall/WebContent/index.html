@@ -32,14 +32,14 @@
 					<a class="dropdown-toggle" data-toggle="dropdown"  href="#"> <span class="icon-white icon-share"> </span>设置 <b class="caret"> </b> </a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="javascript:changeBackGround(0)">系统默认</a>
+							<a href="javascript:void(0)">其他功能</a>
 						</li>
 						<li class="divider"> </li>
 						<li>
-							<a href="javascript:changeBackGround(1)">绿色丛林</a>
+							<a href="javascript:void(0)" id="addFavoritesBtn">加入收藏夹</a>
 						</li>
 						<li>
-							<a href="javascript:changeBackGround(2)" >泫雅时光</a>
+							<a href="javascript:void(0)">设置为主页</a>
 						</li>
 					</ul>
 				</li>
@@ -130,13 +130,13 @@
 			<div class="live-tile well-small mango" data-speed="1500"  data-mode="carousel" data-direction="vertical" data-bounce="true" data-initdelay="6000" >
 				<div >
 					<a class="full" href="views/riskplate/riskPlateNews.html"><img class="full"  src="views/imagelib/indexYM/riskicon.jpg"/></a>
-					<div class="bottomshowInfor" >
-						(汇市股市)风险警示
+					<div class="bottomshowInfor text-warning" >
+						<span class="icon-white icon-info-sign"> </span> (汇市股市)风险警示
 					</div>
 				</div>
 				<div>
 					<a class="full" href="views/riskplate/metalRiskPlateNews.html"><img class="full" src="views/imagelib/indexYM/noblemetal.jpg" /></a>
-					<div class="bottomshowInfor" >
+					<div class="bottomshowInfor text-warning" >
 						<span class="icon-white icon-check"> </span> (贵金属)风险警示
 					</div>
 				</div>
@@ -196,7 +196,7 @@
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="horizontal">
 				<div >
 					<a class="full" href="views/stockpool/stockThemeNews.html"><img class="full"  src="views/imagelib/indexYM/bknews.jpg"/></a>
-					<div class="bottomshowInfor" >
+					<div class="bottomshowInfor text-error" >
 						<span class="icon-white  icon-random"> </span>   题材新闻
 					</div>
 				</div>
