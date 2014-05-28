@@ -38,9 +38,6 @@
 						<li>
 							<a href="javascript:void(0)" id="addFavoritesBtn">加入收藏夹</a>
 						</li>
-						<li>
-							<a href="javascript:void(0)">设置为主页</a>
-						</li>
 					</ul>
 				</li>
 				<li >
@@ -320,23 +317,13 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					×
 				</button>
-				<h4>用户注册</h4>
+				<h4>提示</h4>
 			</div>
-			<div class="modal-body">
-				<label>用户名:</label>
-				<input type="text" name="username" id="username" placeholder="用户名" class="input-xlarge">
-				<label>密码:</label>
-				<input type="password" name="password" id="password" placeholder="密码" class="input-xlarge">
-				<label>初始密码:</label>
-				<input type="password" name="relpassword" id="relpassword" placeholder="初始密码" class="input-xlarge">
-				<label>邮箱:</label>
-				<input type="text" name="email" id="email" placeholder="邮箱" class="input-xlarge">
+			<div class="modal-body" id="modalMessageBody">
+				
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-primary" id="editResourceBtn">
-					注册
-				</button>
-				<button class="btn" data-dismiss="modal" aria-hidden="true">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
 					关闭
 				</button>
 			</div>

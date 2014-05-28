@@ -10,7 +10,7 @@ $(document).ready(function() {
 		$(".live-tile").liveTile();
 		//移除相应的Class属性
 		$(".live-tile").removeClass("carousel");
-		
+
 		//初始化相应的财经慧眼的控制开关
 		$("#mjhyControlBox").liveTile({
 			startNow : false,
@@ -23,26 +23,29 @@ $(document).ready(function() {
 	//初始化相应的模板文件
 	function bindEvent() {
 		$('#registerBut').bind('click', registerButtonEvent);
-		$('#addFavoritesBtn').bind('click',addFavoritesEvent);
+		$('#addFavoritesBtn').bind('click', addFavoritesEvent);
 	};
 
-    
-    //加入收藏夹按钮事件
-    function addFavoritesEvent(){
-    	var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd':'CTRL';
-        if (document.all) {
-            window.external.addFavorite('http://localhost:8080/KTTProject/', '财汇.NET');
-        } else if (window.sidebar) {
-            window.sidebar.addPanel('财汇.NET', 'http://localhost:8080/KTTProject/', "");
-        }else{
-        	alert('添加失败/n您可以尝试通过快捷键'+ctrl+' + D 加入到收藏夹！');
-        }
-    };
-    
+	//加入收藏夹按钮事件
+	function addFavoritesEvent() {
+		var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL';
+		if (document.all) {
+			window.external.addFavorite(window.location.href, document.title);
+		} else if (window.sidebar) {
+			try {
+				window.sidebar.addPanel(document.title, window.location.href, "");
+			} catch(e) {
+				$('#registerModal').modal('show');
+				$('#modalMessageBody').html('<p class="text-error">您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹!</p>');
+			}
+		}
+
+	};
+
 	//注册按钮绑定事件
 	function registerButtonEvent() {
 		$("#registerModal").modal('show');
 	}
-        
+
 });
 

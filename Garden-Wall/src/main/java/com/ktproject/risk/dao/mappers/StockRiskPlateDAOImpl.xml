@@ -4,7 +4,7 @@
     <resultMap id="resultObjectMap" type="com.ktproject.risk.model.StockRiskPlateVO">
 	</resultMap>
     
-	<select id="queryCompanyRiskPlateNews" resultMap="resultObjectMap">
+	<select id="queryCompanyRiskPlateNews" resultMap="resultObjectMap" useCache="true">
 		SELECT
 	       IMPORTTANTNEWS.KEYID,
 	       IMPORTTANTNEWS.LINKURL,
@@ -19,7 +19,7 @@
         </if>
 	</select>
 	
-	<select id="queryCompanyRiskPlateNewsCount" resultType="int">
+	<select id="queryCompanyRiskPlateNewsCount" resultType="int" useCache="true">
 		SELECT
 	       COUNT(*) AS COUNT 
         FROM       
