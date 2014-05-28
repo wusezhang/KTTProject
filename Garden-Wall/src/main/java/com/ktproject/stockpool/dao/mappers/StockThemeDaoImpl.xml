@@ -3,7 +3,7 @@
 <mapper namespace="com.ktproject.stockpool.dao.impl.StockThemeDaoImpl">
 	<resultMap id="objectResult" type="com.ktproject.stockpool.model.StockThemeMessageVO"> </resultMap>   
 	
-	<select id="queryCurrentThemeNews"  resultMap="objectResult" parameterType="hashmap">
+	<select id="queryCurrentThemeNews"  resultMap="objectResult" parameterType="hashmap" useCache="true">
 		 SELECT
 		     THEMENEWS.KEYID,
 	         THEMENEWS.LINKURL,
@@ -18,7 +18,7 @@
         </if>
 	</select>   
 	
-	<select id="queryCurrentThemeNewsCount" resultType="int">
+	<select id="queryCurrentThemeNewsCount" resultType="int" useCache="true">
 		SELECT
 		     COUNT(*) AS COUNT
          FROM
@@ -28,24 +28,26 @@
 	</select>
 	
 	   
-	<select id="queryCompanyNews" resultMap="objectResult" parameterType="hashmap">
+	<select id="queryCompanyNews" resultMap="objectResult" parameterType="hashmap" useCache="true">
 		SELECT
-		     COMPANYNEWS.KEYID,
-	         COMPANYNEWS.LINKURL,
-			 SUBSTRING(COMPANYNEWS.PUBDATE,1,16) AS PUBDATE,
-			 SUBSTRING(COMPANYNEWS.TITLE,1,35) AS TITLE
-         FROM
-	         STOCK_POOL_COMPANY_NEWS_TABLE  COMPANYNEWS
-         WHERE
-           1=1 
-		 ORDER  BY  COMPANYNEWS.PUBDATE DESC 
+	       MAX(COMPANYNEWS.KEYID) AS KEYID,
+	       MAX(COMPANYNEWS.LINKURL) AS LINKURL,
+	       MAX(SUBSTRING(COMPANYNEWS.PUBDATE, 1, 16)) AS PUBDATE,
+	       MAX(SUBSTRING(COMPANYNEWS.TITLE, 1, 35)) AS TITLE
+       FROM
+	       STOCK_POOL_COMPANY_NEWS_TABLE COMPANYNEWS
+       WHERE
+	       1 = 1
+       GROUP BY COMPANYNEWS.TITLE
+       ORDER BY COMPANYNEWS.PUBDATE DESC
 		<if test="limit != null and limit !='' ">
              LIMIT #{start},#{limit}
         </if>
 	</select>
 	
-	<select id="queryCompanyNewsCount" resultType="int">
-		 SELECT  COUNT(*) AS COUNT  FROM STOCK_POOL_COMPANY_NEWS_TABLE  COMPANYNEWS
+	<select id="queryCompanyNewsCount" resultType="int" useCache="true">
+		SELECT COUNT(*) FROM (SELECT MAX(KEYID) FROM STOCK_POOL_COMPANY_NEWS_TABLE COMPANYNEWS
+		WHERE 1 = 1 GROUP BY COMPANYNEWS.TITLE ) AS COMPANYNEWS 
 	</select>
 		
 </mapper>
