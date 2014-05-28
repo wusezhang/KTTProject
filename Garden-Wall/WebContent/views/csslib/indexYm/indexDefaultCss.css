@@ -8,7 +8,7 @@
 	z-index: 30;
 	height: 20px;
 	text-align: center;
-	background-image: url('../../imagelib/bkImage.png');
+	background-image: url('../../imagelib/indexYM/bkImage.png');
 }
 .topappbar {
 	background-image: url('../../imagelib/black-Linen.png');
@@ -29,7 +29,7 @@
 	-ms-touch-action: manipulation;
 }
 .inforBox {
-	background: url('../../imagelib/bkImage.png');
+	background: url('../../imagelib/indexYM/bkImage.png');
 }
 .indexYmBagroundImage {
 	background: url('../../imagelib/furley_bg.png')
@@ -47,3 +47,12 @@
 	top:50px;
 	left:10px;
 }
+.spreadPlatform{
+   position:absolute;
+   top:55px;
+   right:0px;
+   width:4%; 
+   height:75%;
+   background-image:url('../../imagelib/indexYM/bkImage.png');
+}
+
