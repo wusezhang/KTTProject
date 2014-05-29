@@ -1,5 +1,11 @@
-.forxnewsposition{
+.forexnewsposition{
 	position:absolute;
-	top:50px;
+	top:45px;
+	width:50%;
+}
+.metalnewsposition{
+	position:absolute;
+	top:45px;
+	right:0px;
 	width:50%;
 }

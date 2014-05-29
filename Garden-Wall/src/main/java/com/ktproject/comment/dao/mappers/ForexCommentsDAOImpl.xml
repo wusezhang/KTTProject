@@ -21,7 +21,7 @@
 		</if>
 	  </select>
 	  
-	  <select id="queryTodayForexCommentsCount" resultType="int" parameterType="hashmap">
+	  <select id="queryTodayForexCommentsCount" resultType="int" parameterType="hashmap" useCache="true">
 		SELECT COUNT(*) AS COUNT
         FROM
 	      COMMENTS_NEWS_RESOURCE_TABLE COMMENTSNEWS

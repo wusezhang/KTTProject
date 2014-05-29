@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="../scriptslib/comment/forexComment.js"></script>
 	</head>
 	<body>
-        <!--菜单显示栏位-->
+		<!--菜单显示栏位-->
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="navbar-header">
 				<a  href="../../index.html"> <img src="../imagelib/indexYM/Companeicon.jpg" border="0" height="40" class="img-rounded"/> </a>
@@ -44,13 +44,26 @@
 
 		</nav>
 		<!--菜单显示结束-->
-		
-		<div class="well well-sm forxnewsposition" id="forexNewsModal">
-			 
-			
+
+		<!--当日汇市评论-->
+		<div class="well well-sm forexnewsposition">
+			<div class="list-group" id="forexNewsModal"> </div>
+			<div align="center">
+				<a class="btn btn-primary btn-sm" id="forexNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+				&nbsp;&nbsp;&nbsp;
+				<a class="btn btn-primary btn-sm" id="forexNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			</div>
 		</div>
-		
-		
+
+		<div class="well well-sm metalnewsposition">
+			<div class="list-group" id="metalNewsModal"> </div>
+			<div align="center">
+				<a class="btn btn-primary btn-sm" id="metalNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+				&nbsp;&nbsp;&nbsp;
+				<a class="btn btn-primary btn-sm" id="metalNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			</div>
+		</div>
+
 	</body>
 </html>
 
