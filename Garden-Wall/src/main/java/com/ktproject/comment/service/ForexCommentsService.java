@@ -7,6 +7,8 @@
  */
 package com.ktproject.comment.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：
  * ForexCommentsService.java
@@ -15,5 +17,10 @@ package com.ktproject.comment.service;
  * @history 2014-5-29 vteamdell0723 创建ForexCommentsService.java
  */
 public interface ForexCommentsService {
-
+	/**
+	 * 查询当前的外汇评论信息.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryTodayForexComments(final Map<String,Object> map);
 }

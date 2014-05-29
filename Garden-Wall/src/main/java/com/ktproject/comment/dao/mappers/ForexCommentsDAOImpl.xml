@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ktproject.comment.dao.impl.ForexCommentsDAOImpl">
-      
+      <resultMap id="resultObjectMap" type="com.ktproject.comment.model.ForexCommentsVO"> </resultMap>
+	  
+	  <select id="queryTodayForexComments" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
+		  SELECT
+	         COMMENTSNEWS.LINKURL,
+	         COMMENTSNEWS.TITLE,
+	         COMMENTSNEWS.PUBDATE,
+	         COMMENTSNEWS.DESCRIPTCONTEXT,
+	         COMMENTSNEWS.SOURCEFLAG
+         FROM
+	         COMMENTS_NEWS_RESOURCE_TABLE COMMENTSNEWS
+         WHERE
+	         1 = 1
+             AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
+        ORDER BY COMMENTSNEWS.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	  </select>
+	  
+	  <select id="queryTodayForexCommentsCount" resultType="int" parameterType="hashmap">
+		SELECT COUNT(*) AS COUNT
+        FROM
+	      COMMENTS_NEWS_RESOURCE_TABLE COMMENTSNEWS
+        WHERE
+	      1 = 1
+          AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
+        ORDER BY COMMENTSNEWS.PUBDATE DESC
+	  </select>
+	  
 </mapper>

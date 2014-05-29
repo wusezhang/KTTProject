@@ -7,6 +7,11 @@
  */
 package com.ktproject.comment.dao;
 
+import java.util.Map;
+import java.util.List;
+
+import com.ktproject.comment.model.ForexCommentsVO;
+
 /**
  * 类功能描述：
  * ForexCommentsDAO.java
@@ -15,5 +20,19 @@ package com.ktproject.comment.dao;
  * @history 2014-5-29 vteamdell0723 创建ForexCommentsDAO.java
  */
 public interface ForexCommentsDAO {
-
+      
+	  /**
+	   * 查询当日外汇评论资源.
+	   * @param map
+	   * @return
+	   */
+	  List<ForexCommentsVO>  queryTodayForexComments(final  Map<String,Object> map);
+	  
+	  /**
+	   * 查询当日外汇评论资源条数.
+	   * @param map
+	   * @return
+	   */
+	  int  queryTodayForexCommentsCount(final Map<String,Object> map);
+	 
 }

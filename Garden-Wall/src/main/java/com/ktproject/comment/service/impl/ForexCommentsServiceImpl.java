@@ -7,6 +7,12 @@
  */
 package com.ktproject.comment.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.comment.dao.ForexCommentsDAO;
 import com.ktproject.comment.service.ForexCommentsService;
 
 /**
@@ -17,5 +23,19 @@ import com.ktproject.comment.service.ForexCommentsService;
  * @history 2014-5-29 vteamdell0723 创建ForexCommentsServiceImpl.java
  */
 public class ForexCommentsServiceImpl implements ForexCommentsService {
+	
+     @Autowired
+	 private  ForexCommentsDAO  forexCommentsDAO;
+
+	/**
+	 * @see com.ktproject.comment.service.ForexCommentsService#queryTodayForexComments(java.util.Map)
+	 */
+	public Map<String, Object> queryTodayForexComments(final Map<String, Object> map) {
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", forexCommentsDAO.queryTodayForexComments(map));
+		resultMap.put("count",forexCommentsDAO.queryTodayForexCommentsCount(map));
+		return resultMap;
+	}
+     
      
 }
