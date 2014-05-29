@@ -42,4 +42,7 @@
 	<bean id="stockRiskPlateService" class="com.ktproject.risk.service.impl.StockRiskPlateServiceImpl" />
 	<bean id="stockRiskPlateDAO" class="com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl"/>
 	
+	<bean id="forexCommentsService"  class="com.ktproject.comment.service.impl.ForexCommentsServiceImpl"/>
+	<bean id="forexCommentsDAO" class="com.ktproject.comment.dao.impl.ForexCommentsDAOImpl" />
+	
 </beans>
