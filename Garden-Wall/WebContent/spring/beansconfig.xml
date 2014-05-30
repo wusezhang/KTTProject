@@ -45,4 +45,7 @@
 	<bean id="forexCommentsService"  class="com.ktproject.comment.service.impl.ForexCommentsServiceImpl"/>
 	<bean id="forexCommentsDAO" class="com.ktproject.comment.dao.impl.ForexCommentsDAOImpl" />
 	
+	<bean id="stockCommentsService" class="com.ktproject.comment.service.impl.StockCommentsServiceImpl"/>
+	<bean id="stockCommentsDAO" class="com.ktproject.comment.dao.impl.StockCommentsDAOImpl"/>
+	
 </beans>
