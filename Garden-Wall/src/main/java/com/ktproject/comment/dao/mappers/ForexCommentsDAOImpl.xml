@@ -33,4 +33,30 @@
         ORDER BY COMMENTSNEWS.PUBDATE DESC
 	  </select>
 	  
+	  <select id="queryTodayMetalComments" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
+		SELECT
+	        COMMENTSMETAL.LINKURL,
+	        COMMENTSMETAL.TITLE,
+	        SUBSTRING(COMMENTSMETAL.PUBDATE, 1, 16) AS PUBDATE,
+	        COMMENTSMETAL.DESCRIPTCONTEXT,
+	        COMMENTSMETAL.SOURCEFLAG
+        FROM
+	        COMMENTS_METAL_RESOURCE_TABLE COMMENTSMETAL
+        WHERE
+	        1 = 1
+        AND COMMENTSMETAL.COMMENTFLAG = 'METAL'
+        ORDER BY COMMENTSMETAL.PUBDATE DESC
+		<if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		</if>
+	  </select>
+	  
+	  <select id="queryTodayMetalCommentsCount" resultType="int" parameterType="hashmap" useCache="true">
+		 SELECT  COUNT(*)  FROM
+	          COMMENTS_METAL_RESOURCE_TABLE COMMENTSMETAL
+         WHERE
+	          1 = 1
+              AND COMMENTSMETAL.COMMENTFLAG = 'METAL'
+	  </select>
+	  
 </mapper>

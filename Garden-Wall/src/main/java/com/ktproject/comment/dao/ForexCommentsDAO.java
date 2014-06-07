@@ -34,5 +34,19 @@ public interface ForexCommentsDAO {
 	   * @return
 	   */
 	  int  queryTodayForexCommentsCount(final Map<String,Object> map);
+	  
+	  /**
+	   * 查询当日贵金属评论
+	   * @param map
+	   * @return
+	   */
+	  List<ForexCommentsVO>  queryTodayMetalComments(final Map<String,Object> map);
+	  
+	  /**
+	   * 查询当日贵金属评论条数.
+	   * @param map
+	   * @return
+	   */
+	  int  queryTodayMetalCommentsCount(final Map<String,Object> map);
 	 
 }

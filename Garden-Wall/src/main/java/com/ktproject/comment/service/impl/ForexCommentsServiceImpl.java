@@ -36,6 +36,16 @@ public class ForexCommentsServiceImpl implements ForexCommentsService {
 		resultMap.put("count",forexCommentsDAO.queryTodayForexCommentsCount(map));
 		return resultMap;
 	}
+
+	/**
+	 * @see com.ktproject.comment.service.ForexCommentsService#queryTodayMetalComments(java.util.Map)
+	 */
+	public Map<String, Object> queryTodayMetalComments(Map<String, Object> map) {
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", forexCommentsDAO.queryTodayMetalComments(map));
+		resultMap.put("count",forexCommentsDAO.queryTodayMetalCommentsCount(map));
+		return resultMap;
+	}
      
      
 }

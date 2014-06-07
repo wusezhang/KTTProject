@@ -51,4 +51,18 @@ public class ForexCommentsDAOImpl implements ForexCommentsDAO {
 		return sqlSession.selectOne("com.ktproject.comment.dao.impl.ForexCommentsDAOImpl.queryTodayForexCommentsCount", map);
 	}
 
+	/**
+	 * @see com.ktproject.comment.dao.ForexCommentsDAO#queryTodayMetalComments(java.util.Map)
+	 */
+	public List<ForexCommentsVO> queryTodayMetalComments(Map<String, Object> map) {
+		return sqlSession.selectList("com.ktproject.comment.dao.impl.ForexCommentsDAOImpl.queryTodayMetalComments", map);
+	}
+
+	/**
+	 * @see com.ktproject.comment.dao.ForexCommentsDAO#queryTodayMetalCommentsCount(java.util.Map)
+	 */
+	public int queryTodayMetalCommentsCount(Map<String, Object> map) {
+		return sqlSession.selectOne("com.ktproject.comment.dao.impl.ForexCommentsDAOImpl.queryTodayMetalCommentsCount",map);
+	}
+
 }

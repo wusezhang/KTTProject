@@ -56,4 +56,21 @@ public class ForexCommentsController {
 		filterMap.put("limit", limit);
 		return  forexCommentsService.queryTodayForexComments(filterMap);
 	}
+	
+	/**
+	 * 查询当天贵金属评论.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
+	@RequestMapping(value = "/queryTodayMetalComments", method = RequestMethod.POST)
+	public  @ResponseBody  Map<String,Object>  queryTodayMetalComments(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+		final  Map<String,Object>  filterMap = new  HashMap<String,Object>();
+		filterMap.put("start", start);
+		filterMap.put("limit", limit);
+		return  forexCommentsService.queryTodayMetalComments(filterMap);
+	}
+	
 }

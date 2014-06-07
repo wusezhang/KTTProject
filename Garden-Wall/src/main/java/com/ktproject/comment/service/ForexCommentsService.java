@@ -23,4 +23,11 @@ public interface ForexCommentsService {
 	 * @return
 	 */
 	Map<String,Object>  queryTodayForexComments(final Map<String,Object> map);
+	
+	/**
+	 * 查询当天贵金属评论.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryTodayMetalComments(final Map<String,Object> map);
 }
