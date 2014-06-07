@@ -15,6 +15,7 @@
          WHERE
 	         1 = 1
              AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
+             AND COMMENTSNEWS.TITLE !=''
 			 AND DATE(COMMENTSNEWS.PUBDATE) = CURDATE()
         ORDER BY COMMENTSNEWS.PUBDATE DESC
 		<if test="limit != null and limit !='' ">
@@ -29,6 +30,7 @@
         WHERE
 	      1 = 1
           AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
+          AND COMMENTSNEWS.TITLE !=''
 		  AND DATE(COMMENTSNEWS.PUBDATE) = CURDATE()
         ORDER BY COMMENTSNEWS.PUBDATE DESC
 	  </select>
