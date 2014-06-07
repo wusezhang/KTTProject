@@ -47,6 +47,7 @@
         WHERE
 	        1 = 1
         AND COMMENTSMETAL.COMMENTFLAG = 'METAL'
+        AND COMMENTSMETAL.DESCRIPTCONTEXT !=''
         ORDER BY COMMENTSMETAL.PUBDATE DESC
 		<if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
@@ -59,6 +60,7 @@
          WHERE
 	          1 = 1
               AND COMMENTSMETAL.COMMENTFLAG = 'METAL'
+              AND COMMENTSMETAL.DESCRIPTCONTEXT !=''
 	  </select>
 	  
 </mapper>

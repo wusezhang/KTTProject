@@ -74,7 +74,7 @@ $(document).ready(function(){
 	             +'<h5 class="list-group-item-heading">'
 	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
-				 + obj.descriptContext
+				 + $.trim(obj.descriptContext)
 				 +'</h6></a>');
 	    });
 	}
@@ -101,7 +101,7 @@ $(document).ready(function(){
 	             +'<h5 class="list-group-item-heading">'
 	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
-				 + obj.descriptContext
+				 + $.trim(obj.descriptContext)
 				 +'</h6></a>');
 	    });
 	}
