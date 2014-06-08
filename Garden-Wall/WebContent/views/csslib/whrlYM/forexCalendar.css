@@ -4,5 +4,11 @@
 .newsposition{
   position:absolute;
   top:50px;
-  width:100%;
+  width:50%;
+}
+.cjnewsposition{
+	position:absolute;
+	top:45px;
+	right:0px;
+	width:50%;
 }
