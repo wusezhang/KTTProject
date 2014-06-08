@@ -1,0 +1,11 @@
+.stocknewsposition{
+	position:absolute;
+	top:45px;
+	width:50%;
+}
+.cjnewsposition{
+	position:absolute;
+	top:45px;
+	right:0px;
+	width:50%;
+}

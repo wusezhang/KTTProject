@@ -10,7 +10,7 @@
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap.min.css"/>
 		<link  rel="stylesheet" type="text/css" href="../jslib/scriptsPlugin/bootstrap3/css/bootstrap-theme.min.css"/>
 		<!--引入自定义的css样式-->
-		
+		<link  rel="stylesheet" type="text/css" href="../csslib/commentYM/stockComment.css"/>
 		<!--js文件导入-->
 		<script type="text/javascript" src="../jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="../jslib/scriptsPlugin/bootstrap3/js/bootstrap.min.js"></script>
@@ -28,7 +28,7 @@
 
 			<div class="collapse navbar-collapse" id="bs-infor">
 				<ul class="nav navbar-nav">
-					<span class="label label-info">当日股市评论</span>
+					<span class="label label-info">当日(股市/财经)评论</span>
 				</ul>
 
 				<div class="navbar-form pull-right" role="search">
@@ -44,6 +44,27 @@
 
 		</nav>
 		<!--菜单显示结束-->
+		
+		<!--当日股市评论-->
+		<div class="well well-sm stocknewsposition">
+			<div class="list-group" id="forexNewsModal"> </div>
+			<div align="center">
+				<a class="btn btn-primary btn-sm" id="forexNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+				&nbsp;&nbsp;&nbsp;
+				<a class="btn btn-primary btn-sm" id="forexNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			</div>
+		</div>
+        
+        <!--当日财经评论-->
+		<div class="well well-sm cjnewsposition">
+			<div class="list-group" id="metalNewsModal"> </div>
+			<div align="center">
+				<a class="btn btn-primary btn-sm" id="metalNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+				&nbsp;&nbsp;&nbsp;
+				<a class="btn btn-primary btn-sm" id="metalNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			</div>
+		</div>
+		
 	</body>
 </html>
 
