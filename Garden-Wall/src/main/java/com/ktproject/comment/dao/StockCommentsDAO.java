@@ -7,6 +7,11 @@
  */
 package com.ktproject.comment.dao;
 
+import java.util.Map;
+import java.util.List;
+
+import com.ktproject.comment.model.ForexCommentsVO;
+
 /**
  * 类功能描述：
  * StockCommentsDAO.java
@@ -15,5 +20,17 @@ package com.ktproject.comment.dao;
  * @history 2014-5-30 vteamdell0723 创建StockCommentsDAO.java
  */
 public interface StockCommentsDAO {
-
+	/**
+	 * 查询当天股市评论.
+	 * @param map
+	 * @return
+	 */
+	List<ForexCommentsVO>   queryDailyStockComments(final  Map<String,Object> map);
+	
+	/**
+	 * 查询当天股市评论条数.
+	 * @param map
+	 * @return
+	 */
+	int  queryDailyStockCommentsCount(final  Map<String,Object> map);
 }

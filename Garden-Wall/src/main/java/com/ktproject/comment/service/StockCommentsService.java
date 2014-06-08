@@ -7,6 +7,8 @@
  */
 package com.ktproject.comment.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：股市当日评论
  * StockCommentsService.java
@@ -15,5 +17,11 @@ package com.ktproject.comment.service;
  * @history 2014-5-30 vteamdell0723 创建StockCommentsService.java
  */
 public interface StockCommentsService {
-
+    
+	/**
+	 * 查询当天股票评论.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object> queryDailyStockComments(final  Map<String,Object> map);
 }

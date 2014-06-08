@@ -7,8 +7,9 @@
  */
 package com.ktproject.comment.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ktproject.comment.dao.StockCommentsDAO;
 import com.ktproject.comment.service.StockCommentsService;
 
@@ -23,6 +24,16 @@ public class StockCommentsServiceImpl implements StockCommentsService {
     
 	  @Autowired
 	  private  StockCommentsDAO stockCommentsDAO;
+
+	/**
+	 * @see com.ktproject.comment.service.StockCommentsService#queryDailyStockComments(java.util.Map)
+	 */
+	public Map<String, Object> queryDailyStockComments(final Map<String, Object> map) {
+		final  Map<String,Object> resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", stockCommentsDAO.queryDailyStockComments(map));
+		resultMap.put("count", stockCommentsDAO.queryDailyStockCommentsCount(map));
+		return resultMap;
+	}
 	
 	
 }

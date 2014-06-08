@@ -7,9 +7,16 @@
  */
 package com.ktproject.comment.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.ktproject.comment.service.StockCommentsService;
 
 /**
@@ -26,5 +33,19 @@ public class StockCommentsController {
 	@Autowired
 	private  StockCommentsService  stockCommentsService;
 	
-	
+	/**
+	 * 查询当天股票评论.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
+	@RequestMapping(value = "/queryDailyStockComments", method = RequestMethod.POST)
+	public  @ResponseBody  Map<String,Object> queryDailyStockComments(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+		final  Map<String,Object>  filterMap = new  HashMap<String,Object>();
+		filterMap.put("start", start);
+		filterMap.put("limit", limit);
+		return  stockCommentsService.queryDailyStockComments(filterMap);
+	}
 }

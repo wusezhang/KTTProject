@@ -7,7 +7,14 @@
  */
 package com.ktproject.comment.dao.impl;
 
+import java.util.List;
+import java.util.Map;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.comment.dao.StockCommentsDAO;
+import com.ktproject.comment.model.ForexCommentsVO;
 
 /**
  * 类功能描述：DAO接口文件描述.
@@ -18,4 +25,26 @@ import com.ktproject.comment.dao.StockCommentsDAO;
  */
 public class StockCommentsDAOImpl implements StockCommentsDAO {
 
+	/**
+	 * 日志管理器，以便于跟踪错误.
+	 */
+	private Log  log  = LogFactory.getLog(StockCommentsDAOImpl.class);
+	
+	
+	@Autowired
+	private SqlSession  sqlSession ;
+	/**
+	 * @see com.ktproject.comment.dao.StockCommentsDAO#queryDailyStockComments(java.util.Map)
+	 */
+	public List<ForexCommentsVO> queryDailyStockComments(Map<String, Object> map) {
+		return sqlSession.selectList("", map);
+	}
+
+	/**
+	 * @see com.ktproject.comment.dao.StockCommentsDAO#queryDailyStockCommentsCount(java.util.Map)
+	 */
+	public int queryDailyStockCommentsCount(Map<String, Object> map) {
+		return sqlSession.selectOne("", map);
+	}
+       
 }
