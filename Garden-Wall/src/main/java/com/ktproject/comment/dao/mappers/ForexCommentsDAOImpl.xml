@@ -5,6 +5,7 @@
 	  
 	  <select id="queryTodayForexComments" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
 		  SELECT
+		     COMMENTSNEWS.KEYID,
 	         COMMENTSNEWS.LINKURL,
 	         COMMENTSNEWS.TITLE,
 			 SUBSTRING(COMMENTSNEWS.PUBDATE,1,16) AS PUBDATE,
@@ -16,7 +17,6 @@
 	         1 = 1
              AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
              AND COMMENTSNEWS.TITLE !=''
-			 AND DATE(COMMENTSNEWS.PUBDATE) = CURDATE()
         ORDER BY COMMENTSNEWS.PUBDATE DESC
 		<if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
@@ -31,12 +31,12 @@
 	      1 = 1
           AND COMMENTSNEWS.COMMENTFLAG = 'FOREX'
           AND COMMENTSNEWS.TITLE !=''
-		  AND DATE(COMMENTSNEWS.PUBDATE) = CURDATE()
         ORDER BY COMMENTSNEWS.PUBDATE DESC
 	  </select>
 	  
 	  <select id="queryTodayMetalComments" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
 		SELECT
+		    COMMENTSMETAL.KEYID,
 	        COMMENTSMETAL.LINKURL,
 	        COMMENTSMETAL.TITLE,
 	        SUBSTRING(COMMENTSMETAL.PUBDATE, 1, 16) AS PUBDATE,

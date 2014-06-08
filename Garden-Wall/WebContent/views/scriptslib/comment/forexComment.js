@@ -74,7 +74,7 @@ $(document).ready(function(){
 	             +'<h5 class="list-group-item-heading">'
 	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
-				 + $.trim(obj.descriptContext)
+				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');
 	    });
 	}
@@ -101,9 +101,21 @@ $(document).ready(function(){
 	             +'<h5 class="list-group-item-heading">'
 	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
-				 + $.trim(obj.descriptContext)
+				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');
 	    });
 	}
 	
+	function substringDescripttion(data,keyId){
+		 currentLen = 120;
+		 if(data.length>currentLen){
+		 	var  object = {des:data,keyId:keyId};
+		 	array.push(object);
+		 	return  data.substring(0,currentLen)+'...';
+		 }else{
+		 	return data;
+		 }
+	}
+	
+	var  array = [];
 });
