@@ -37,14 +37,14 @@ public class StockCommentsDAOImpl implements StockCommentsDAO {
 	 * @see com.ktproject.comment.dao.StockCommentsDAO#queryDailyStockComments(java.util.Map)
 	 */
 	public List<ForexCommentsVO> queryDailyStockComments(Map<String, Object> map) {
-		return sqlSession.selectList("", map);
+		return sqlSession.selectList("com.ktproject.comment.dao.impl.StockCommentsDAOImpl.queryDailyStockComments", map);
 	}
 
 	/**
 	 * @see com.ktproject.comment.dao.StockCommentsDAO#queryDailyStockCommentsCount(java.util.Map)
 	 */
 	public int queryDailyStockCommentsCount(Map<String, Object> map) {
-		return sqlSession.selectOne("", map);
+		return sqlSession.selectOne("com.ktproject.comment.dao.impl.StockCommentsDAOImpl.queryDailyStockCommentsCount", map);
 	}
        
 }

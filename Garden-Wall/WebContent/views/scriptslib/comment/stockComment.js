@@ -9,27 +9,27 @@ $(document).ready(function(){
 	}
 	
 	function  initModal(){
-		//初始化相应的外汇评论信息
-		
+		//初始化相应的股市评论信息
+		initStockNewsDataSource();
 		//初始化贵金属板块评论.
 		
 	}
 	
 	
-	function  initForexNewsDataSource(){
-		startNum = Number($('#forexNewsCount').val())+0;
-		$.commonService('../../forexCommentsController/queryTodayForexComments', 'POST',
+	function  initStockNewsDataSource(){
+		startNum = Number($('#stockNewsCount').val())+0;
+		$.commonService('../../stockCommentsController/queryDailyStockComments', 'POST',
             {start:startNum,limit:8}, function(map) {
-              
+                initStockNewsModal(map.data);
 	        }); 
 	}
 	
-	function  initForexNewsModal(data){
-		$('#forexNewsModal').empty();
+	function  initStockNewsModal(data){
+		$('#stockNewsModal').empty();
 	    $.each(data,function(i,obj){
-	       $('#forexNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
-	             +'<h5 class="list-group-item-heading">'
-	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
+	       $('#stockNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
+	             +'<h5 class="list-group-item-heading text-info">'
+	             + obj.title+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
 				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');

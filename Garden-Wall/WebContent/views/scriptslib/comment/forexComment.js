@@ -72,7 +72,7 @@ $(document).ready(function(){
 	    $.each(data,function(i,obj){
 	       $('#forexNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
 	             +'<h5 class="list-group-item-heading">'
-	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
+	             + obj.title+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
 				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');
@@ -99,7 +99,7 @@ $(document).ready(function(){
 	    $.each(data,function(i,obj){
 	       $('#metalNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
 	             +'<h5 class="list-group-item-heading">'
-	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
+	             + obj.title+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 				 +'<h6 class="list-group-item-text text-warning">'
 				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');

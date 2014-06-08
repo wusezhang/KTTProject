@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.comment.dao.impl.StockCommentsDAOImpl">
+
+	<resultMap id="resultObjectMap" type="com.ktproject.comment.model.ForexCommentsVO">
+	</resultMap>
+    
+    <select id="queryDailyStockComments" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+         SELECT  COMMENTSSTOCK.KEYID AS KEYID ,
+                 COMMENTSSTOCK.TITLE AS TITLE , 
+                 COMMENTSSTOCK.DESCRIPTCONTEXT AS DESCRIPTCONTEXT ,
+                 COMMENTSSTOCK.LINKURL AS LINKURL,
+                 SUBSTRING(COMMENTSSTOCK.PUBDATE,1,16) AS PUBDATE
+         FROM  COMMENTS_STOCK_RESOURCE_TABLE  COMMENTSSTOCK
+         WHERE 1=1
+               ORDER BY  COMMENTSSTOCK.PUBDATE DESC
+         <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		 </if>      
+    </select>
+
+    <select id="queryDailyStockCommentsCount" resultType="int" parameterType="hashmap" useCache="true">
+		  SELECT COUNT(*)
+          FROM  COMMENTS_STOCK_RESOURCE_TABLE  COMMENTSSTOCK
+          WHERE 1=1
+	</select>
+
+</mapper>
