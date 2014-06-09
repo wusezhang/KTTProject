@@ -41,10 +41,10 @@
 					</ul>
 				</li>
 				<li >
-					<a  id="registerBut" href="#"><span class="icon-white icon-user"> </span>注册</a>
+					<a id="registerBut" href="#"><span class="icon-white icon-user"> </span>注册</a>
 				</li>
 				<li class="active">
-					<a href="#"><span class="icon-white  icon-download"> </span>客户端下载</a>
+					<a href="#" id="clientDownBtn"><span class="icon-white  icon-download"> </span>客户端下载</a>
 				</li>
 			</ul>
 		</div>
@@ -338,6 +338,24 @@
 			</div>
 		</div>
 		<!--首页Modal显示框结束-->
-
+        
+        <!--客户端下载model-->   
+        <div id="clientDownModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h4>客户端下载</h4>
+			</div>
+			<div class="modal-body" id="clientDownModalBody">
+				
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
+					关闭
+				</button>
+			</div>
+		</div>
+        <!--客户端下载model结束-->
 	</body>
 </html>

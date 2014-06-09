@@ -10,20 +10,13 @@ $(document).ready(function() {
 		$(".live-tile").liveTile();
 		//移除相应的Class属性
 		$(".live-tile").removeClass("carousel");
-
-		//初始化相应的财经慧眼的控制开关
-		$("#mjhyControlBox").liveTile({
-			startNow : false,
-			flipListOnHover : true,
-			flipListOnHoverEvent : 'mouseover'
-		});
-
 	};
 
 	//初始化相应的模板文件
 	function bindEvent() {
 		$('#registerBut').bind('click', registerButtonEvent);
 		$('#addFavoritesBtn').bind('click', addFavoritesEvent);
+		$('#clientDownBtn').bind('click',clientDownEvent);
 	};
 
 	//加入收藏夹按钮事件
@@ -46,6 +39,11 @@ $(document).ready(function() {
 	function registerButtonEvent() {
 		$("#registerModal").modal('show');
 	}
+
+    //客户端下载控制事件.
+    function  clientDownEvent(){
+        $("#clientDownModal").modal('show');
+    }
 
 });
 
