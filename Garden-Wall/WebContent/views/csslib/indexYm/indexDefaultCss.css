@@ -55,4 +55,8 @@
    height:75%;
    background-image:url('../../imagelib/indexYM/bkImage.png');
 }
+.imageSize{
+	max-width:140px;
+	max-height:140px;
+}
 
