@@ -5,7 +5,8 @@ $(document).ready(function(){
 	});
 	
 	function  bindEvent(){
-		
+		$('#stockNewsBtnDown').bind('click',stockNewsDownEvent);
+		$('#stockNewsBtnUp').bind('click',stockNewsUpEvent);
 	}
 	
 	function  initModal(){
@@ -20,6 +21,7 @@ $(document).ready(function(){
 		startNum = Number($('#stockNewsCount').val())+0;
 		$.commonService('../../stockCommentsController/queryDailyStockComments', 'POST',
             {start:startNum,limit:8}, function(map) {
+            	$('#stockNewsTotalCount').val(map.count);
                 initStockNewsModal(map.data);
 	        }); 
 	}
@@ -34,6 +36,32 @@ $(document).ready(function(){
 				 +$.trim(obj.descriptContext)
 				 +'</h6></a>');
 	    });
+	}
+	
+	/**
+	 * 想下按钮点击事件.
+	 */
+	function stockNewsDownEvent(){
+		currentCount = 0 ;
+    	if((Number($('#stockNewsCount').val())+8)>Number($('#stockNewsTotalCount').val())){
+    		currentCount = Number($('#stockNewsCount').val());
+    	}else{
+    		currentCount = Number($('#stockNewsCount').val())+8;
+    	}
+    	$('#stockNewsCount').val(currentCount);
+    	initStockNewsDataSource();
+	}
+	
+	/**
+	 * 向上按钮点击事件.
+	 */
+	function stockNewsUpEvent(){
+		currentData = 0;
+    	if((Number($('#stockNewsCount').val())-8)>0){
+    		currentData = Number($('#stockNewsCount').val())-8;
+    	}
+    	$('#stockNewsCount').val(currentData);
+    	initStockNewsDataSource();
 	}
 	
 	/**
