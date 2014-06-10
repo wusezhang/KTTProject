@@ -13,7 +13,8 @@
                  SUBSTRING(COMMENTSSTOCK.PUBDATE,1,16) AS PUBDATE
          FROM  COMMENTS_STOCK_RESOURCE_TABLE  COMMENTSSTOCK
          WHERE 1=1
-               ORDER BY  COMMENTSSTOCK.PUBDATE DESC
+         AND   COMMENTSSTOCK.DESCRIPTCONTEXT !=''
+         ORDER BY  COMMENTSSTOCK.PUBDATE DESC
          <if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
 		 </if>      
@@ -23,6 +24,7 @@
 		  SELECT COUNT(*)
           FROM  COMMENTS_STOCK_RESOURCE_TABLE  COMMENTSSTOCK
           WHERE 1=1
+          AND   COMMENTSSTOCK.DESCRIPTCONTEXT !=''
 	</select>
 
 </mapper>
