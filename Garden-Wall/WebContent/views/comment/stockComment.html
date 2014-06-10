@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="../scriptslib/comment/stockComment.js"></script>
 	</head>
 	<body>
-        <!--菜单显示栏位-->
+		<!--菜单显示栏位-->
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="navbar-header">
 				<a  href="../../index.html"> <img src="../imagelib/indexYM/Companeicon.jpg" border="0" height="40" class="img-rounded"/> </a>
@@ -44,20 +44,22 @@
 
 		</nav>
 		<!--菜单显示结束-->
-		
+
 		<!--当日股市评论-->
 		<div class="well well-sm stocknewsposition">
-			<div class="list-group" id="stockNewsModal"> </div>
+			<table class="table table-striped table-condensed table-hover">
+			   <tbody id="stockNewsModal"> </tbody>
+			</table>
 			<div align="center">
 				<a class="btn btn-primary btn-sm" id="stockNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
 				&nbsp;&nbsp;&nbsp;
 				<a class="btn btn-primary btn-sm" id="stockNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
 			</div>
 		</div>
-        
-        <!--当日财经评论-->
+
+		<!--当日财经评论-->
 		<div class="well well-sm cjnewsposition">
-			<div class="list-group" id="metalNewsModal"> </div>
+			<div id="metalNewsModal"> </div>
 			<div align="center">
 				<a class="btn btn-primary btn-sm" id="metalNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
 				&nbsp;&nbsp;&nbsp;
@@ -66,7 +68,7 @@
 		</div>
 		
 		<input type="text" class="hide" value="0" id="stockNewsCount"/>
-		<input type="text" class="hide" value="0" id="stockNewsTotalCount"/> 
+		<input type="text" class="hide" value="0" id="stockNewsTotalCount"/>
 	</body>
 </html>
 

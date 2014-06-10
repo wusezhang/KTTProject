@@ -29,12 +29,13 @@ $(document).ready(function(){
 	function  initStockNewsModal(data){
 		$('#stockNewsModal').empty();
 	    $.each(data,function(i,obj){
-	       $('#stockNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
-	             +'<h5 class="list-group-item-heading text-info">'
-	             + obj.title+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
-				 +'<h6 class="list-group-item-text text-warning">'
-				 +$.trim(obj.descriptContext)
-				 +'</h6></a>');
+	      $('#stockNewsModal').append('<tr><td><div class="media">'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl+'" class="text-info" target="view_window">'+obj.title+'</a>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>');
 	    });
 	}
 	
