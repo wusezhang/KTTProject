@@ -47,26 +47,40 @@
 
 		<!--当日股市评论-->
 		<div class="well well-sm stocknewsposition">
-			<table class="table table-striped table-condensed table-hover table-bordered">
-			   <tbody id="stockNewsModal"> </tbody>
-			</table>
-			<div align="center">
-				<a class="btn btn-primary btn-sm" id="stockNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
-				&nbsp;&nbsp;&nbsp;
-				<a class="btn btn-primary btn-sm" id="stockNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					股市评论
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-condensed table-hover table-bordered">
+						<tbody id="stockNewsModal"></tbody>
+					</table>
+					<div align="center">
+						<a class="btn btn-primary btn-sm" id="stockNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" id="stockNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<!--当日财经评论-->
 		<div class="well well-sm cjnewsposition">
-			<div id="metalNewsModal"> </div>
-			<div align="center">
-				<a class="btn btn-primary btn-sm" id="metalNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
-				&nbsp;&nbsp;&nbsp;
-				<a class="btn btn-primary btn-sm" id="metalNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					财经评论
+				</div>
+				<div class="panel-body">
+					<div id="metalNewsModal"> </div>
+					<div align="center">
+						<a class="btn btn-primary btn-sm" id="metalNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" id="metalNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
+				</div>
 			</div>
 		</div>
-		
+
 		<input type="text" class="hide" value="0" id="stockNewsCount"/>
 		<input type="text" class="hide" value="0" id="stockNewsTotalCount"/>
 	</body>
