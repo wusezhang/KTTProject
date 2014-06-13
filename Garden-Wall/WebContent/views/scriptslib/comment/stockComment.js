@@ -7,6 +7,8 @@ $(document).ready(function(){
 	function  bindEvent(){
 		$('#stockNewsBtnDown').bind('click',stockNewsDownEvent);
 		$('#stockNewsBtnUp').bind('click',stockNewsUpEvent);
+		$('#financeNewsBtnDown').bind('click',financeNewsDownEvent);
+		$('#financeNewsBtnUp').bind('click',financeNewsUpEvent);
 	}
 	
 	function  initModal(){
@@ -63,6 +65,32 @@ $(document).ready(function(){
     	}
     	$('#stockNewsCount').val(currentData);
     	initStockNewsDataSource();
+	}
+	
+	/**
+	 * 当日财经评论向下点击按钮事件.
+	 */
+	function  financeNewsDownEvent(){
+	    currentCount = 0 ;
+    	if((Number($('#stockFinanceCount').val())+8)>Number($('#stockFinanceTotalCount').val())){
+    		currentCount = Number($('#stockFinanceCount').val());
+    	}else{
+    		currentCount = Number($('#stockFinanceCount').val())+8;
+    	}
+    	$('#stockFinanceCount').val(currentCount);
+    	initFinanceDataSource();
+	}
+	
+	/**
+	 * 当日财经评论向上点击按钮事件.
+	 */
+	function  financeNewsUpEvent(){
+	    currentData = 0;
+    	if((Number($('#stockFinanceCount').val())-8)>0){
+    		currentData = Number($('#stockFinanceCount').val())-8;
+    	}
+    	$('#stockFinanceCount').val(currentData);
+    	initFinanceDataSource();
 	}
 	
 	/**
