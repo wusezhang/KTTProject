@@ -33,4 +33,18 @@ public interface StockCommentsDAO {
 	 * @return
 	 */
 	int  queryDailyStockCommentsCount(final  Map<String,Object> map);
+	
+	/**
+	 * 查询当日评论的信息.
+	 * @param map
+	 * @return
+	 */
+	List<ForexCommentsVO>  queryDailyFinanceComments(final  Map<String,Object>  map);
+	
+	/**
+	 * 查询当日评论的条数
+	 * @param map
+	 * @return
+	 */
+	int  queryDailyFinanceCommentsCount(final Map<String,Object>  map);
 }

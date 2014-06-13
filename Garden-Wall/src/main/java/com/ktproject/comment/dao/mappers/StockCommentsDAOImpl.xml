@@ -27,4 +27,29 @@
           AND   COMMENTSSTOCK.DESCRIPTCONTEXT !=''
 	</select>
 
+    
+	<select id="queryDailyFinanceComments" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+		SELECT  COMMENTSFINANCE.KEYID AS KEYID ,
+                 COMMENTSFINANCE.TITLE AS TITLE , 
+                 COMMENTSFINANCE.DESCRIPTCONTEXT AS DESCRIPTCONTEXT ,
+                 COMMENTSFINANCE.LINKURL AS LINKURL,
+                 SUBSTRING(COMMENTSFINANCE.PUBDATE,1,16) AS PUBDATE
+         FROM  COMMENTS_FINANCE_RESOURCE_TABLE  COMMENTSFINANCE
+         WHERE 1=1
+         AND   COMMENTSFINANCE.DESCRIPTCONTEXT !=''
+         AND   COMMENTSFINANCE.COMMENTFLAG = 'FINANCE'
+         ORDER BY  COMMENTSFINANCE.PUBDATE DESC
+		 <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+		 </if>   
+	</select>
+	
+	<select id="queryDailyFinanceCommentsCount" useCache="true" resultType="int" parameterType="hashmap">
+		 SELECT  COUNT(*)
+         FROM  COMMENTS_FINANCE_RESOURCE_TABLE  COMMENTSFINANCE
+         WHERE 1=1
+         AND   COMMENTSFINANCE.DESCRIPTCONTEXT !=''
+         AND   COMMENTSFINANCE.COMMENTFLAG = 'FINANCE'
+	</select>
+
 </mapper>

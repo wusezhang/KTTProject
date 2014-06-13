@@ -34,6 +34,16 @@ public class StockCommentsServiceImpl implements StockCommentsService {
 		resultMap.put("count", stockCommentsDAO.queryDailyStockCommentsCount(map));
 		return resultMap;
 	}
+
+	/**
+	 * @see com.ktproject.comment.service.StockCommentsService#queryDailyFinanceComments(java.util.Map)
+	 */
+	public Map<String, Object> queryDailyFinanceComments(Map<String, Object> map) {
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", stockCommentsDAO.queryDailyFinanceComments(map));
+		resultMap.put("count", stockCommentsDAO.queryDailyFinanceCommentsCount(map));
+		return resultMap;
+	}
 	
 	
 }

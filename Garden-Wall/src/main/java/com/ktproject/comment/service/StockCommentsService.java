@@ -24,4 +24,12 @@ public interface StockCommentsService {
 	 * @return
 	 */
 	Map<String,Object> queryDailyStockComments(final  Map<String,Object> map);
+	
+	
+	/**
+	 * 查询当前的财经评论.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object> queryDailyFinanceComments(final Map<String,Object> map);
 }
