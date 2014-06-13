@@ -13,7 +13,7 @@ $(document).ready(function(){
 		//初始化相应的股市评论信息
 		initStockNewsDataSource();
 		//初始化贵金属板块评论.
-		
+		initFinanceDataSource();
 	}
 	
 	
@@ -68,26 +68,28 @@ $(document).ready(function(){
 	/**
 	 *初始化相应的贵金属板块数据源. 
 	 */
-	function  initMetalNewsDataSource(){
-		startNum = Number($('#metalNewsCount').val())+0;
-		$.commonService('../../forexCommentsController/queryTodayMetalComments', 'POST',
+	function  initFinanceDataSource(){
+		startNum = Number($('#stockFinanceCount').val())+0;
+		$.commonService('../../stockCommentsController/queryDailyFinanceComments', 'POST',
             {start:startNum,limit:8}, function(map) {
-               
+               $('#stockFinanceTotalCount').val(map.count);
+                initFinanceNewsModal(map.data);
 	        }); 
 	}
 	
 	/**
 	 * 初始化相应的贵金属板块数据模板.
 	 */
-	function  initMetalNewsModal(data){
-		$('#metalNewsModal').empty();
+	function  initFinanceNewsModal(data){
+		$('#financeNewsModal').empty();
 	    $.each(data,function(i,obj){
-	       $('#metalNewsModal').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
-	             +'<h5 class="list-group-item-heading">'
-	             + obj.title+'<div class="pull-right">'+obj.pubDate+'</div> </h5>'
-				 +'<h6 class="list-group-item-text text-warning">'
-				 +$.trim(obj.descriptContext)
-				 +'</h6></a>');
+	      $('#financeNewsModal').append('<tr><td><div class="media">'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl+'" class="text-info" target="view_window">'+obj.title+'</a>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>');
 	    });
 	}
 	
