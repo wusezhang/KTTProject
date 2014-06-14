@@ -33,7 +33,9 @@ $(document).ready(function(){
 	    $.each(data,function(i,obj){
 	      $('#stockNewsModal').append('<tr><td><div class="media">'
 			+'<div class="media-body">'
-			+'<h5 class="media-heading"><a href="'+obj.linkUrl+'" class="text-info" target="view_window">'+obj.title+'</a>'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
 			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
@@ -113,7 +115,9 @@ $(document).ready(function(){
 	    $.each(data,function(i,obj){
 	      $('#financeNewsModal').append('<tr><td><div class="media">'
 			+'<div class="media-body">'
-			+'<h5 class="media-heading"><a href="'+obj.linkUrl+'" class="text-info" target="view_window">'+obj.title+'</a>'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-share-alt"></span> '
+			+obj.title+'</a>'
 			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
