@@ -35,16 +35,42 @@
 		</nav>
 		<!--菜单显示结束-->
 
-		<div class="well well-sm currentNewsPosition">
+		<div class="well well-sm chinaNewsPosition">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					每日财经新闻
+					国内财经快讯
 				</div>
 				<div class="panel-body">
-			        
+					<table class="table table-striped table-condensed table-bordered">
+						<tbody id="chinaNewsModal"> </tbody>
+					</table>
+			        <div align="center">
+						<a class="btn btn-primary btn-sm" id="chinaNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" id="chinaNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
 			    </div>
 			</div>
+			
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					国外财经快讯
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-condensed table-bordered">
+						<tbody id="europeNewsModal"> </tbody>
+					</table>
+			        <div align="center">
+						<a class="btn btn-primary btn-sm" id="europeNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" id="europeNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
+			    </div>
+			</div>
+			
 		</div>
+		
+			
 
         <input type="text" class="hide" id="chinaNewsCount" value="0"/>
         <input type="text" class="hide" id="chinaNewsTotalCount" value="0"/>
