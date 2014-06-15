@@ -39,13 +39,16 @@
 	<bean id="stockThemeService" class="com.ktproject.stockpool.service.impl.StockThemeServiceImpl" scope="prototype" />
 	<bean id="stockThemeDao" class="com.ktproject.stockpool.dao.impl.StockThemeDaoImpl" scope="prototype" />	
 	
-	<bean id="stockRiskPlateService" class="com.ktproject.risk.service.impl.StockRiskPlateServiceImpl" />
-	<bean id="stockRiskPlateDAO" class="com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl"/>
+	<bean id="stockRiskPlateService" class="com.ktproject.risk.service.impl.StockRiskPlateServiceImpl" scope="prototype"/>
+	<bean id="stockRiskPlateDAO" class="com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl" scope="prototype"/>
 	
-	<bean id="forexCommentsService"  class="com.ktproject.comment.service.impl.ForexCommentsServiceImpl"/>
-	<bean id="forexCommentsDAO" class="com.ktproject.comment.dao.impl.ForexCommentsDAOImpl" />
+	<bean id="forexCommentsService"  class="com.ktproject.comment.service.impl.ForexCommentsServiceImpl" scope="prototype"/>
+	<bean id="forexCommentsDAO" class="com.ktproject.comment.dao.impl.ForexCommentsDAOImpl" scope="prototype"/>
 	
-	<bean id="stockCommentsService" class="com.ktproject.comment.service.impl.StockCommentsServiceImpl"/>
-	<bean id="stockCommentsDAO" class="com.ktproject.comment.dao.impl.StockCommentsDAOImpl"/>
+	<bean id="stockCommentsService" class="com.ktproject.comment.service.impl.StockCommentsServiceImpl" scope="prototype"/>
+	<bean id="stockCommentsDAO" class="com.ktproject.comment.dao.impl.StockCommentsDAOImpl" scope="prototype"/>
+	
+	<bean  id="morningNewsService" class="com.ktproject.mornnews.service.impl.MorningNewsServiceImpl" scope="prototype"/>
+	<bean  id="morningNewsDAO" class="com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl" scope="prototype"/>
 	
 </beans>

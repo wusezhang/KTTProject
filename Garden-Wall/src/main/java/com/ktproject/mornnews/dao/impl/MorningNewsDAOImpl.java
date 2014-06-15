@@ -7,7 +7,11 @@
  */
 package com.ktproject.mornnews.dao.impl;
 
+import java.util.List;
+import java.util.Map;
+
 import com.ktproject.mornnews.dao.MorningNewsDAO;
+import com.ktproject.mornnews.model.MorningNewsVO;
 
 /**
  * 类功能描述：
@@ -17,5 +21,22 @@ import com.ktproject.mornnews.dao.MorningNewsDAO;
  * @history 2014年6月15日 ZJJ 创建MorningNewsDAOImpl.java
  */
 public class MorningNewsDAOImpl implements MorningNewsDAO {
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryChinaMorningNews(java.util.Map)
+	 */
+	public List<MorningNewsVO> queryChinaMorningNews(
+			Map<String, Object> filterMap) {
+		
+		return null;
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryChinaMorningNewsCount(java.util.Map)
+	 */
+	public int queryChinaMorningNewsCount(Map<String, Object> filterMap) {
+		
+		return 0;
+	}
 
 }

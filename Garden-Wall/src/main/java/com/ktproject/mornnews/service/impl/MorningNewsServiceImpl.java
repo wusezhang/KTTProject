@@ -7,6 +7,8 @@
  */
 package com.ktproject.mornnews.service.impl;
 
+import java.util.Map;
+
 import com.ktproject.mornnews.service.MorningNewsService;
 
 /**
@@ -17,5 +19,14 @@ import com.ktproject.mornnews.service.MorningNewsService;
  * @history 2014年6月15日 ZJJ 创建MorningNewsServiceImpl.java
  */
 public class MorningNewsServiceImpl implements MorningNewsService {
+
+	/**
+	 * @see com.ktproject.mornnews.service.MorningNewsService#queryChinaMorningNews(java.util.Map)
+	 */
+	public Map<String, Object> queryChinaMorningNews(
+			Map<String, Object> filterMap) {
+		
+		return null;
+	}
 
 }

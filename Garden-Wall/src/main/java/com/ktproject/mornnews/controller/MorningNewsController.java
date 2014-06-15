@@ -7,6 +7,18 @@
  */
 package com.ktproject.mornnews.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.ktproject.mornnews.service.MorningNewsService;
+
 /**
  * 类功能描述：
  * MorningNewsController.java
@@ -14,6 +26,25 @@ package com.ktproject.mornnews.controller;
  * @version 0.1.0
  * @history 2014年6月15日 ZJJ 创建MorningNewsController.java
  */
+@Controller
+@RequestMapping("morningNews")
 public class MorningNewsController {
-
+    
+	@Autowired
+	MorningNewsService   morningNewsService;
+	
+	@RequestMapping(value = "/queryChinaMorningNews", method = RequestMethod.POST)
+	public  @ResponseBody Map<String,Object>  queryChinaMorningNews(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+	   Map<String,Object>  filterMap = new  HashMap<String,Object>();
+	   filterMap.put("start", start);
+	   filterMap.put("limit", limit);
+	   return morningNewsService.queryChinaMorningNews(filterMap);
+	}
+	
+	
+	
+	
+	
 }

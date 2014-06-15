@@ -7,6 +7,10 @@
  */
 package com.ktproject.mornnews.dao;
 
+import java.util.List;
+import java.util.Map;
+import com.ktproject.mornnews.model.MorningNewsVO;
+
 /**
  * 类功能描述：
  * MorningNewsDAO.java
@@ -15,5 +19,18 @@ package com.ktproject.mornnews.dao;
  * @history 2014年6月15日 ZJJ 创建MorningNewsDAO.java
  */
 public interface MorningNewsDAO {
-
+     
+	 /**
+	  * 查询当日财经国内财经新闻.
+	  * @param filterMap
+	  * @return
+	  */
+	 List<MorningNewsVO>  queryChinaMorningNews(final Map<String,Object> filterMap);
+	 
+	 /**
+	  * 查询当日财经国内财经新闻总条数.
+	  * @param filterMap
+	  * @return
+	  */
+	 int  queryChinaMorningNewsCount(final Map<String,Object> filterMap);
 }

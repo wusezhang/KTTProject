@@ -7,6 +7,8 @@
  */
 package com.ktproject.mornnews.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：
  * MorningNewsService.java
@@ -15,5 +17,10 @@ package com.ktproject.mornnews.service;
  * @history 2014年6月15日 ZJJ 创建MorningNewsService.java
  */
 public interface MorningNewsService {
-
+	/**
+	 * 查询当天的财经新闻.
+	 * @param filterMap
+	 * @return
+	 */
+	Map<String,Object>  queryChinaMorningNews(final Map<String,Object> filterMap);
 }
