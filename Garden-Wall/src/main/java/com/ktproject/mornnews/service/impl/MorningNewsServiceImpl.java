@@ -7,8 +7,12 @@
  */
 package com.ktproject.mornnews.service.impl;
 
+import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.mornnews.dao.MorningNewsDAO;
 import com.ktproject.mornnews.service.MorningNewsService;
 
 /**
@@ -19,14 +23,19 @@ import com.ktproject.mornnews.service.MorningNewsService;
  * @history 2014年6月15日 ZJJ 创建MorningNewsServiceImpl.java
  */
 public class MorningNewsServiceImpl implements MorningNewsService {
-
+     
+	@Autowired
+	MorningNewsDAO  morningNewsDAO;
+	
 	/**
 	 * @see com.ktproject.mornnews.service.MorningNewsService#queryChinaMorningNews(java.util.Map)
 	 */
 	public Map<String, Object> queryChinaMorningNews(
 			Map<String, Object> filterMap) {
-		
-		return null;
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", morningNewsDAO.queryChinaMorningNews(filterMap));
+		resultMap.put("count", morningNewsDAO.queryChinaMorningNewsCount(filterMap));
+		return resultMap;
 	}
 
 }

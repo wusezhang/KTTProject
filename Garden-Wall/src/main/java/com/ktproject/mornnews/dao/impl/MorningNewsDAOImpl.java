@@ -9,7 +9,8 @@ package com.ktproject.mornnews.dao.impl;
 
 import java.util.List;
 import java.util.Map;
-
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.ktproject.mornnews.dao.MorningNewsDAO;
 import com.ktproject.mornnews.model.MorningNewsVO;
 
@@ -21,22 +22,23 @@ import com.ktproject.mornnews.model.MorningNewsVO;
  * @history 2014年6月15日 ZJJ 创建MorningNewsDAOImpl.java
  */
 public class MorningNewsDAOImpl implements MorningNewsDAO {
-
+     
+	@Autowired
+	private SqlSession  sqlSession ;
+	
 	/**
 	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryChinaMorningNews(java.util.Map)
 	 */
 	public List<MorningNewsVO> queryChinaMorningNews(
 			Map<String, Object> filterMap) {
-		
-		return null;
+		return sqlSession.selectList("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryChinaMorningNews", filterMap);
 	}
 
 	/**
 	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryChinaMorningNewsCount(java.util.Map)
 	 */
 	public int queryChinaMorningNewsCount(Map<String, Object> filterMap) {
-		
-		return 0;
+		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryChinaMorningNewsCount", filterMap);
 	}
 
 }

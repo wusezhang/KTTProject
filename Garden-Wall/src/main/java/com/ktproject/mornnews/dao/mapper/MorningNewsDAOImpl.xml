@@ -4,6 +4,12 @@
 
 	<resultMap id="resultObjectMap" type="com.ktproject.mornnews.model.MorningNewsVO"> </resultMap>
     
+    <select id="queryChinaMorningNews" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+       
+    </select>
     
+    <select id="queryChinaMorningNewsCount" useCache="true" resultType="int" parameterType="hashmap">
+      
+    </select>
    
 </mapper>
