@@ -23,4 +23,11 @@ public interface MorningNewsService {
 	 * @return
 	 */
 	Map<String,Object>  queryChinaMorningNews(final Map<String,Object> filterMap);
+	
+	/**
+	 * 查询当天国外财经新闻.
+	 * @param filterMap
+	 * @return
+	 */
+	Map<String,Object>  queryEuropeMorningNews(final Map<String,Object> filterMap);
 }

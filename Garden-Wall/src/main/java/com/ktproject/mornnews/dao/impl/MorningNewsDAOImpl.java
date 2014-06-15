@@ -9,8 +9,10 @@ package com.ktproject.mornnews.dao.impl;
 
 import java.util.List;
 import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ktproject.mornnews.dao.MorningNewsDAO;
 import com.ktproject.mornnews.model.MorningNewsVO;
 
@@ -39,6 +41,21 @@ public class MorningNewsDAOImpl implements MorningNewsDAO {
 	 */
 	public int queryChinaMorningNewsCount(Map<String, Object> filterMap) {
 		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryChinaMorningNewsCount", filterMap);
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryEuropeMorningNews(java.util.Map)
+	 */
+	public List<MorningNewsVO> queryEuropeMorningNews(
+			Map<String, Object> filterMap) {
+		return sqlSession.selectList("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryEuropeMorningNews", filterMap);
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryEuropeMorningNewsCount(java.util.Map)
+	 */
+	public int queryEuropeMorningNewsCount(Map<String, Object> filterMap) {
+		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryEuropeMorningNewsCount", filterMap);
 	}
 
 }

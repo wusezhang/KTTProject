@@ -33,6 +33,12 @@ public class MorningNewsController {
 	@Autowired
 	MorningNewsService   morningNewsService;
 	
+	/**
+	 * 查询国内当天的财经新闻.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
 	@RequestMapping(value = "/queryChinaMorningNews", method = RequestMethod.POST)
 	public  @ResponseBody Map<String,Object>  queryChinaMorningNews(
 			@RequestParam("start") final int start,
@@ -43,7 +49,21 @@ public class MorningNewsController {
 	   return morningNewsService.queryChinaMorningNews(filterMap);
 	}
 	
-	
+	/**
+	 * 查询当天国外财经新闻.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
+	@RequestMapping(value = "/queryEuropeMorningNews", method = RequestMethod.POST)
+	public  @ResponseBody Map<String,Object> queryEuropeMorningNews(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+		Map<String,Object>  filterMap = new  HashMap<String,Object>();
+		filterMap.put("start", start);
+		filterMap.put("limit", limit);
+		return  morningNewsService.queryEuropeMorningNews(filterMap);
+	}
 	
 	
 	

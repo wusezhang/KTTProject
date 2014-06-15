@@ -9,9 +9,7 @@ package com.ktproject.mornnews.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ktproject.mornnews.dao.MorningNewsDAO;
 import com.ktproject.mornnews.service.MorningNewsService;
 
@@ -35,6 +33,17 @@ public class MorningNewsServiceImpl implements MorningNewsService {
 		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
 		resultMap.put("data", morningNewsDAO.queryChinaMorningNews(filterMap));
 		resultMap.put("count", morningNewsDAO.queryChinaMorningNewsCount(filterMap));
+		return resultMap;
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.service.MorningNewsService#queryEuropeMorningNews(java.util.Map)
+	 */
+	public Map<String, Object> queryEuropeMorningNews(
+			Map<String, Object> filterMap) {
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", morningNewsDAO.queryEuropeMorningNews(filterMap));
+		resultMap.put("count", morningNewsDAO.queryEuropeMorningNewsCount(filterMap));
 		return resultMap;
 	}
 

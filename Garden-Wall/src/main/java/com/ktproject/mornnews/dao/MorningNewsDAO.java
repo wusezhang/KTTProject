@@ -33,4 +33,18 @@ public interface MorningNewsDAO {
 	  * @return
 	  */
 	 int  queryChinaMorningNewsCount(final Map<String,Object> filterMap);
+	 
+	 /**
+	  * 查询当天国外财经新闻.
+	  * @param filterMap
+	  * @return
+	  */
+	 List<MorningNewsVO>  queryEuropeMorningNews(final Map<String,Object> filterMap);
+	 
+	 /**
+	  * 查询当天国外财经新闻总条数.
+	  * @param filterMap
+	  * @return
+	  */
+	 int  queryEuropeMorningNewsCount(final Map<String,Object> filterMap);
 }
