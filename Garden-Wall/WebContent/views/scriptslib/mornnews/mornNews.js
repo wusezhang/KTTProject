@@ -7,12 +7,15 @@ $(document).ready(function(){
 	function  bindEvent(){
 		$('#chinaNewsBtnDown').bind('click',chinaNewsDownEvent);
 		$('#chinaNewsBtnUp').bind('click',chinaNewsUpEvent);
+		$('#europeNewsBtnDown').bind('click',europeNewsDownEvent);
+		$('#europeNewsBtnUp').bind('click',europeNewsUpEvent);
 	}
 	
 	function  initModal(){
 		//初始化相应的股市评论信息
 		initChinaNewsDataSource();
-		
+		//初始化相应的外国信息.
+		initEuropeNewsDataSource();
 	}
 	
 	/**
@@ -28,6 +31,8 @@ $(document).ready(function(){
     	$('#chinaNewsCount').val(currentCount);
     	initChinaNewsDataSource();
 	}
+	
+	
 	/**
 	 *向上按钮点击事件. 
 	 */
@@ -40,12 +45,43 @@ $(document).ready(function(){
     	initChinaNewsDataSource();
 	}
 	
+	
 	function initChinaNewsDataSource(){
 		startNum = Number($('#chinaNewsCount').val())+0;
 		$.commonService('../../morningNews/queryChinaMorningNews', 'POST',
             {start:startNum,limit:8}, function(map) {
             	$('#chinaNewsTotalCount').val(map.count);
                 initChinaNewsModal(map.data);
+	        }); 
+	}
+	
+	
+	function  europeNewsDownEvent(){
+		currentCount = 0 ;
+    	if((Number($('#europeNewsCount').val())+8)>Number($('#europeNewsTotalCount').val())){
+    		currentCount = Number($('#europeNewsCount').val());
+    	}else{
+    		currentCount = Number($('#europeNewsCount').val())+8;
+    	}
+    	$('#europeNewsCount').val(currentCount);
+    	initEuropeNewsDataSource();
+	}
+	
+	function  europeNewsUpEvent(){
+		currentData = 0;
+    	if((Number($('#europeNewsCount').val())-8)>0){
+    		currentData = Number($('#europeNewsCount').val())-8;
+    	}
+    	$('#europeNewsCount').val(currentData);
+    	initEuropeNewsDataSource();
+	}
+	
+	function  initEuropeNewsDataSource(){
+		startNum = Number($('#europeNewsCount').val())+0;
+		$.commonService('../../morningNews/queryEuropeMorningNews', 'POST',
+            {start:startNum,limit:8}, function(map) {
+            	$('#europeNewsTotalCount').val(map.count);
+                initEuropeNewsModal(map.data);
 	        }); 
 	}
 	
@@ -83,6 +119,40 @@ $(document).ready(function(){
 		  }
 	    });
 	    $('#chinaNewsModal').append(insertTable);
+	}
+	
+	
+	function  initEuropeNewsModal(data){
+		$('#europeNewsModal').empty();
+		var insertTable = '';
+		$.each(data,function(i,obj){
+		  if(i%2==0){
+		  	insertTable = insertTable +'<tr><td><div class="media">'
+	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
+            +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td>';
+		  }else{
+		  	insertTable =insertTable + '<td><div class="media">'
+	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
+            +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>';
+		  }
+	    });
+	    $('#europeNewsModal').append(insertTable);
 	}
 	
 	
