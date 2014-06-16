@@ -1,0 +1,10 @@
+.newsPosition{
+	position:absolute;
+	top:45px;
+	width:100%;
+}
+.maxImageSize{
+	max-height:100px;
+	max-width:100px;
+}
+
