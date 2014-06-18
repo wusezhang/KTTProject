@@ -64,5 +64,20 @@ public class MorningMetalNewsController {
     	   filterMap.put("limit", limit);
 		   return  morningMetalNewsService.queryMetalMorningNews(filterMap);
 	   }
-	
+	    
+	   /**
+	    * 查询国内外期货及时新闻.
+	    * @param start
+	    * @param limit
+	    * @return
+	    */
+	   @RequestMapping(value = "/queryFutureMorningNews", method = RequestMethod.POST)
+	   public  @ResponseBody Map<String,Object> queryFutureMorningNews(
+			   @RequestParam("start") final int start,
+   			   @RequestParam("limit") final int limit){
+		   Map<String,Object>  filterMap = new  HashMap<String,Object>();
+    	   filterMap.put("start", start);
+    	   filterMap.put("limit", limit);		   
+    	   return  morningMetalNewsService.queryFutureMorningNews(filterMap);
+	   }
 }

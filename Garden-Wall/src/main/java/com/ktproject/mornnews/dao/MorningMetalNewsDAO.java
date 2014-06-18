@@ -49,4 +49,18 @@ public interface MorningMetalNewsDAO {
       * @return
       */
      int  queryMetalMorningNewsCount(final  Map<String,Object> filterMap);
+     
+     /**
+      *  查询国内外期货及时新闻.
+      * @param filterMap
+      * @return
+      */
+     List<MorningNewsVO>  queryFutureMorningNews(final  Map<String,Object> filterMap);
+     
+     /**
+      * 查询国内外期货及时新闻条数.
+      * @param filterMap
+      * @return
+      */
+     int  queryFutureMorningNewsCount(final Map<String,Object> filterMap);
 }
