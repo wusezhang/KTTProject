@@ -25,13 +25,13 @@ $(document).ready(function() {
                     formatter : "{a} <br/>{b} : {c} ({d}%)"
                 },
                 toolbox : {
-                    show : false,
+                    show : true,
                     feature : {
-                        mark : true,
+                        mark : false,
                         dataView : {
                             readOnly : false
                         },
-                        restore : true,
+                        restore : false,
                         saveAsImage : true
                     }
                 },
