@@ -9,6 +9,8 @@ $(document).ready(function(){
 		$('#chinaNewsBtnUp').bind('click',chinaNewsUpEvent);
 		$('#europeNewsBtnDown').bind('click',europeNewsDownEvent);
 		$('#europeNewsBtnUp').bind('click',europeNewsUpEvent);
+		$('#stockNewsBtnDown').bind('click',stockNewsDownEvent);
+		$('#stockNewsBtnUp').bind('click',stockNewsUpEvent);
 	}
 	
 	function  initModal(){
@@ -16,6 +18,8 @@ $(document).ready(function(){
 		initChinaNewsDataSource();
 		//初始化相应的外国信息.
 		initEuropeNewsDataSource();
+		//初始化股市新闻.
+		initStockNewsDataSource();
 	}
 	
 	/**
@@ -82,6 +86,37 @@ $(document).ready(function(){
             {start:startNum,limit:8}, function(map) {
             	$('#europeNewsTotalCount').val(map.count);
                 initEuropeNewsModal(map.data);
+	        }); 
+	}
+	
+	
+	function stockNewsDownEvent(){
+		currentCount = 0 ;
+    	if((Number($('#stockNewsCount').val())+8)>Number($('#stockNewsTotalCount').val())){
+    		currentCount = Number($('#stockNewsCount').val());
+    	}else{
+    		currentCount = Number($('#stockNewsCount').val())+8;
+    	}
+    	$('#stockNewsCount').val(currentCount);
+    	initStockNewsDataSource();
+	}
+	
+	function stockNewsUpEvent(){
+		currentData = 0;
+    	if((Number($('#stockNewsCount').val())-8)>0){
+    		currentData = Number($('#stockNewsCount').val())-8;
+    	}
+    	$('#stockNewsCount').val(currentData);
+    	initStockNewsDataSource();
+	}
+	
+	
+	function initStockNewsDataSource(){
+		startNum = Number($('#stockNewsCount').val())+0;
+		$.commonService('../../morningNews/queryStockMorningNews', 'POST',
+            {start:startNum,limit:8}, function(map) {
+            	$('#stockNewsTotalCount').val(map.count);
+                initStockNewsModal(map.data);
 	        }); 
 	}
 	
@@ -155,5 +190,37 @@ $(document).ready(function(){
 	    $('#europeNewsModal').append(insertTable);
 	}
 	
+	function initStockNewsModal(data){
+		$('#stockNewsModal').empty();
+		var insertTable = '';
+		$.each(data,function(i,obj){
+		  if(i%2==0){
+		  	insertTable = insertTable +'<tr><td><div class="media">'
+	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
+            +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
+			+'<span class="label label-warning pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td>';
+		  }else{
+		  	insertTable =insertTable + '<td><div class="media">'
+	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
+            +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
+			+'<span class="label label-warning pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>';
+		  }
+	    });
+	    $('#stockNewsModal').append(insertTable);
+	}
 	
 });
