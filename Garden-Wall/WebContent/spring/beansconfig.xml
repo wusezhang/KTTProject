@@ -51,4 +51,7 @@
 	<bean  id="morningNewsService" class="com.ktproject.mornnews.service.impl.MorningNewsServiceImpl" scope="prototype"/>
 	<bean  id="morningNewsDAO" class="com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl" scope="prototype"/>
 	
+	<bean  id="morningMetalNewsService" class="com.ktproject.mornnews.service.impl.MorningMetalNewsServiceImpl" scope="prototype"/>
+	<bean  id="morningMetalNewsDAO" class="com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl" scope="prototype"/>
+	
 </beans>
