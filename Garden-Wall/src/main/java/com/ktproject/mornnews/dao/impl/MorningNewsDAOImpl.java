@@ -58,4 +58,19 @@ public class MorningNewsDAOImpl implements MorningNewsDAO {
 		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryEuropeMorningNewsCount", filterMap);
 	}
 
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryStockMorningNews(java.util.Map)
+	 */
+	public List<MorningNewsVO> queryStockMorningNews(
+		  final	Map<String, Object> filterMap) {
+		return sqlSession.selectList("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryStockMorningNews", filterMap);
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningNewsDAO#queryStockMorningNewsCount(java.util.Map)
+	 */
+	public int queryStockMorningNewsCount(final Map<String, Object> filterMap) {	
+		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningNewsDAOImpl.queryStockMorningNewsCount", filterMap);
+	}
+
 }

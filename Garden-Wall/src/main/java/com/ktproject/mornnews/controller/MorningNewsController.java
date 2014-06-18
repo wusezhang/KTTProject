@@ -65,6 +65,20 @@ public class MorningNewsController {
 		return  morningNewsService.queryEuropeMorningNews(filterMap);
 	}
 	
-	
+	/**
+	 * 查询当天国内外股票信息新闻.
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
+	@RequestMapping(value = "/queryStockMorningNews", method = RequestMethod.POST)
+	public  @ResponseBody  Map<String,Object> queryStockMorningNews(
+			@RequestParam("start") final int start,
+			@RequestParam("limit") final int limit){
+		Map<String,Object>  filterMap = new  HashMap<String,Object>();
+		filterMap.put("start", start);
+		filterMap.put("limit", limit);
+		return  morningNewsService.queryStockMorningNews(filterMap);
+	}
 	
 }

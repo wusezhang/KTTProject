@@ -47,4 +47,15 @@ public class MorningNewsServiceImpl implements MorningNewsService {
 		return resultMap;
 	}
 
+	/**
+	 * @see com.ktproject.mornnews.service.MorningNewsService#queryStockMorningNews(java.util.Map)
+	 */
+	public Map<String, Object> queryStockMorningNews(
+			Map<String, Object> filterMap) {
+		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data",morningNewsDAO.queryStockMorningNews(filterMap));
+		resultMap.put("count",morningNewsDAO.queryStockMorningNewsCount(filterMap));
+		return resultMap;
+	}
+
 }
