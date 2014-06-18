@@ -34,4 +34,19 @@ public interface MorningMetalNewsDAO {
       * @return
       */
      int  queryForexMorningNewsCount(final Map<String,Object> filterMap);
+     
+     
+     /**
+      * 查询国内外贵金属及时新闻.
+      * @param filterMap
+      * @return
+      */
+     List<MorningNewsVO>  queryMetalMorningNews(final  Map<String,Object> filterMap);
+     
+     /**
+      * 查询国内外贵金属及时新闻条数.
+      * @param filterMap
+      * @return
+      */
+     int  queryMetalMorningNewsCount(final  Map<String,Object> filterMap);
 }

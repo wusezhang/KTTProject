@@ -23,4 +23,11 @@ public interface MorningMetalNewsService {
 	 * @return
 	 */
 	Map<String,Object>  queryForexMorningNews(final  Map<String,Object>  filterMap);
+	
+	/**
+	 * 查询国内外贵金属及时新闻.
+	 * @param filterMap
+	 * @return
+	 */
+	Map<String,Object>  queryMetalMorningNews(final  Map<String,Object>  filterMap);
 }

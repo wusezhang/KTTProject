@@ -42,4 +42,19 @@ public class MorningMetalNewsDAOImpl implements MorningMetalNewsDAO {
 		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl.queryForexMorningNewsCount", filterMap);
 	}
 
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningMetalNewsDAO#queryMetalMorningNews(java.util.Map)
+	 */
+	public List<MorningNewsVO> queryMetalMorningNews(
+		final	Map<String, Object> filterMap) {
+		return sqlSession.selectList("com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl.queryMetalMorningNews", filterMap);
+	}
+
+	/**
+	 * @see com.ktproject.mornnews.dao.MorningMetalNewsDAO#queryMetalMorningNewsCount(java.util.Map)
+	 */
+	public int queryMetalMorningNewsCount(final Map<String, Object> filterMap) {
+		return sqlSession.selectOne("com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl.queryMetalMorningNewsCount", filterMap);
+	}
+
 }

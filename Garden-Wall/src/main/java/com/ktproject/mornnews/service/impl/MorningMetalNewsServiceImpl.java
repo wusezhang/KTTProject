@@ -37,4 +37,15 @@ public class MorningMetalNewsServiceImpl implements MorningMetalNewsService {
 		return resultMap;
 	}
 
+	/**
+	 * @see com.ktproject.mornnews.service.MorningMetalNewsService#queryMetalMorningNews(java.util.Map)
+	 */
+	public Map<String, Object> queryMetalMorningNews(
+		final Map<String, Object> filterMap) {
+		final Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", morningMetalNewsDAO.queryMetalMorningNews(filterMap));
+		resultMap.put("count",morningMetalNewsDAO.queryMetalMorningNewsCount(filterMap));
+		return resultMap;
+	}
+
 }

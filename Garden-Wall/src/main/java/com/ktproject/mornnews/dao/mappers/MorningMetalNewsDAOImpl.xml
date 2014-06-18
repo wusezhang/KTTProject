@@ -29,7 +29,30 @@
       AND  NEWS.NEWSFLAG = 'FOREX' 
     </select>
    
+    <select id="queryMetalMorningNews" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+       SELECT
+	        NEWS.TITLE AS TITLE,
+	        NEWS.IMAGEURL AS IMAGEURL,
+	        SUBSTRING(NEWS.PUBDATE, 1, 16) AS PUBDATE,
+	        NEWS.LINKURL AS LINKURL,
+	        NEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
+      FROM
+	        MORNING_OTHERNEWS_RESOURCE_TABLE NEWS
+      WHERE
+	        1 = 1
+        AND NEWS.NEWSFLAG = 'METAL'
+        ORDER BY NEWS.PUBDATE DESC
+       <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+	   </if>   
+    </select>
     
+    <select id="queryMetalMorningNewsCount" useCache="true" resultType="int" parameterType="hashmap">
+      SELECT COUNT(*)
+      FROM  MORNING_OTHERNEWS_RESOURCE_TABLE  NEWS 
+      WHERE  1=1 
+      AND  NEWS.NEWSFLAG = 'METAL' 
+    </select>
      
    
    
