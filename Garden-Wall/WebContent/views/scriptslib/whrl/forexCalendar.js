@@ -34,7 +34,7 @@ function initCurrentModel(data) {
 	for (var i = 0; i < data.length; i++){
 		$('#forexNewsTable').append('<tr class="'+initCurrentTr(data[i].descriptDetails)+'">' 
 		+ '<td><span class="label label-warning">' + data[i].titleTime + '</span><td>' 
-		+ '<td>' + data[i].descriptContext + '<td>'
+		+ '<td><h6>' + data[i].descriptContext + '</h6><td>'
 		+ '<td>'+initPopModal(data[i].keyId,data[i].descriptDetails)+'<td>'
 		+'</tr>');
 		if(data[i].descriptDetails != ''){
