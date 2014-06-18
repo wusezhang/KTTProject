@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl">
+
+	<resultMap id="resultObjectMap" type="com.ktproject.mornnews.model.MorningNewsVO"> </resultMap>
+    
+    <select id="queryForexMorningNews" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+       SELECT
+	        NEWS.TITLE AS TITLE,
+	        NEWS.IMAGEURL AS IMAGEURL,
+	        SUBSTRING(NEWS.PUBDATE, 1, 16) AS PUBDATE,
+	        NEWS.LINKURL AS LINKURL,
+	        NEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
+      FROM
+	        MORNING_OTHERNEWS_RESOURCE_TABLE NEWS
+      WHERE
+	        1 = 1
+        AND NEWS.NEWSFLAG = 'FOREX'
+        ORDER BY NEWS.PUBDATE DESC
+       <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+	   </if>   
+    </select>
+    
+    <select id="queryForexMorningNewsCount" useCache="true" resultType="int" parameterType="hashmap">
+      SELECT COUNT(*)
+      FROM  MORNING_OTHERNEWS_RESOURCE_TABLE  NEWS 
+      WHERE  1=1 
+      AND  NEWS.NEWSFLAG = 'FOREX' 
+    </select>
+   
+    
+     
+   
+   
+   
+</mapper>

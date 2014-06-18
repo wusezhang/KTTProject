@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.ktproject.mornnews.service.MorningNewsService;
 
 /**
- * 类功能描述：
+ * 类功能描述：国内外(财经)新闻快讯处理类
  * MorningNewsController.java
  * @author ZJJ
  * @version 0.1.0

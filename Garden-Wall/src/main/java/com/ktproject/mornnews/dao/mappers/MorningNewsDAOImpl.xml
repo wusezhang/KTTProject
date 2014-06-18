@@ -10,7 +10,7 @@
               SUBSTRING(NEWS.PUBDATE,1,16) AS PUBDATE,
               NEWS.LINKURL AS LINKURL ,
               NEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
-       FROM  MORNING_NEWS_RESOURCE_TABLE  NEWS 
+       FROM  MORNING_FINANCENEWS_RESOURCE_TABLE  NEWS 
        WHERE  1=1 
        AND  NEWS.NEWSFLAG = 'CHINA'
        ORDER BY  NEWS.PUBDATE DESC 
@@ -21,7 +21,7 @@
     
     <select id="queryChinaMorningNewsCount" useCache="true" resultType="int" parameterType="hashmap">
       SELECT COUNT(*)
-      FROM  MORNING_NEWS_RESOURCE_TABLE  NEWS 
+      FROM  MORNING_FINANCENEWS_RESOURCE_TABLE  NEWS 
       WHERE  1=1 
       AND  NEWS.NEWSFLAG = 'CHINA' 
     </select>
@@ -32,7 +32,7 @@
               SUBSTRING(NEWS.PUBDATE,1,16) AS PUBDATE,
               NEWS.LINKURL AS LINKURL ,
               NEWS.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
-       FROM  MORNING_NEWS_RESOURCE_TABLE  NEWS 
+       FROM  MORNING_FINANCENEWS_RESOURCE_TABLE  NEWS 
        WHERE  1=1 
        AND  NEWS.NEWSFLAG = 'EUROPE'
        ORDER BY  NEWS.PUBDATE DESC 
@@ -43,7 +43,7 @@
     
     <select id="queryEuropeMorningNewsCount" useCache="true" resultType="int" parameterType="hashmap">
       SELECT COUNT(*)
-      FROM  MORNING_NEWS_RESOURCE_TABLE  NEWS 
+      FROM  MORNING_FINANCENEWS_RESOURCE_TABLE  NEWS 
       WHERE  1=1 
       AND  NEWS.NEWSFLAG = 'EUROPE' 
     </select>
