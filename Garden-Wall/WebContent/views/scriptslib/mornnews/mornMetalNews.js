@@ -189,7 +189,7 @@ $(document).ready(function(){
 			+'<h5 class="media-heading"><a href="'+obj.linkUrl
 			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
 			+obj.title+'</a>'
-			+'<span class="label label-warning pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
 		    +'</div></td>';
@@ -201,7 +201,7 @@ $(document).ready(function(){
 			+'<h5 class="media-heading"><a href="'+obj.linkUrl
 			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
 			+obj.title+'</a>'
-			+'<span class="label label-warning pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<span class="label label-primary pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
 		    +'</div></td></tr>';
