@@ -5,7 +5,10 @@
    <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.ForexGoldDataCenterVO"> </resultMap>
    
    <select id="queryForexGoldDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
-	   SELECT  *  FROM  DATACENTER_GOLDFOREX_RESOURCE_TABLE  DATACENTER WHERE  1=1 
+	   SELECT  *  
+	   FROM  DATACENTER_GOLDFOREX_RESOURCE_TABLE  DATACENTER 
+	   WHERE  1=1 
+	   ORDER  BY  DATACENTER.CURRENTDATE DESC 
 	   <if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
 	   </if>
