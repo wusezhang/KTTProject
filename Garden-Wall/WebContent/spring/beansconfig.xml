@@ -54,4 +54,7 @@
 	<bean  id="morningMetalNewsService" class="com.ktproject.mornnews.service.impl.MorningMetalNewsServiceImpl" scope="prototype"/>
 	<bean  id="morningMetalNewsDAO" class="com.ktproject.mornnews.dao.impl.MorningMetalNewsDAOImpl" scope="prototype"/>
 	
+	<bean  id="forexGoldDataCenterService" class="com.ktproject.datacenter.service.impl.ForexGoldDataCenterServiceImpl" scope="prototype"/>
+	<bean  id="forexGoldDataCenterDAO"  class="com.ktproject.datacenter.dao.impl.ForexGoldDataCenterDAOImpl" scope="prototype"/>
+	
 </beans>
