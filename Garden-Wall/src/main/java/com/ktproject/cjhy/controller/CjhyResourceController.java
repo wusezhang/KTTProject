@@ -1,7 +1,7 @@
 package com.ktproject.cjhy.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -24,7 +24,7 @@ public class CjhyResourceController {
 	/**
 	 * 日志管理器，以便于跟踪错误.
 	 */
-	private Log log = LogFactory.getLog(CjhyResourceController.class);
+	private Logger log = Logger.getLogger(CjhyResourceController.class);
 
 	@Autowired
 	CjhyResourceService cjhyResourceService;
