@@ -36,7 +36,24 @@
 		<!--菜单显示结束-->
 
 		<div class="well well-sm chinaNewsPosition">
+			
 			<div class="panel panel-primary">
+				<div class="panel-heading">
+					国内外股市快讯
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-condensed table-bordered">
+						<tbody id="stockNewsModal"> </tbody>
+					</table>
+			        <div align="center">
+						<a class="btn btn-primary btn-sm" id="stockNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-primary btn-sm" id="stockNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+					</div>
+			    </div>
+			</div>
+			
+			<div class="panel panel-warning">
 				<div class="panel-heading">
 					国内财经快讯
 				</div>
@@ -45,9 +62,9 @@
 						<tbody id="chinaNewsModal"> </tbody>
 					</table>
 			        <div align="center">
-						<a class="btn btn-primary btn-sm" id="chinaNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						<a class="btn btn-warning btn-sm" id="chinaNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
 						&nbsp;&nbsp;&nbsp;
-						<a class="btn btn-primary btn-sm" id="chinaNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+						<a class="btn btn-warning btn-sm" id="chinaNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
 					</div>
 			    </div>
 			</div>
@@ -67,23 +84,7 @@
 					</div>
 			    </div>
 			</div>
-			
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					国内外股市快讯
-				</div>
-				<div class="panel-body">
-					<table class="table table-striped table-condensed table-bordered">
-						<tbody id="stockNewsModal"> </tbody>
-					</table>
-			        <div align="center">
-						<a class="btn btn-warning btn-sm" id="stockNewsBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
-						&nbsp;&nbsp;&nbsp;
-						<a class="btn btn-warning btn-sm" id="stockNewsBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
-					</div>
-			    </div>
-			</div>
-			
+		
 		</div>
 		
         <input type="text" class="hide" id="chinaNewsCount" value="0"/>
