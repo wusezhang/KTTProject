@@ -1,16 +1,26 @@
 $(document).ready(function() {
 	$(function() {
 		bindEvent();
+		initModel();
 	});
 	function bindEvent() {
 		$("#goldForexBtn").bind("click", goldForexShowEvent);
 		$("#marketSentBtn").bind('click',marketSentShowEvent);
 
 	}
-
+    
+    function  initModel(){
+    	marketSentShowEvent();
+    }
+    
+    function commenSelect(btnId){
+    	$('.list-group-item').removeClass('active');
+		$('#'+btnId).attr('class','list-group-item active');
+    }
+    
 	function goldForexShowEvent() {
-		     $('#goldForexBtn').attr('class','list-group-item active');
-		     var map = $.commonAsyncService('../../dataCenter/queryForexGoldDataCenter', 'POST',{start:0,limit:25}); 
+		     commenSelect('goldForexBtn');
+		     var map = $.commonAsyncService('../../dataCenter/queryForexGoldDataCenter', 'POST',{start:0,limit:20}); 
 			 $('#showModal').empty();
 			 $('#showModal').highcharts(
 				{chart:{ type: 'areaspline' },
@@ -29,27 +39,26 @@ $(document).ready(function() {
 	}
 	
 	function  marketSentShowEvent(){
-		 $('#marketSentBtn').attr('class','list-group-item active');
-		 var map = $.commonAsyncService('../../dataCenter/queryMarketSentDataCenter','POST',{start:0,limit:25});
+		 commenSelect('marketSentBtn');
+		 var map = $.commonAsyncService('../../dataCenter/queryMarketSentDataCenter','POST',{start:0,limit:20});
          $('#showModal').empty();
 		 $('#showModal').highcharts({chart:{type:'line'},
-				title:{text:'市场情绪指标动态'},
-				subtitle:{text:'Source: WorldClimate.com'},
+				title:{text:'股市市场情绪指标动态'},
+				subtitle:{text:'数据由:财汇.NET提供'},
 				xAxis:{categories:map.currentdate},
 				yAxis:{title:{text:'股市市场情绪指数'}},
 				tooltip : {
 					enabled : false,
 					formatter : function() {
-						return '<b>' + this.series.name + '</b><br>'+this.x +': '+this.y+'°C';
+						return '<b>'+ this.series.name+'</b><br>'+this.x +':'+this.y;
 					}
 				},
-				plotOptions:{line:{dataLabels:{enabled:true},
-						     enableMouseTracking:false}},
+				plotOptions:{line:{dataLabels:{enabled:true},enableMouseTracking:false}},
 				series : [{
 					name : '股市市场情绪指数值',
 					data : map.currentvalue
 				}]
-			});
+		});	
 	}
 
 }); 
