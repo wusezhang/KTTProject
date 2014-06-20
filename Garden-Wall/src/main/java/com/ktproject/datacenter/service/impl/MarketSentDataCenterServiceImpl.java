@@ -7,12 +7,15 @@
  */
 package com.ktproject.datacenter.service.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ktproject.datacenter.dao.MarketSentDataCenterDAO;
+import com.ktproject.datacenter.model.MarketSentDataCenterVO;
 import com.ktproject.datacenter.service.MarketSentDataCenterService;
 
 /**
@@ -33,11 +36,19 @@ public class MarketSentDataCenterServiceImpl implements
 	 */
 	public Map<String, Object> queryMarketSentDataCenter(final Map<String, Object> filterMap) {
 		final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+		List<MarketSentDataCenterVO>  currentList = marketSentDataCenterDAO.queryMarketSentDataCenter(filterMap);
+		List<String>  currentDate = new ArrayList<String>();
+		List<Float>   currentValue = new ArrayList<Float>();
+		List<String>  descriptContext= new ArrayList<String>();
+		for(MarketSentDataCenterVO vo : currentList){
+			currentDate.add(vo.getCurrentDate());
+			currentValue.add(vo.getCurrentValue());
+			descriptContext.add(vo.getDescriptContext());
+		}
 		resultMap.put("count", marketSentDataCenterDAO.queryMarketSentDataCenterCount(filterMap));
-		
-		
-		
-		
+		resultMap.put("currentdate", currentDate);
+		resultMap.put("currentvalue", currentValue);
+		resultMap.put("descriptcontext", descriptContext);
 		return resultMap;
 	}
 
