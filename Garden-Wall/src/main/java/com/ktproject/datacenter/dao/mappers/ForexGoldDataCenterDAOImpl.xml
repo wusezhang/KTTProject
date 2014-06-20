@@ -6,7 +6,7 @@
    
    <select id="queryForexGoldDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
 	   SELECT
-	        DATACENTER.CURRENTDATE AS CURRENTDATE,
+	         SUBSTRING(DATACENTER.CURRENTDATE,1,10) AS CURRENTDATE,
             DATACENTER.FOREXSTORA AS FOREXSTORA,
             DATACENTER.GOLDSTORA AS GOLDSTORA
        FROM
