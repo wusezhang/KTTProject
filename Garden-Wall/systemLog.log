@@ -1,0 +1,5 @@
+2014-06-20 15:22:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@1ef9233 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@16a5940)
+2014-06-20 15:22:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@1ef9233 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@16a5940)
+2014-06-20 15:22:43 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@be5e08: close() called more than once.
+2014-06-20 15:22:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@1ef9233 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@16a5940)
+2014-06-20 15:22:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@1ef9233 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@16a5940)

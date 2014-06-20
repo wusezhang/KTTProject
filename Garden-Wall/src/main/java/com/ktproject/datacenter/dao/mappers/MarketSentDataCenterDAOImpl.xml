@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.datacenter.dao.impl.MarketSentDataCenterDAOImpl">
+    
+   <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.MarketSentDataCenterVO"> </resultMap>
+   
+   <select id="queryMarketSentDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
+	   SELECT
+	         SUBSTRING(DATACENTER.CURRENTDATE,1,10) AS CURRENTDATE,
+	         DATACENTER.CURRENTVALUE AS CURRENTVALUE,
+	         DATACENTER.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
+      FROM
+	         DATACENTER_MARKETSENTIMENT_RESOURCE_TABLE DATACENTER
+      WHERE
+	         1 = 1
+      ORDER BY DATACENTER.CURRENTDATE DESC
+	  <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+	  </if>
+   </select>
+   
+   <select id="queryMarketSentDataCenterCount" resultType="int" parameterType="hashmap" useCache="true">
+	SELECT COUNT(*)
+    FROM
+	       DATACENTER_MARKETSENTIMENT_RESOURCE_TABLE DATACENTER
+    WHERE  1 = 1
+   </select>
+	    
+</mapper>
