@@ -33,10 +33,10 @@ $(document).ready(function() {
 		 var map = $.commonAsyncService('../../dataCenter/queryMarketSentDataCenter','POST',{start:0,limit:25});
          $('#showModal').empty();
 		 $('#showModal').highcharts({chart:{type:'line'},
-				title:{text : 'Monthly Average Temperature'},
-				subtitle:{text : 'Source: WorldClimate.com'},
+				title:{text:'市场情绪指标动态'},
+				subtitle:{text:'Source: WorldClimate.com'},
 				xAxis:{categories:map.currentdate},
-				yAxis:{title:{text:'Temperature (°C)'}},
+				yAxis:{title:{text:'股市市场情绪指数'}},
 				tooltip : {
 					enabled : false,
 					formatter : function() {
@@ -46,7 +46,7 @@ $(document).ready(function() {
 				plotOptions:{line:{dataLabels:{enabled:true},
 						     enableMouseTracking:false}},
 				series : [{
-					name : 'Tokyo',
+					name : '股市市场情绪指数值',
 					data : map.currentvalue
 				}]
 			});
