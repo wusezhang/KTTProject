@@ -1,0 +1,23 @@
+.btnPrice {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0px auto;
+	background: url('../../imagelib/gpcYM/botton_g1.gif') no-repeat;
+}
+.btnPrice:hover {
+	background: url('../../imagelib/gpcYM/botton_g2.gif') no-repeat;
+}
+.menuposition{
+	position:absolute;
+	top:45px;
+	width:15%;
+	height:95%;
+}
+.tableposition{
+	position:absolute;
+	top:45px;
+	right:0px;
+	width:85%;
+}
+
