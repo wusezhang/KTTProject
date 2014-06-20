@@ -7,12 +7,15 @@
  */
 package com.ktproject.datacenter.service.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ktproject.datacenter.dao.ForexGoldDataCenterDAO;
+import com.ktproject.datacenter.model.ForexGoldDataCenterVO;
 import com.ktproject.datacenter.service.ForexGoldDataCenterService;
 
 /**
@@ -33,7 +36,18 @@ public class ForexGoldDataCenterServiceImpl implements
 	public Map<String, Object> queryForexGoldDataCenter(
 		final	Map<String, Object> filterMap) {
 		Map<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("data", forexGoldDataCenterDAO.queryForexGoldDataCenter(filterMap));
+		List<ForexGoldDataCenterVO>  reulstList = forexGoldDataCenterDAO.queryForexGoldDataCenter(filterMap);
+		List<String>  currentDate = new  ArrayList<String>();
+		List<Float>   forexValue =  new  ArrayList<Float>();
+		List<Float>   goldValue = new  ArrayList<Float>();
+		for(ForexGoldDataCenterVO vo : reulstList){
+			currentDate.add(vo.getCurrentDate());
+			forexValue.add(vo.getForexStora());
+			goldValue.add(vo.getGoldStora());
+		}
+		resultMap.put("currentdate", currentDate);
+		resultMap.put("forexdata", forexValue);
+		resultMap.put("golddata", goldValue);
 		return resultMap;
 	}
 
