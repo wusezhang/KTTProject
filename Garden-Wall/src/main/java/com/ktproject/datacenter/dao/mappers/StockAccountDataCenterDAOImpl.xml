@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.datacenter.dao.impl.StockAccountDataCenterDAOImpl">
+    
+   <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.StockAccountVO"> </resultMap>
+   
+   <select id="queryStockAccountDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
+	   SELECT
+	       CONCAT(SUBSTRING(DATACENTER.STARTDATE,1,10),'-',SUBSTRING(DATACENTER.ENDDATE,1,10)) AS STARTDATE,
+	       DATACENTER.FINALSHEFFACCNUM AS FINALSHEFFACCNUM,
+	       DATACENTER.FINALSZEFFACCNUM AS FINALSZEFFACCNUM,
+           DATACENTER.FINALSUMEFFACCNUM AS FINALSUMEFFACCNUM,
+           DATACENTER.ADDSHACCNUM AS ADDSHACCNUM,
+           DATACENTER.ADDSZACCNUM AS ADDSZACCNUM,
+           DATACENTER.ADDSUMACCNUM AS ADDSUMACCNUM,
+           DATACENTER.FINALSHACCNUM AS FINALSHACCNUM,
+           DATACENTER.FINALSZACCNUM AS FINALSZACCNUM,
+           DATACENTER.FINALSUMACCNUM AS FINALSUMACCNUM,
+           DATACENTER.FINALSZSLEEPACCNUM AS FINALSZSLEEPACCNUM,
+           DATACENTER.FINALSHSLEEPACCNUM AS FINALSHSLEEPACCNUM,
+           DATACENTER.FINALSUMSLEEPACCNUM AS FINALSUMSLEEPACCNUM
+      FROM
+	         DATACENTER_STOCKACCOUNT_RESOURCE_TABLE DATACENTER
+      WHERE
+	         1 = 1
+      ORDER BY DATACENTER.STARTDATE DESC
+	  <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+	  </if>
+   </select>
+   
+   <select id="queryStockAccountDataCenterCount" resultType="int" parameterType="hashmap" useCache="true">
+	SELECT COUNT(*)
+    FROM
+	        DATACENTER_STOCKACCOUNT_RESOURCE_TABLE DATACENTER
+    WHERE  1 = 1
+   </select>
+	    
+</mapper>

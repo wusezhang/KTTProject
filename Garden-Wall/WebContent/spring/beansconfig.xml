@@ -60,4 +60,7 @@
 	<bean  id="marketSentDataCenterService" class="com.ktproject.datacenter.service.impl.MarketSentDataCenterServiceImpl" scope="prototype"/>
 	<bean  id="marketSentDataCenterDAO"  class="com.ktproject.datacenter.dao.impl.MarketSentDataCenterDAOImpl" scope="prototype"/>
 	
+	<bean  id="stockAccountDataCenterService" class="com.ktproject.datacenter.service.impl.StockAccountDataCenterServiceImpl" scope="prototype"/>
+	<bean  id="stockAccountDataCenterDAO" class="com.ktproject.datacenter.dao.impl.StockAccountDataCenterDAOImpl"/>
+	
 </beans>
