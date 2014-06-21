@@ -14,7 +14,7 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014年6月21日 ZJJ 创建StockAccountVO.java
  */
-public class StockAccountVO {
+public class StockAccountDataCenterVO {
 	private String startDate;
 	private String endDate;
 	private Float finalShEffAccNum;

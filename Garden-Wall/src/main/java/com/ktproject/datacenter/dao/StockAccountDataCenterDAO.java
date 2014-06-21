@@ -9,7 +9,7 @@ package com.ktproject.datacenter.dao;
 
 import java.util.List;
 import java.util.Map;
-import com.ktproject.datacenter.model.StockAccountVO;
+import com.ktproject.datacenter.model.StockAccountDataCenterVO;
 /**
  * 类功能描述：
  * StockAccountDataCenterDAO.java
@@ -24,7 +24,7 @@ public interface StockAccountDataCenterDAO {
        * @param filterMap
        * @return
        */
-	  List<StockAccountVO>  queryStockAccountDataCenter(final Map<String,Object> filterMap);
+	  List<StockAccountDataCenterVO>  queryStockAccountDataCenter(final Map<String,Object> filterMap);
 	  
 	  
 	  /**

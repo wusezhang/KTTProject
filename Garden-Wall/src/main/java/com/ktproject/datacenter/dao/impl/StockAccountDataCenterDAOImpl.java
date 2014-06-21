@@ -14,7 +14,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.ktproject.datacenter.dao.StockAccountDataCenterDAO;
-import com.ktproject.datacenter.model.StockAccountVO;
+import com.ktproject.datacenter.model.StockAccountDataCenterVO;
 
 /**
  * 类功能描述：
@@ -31,7 +31,7 @@ public class StockAccountDataCenterDAOImpl implements StockAccountDataCenterDAO 
 	/**
 	 * @see com.ktproject.datacenter.dao.StockAccountDataCenterDAO#queryStockAccountDataCenter(java.util.Map)
 	 */
-	public List<StockAccountVO> queryStockAccountDataCenter(final Map<String, Object> filterMap) {
+	public List<StockAccountDataCenterVO> queryStockAccountDataCenter(final Map<String, Object> filterMap) {
 		return sqlSession.selectList("com.ktproject.datacenter.dao.impl.StockAccountDataCenterDAOImpl.queryStockAccountDataCenter", filterMap);
 	}
 
