@@ -7,6 +7,7 @@ $(document).ready(function() {
 		$("#goldForexBtn").bind("click", goldForexShowEvent);
 		$("#marketSentBtn").bind('click',marketSentShowEvent);
         $('#stockAccountBtn').bind('click',stockAccountShowEvent);
+        $('#tradeActivityBtn').bind('click',tradeActivityShowEvent);
 	}
     
     function  initModel(){
@@ -83,7 +84,27 @@ $(document).ready(function() {
             name: '合计增加股票账户数(户)',
             data:map.addaccnum
         }]
-    });
+       });
+	}
+	
+	function  tradeActivityShowEvent(){
+		commenSelect('tradeActivityBtn');
+		var map = $.commonAsyncService('../../dataCenter/queryTradeActivityDataCenter', 'POST',{start:0,limit:25}); 
+			 $('#showModal').empty();
+			 $('#showModal').highcharts(
+				{chart:{ type: 'areaspline' },
+				 title:{ text:'股市交易活跃度'},
+				 subtitle: {text: '数据由:财汇.NET提供',x:-20},
+				 legend: { layout:'vertical', align:'left',verticalAlign: 'top', x: 150, y: 100, floating:true, borderWidth:1, backgroundColor:'#FFFFFF' },
+				 xAxis: { categories:map.currentdate, 
+				 plotBands: [{
+				 color: 'rgba(68, 170, 213, .2)' }] },
+				 yAxis: { title: { text:'交易活跃度数值'} },
+				 tooltip: { shared: true, valueSuffix:''}, 
+				 credits: { enabled: false },
+				 plotOptions: { areaspline: { fillOpacity: 0.5 } },
+				 series: [{ name: '股市交易活跃度', data:map.currentvalue}] 
+				});
 	}
 
 }); 

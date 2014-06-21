@@ -1,0 +1,373 @@
+2014-06-21 14:26:19 MLog.java INFO MLog clients using log4j logging.
+2014-06-21 14:26:19 C3P0Registry.java INFO Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2014-06-21 14:26:19 DynamicPooledDataSourceManagerMBean.java DEBUG MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hge0w3921ggwpfknejq6r|3ba4f1] registered.
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG incremented pending_acquires: 1
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG incremented pending_acquires: 2
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG incremented pending_acquires: 3
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 config: [start -> 3; min -> 2; max -> 50; inc -> 3; num_acq_attempts -> 60; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 250327040; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 900000; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2014-06-21 14:26:20 AbstractPoolBackedDataSource.java INFO Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0w3921ggwpfknejq6r|3ba4f1, debugUnreturnedConnectionStackTraces -> true, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0w3921ggwpfknejq6r|3ba4f1, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/ktproject, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 43200000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 2, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG acquire test -- pool size: 0; target_pool_size: 3; desired target? 1
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG awaitAvailable(): [unknown]
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 0, unused: 0, excluded: 0]
+2014-06-21 14:26:20 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@18b0b4a.acquireResource() returning. 
+2014-06-21 14:26:20 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@18b0b4a.acquireResource() returning. 
+2014-06-21 14:26:20 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@18b0b4a.acquireResource() returning. 
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 1, unused: 1, excluded: 0]
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae)
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG decremented pending_acquires: 2
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae)
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG decremented pending_acquires: 1
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG decremented pending_acquires: 0
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae)
+2014-06-21 14:26:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@12b72f4 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae)
+2014-06-21 14:26:21 ActiveManagementCoordinator.java DEBUG MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hge0w3921ggwpfknejq6r|3ba4f1] unregistered.
+2014-06-21 14:26:21 ActiveManagementCoordinator.java DEBUG C3P0Registry mbean unregistered.
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae
+2014-06-21 14:26:21 ThreadPoolAsynchronousRunner.java DEBUG Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1,5,main] interrupted. Shutting down.
+2014-06-21 14:26:21 ThreadPoolAsynchronousRunner.java DEBUG Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2,5,main] interrupted. Shutting down.
+2014-06-21 14:26:21 ThreadPoolAsynchronousRunner.java DEBUG Thread[com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0,5,main] interrupted. Shutting down.
+2014-06-21 14:26:21 NewPooledConnection.java DEBUG com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:566)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:234)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:470)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:964)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:989)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1174)
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@10241ae
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@bed4c8
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@bed4c8
+2014-06-21 14:26:21 NewPooledConnection.java DEBUG com.mchange.v2.c3p0.impl.NewPooledConnection@bed4c8 closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:566)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:234)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:470)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:964)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:989)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1174)
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@bed4c8
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@bed4c8
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@10fba68
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@10fba68
+2014-06-21 14:26:21 NewPooledConnection.java DEBUG com.mchange.v2.c3p0.impl.NewPooledConnection@10fba68 closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:566)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:234)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:470)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:964)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:989)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1174)
+2014-06-21 14:26:21 C3P0PooledConnectionPool.java DEBUG Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@10fba68
+2014-06-21 14:26:21 BasicResourcePool.java DEBUG Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@10fba68
+2014-06-21 14:26:21 AbstractPoolBackedDataSource.java DEBUG com.mchange.v2.c3p0.ComboPooledDataSource@3ba4f1 has been closed. 
+java.lang.Exception: DEBUG STACK TRACE for PoolBackedDataSource.close().
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.close(AbstractPoolBackedDataSource.java:417)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:327)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:510)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:740)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:455)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1090)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+2014-06-21 14:27:24 MLog.java INFO MLog clients using log4j logging.
+2014-06-21 14:27:24 C3P0Registry.java INFO Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2014-06-21 14:27:24 DynamicPooledDataSourceManagerMBean.java DEBUG MBean: com.mchange.v2.c3p0:type=PooledDataSource[1hge0w3921ggy3q910xnlsc|1c9ce70] registered.
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG incremented pending_acquires: 1
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG incremented pending_acquires: 2
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG incremented pending_acquires: 3
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG com.mchange.v2.resourcepool.BasicResourcePool@10c29fe config: [start -> 3; min -> 2; max -> 50; inc -> 3; num_acq_attempts -> 60; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 250327040; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 900000; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2014-06-21 14:27:25 AbstractPoolBackedDataSource.java INFO Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 60, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0w3921ggy3q910xnlsc|1c9ce70, debugUnreturnedConnectionStackTraces -> true, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0w3921ggy3q910xnlsc|1c9ce70, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/ktproject, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 43200000, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 2, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG acquire test -- pool size: 0; target_pool_size: 3; desired target? 1
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG awaitAvailable(): [unknown]
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 0, unused: 0, excluded: 0]
+2014-06-21 14:27:25 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@1bc93a7.acquireResource() returning. 
+2014-06-21 14:27:25 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@1bc93a7.acquireResource() returning. 
+2014-06-21 14:27:25 C3P0PooledConnectionPool.java DEBUG com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@1bc93a7.acquireResource() returning. 
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 1, unused: 1, excluded: 0]
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 1, unused: 0, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG decremented pending_acquires: 2
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG decremented pending_acquires: 1
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:27:25 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@13a356: close() called more than once.
+2014-06-21 14:27:25 BasicResourcePool.java DEBUG decremented pending_acquires: 0
+2014-06-21 14:28:01 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:02 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@f9b31d: close() called more than once.
+2014-06-21 14:28:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:06 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1da3acc: close() called more than once.
+2014-06-21 14:28:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:11 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@17f2dac: close() called more than once.
+2014-06-21 14:28:14 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:14 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:18 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:18 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:19 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:20 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:23 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1c83d89: close() called more than once.
+2014-06-21 14:28:24 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:24 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:26 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:26 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:27 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:28 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:35 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:35 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:28:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:43 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1a4f43e: close() called more than once.
+2014-06-21 14:29:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:52 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:52 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:52 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@d03350: close() called more than once.
+2014-06-21 14:29:52 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:29:52 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:23 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:25 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1783d33: close() called more than once.
+2014-06-21 14:31:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:29 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@8f337b: close() called more than once.
+2014-06-21 14:31:33 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:33 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:36 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@15978e7: close() called more than once.
+2014-06-21 14:31:37 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:37 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:42 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:42 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:42 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@87c801: close() called more than once.
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@aa3e9a: close() called more than once.
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:46 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:49 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@3b84ee: close() called more than once.
+2014-06-21 14:31:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:59 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:59 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:59 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:31:59 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:04 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:04 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:04 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1c98b2: close() called more than once.
+2014-06-21 14:32:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:06 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:32:06 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@4df9a0: close() called more than once.
+2014-06-21 14:37:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:37:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:37:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:37:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:21 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:21 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@374956: close() called more than once.
+2014-06-21 14:39:22 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:39:22 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:57 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:41:57 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:51 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:51 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:53 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@47fc71: close() called more than once.
+2014-06-21 14:42:56 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:56 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:58 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:58 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:42:58 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@a3aaf5: close() called more than once.
+2014-06-21 14:43:08 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:08 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:09 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:10 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:10 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:10 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:14 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:14 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:14 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1681460: close() called more than once.
+2014-06-21 14:43:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:27 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:27 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:55 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:58 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:58 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:43:58 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@e6f8d7: close() called more than once.
+2014-06-21 14:44:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:02 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:11 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:13 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@145240a: close() called more than once.
+2014-06-21 14:44:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:19 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:19 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:19 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@14d8c01: close() called more than once.
+2014-06-21 14:44:19 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:19 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:22 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:22 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:26 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:26 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:26 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@166de66: close() called more than once.
+2014-06-21 14:44:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:47 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@119d975: close() called more than once.
+2014-06-21 14:44:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:47 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:44:49 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:07 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:07 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:07 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:07 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:09 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:09 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:10 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:10 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:12 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:12 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:12 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@104c58e: close() called more than once.
+2014-06-21 14:45:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:13 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@114b3af: close() called more than once.
+2014-06-21 14:45:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:13 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:25 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@135ecf1: close() called more than once.
+2014-06-21 14:45:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:25 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:27 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:27 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:29 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:31 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:31 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:32 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:34 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:34 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:36 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:39 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@1618248: close() called more than once.
+2014-06-21 14:45:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:39 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:41 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:41 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:43 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:50 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:53 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:45:53 NewProxyConnection.java DEBUG com.mchange.v2.c3p0.impl.NewProxyConnection@11633fd: close() called more than once.
+2014-06-21 14:46:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)
+2014-06-21 14:46:16 BasicResourcePool.java DEBUG trace com.mchange.v2.resourcepool.BasicResourcePool@10c29fe [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@1bf6ec8)

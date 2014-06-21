@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ktproject.datacenter.dao.impl.StockAccountDataCenterDAOImpl">
     
-   <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.StockAccountVO"> </resultMap>
+   <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.StockAccountDataCenterVO"> </resultMap>
    
    <select id="queryStockAccountDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
 	   SELECT
