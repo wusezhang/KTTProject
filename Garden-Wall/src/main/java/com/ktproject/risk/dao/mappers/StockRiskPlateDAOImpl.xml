@@ -28,4 +28,28 @@
 	       IMPORTTANTNEWS.NEWSFLAG = 'bad'
 	</select>
 	
+	<select id="queryCompanyGoodPlateNews" resultMap="resultObjectMap" useCache="true">
+		SELECT
+	       IMPORTTANTNEWS.KEYID,
+	       IMPORTTANTNEWS.LINKURL,
+		   SUBSTRING(IMPORTTANTNEWS.PUBDATE,1,16) AS PUBDATE,
+	       IMPORTTANTNEWS.TITLE
+        FROM
+	       STOCK_POOL_IMPORTANT_NEWS_TABLE IMPORTTANTNEWS
+        WHERE
+	       IMPORTTANTNEWS.NEWSFLAG = 'good'
+		<if test="limit != null and limit !='' ">
+             LIMIT #{start},#{limit}
+        </if>
+	</select>
+	
+	<select id="queryCompanyGoodPlateNewsCount" resultType="int" useCache="true">
+		SELECT
+	       COUNT(*) AS COUNT 
+        FROM       
+	       STOCK_POOL_IMPORTANT_NEWS_TABLE IMPORTTANTNEWS
+        WHERE
+	       IMPORTTANTNEWS.NEWSFLAG = 'good'
+	</select>
+	
 </mapper>

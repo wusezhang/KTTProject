@@ -37,6 +37,17 @@ public class StockRiskPlateServiceImpl implements StockRiskPlateService {
 			resultMap.put("count", stockRiskPlateDAO.queryCompanyRiskPlateNewsCount(map));
 			return resultMap;
 		}
+
+		/**
+		 * @see com.ktproject.risk.service.StockRiskPlateService#queryCompanyGoodPlateNews(java.util.Map)
+		 */
+		public Map<String, Object> queryCompanyGoodPlateNews(
+				Map<String, Object> map) {
+			final  Map<String,Object>  resultMap = new  HashMap<String,Object>();
+			resultMap.put("data", stockRiskPlateDAO.queryCompanyGoodPlateNews(map));
+			resultMap.put("count", stockRiskPlateDAO.queryCompanyGoodPlateNewsCount(map));
+			return resultMap;
+		}
 	    
 	    
 }

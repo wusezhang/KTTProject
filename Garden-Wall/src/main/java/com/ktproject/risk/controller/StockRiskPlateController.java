@@ -47,4 +47,20 @@ public class StockRiskPlateController {
 		 filterMap.put("limit", limit);
 		 return  stockRiskPlateService.queryCompanyRiskPlateNews(filterMap);
 	 }
+	 
+	 /**
+	  * 查询上市公司的利好信息.
+	  * @param start
+	  * @param limit
+	  * @return
+	  */
+	 @RequestMapping(value = "/queryCompanyGoodPlateNews", method = RequestMethod.POST)
+	 public  @ResponseBody Map<String,Object>  queryCompanyGoodPlateNews(
+			 @RequestParam("start") final int start,
+				@RequestParam("limit") final int limit){
+		 final  Map<String,Object> filterMap = new  HashMap<String,Object>();
+		 filterMap.put("start", start);
+		 filterMap.put("limit", limit);
+		 return stockRiskPlateService.queryCompanyGoodPlateNews(filterMap);
+	 }
 }

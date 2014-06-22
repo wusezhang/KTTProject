@@ -42,5 +42,20 @@ public class StockRiskPlateDAOImpl implements StockRiskPlateDAO{
 	public int queryCompanyRiskPlateNewsCount(final  Map<String, Object> map) {
 		return sqlSession.selectOne("com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl.queryCompanyRiskPlateNewsCount");
 	}
+
+	/**
+	 * @see com.ktproject.risk.dao.StockRiskPlateDAO#queryCompanyGoodPlateNews(java.util.Map)
+	 */
+	public List<StockRiskPlateVO> queryCompanyGoodPlateNews(
+			Map<String, Object> filtermap) {
+		return sqlSession.selectList("com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl.queryCompanyGoodPlateNews", filtermap);
+	}
+
+	/**
+	 * @see com.ktproject.risk.dao.StockRiskPlateDAO#queryCompanyGoodPlateNewsCount(java.util.Map)
+	 */
+	public int queryCompanyGoodPlateNewsCount(Map<String, Object> filterMap) {
+		return sqlSession.selectOne("com.ktproject.risk.dao.impl.StockRiskPlateDAOImpl.queryCompanyGoodPlateNewsCount",filterMap);
+	}
    
 }

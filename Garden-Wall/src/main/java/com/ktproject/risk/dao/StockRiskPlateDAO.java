@@ -34,4 +34,19 @@ public interface StockRiskPlateDAO {
 	    * @return
 	    */
 	   int  queryCompanyRiskPlateNewsCount(final Map<String,Object> map);
+	   
+	   
+	   /**
+	    * 查询上市公司利好消息.
+	    * @param filtermap
+	    * @return
+	    */
+	   List<StockRiskPlateVO>  queryCompanyGoodPlateNews(final Map<String,Object> filtermap);
+	   
+	   /**
+	    * 查询上市公司利好消息总条数.
+	    * @param filterMap
+	    * @return
+	    */
+	   int  queryCompanyGoodPlateNewsCount(final  Map<String,Object> filterMap);
 }

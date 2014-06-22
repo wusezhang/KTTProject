@@ -24,4 +24,12 @@ public interface StockRiskPlateService {
 	 * @return
 	 */
 	Map<String,Object>  queryCompanyRiskPlateNews(final Map<String,Object> map);
+	
+	
+	/**
+	 * 查询上市公司的利好信息.
+	 * @param map
+	 * @return
+	 */
+	Map<String,Object>  queryCompanyGoodPlateNews(final Map<String,Object> map);
 }

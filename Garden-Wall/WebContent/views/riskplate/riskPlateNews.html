@@ -45,32 +45,28 @@
 					股市利空警示
 				</div>
 				<div class="panel-body">
-					<div class="list-group" id="companylist"></div>
+					<div class="list-group" id="companylist"> </div>
 					<div align="center">
-						<a class="btn btn-primary btn-sm" id="companyRiskBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						<a class="btn btn-danger btn-sm" id="companyRiskBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
 						&nbsp;&nbsp;&nbsp;
-						<a class="btn btn-primary btn-sm" id="companyRiskBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
+						<a class="btn btn-danger btn-sm" id="companyRiskBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
 					</div>
 				</div>
 			</div>
 		</div>
-
+        
 		<!--外汇利空新闻版块-->
 		<div class="well well-sm forexnewsposition">
-			<div class="panel panel-danger">
+			<div class="panel panel-warning">
 				<div class="panel-heading">
 					股市利好警示
 				</div>
 				<div class="panel-body">
-					<div class="list-group">
-						<a href="#" class="list-group-item "> <h5 class="list-group-item-heading">List group item heading</h5>
-						<p class="list-group-item-text">
-							...
-						</p> </a>
-						<a href="#" class="list-group-item "> <h5 class="list-group-item-heading">List group item heading</h5>
-						<p class="list-group-item-text">
-							...
-						</p> </a>
+					<div class="list-group" id="companyGoodlist"> </div>
+					<div align="center">
+						<a class="btn btn-warning btn-sm" id="companyRiskBtnDown"><span class="glyphicon glyphicon-chevron-down"> </span></a>
+						&nbsp;&nbsp;&nbsp;
+						<a class="btn btn-warning btn-sm" id="companyRiskBtnUp"><span class="glyphicon glyphicon-chevron-up"> </span></a>
 					</div>
 				</div>
 			</div>
@@ -78,6 +74,8 @@
 
 		<input type="text" class="hide" value="0" id="companyRiskNewsCount"/>
 		<input type="text" class="hide" value="0" id="companyRiskNewsTotalCount"/>
+		<input type="text" class="hide" value="0" id="companyGoodPlateNewsCount"/>
+		<input type="text" class="hide" value="0" id="companyGoodPlateNewsTotalCount"/>
 	</body>
 </html>
 
