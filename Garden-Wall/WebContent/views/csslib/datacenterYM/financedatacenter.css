@@ -1,0 +1,15 @@
+.menuposition{
+	position:absolute;
+	top:45px;
+	width:15%;
+	height:95%;
+}
+.tableposition{
+	position:absolute;
+	top:45px;
+	right:0px;
+	width:85%;
+}
+.panelposition{
+	padding-top:10px;
+}
