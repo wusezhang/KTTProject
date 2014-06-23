@@ -35,7 +35,7 @@
 						<li>
 							<a href="javascript:void(0)">其他功能</a>
 						</li>
-						<li class="divider"> </li>
+						<li class="divider"></li>
 						<li>
 							<a href="javascript:void(0)" id="addFavoritesBtn">加入收藏夹</a>
 						</li>
@@ -45,15 +45,15 @@
 					<a class="dropdown-toggle" data-toggle="dropdown"  href="#"><span class="icon-white icon-user"> </span> 用户管理<b class="caret"> </b> </a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="javascript:void(0)">用户登录</a>
+							<a href="javascript:void(0)" id="userLoginBtn">用户登录</a>
 						</li>
 						<li class="divider"> </li>
 						<li >
-					        <a id="registerBut" href="views/login/register.html">注册</a>
-				        </li>
+							<a  href="views/login/register.html">注册</a>
+						</li>
 					</ul>
 				</li>
-				
+
 				<li class="active">
 					<a href="#" id="clientDownBtn"><span class="icon-white  icon-download"> </span>客户端下载</a>
 				</li>
@@ -79,7 +79,7 @@
 				</div>
 			</div>
 
-            <div class="live-tile well-small cyan" data-speed="1500"  data-mode="carousel" data-bounce="true" data-initdelay="3500" id="kjqyControl" data-direction="horizontal">
+			<div class="live-tile well-small cyan" data-speed="1500"  data-mode="carousel" data-bounce="true" data-initdelay="3500" id="kjqyControl" data-direction="horizontal">
 				<div >
 					<a class="full" href="views/comment/stockComment.html"><img class="full"  src="views/imagelib/indexYM/jrplIcon.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 			</div>
-            
+
 			<!--财经新闻模块-->
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="vertical">
 				<div >
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tile-strip two-wide" >
 				<div class="live-tile half-tile two-wide well-small mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,r" id="mjhyControlNext">
 					<div>
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 
-            <!--股票池展示-->
+			<!--股票池展示-->
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" data-direction="horizontal">
 				<div >
 					<a class="full" href="views/stockrecom/stockRecomRes.html"> <img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
@@ -160,7 +160,7 @@
 					</div>
 				</div>
 			</div>
-              
+
 			<!--外汇日历--->
 			<div class="live-tile well-small mango" data-speed="1000"  data-mode="carousel" data-direction="horizontal" data-bounce="true" data-initdelay="3000" >
 				<div id="whrlControl">
@@ -310,7 +310,7 @@
 					<!--早财快讯显示框架结束-->
 
 					<!--经济指标显示信息-->
-					<div id="showSSPM" style="height:300px;width:400px;display:none"> </div>
+					<div id="showSSPM" style="height:300px;width:400px;display:none"></div>
 					<!--经济指标显示信息结束-->
 				</div>
 				<!--信息列表显示-->
@@ -320,11 +320,11 @@
 
 		<div class="well well-small spreadPlatform">
 			<img src="views/imagelib/indexYM/joinus.jpg" class="img-rounded"/>
-			
+
 		</div>
 
 		<!--首页modal显示框-->
-		<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+		<div id="showModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					×
@@ -341,6 +341,38 @@
 			</div>
 		</div>
 		<!--首页Modal显示框结束-->
+
+		<!--用户登录model-->
+		<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h5><span class="icon-user"> </span> 用户登录</h5>
+			</div>
+			<div class="modal-body" id="loginModalModalBody">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="userName">用户名:</label>
+						<div class="controls">
+							<input type="text" id="userName" placeholder="用户名">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputPassword">密   码:</label>
+						<div class="controls">
+							<input type="password" id="inputPassword" placeholder="密码">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
+					<span class="icon-white icon-ok"> </span> 登录
+				</button>
+			</div>
+		</div>
+		<!--用户登录model结束-->
 
 		<!--客户端下载model-->
 		<div id="clientDownModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
