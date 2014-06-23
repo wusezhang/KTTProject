@@ -17,6 +17,7 @@ $(document).ready(function() {
 		$('#registerBut').bind('click', registerButtonEvent);
 		$('#addFavoritesBtn').bind('click', addFavoritesEvent);
 		$('#clientDownBtn').bind('click',clientDownEvent);
+		$('#userLoginBtn').bind('click',userLoginEvent);
 	};
 
 	//加入收藏夹按钮事件
@@ -28,13 +29,18 @@ $(document).ready(function() {
 			try {
 				window.sidebar.addPanel(document.title, window.location.href, "");
 			} catch(e) {
-				$('#registerModal').modal('show');
+				$('#showModal').modal('show');
 				$('#modalMessageBody').html('<p class="text-error">您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹!</p>');
 			}
 		}
 
 	};
-
+    
+    //用户登录事件.
+    function  userLoginEvent(){
+    	$("#loginModal").modal('show');
+    }
+    
 	//注册按钮绑定事件
 	function registerButtonEvent() {
 		$("#registerModal").modal('show');

@@ -4,10 +4,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>财汇.NET-投资者的摇篮</title>
+		<link rel="shortcut icon" href="views/imagelib/indexYM/favicon.ico" >
 		<!--加载相应的CSS文件-->
 		<link href="views/jslib/scriptsPlugin/MetroJs/MetroJs.min.css" rel="stylesheet" type="text/css" />
 		<link href="views/jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href="views/csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
+		<link href="views/csslib/indexYm/index.css" rel="stylesheet" type="text/css" />
 		<!--加载相应的JS文件-->
 		<script src="views/jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js" type="text/javascript"></script>
 		<script src="views/jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -17,7 +18,7 @@
 		<!--自定义js文件-->
 		<script type="text/javascript" src="views/scriptslib/index/EchartMainInit.js"></script>
 		<script type="text/javascript" src="views/scriptslib/index/MetroApplicationBar.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="views/scriptslib/index/jsIndexResource.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="views/scriptslib/index/index.js" charset="UTF-8"></script>
 	</head>
 	<body class="indexYmBagroundImage" id="indexYmBody">
 		<!--导航菜单-->
@@ -40,9 +41,19 @@
 						</li>
 					</ul>
 				</li>
-				<li >
-					<a id="registerBut" href="#"><span class="icon-white icon-user"> </span>注册</a>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown"  href="#"><span class="icon-white icon-user"> </span> 用户管理<b class="caret"> </b> </a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="javascript:void(0)" id="userLoginBtn">用户登录</a>
+						</li>
+						<li class="divider"> </li>
+						<li >
+							<a  href="views/login/register.html">注册</a>
+						</li>
+					</ul>
 				</li>
+
 				<li class="active">
 					<a href="#" id="clientDownBtn"><span class="icon-white  icon-download"> </span>客户端下载</a>
 				</li>
@@ -52,7 +63,7 @@
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
 		<div class="titles eight-wide three-tall metreBoxPosition" >
-			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical"
+			<div class="live-tile two-wide  label-warning  well-small"  data-speed="1000"  id="zckxBox"  data-direction="vertical"
 			data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div>
 					<a class="full" href="views/mornnews/mornNews.html"><img class="full" src="views/imagelib/gnzckxlogo.jpg"/></a>
@@ -68,7 +79,7 @@
 				</div>
 			</div>
 
-            <div class="live-tile well-small cyan" data-speed="1500"  data-mode="carousel" data-bounce="true" data-initdelay="3500" id="kjqyControl" data-direction="horizontal">
+			<div class="live-tile well-small cyan" data-speed="1500"  data-mode="carousel" data-bounce="true" data-initdelay="3500" id="kjqyControl" data-direction="horizontal">
 				<div >
 					<a class="full" href="views/comment/stockComment.html"><img class="full"  src="views/imagelib/indexYM/jrplIcon.jpg"/></a>
 					<div class="bottomshowInfor" >
@@ -82,9 +93,9 @@
 					</div>
 				</div>
 			</div>
-            
+
 			<!--财经新闻模块-->
-			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="horizontal">
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="vertical">
 				<div >
 					<a class="full" href="views/stockpool/stockThemeNews.html"><img class="full"  src="views/imagelib/indexYM/bknews.jpg"/></a>
 					<div class="bottomshowInfor text-error" >
@@ -94,11 +105,11 @@
 				<div >
 					<a class="full" href="views/riskplate/riskPlateNews.html"><img class="full"  src="views/imagelib/indexYM/riskicon.jpg"/></a>
 					<div class="bottomshowInfor text-warning" >
-						<span class="icon-white icon-info-sign"> </span>股市(利空/利好)风险警示
+						<span class="icon-white icon-warning-sign"> </span>股市(利空/利好)风险警示
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tile-strip two-wide" >
 				<div class="live-tile half-tile two-wide well-small mango" data-mode="none" data-bounce="true"  data-bounce-dir="*,r" id="mjhyControlNext">
 					<div>
@@ -119,17 +130,33 @@
 			</div>
 
 			<!--财经数据模块-->
-			<div class="live-tile well-small mango" data-speed="1000"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="1000" >
+			<div class="live-tile well-small mango" data-speed="1500"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="3000" >
 				<div>
 					<a class="full metroLarger" href="views/datacenter/stockDataCenter.html"><img class="full"  src="views/imagelib/indexYM/jsfxImage.jpg"/></a>
 					<div class="bottomshowInfor" >
-						股市数据分析
+						<span class="icon-white  icon-bookmark"> </span> 股市数据分析
 					</div>
 				</div>
 				<div >
 					<a class="full metroLarger" href="views/datacenter/financeDataCenter.html"><img class="full"  src="views/imagelib/indexYM/datacenter.jpg"/></a>
 					<div class="bottomshowInfor" >
-						财经数据分析
+						<span class="icon-white  icon-bookmark"> </span> 财经数据分析
+					</div>
+				</div>
+			</div>
+
+			<!--股票池展示-->
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" data-direction="horizontal">
+				<div >
+					<a class="full" href="views/stockrecom/stockRecomRes.html"> <img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
+					<div class="bottomshowInfor" >
+						<span class="icon-white icon-leaf"> </span> (汇市股市)推荐
+					</div>
+				</div>
+				<div>
+					<img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
+					<div class="bottomshowInfor" >
+						<span class="icon-white icon-globe"> </span> (股票池)股吧社区
 					</div>
 				</div>
 			</div>
@@ -180,28 +207,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!--股票池展示-->
-			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" data-direction="horizontal">
-				<div >
-					<a class="full" href="views/stockrecom/stockRecomRes.html"> <img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
-					<div class="bottomshowInfor" >
-						<span class="icon-white icon-leaf"> </span> (汇市股市)推荐
-					</div>
-				</div>
-				<div>
-					<img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
-					<div class="bottomshowInfor" >
-						<span class="icon-white icon-globe"> </span> (股票池)股吧社区
-					</div>
-				</div>
-			</div>
-
-			
-
-			
-
-			
 
 			<!--股票池展示-->
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="kjqyControl" data-direction="horizontal">
@@ -305,7 +310,7 @@
 					<!--早财快讯显示框架结束-->
 
 					<!--经济指标显示信息-->
-					<div id="showSSPM" style="height:300px;width:400px;display:none"> </div>
+					<div id="showSSPM" style="height:300px;width:400px;display:none"></div>
 					<!--经济指标显示信息结束-->
 				</div>
 				<!--信息列表显示-->
@@ -313,10 +318,13 @@
 			<a class="etc"><span class="icon-white icon-th" id="arrowUpButton"> </span></a>
 		</div>
 
-		<div class="well well-small spreadPlatform"> </div>
+		<div class="well well-small spreadPlatform">
+			<img src="views/imagelib/indexYM/joinus.jpg" class="img-rounded"/>
+
+		</div>
 
 		<!--首页modal显示框-->
-		<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+		<div id="showModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					×
@@ -333,6 +341,38 @@
 			</div>
 		</div>
 		<!--首页Modal显示框结束-->
+
+		<!--用户登录model-->
+		<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h5><span class="icon-user"> </span> 用户登录</h5>
+			</div>
+			<div class="modal-body" id="loginModalModalBody">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="userName">用户名:</label>
+						<div class="controls">
+							<input type="text" id="userName" placeholder="用户名">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputPassword">密   码:</label>
+						<div class="controls">
+							<input type="password" id="inputPassword" placeholder="密码">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
+					<span class="icon-white icon-ok"> </span> 登录
+				</button>
+			</div>
+		</div>
+		<!--用户登录model结束-->
 
 		<!--客户端下载model-->
 		<div id="clientDownModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
