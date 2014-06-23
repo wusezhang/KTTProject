@@ -1,11 +1,8 @@
 .stocknewsposition{
 	position:absolute;
 	top:45px;
-	width:50%;
+	width:100%;
 }
-.cjnewsposition{
-	position:absolute;
-	top:45px;
-	right:0px;
+.tablerowwidth{
 	width:50%;
 }

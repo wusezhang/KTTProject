@@ -30,8 +30,10 @@ $(document).ready(function(){
 	
 	function  initStockNewsModal(data){
 		$('#stockNewsModal').empty();
+		var insertTable = '';
 	    $.each(data,function(i,obj){
-	      $('#stockNewsModal').append('<tr><td><div class="media">'
+	      if(i%2==0){
+	      	insertTable = insertTable +'<tr><td class="tablerowwidth"><div class="media">'
 			+'<div class="media-body">'
 			+'<h5 class="media-heading"><a href="'+obj.linkUrl
 			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
@@ -39,8 +41,20 @@ $(document).ready(function(){
 			+'<span class="label label-success pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
-		    +'</div></td></tr>');
+		    +'</div></td>';
+	      }	else {
+	      	insertTable = insertTable +'<td class="tablerowwidth"><div class="media">'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span>  '
+			+obj.title+'</a>'
+			+'<span class="label label-success pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>';
+	      }
 	    });
+	    $('#stockNewsModal').append(insertTable);
 	}
 	
 	/**
@@ -112,8 +126,10 @@ $(document).ready(function(){
 	 */
 	function  initFinanceNewsModal(data){
 		$('#financeNewsModal').empty();
+		var insertTable = '';
 	    $.each(data,function(i,obj){
-	      $('#financeNewsModal').append('<tr><td><div class="media">'
+	      if(i%2==0){
+	      	insertTable = insertTable +'<tr><td class="tablerowwidth"><div class="media">'
 			+'<div class="media-body">'
 			+'<h5 class="media-heading"><a href="'+obj.linkUrl
 			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span> '
@@ -121,8 +137,20 @@ $(document).ready(function(){
 			+'<span class="label label-success pull-right">'+obj.pubDate+'</span> </h5>'
 			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
 			+'</div>'
-		    +'</div></td></tr>');
+		    +'</div></td>';
+	      }else{
+	      	insertTable = insertTable +'<td class="tablerowwidth"><div class="media">'
+			+'<div class="media-body">'
+			+'<h5 class="media-heading"><a href="'+obj.linkUrl
+			+'" class="text-info" target="view_window"><span class="glyphicon glyphicon-globe"></span> '
+			+obj.title+'</a>'
+			+'<span class="label label-success pull-right">'+obj.pubDate+'</span> </h5>'
+			+'<h6 class="text-warning">'+$.trim(obj.descriptContext)+'</h6>'
+			+'</div>'
+		    +'</div></td></tr>';
+	      }
 	    });
+	    $('#financeNewsModal').append(insertTable);
 	}
 	
 });
