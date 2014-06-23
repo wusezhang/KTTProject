@@ -7,7 +7,7 @@
 		<!--加载相应的CSS文件-->
 		<link href="views/jslib/scriptsPlugin/MetroJs/MetroJs.min.css" rel="stylesheet" type="text/css" />
 		<link href="views/jslib/scriptsPlugin/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href="views/csslib/indexYm/indexDefaultCss.css" rel="stylesheet" type="text/css" />
+		<link href="views/csslib/indexYm/index.css" rel="stylesheet" type="text/css" />
 		<!--加载相应的JS文件-->
 		<script src="views/jslib/scriptsPlugin/jqueryPlugin/jquery-1.8.3.min.js" type="text/javascript"></script>
 		<script src="views/jslib/scriptsPlugin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -17,7 +17,7 @@
 		<!--自定义js文件-->
 		<script type="text/javascript" src="views/scriptslib/index/EchartMainInit.js"></script>
 		<script type="text/javascript" src="views/scriptslib/index/MetroApplicationBar.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="views/scriptslib/index/jsIndexResource.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="views/scriptslib/index/index.js" charset="UTF-8"></script>
 	</head>
 	<body class="indexYmBagroundImage" id="indexYmBody">
 		<!--导航菜单-->
@@ -52,7 +52,7 @@
 		<!--仿Win8风格的网站-->
 		<!--早财快讯模块-->
 		<div class="titles eight-wide three-tall metreBoxPosition" >
-			<div class="live-tile two-wide  label-warning  well-small"  data-speed="500"  id="zckxBox"  data-direction="vertical"
+			<div class="live-tile two-wide  label-warning  well-small"  data-speed="1000"  id="zckxBox"  data-direction="vertical"
 			data-mode="carousel" data-bounce="true" data-bounce-dir="edges">
 				<div>
 					<a class="full" href="views/mornnews/mornNews.html"><img class="full" src="views/imagelib/gnzckxlogo.jpg"/></a>
@@ -84,7 +84,7 @@
 			</div>
             
 			<!--财经新闻模块-->
-			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="horizontal">
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7500" data-direction="vertical">
 				<div >
 					<a class="full" href="views/stockpool/stockThemeNews.html"><img class="full"  src="views/imagelib/indexYM/bknews.jpg"/></a>
 					<div class="bottomshowInfor text-error" >
@@ -94,7 +94,7 @@
 				<div >
 					<a class="full" href="views/riskplate/riskPlateNews.html"><img class="full"  src="views/imagelib/indexYM/riskicon.jpg"/></a>
 					<div class="bottomshowInfor text-warning" >
-						<span class="icon-white icon-info-sign"> </span>股市(利空/利好)风险警示
+						<span class="icon-white icon-warning-sign"> </span>股市(利空/利好)风险警示
 					</div>
 				</div>
 			</div>
@@ -119,21 +119,37 @@
 			</div>
 
 			<!--财经数据模块-->
-			<div class="live-tile well-small mango" data-speed="1000"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="1000" >
+			<div class="live-tile well-small mango" data-speed="1500"  data-mode="carousel" id="cjfxLiveTitle" data-bounce="true"  data-initdelay="3000" >
 				<div>
 					<a class="full metroLarger" href="views/datacenter/stockDataCenter.html"><img class="full"  src="views/imagelib/indexYM/jsfxImage.jpg"/></a>
 					<div class="bottomshowInfor" >
-						股市数据分析
+						<span class="icon-white  icon-bookmark"> </span> 股市数据分析
 					</div>
 				</div>
 				<div >
 					<a class="full metroLarger" href="views/datacenter/financeDataCenter.html"><img class="full"  src="views/imagelib/indexYM/datacenter.jpg"/></a>
 					<div class="bottomshowInfor" >
-						财经数据分析
+						<span class="icon-white  icon-bookmark"> </span> 财经数据分析
 					</div>
 				</div>
 			</div>
 
+            <!--股票池展示-->
+			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" data-direction="horizontal">
+				<div >
+					<a class="full" href="views/stockrecom/stockRecomRes.html"> <img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
+					<div class="bottomshowInfor" >
+						<span class="icon-white icon-leaf"> </span> (汇市股市)推荐
+					</div>
+				</div>
+				<div>
+					<img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
+					<div class="bottomshowInfor" >
+						<span class="icon-white icon-globe"> </span> (股票池)股吧社区
+					</div>
+				</div>
+			</div>
+              
 			<!--外汇日历--->
 			<div class="live-tile well-small mango" data-speed="1000"  data-mode="carousel" data-direction="horizontal" data-bounce="true" data-initdelay="3000" >
 				<div id="whrlControl">
@@ -180,28 +196,6 @@
 					</div>
 				</div>
 			</div>
-
-			<!--股票池展示-->
-			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" data-direction="horizontal">
-				<div >
-					<a class="full" href="views/stockrecom/stockRecomRes.html"> <img class="full"  src="views/imagelib/indexYM/jsxxlogo.jpg"/></a>
-					<div class="bottomshowInfor" >
-						<span class="icon-white icon-leaf"> </span> (汇市股市)推荐
-					</div>
-				</div>
-				<div>
-					<img class="full" src="views/imagelib/indexYM/gbsqlogo.jpg"/>
-					<div class="bottomshowInfor" >
-						<span class="icon-white icon-globe"> </span> (股票池)股吧社区
-					</div>
-				</div>
-			</div>
-
-			
-
-			
-
-			
 
 			<!--股票池展示-->
 			<div class="live-tile well-small cyan" data-speed="1000"  data-mode="carousel" data-bounce="true" data-initdelay="7000" id="kjqyControl" data-direction="horizontal">
@@ -313,7 +307,10 @@
 			<a class="etc"><span class="icon-white icon-th" id="arrowUpButton"> </span></a>
 		</div>
 
-		<div class="well well-small spreadPlatform"> </div>
+		<div class="well well-small spreadPlatform">
+			<img src="views/imagelib/indexYM/joinus.jpg" class="img-rounded"/>
+			
+		</div>
 
 		<!--首页modal显示框-->
 		<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
