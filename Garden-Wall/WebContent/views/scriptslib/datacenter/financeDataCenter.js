@@ -10,7 +10,8 @@ $(document).ready(function() {
 	}
 	
 	function  initModel(){
-		
+		//显示国家黄金外汇储备
+		goldForexShowEvent();
 	}
 	
 	function commenSelect(btnId){
