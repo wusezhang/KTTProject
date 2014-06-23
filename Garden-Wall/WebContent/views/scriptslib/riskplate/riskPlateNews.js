@@ -13,6 +13,8 @@ $(document).ready(function() {
     function  bindEvent(){
     	$('#companyRiskBtnDown').bind('click',companyRiskNextEvent);
     	$('#companyRiskBtnUp').bind('click',companyRiskUpEvent);
+    	$('#companyGoodRiskBtnDown').bind('click',companyGoodRiskDownEvent);
+    	$('#companyGoodRiskBtnUp').bind('click',companyGoodRiskUpEvent);
     }
     
     function  companyRiskNextEvent(){
@@ -58,25 +60,44 @@ $(document).ready(function() {
     }
     
     
+    function companyGoodRiskDownEvent(){
+    	currentCount = 0 ;
+    	if((Number($('#companyGoodPlateNewsCount').val())+8)>Number($('#companyGoodPlateNewsTotalCount').val())){
+    		currentCount = Number($('#companyGoodPlateNewsCount').val());
+    	}else{
+    		currentCount = Number($('#companyGoodPlateNewsCount').val())+8;
+    	}
+    	$('#companyGoodPlateNewsCount').val(currentCount);
+    	initCompanyGoodPlateNewsEvent();
+    }
+    
+    function  companyGoodRiskUpEvent(){
+    	currentData = 0;
+    	if((Number($('#companyGoodPlateNewsCount').val())-8)>0){
+    		currentData = Number($('#companyGoodPlateNewsCount').val())-8;
+    	}
+    	$('#companyGoodPlateNewsCount').val(currentData);
+    	initCompanyGoodPlateNewsEvent();
+    }
     
     function  initCompanyGoodPlateNewsEvent(){
     	startNum = Number($('#companyGoodPlateNewsCount').val())+0;
     	 //初始化相应的外汇图信息.
-		 $.commonService('../../stockRiskPlateController/queryCompanyRiskPlateNews',
+		 $.commonService('../../stockRiskPlateController/queryCompanyGoodPlateNews',
 		 'POST',{start:startNum,limit:8}, function(map) {
 		 	$('#companyGoodPlateNewsTotalCount').val(map.count);
 		    initCompanyGoodNewsModal(map);
 	     }); 
     }
     
-    function  initCompanyGoodNewsModal(data){
+    function  initCompanyGoodNewsModal(map){
     	$('#companyGoodlist').empty();
 	    $.each(map.data,function(i,obj){
 	       $('#companyGoodlist').append('<a href="'+obj.linkUrl+'" class="list-group-item" target="view_window">'
 	             +'<h5 class="list-group-item-heading">'
 	             +obj.pubDate+'</h5>'
-				 +'<p class="list-group-item-text text-danger">'
-				 +'<span class="glyphicon glyphicon-flash"> </span> '+obj.title
+				 +'<p class="list-group-item-text text-warning">'
+				 +'<span class="glyphicon glyphicon-globe"> </span> '+obj.title
 				 +'</p></a>');
 	    });
     }
