@@ -55,12 +55,22 @@
 		</div>
 
 		<div class="well well-sm tableposition" >
-
-			<div id="showModal"> </div>
-
-			<div id="tableModal" class="panelposition"> 
-			   
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h5 class="panel-title" id='messageTitle'>统计表呈现 </h5>
+				</div>
+				<div class="panel-body">
+					<div id="showModal"> </div>
+				</div>
 			</div>
+			
+			<div id='btnContainer' style="display:none">
+			  <a href="javascript:void(0)" class="btn btn-primary pull-right" id='addStockAccNumBtn'>新增股票账户数统计</a>
+			  &nbsp;&nbsp;&nbsp;
+			  <a href="javascript:void(0)" class="btn btn-primary pull-right" id="finalSleepAccNumBtn">期末休眠账户数统计</a>
+			</div>
+             
+			<div id="tableModal" class="panelposition"> </div>
 
 		</div>
 

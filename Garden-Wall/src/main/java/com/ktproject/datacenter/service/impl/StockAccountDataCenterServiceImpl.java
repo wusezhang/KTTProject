@@ -45,12 +45,18 @@ public class StockAccountDataCenterServiceImpl implements
 		List<Float>  addSzAccNum = new  ArrayList<Float>();
 		List<Float>  finalAccNum = new ArrayList<Float>();
 		List<Float>  finalSleepNum = new ArrayList<Float>();
+		List<Float>  finalSzSleepNum = new ArrayList<Float>();
+		List<Float>  finalShSleepNum = new ArrayList<Float>();
 		for(StockAccountDataCenterVO vo:resultList){
 			currentDate.add(vo.getStartDate());
 			finalEffAccNum.add(vo.getFinalSumAccNum());
 			addAccNum.add(vo.getAddSumAccNum());
 			finalAccNum.add(vo.getFinalSumAccNum());
+			
+			finalSzSleepNum.add(vo.getFinalSzSleepAccNum());
+			finalShSleepNum.add(vo.getFinalShSleepAccNum());
 			finalSleepNum.add(vo.getFinalSumSleepAccNum());
+			
 			addShAccNum.add(vo.getAddShAccNum());
 			addSzAccNum.add(vo.getAddSzAccNum());
 		}
@@ -60,6 +66,9 @@ public class StockAccountDataCenterServiceImpl implements
 		resultMap.put("addshaccnum", addShAccNum);
 		resultMap.put("addszaccnum", addSzAccNum);
 		resultMap.put("finalaccnum", finalAccNum);
+		
+		resultMap.put("finalszsleepnum", finalSzSleepNum);
+		resultMap.put("finalshsleepnum", finalShSleepNum);
 		resultMap.put("finalsleepnum", finalSleepNum);
 		return resultMap;
 	}
