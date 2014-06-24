@@ -40,7 +40,7 @@ public class PlateConceptDataCenterServiceImpl implements
 		List<Float>  currentMoney = new  ArrayList<Float>();
 		List<String>  plateName = new  ArrayList<String>();
 		for(PlateConceptDataCenterVO vo : resultList){
-			riseDecline.add(vo.getRiseDecline());
+			riseDecline.add(vo.getRiseDecline()*100);
 			currentMoney.add(vo.getCurrentMoney());
 			plateName.add(vo.getPlateName());
 		}
