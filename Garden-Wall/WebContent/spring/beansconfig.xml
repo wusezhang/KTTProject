@@ -65,4 +65,8 @@
 	
 	<bean  id="tradeActivityDataCenterService" class="com.ktproject.datacenter.service.impl.TradeActivityDataCenterServiceImpl" scope="prototype"/>
 	<bean  id="tradeActivityDataCenterDAO" class="com.ktproject.datacenter.dao.impl.TradeActivityDataCenterDAOImpl" scope="prototype"/>
+	
+	<bean  id="plateConceptDataCenterService" class="com.ktproject.datacenter.service.impl.PlateConceptDataCenterServiceImpl" scope="prototype"/>
+	<bean  id="plateConceptDataCenterDAO" class="com.ktproject.datacenter.dao.impl.PlateConceptDataCenterDAOImpl" scope="prototype"/>
+	
 </beans>
