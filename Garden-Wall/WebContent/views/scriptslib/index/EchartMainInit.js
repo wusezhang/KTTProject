@@ -3,16 +3,17 @@ $(document).ready(function() {
 		bindEvent();
 	});
 	function bindEvent() {
-		$("#sspmBtn").bind("click", showJJZBEvent);
+		$("#timelyDiskBtn").bind("click", showJJZBEvent);
+		$('#financeSummaryBtn').bind('click',financeSummaryShowEvent);
 	}
 
 	function showJJZBEvent() {
-		$("#showZCKX").hide();
+		$("#financeSummaryModel").hide();
 		$('#showTbModel').show();
-		$("#zckxli").removeClass("active");
+		$("#financeSummary").removeClass("active");
 		$("#hqxxli").removeClass("active");
 		$("#jjzbli").removeClass("active");
-		$("#sspmli").attr("class", "active");
+		$("#timelyDisk").attr("class", "active");
 		var map = $.commonAsyncService('dataCenter/queryPlateConceptDataCenter', 'POST', {start:0,limit:10});
 		$('#showTbModel').highcharts({
 		 chart: { type: 'column',backgroundColor: 'rgba(0,0,0,0)' },
@@ -27,5 +28,14 @@ $(document).ready(function() {
 		 series:[{name:'涨跌幅', data:map.risedecline}] 
 		 });
 	}
+	
+   function  financeSummaryShowEvent(){
+   	   $('#showTbModel').hide();
+   	   $('#financeSummaryModel').show();
+   	   $("#timelyDisk").removeClass("active");
+	   $("#hqxxli").removeClass("active");
+	   $("#jjzbli").removeClass("active");
+	   $("#financeSummary").attr("class", "active");
+   }	
 
 });
