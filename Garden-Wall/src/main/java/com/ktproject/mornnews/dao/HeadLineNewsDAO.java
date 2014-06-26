@@ -7,6 +7,11 @@
  */
 package com.ktproject.mornnews.dao;
 
+import java.util.List;
+import java.util.Map;
+
+import com.ktproject.mornnews.model.HeadLineNewsVO;
+
 /**
  * 类功能描述：
  * HeadLineNewsDAO.java
@@ -15,5 +20,18 @@ package com.ktproject.mornnews.dao;
  * @history 2014年6月25日 ZJJ 创建HeadLineNewsDAO.java
  */
 public interface HeadLineNewsDAO {
-
+	 
+	 /**
+	  *  查询当天财经头条
+	  * @param filterMap
+	  * @return
+	  */
+     List<HeadLineNewsVO>  queryDailyHeadLineNews(final Map<String,Object> filterMap);
+     
+     /**
+      * 查询财经头条条数.
+      * @param filterMap
+      * @return
+      */
+     int  queryDailyHeadLineNewsCount(final Map<String,Object> filterMap);
 }

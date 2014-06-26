@@ -7,6 +7,12 @@
  */
 package com.ktproject.mornnews.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ktproject.mornnews.dao.HeadLineNewsDAO;
 import com.ktproject.mornnews.service.HeadLineNewsService;
 
 /**
@@ -17,5 +23,18 @@ import com.ktproject.mornnews.service.HeadLineNewsService;
  * @history 2014年6月25日 ZJJ 创建HeadLineNewsServiceImpl.java
  */
 public class HeadLineNewsServiceImpl implements HeadLineNewsService {
+    
+	@Autowired
+	HeadLineNewsDAO headLineNewsDAO;
+	
+	/**
+	 * @see com.ktproject.mornnews.service.HeadLineNewsService#queryDailyHeadLineNews(java.util.Map)
+	 */
+	public Map<String, Object> queryDailyHeadLineNews(
+			Map<String, Object> filterMap) {
+		final  Map<String,Object> resultMap = new  HashMap<String,Object>();
+		resultMap.put("data", headLineNewsDAO.queryDailyHeadLineNews(filterMap));
+		return resultMap;
+	}
 
 }

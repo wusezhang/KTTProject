@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.mornnews.dao.impl.HeadLineNewsDAOImpl">
+
+	<resultMap id="resultObjectMap" type="com.ktproject.mornnews.model.HeadLineNewsVO"> </resultMap>
+    
+    <select id="queryDailyHeadLineNews" useCache="true" resultMap="resultObjectMap" parameterType="hashmap">
+      SELECT
+	        HEADLINE.TITLE AS TITLE,
+	        HEADLINE.IMAGEURL AS IMAGEURL,
+	        SUBSTRING(HEADLINE.PUBDATE, 1,10) AS PUBDATE,
+	        HEADLINE.LINKURL AS LINKURL,
+	        HEADLINE.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
+     FROM
+	        HEADLINE_FINANCENEWS_RESOURCE_TABLE HEADLINE
+     WHERE 1 = 1 ORDER BY HEADLINE.PUBDATE DESC
+       <if test="limit != null and limit !='' ">
+			LIMIT #{start},#{limit}
+	   </if>   
+    </select>
+    
+    <select id="queryDailyHeadLineNewsCount" useCache="true" resultType="int" parameterType="hashmap">
+      SELECT COUNT(*)
+      FROM  HEADLINE_FINANCENEWS_RESOURCE_TABLE HEADLINE
+      WHERE  1=1 
+    </select>
+    
+</mapper>

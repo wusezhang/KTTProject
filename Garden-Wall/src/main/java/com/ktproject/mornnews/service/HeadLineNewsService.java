@@ -7,6 +7,8 @@
  */
 package com.ktproject.mornnews.service;
 
+import java.util.Map;
+
 /**
  * 类功能描述：
  * HeadLineNewsService.java
@@ -15,5 +17,10 @@ package com.ktproject.mornnews.service;
  * @history 2014年6月25日 ZJJ 创建HeadLineNewsService.java
  */
 public interface HeadLineNewsService {
-
+	/**
+	 * 查询当天财经头条.
+	 * @param filterMap
+	 * @return
+	 */
+	Map<String,Object>  queryDailyHeadLineNews(final Map<String,Object>  filterMap);
 }
