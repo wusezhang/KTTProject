@@ -41,20 +41,20 @@ $(document).ready(function() {
 	   var insertTable = '';
 	   $.each(map.data,function(i,obj){
 	       if(i%2==0){
-	      	  insertTable = insertTable +'<tr><td class="table-hover"><div class="media">'
+	      	  insertTable = insertTable +'<tr><td class="headlineTableWidth"><div class="media">'
 						+'<a class="pull-left" href="'+obj.linkUrl+'" target="view_window">'
 						+'<img class="media-object headlineImageSize img-rounded" src="'+obj.imageUrl+'"> </a>'
 						+'<div class="media-body">'
 						+'<a class="media-heading" href="'+obj.linkUrl+'" target="view_window">'+obj.title+'</a>'
-						+'<div class="media">'+obj.descriptContext+'</div>'
+						+'<div>'+obj.descriptContext+'</div>'
 						+'</div></div></td>';
 	      	}else{
-	      	   insertTable = insertTable +'<td class="table-hover"><div class="media">'
+	      	   insertTable = insertTable +'<td class="headlineTableWidth"><div class="media">'
 						+'<a class="pull-left" href="'+obj.linkUrl+'" target="view_window">'
 						+'<img class="media-object headlineImageSize img-rounded" src="'+obj.imageUrl+'"> </a>'
 						+'<div class="media-body">'
 						+'<a class="media-heading" href="'+obj.linkUrl+'" target="view_window">'+obj.title+'</a>'
-						+'<div class="media">'+obj.descriptContext+'</div>'
+						+'<div>'+obj.descriptContext+'</div>'
 						+'</div></div></td></tr>';
 	      }
 	   });

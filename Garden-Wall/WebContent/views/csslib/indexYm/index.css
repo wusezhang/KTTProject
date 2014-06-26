@@ -63,7 +63,10 @@
    display:none;
 }
 .headlineImageSize{
-	width:130px;
-	height:90px;
+	width:100px;
+	height:70px;
+}
+.headlineTableWidth{
+	width:50%;
 }
 
