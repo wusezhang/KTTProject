@@ -63,8 +63,8 @@ $(document).ready(function() {
             $("#arrowUpButton").attr("class", "icon-white icon-th-list");
             $("#mooningdiv,#usddiv,#sspmdiv,#jjzbdiv").hide();
             $("#showBox").show(500);
+            $('#financeSummaryBtn').click();
         }
-        ;
     }
 
 });
