@@ -195,7 +195,7 @@ $(document).ready(function(){
 		var insertTable = '';
 		$.each(data,function(i,obj){
 		  if(i%2==0){
-		  	insertTable = insertTable +'<tr><td><div class="media">'
+		  	insertTable = insertTable +'<tr><td class="tableWidth"><div class="media">'
 	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
             +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
 			+'<div class="media-body">'
@@ -207,7 +207,7 @@ $(document).ready(function(){
 			+'</div>'
 		    +'</div></td>';
 		  }else{
-		  	insertTable =insertTable + '<td><div class="media">'
+		  	insertTable =insertTable + '<td class="tableWidth"><div class="media">'
 	        +'<a class="pull-left" href="'+obj.linkUrl+'">'
             +'<img class="media-object maxImageSize img-thumbnail" src='+obj.imageUrl+' alt="'+obj.title+'"></a>'
 			+'<div class="media-body">'
