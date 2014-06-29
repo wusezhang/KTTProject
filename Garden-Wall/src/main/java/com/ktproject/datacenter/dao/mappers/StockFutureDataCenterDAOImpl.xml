@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktproject.datacenter.dao.impl.StockFutureDataCenterDAOImpl">
+    
+   <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.StockFutureDataCenterVO"> </resultMap>
+   
+   <select id="queryStockFutureDataSource" resultMap="float" useCache="true" parameterType="hashmap">
+	   SELECT  SUM(TOTALVALUE) AS TOTALVALUE  
+	   FROM  DATACENTER_STOCKFUTURE_RESOURCE_TABLE DATACENTER  
+       WHERE  1=1 
+	   <if test="dataFlag != null and dataFlag !='' ">
+	        AND  DATACENTER.DATAFLAG =#{dataFlag}
+	   </if>
+   </select>
+   
+  
+   
+	    
+</mapper>
