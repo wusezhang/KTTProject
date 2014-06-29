@@ -27,6 +27,28 @@ $(document).ready(function() {
 		 plotOptions: { column: { pointPadding: 0.2, borderWidth: 0 } },
 		 series:[{name:'涨跌幅', data:map.risedecline}] 
 		 });
+		 showFutureModal();
+	}
+	
+	function showFutureModal() {
+        $("#showFutureModel").show();
+		var map = $.commonAsyncService('dataCenter/queryStockFutureDataCenter', 'POST', {start:0,limit:10});
+		 $('#showFutureModel').highcharts({
+		 	chart:{backgroundColor: 'rgba(0,0,0,0)'},
+		 	title:{ text: '大盘期指期货多空所占比例' },
+		 	subtitle: { text: '资源提供:财汇.NET' },
+		 	tooltip: { pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>' },
+		 	plotOptions:{
+		 		pie:{allowPointSelect: true,
+		 			 cursor: 'pointer',
+		 			 dataLabels: { enabled:true,
+		 			 	           color: '#000000',
+		 			 	           connectorColor:'#000000',
+		 			 	           format: '<b>{point.name}</b>: {point.percentage:.1f} %' }
+		 			 	           }
+		 			 },
+		 	series:[{type: 'pie', name: '多空所占比例', data: [['空方',map.bear],['多方',map.bull]] }]
+		 });
 	}
 	
    function  financeSummaryShowEvent(){

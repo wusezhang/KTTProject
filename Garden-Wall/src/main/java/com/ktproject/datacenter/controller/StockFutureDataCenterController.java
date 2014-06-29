@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ktproject.datacenter.service.StockFutureDataCenterService;
 
@@ -39,7 +40,7 @@ public class StockFutureDataCenterController {
 	   * @return
 	   */
 	  @RequestMapping(value = "/queryStockFutureDataCenter", method = RequestMethod.POST)
-      public  Map<String,Object>  queryStockFutureDataCenter(
+      public  @ResponseBody Map<String,Object>  queryStockFutureDataCenter(
     		   @RequestParam("start") final int start,
 			   @RequestParam("limit") final int limit){
 			  final Map<String,Object>   filterMap = new  HashMap<String,Object>();

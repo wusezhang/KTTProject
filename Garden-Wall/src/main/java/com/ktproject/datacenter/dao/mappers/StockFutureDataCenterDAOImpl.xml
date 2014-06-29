@@ -4,7 +4,7 @@
     
    <resultMap id="resultObjectMap" type="com.ktproject.datacenter.model.StockFutureDataCenterVO"> </resultMap>
    
-   <select id="queryStockFutureDataSource" resultMap="float" useCache="true" parameterType="hashmap">
+   <select id="queryStockFutureDataSource"  resultType="float" useCache="true" parameterType="hashmap">
 	   SELECT  SUM(TOTALVALUE) AS TOTALVALUE  
 	   FROM  DATACENTER_STOCKFUTURE_RESOURCE_TABLE DATACENTER  
        WHERE  1=1 
