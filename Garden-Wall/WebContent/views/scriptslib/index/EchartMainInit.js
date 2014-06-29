@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	function showJJZBEvent() {
 		$("#financeSummaryModel").hide();
-		$('#showTbModel').show();
+		$('#showModelTable').show();
 		$("#financeSummary").removeClass("active");
 		$("#hqxxli").removeClass("active");
 		$("#jjzbli").removeClass("active");
@@ -52,7 +52,7 @@ $(document).ready(function() {
 	}
 	
    function  financeSummaryShowEvent(){
-   	   $('#showTbModel').hide();
+   	   $('#showModelTable').hide();
    	   $('#financeSummaryModel').show();
    	   $("#timelyDisk").removeClass("active");
 	   $("#hqxxli").removeClass("active");
