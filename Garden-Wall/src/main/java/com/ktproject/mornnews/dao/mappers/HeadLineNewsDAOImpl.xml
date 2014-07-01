@@ -13,7 +13,10 @@
 	        HEADLINE.DESCRIPTCONTEXT AS DESCRIPTCONTEXT
      FROM
 	        HEADLINE_FINANCENEWS_RESOURCE_TABLE HEADLINE
-     WHERE 1 = 1 ORDER BY HEADLINE.PUBDATE DESC
+     WHERE 1 = 1 
+     AND  HEADLINE.TITLE !=''
+     AND  HEADLINE.DESCRIPTCONTEXT !=''
+     ORDER BY HEADLINE.PUBDATE DESC
        <if test="limit != null and limit !='' ">
 			LIMIT #{start},#{limit}
 	   </if>   
