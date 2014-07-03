@@ -4,7 +4,7 @@ $(document).ready(function() {
 		initModel();
 	});
 	function bindEvent() {
-		$("#marketSentBtn").bind('click',marketSentShowEvent);
+		
         $('#stockAccountBtn').bind('click',stockAccountShowEvent);
         $('#tradeActivityBtn').bind('click',tradeActivityShowEvent);
         $('#addStockAccNumBtn').bind('click',addStockAccNumShow);
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	}
     
     function  initModel(){
-    	marketSentShowEvent();
+    	tradeActivityShowEvent();
     }
     
     function commenSelect(btnId){
@@ -36,30 +36,6 @@ $(document).ready(function() {
        $('#btnContainer').hide();
     }
     
-	function  marketSentShowEvent(){
-		 commenSelect('marketSentBtn');
-		 commonInitTitle('股市市场情绪指标动态');
-		 commonHideEvent();
-		 var map = $.commonAsyncService('../../dataCenter/queryMarketSentDataCenter','POST',{start:0,limit:20});
-         $('#showModal').empty();
-		 $('#showModal').highcharts({chart:{type:'line'},
-				title:{text:'股市市场情绪指标动态'},
-				subtitle:{text:'财汇.NET提供'},
-				xAxis:{categories:map.currentdate},
-				yAxis:{title:{text:'股市市场情绪指数'}},
-				tooltip : {
-					enabled : false,
-					formatter : function() {
-						return '<b>'+ this.series.name+'</b><br>'+this.x +':'+this.y;
-					}
-				},
-				plotOptions:{line:{dataLabels:{enabled:true},enableMouseTracking:false}},
-				series : [{
-					name : '股市市场情绪指数值',
-					data : map.currentvalue
-				}]
-		});	
-	}
 	
 	function  stockAccountShowEvent(){
 	    $('#btnContainer').show();

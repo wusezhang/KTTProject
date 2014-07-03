@@ -28,6 +28,7 @@ $(document).ready(function() {
 		 series:[{name:'涨跌幅', data:map.risedecline}] 
 		 });
 		 showFutureModal();
+		 showMarketSentModal();
 	}
 	
 	function showFutureModal() {
@@ -49,6 +50,28 @@ $(document).ready(function() {
 		 			 },
 		 	series:[{type: 'pie', name: '多空所占比例', data: [['空方',map.bear],['多方',map.bull]] }]
 		 });
+	}
+	
+	function  showMarketSentModal(){
+		 var map = $.commonAsyncService('dataCenter/queryMarketSentDataCenter','POST',{start:0,limit:10});
+         $('#showMarketSentModel').empty();
+		 $('#showMarketSentModel').highcharts({chart:{type:'line',backgroundColor: 'rgba(0,0,0,0)'},
+				title:{text:'股市交易情绪指标动态'},
+				subtitle:{text:'财汇.NET提供'},
+				xAxis:{categories:map.currentdate},
+				yAxis:{title:{text:'股市市场情绪指数'}},
+				tooltip : {
+					enabled : false,
+					formatter : function() {
+						return '<b>'+ this.series.name+'</b><br>'+this.x +':'+this.y;
+					}
+				},
+				plotOptions:{line:{dataLabels:{enabled:true},enableMouseTracking:false}},
+				series : [{
+					name : '股市市场情绪指数值',
+					data : map.currentvalue
+				}]
+		});	
 	}
 	
    function  financeSummaryShowEvent(){
