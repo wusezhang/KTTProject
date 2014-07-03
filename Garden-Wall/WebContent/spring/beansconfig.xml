@@ -74,5 +74,8 @@
 	
 	<bean  id="headLineNewsService" class="com.ktproject.mornnews.service.impl.HeadLineNewsServiceImpl" scope="prototype"/>
 	<bean  id="headLineNewsDAO" class="com.ktproject.mornnews.dao.impl.HeadLineNewsDAOImpl" scope="prototype"/>
-
+    
+    <bean  id="bulkCargoTransDataCenterService" class="com.ktproject.datacenter.service.impl.BulkCargoTransDataCenterServiceImpl" scope="prototype"/>
+    <bean  id="bulkCargoTransDataCenterDAO" class="com.ktproject.datacenter.dao.impl.BulkCargoTransDataCenterDAOImpl" scope="prototype"/>
+     
 </beans>
