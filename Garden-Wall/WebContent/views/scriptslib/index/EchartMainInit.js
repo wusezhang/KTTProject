@@ -57,7 +57,7 @@ $(document).ready(function() {
          $('#showMarketSentModel').empty();
 		 $('#showMarketSentModel').highcharts({chart:{type:'line',backgroundColor: 'rgba(0,0,0,0)'},
 				title:{text:'股市交易情绪指标动态'},
-				subtitle:{text:'财汇.NET提供'},
+				subtitle:{text:'资源提供:财汇.NET'},
 				xAxis:{categories:map.currentdate},
 				yAxis:{title:{text:'股市市场情绪指数'}},
 				tooltip : {
