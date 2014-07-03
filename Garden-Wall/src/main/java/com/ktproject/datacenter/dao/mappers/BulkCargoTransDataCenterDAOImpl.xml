@@ -6,7 +6,7 @@
    
    <select id="queryBulkCargoTransDataCenter" resultMap="resultObjectMap" useCache="true" parameterType="hashmap">
      SELECT
-	       DATACENTER.CURRENTTIME AS CURRENTTIME,
+	       SUBSTRING(DATACENTER.CURRENTTIME,1,10) AS CURRENTTIME,
            DATACENTER.INDEXVALUE AS INDEXVALUE
      FROM
 	       DATACENTER_BULKCARGOTRANS_RESOURCE_TABLE DATACENTER
