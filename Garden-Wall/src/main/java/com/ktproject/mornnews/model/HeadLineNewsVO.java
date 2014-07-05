@@ -7,6 +7,8 @@
  */
 package com.ktproject.mornnews.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： HeadLineNewsVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.mornnews.model;
  * @version 0.1.0
  * @history 2014-6-26 vteamdell0723 创建HeadLineNewsVO.java
  */
-public class HeadLineNewsVO {
+public class HeadLineNewsVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 485754558433883350L;
 	/**
 	 * 主键.
 	 */

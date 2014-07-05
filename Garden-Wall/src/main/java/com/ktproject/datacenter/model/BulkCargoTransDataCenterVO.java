@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： BulkCargoTransDataCenterVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014-7-3 Administrator 创建BulkCargoTransDataCenterVO.java
  */
-public class BulkCargoTransDataCenterVO {
+public class BulkCargoTransDataCenterVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6418011276338633859L;
 	/**
 	 * 统计时间.
 	 */

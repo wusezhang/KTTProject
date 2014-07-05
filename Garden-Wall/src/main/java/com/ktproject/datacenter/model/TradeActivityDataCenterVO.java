@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述：
  * TradeActivityDataCenterVO.java
@@ -14,8 +16,12 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014年6月21日 ZJJ 创建TradeActivityDataCenterVO.java
  */
-public class TradeActivityDataCenterVO {
-      private  String  startDate;
+public class TradeActivityDataCenterVO implements Serializable{
+      /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8633994631938453922L;
+	private  String  startDate;
       private  String  endDate;
       private  Float   currentValue;
 	/**

@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： ForexGoldDataCenterVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014-6-19 vteamdell0723 创建ForexGoldDataCenterVO.java
  */
-public class ForexGoldDataCenterVO {
+public class ForexGoldDataCenterVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4043772720875647121L;
 	/**
 	 * 当前日期
 	 */

@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： StockFutureDataCenterVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014年6月29日 ZJJ 创建StockFutureDataCenterVO.java
  */
-public class StockFutureDataCenterVO {
+public class StockFutureDataCenterVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -281729447912548406L;
 	/**
 	 * 链接地址.
 	 */

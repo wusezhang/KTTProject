@@ -7,6 +7,8 @@
  */
 package com.ktproject.risk.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述：
  * StockRiskPlateVO.java
@@ -14,7 +16,11 @@ package com.ktproject.risk.model;
  * @version 0.1.0
  * @history 2014-5-26 vteamdell0723 创建StockRiskPlateVO.java
  */
-public class StockRiskPlateVO {
+public class StockRiskPlateVO  implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1955025984819709805L;
 	/**
 	 * 主键.
 	 */

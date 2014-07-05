@@ -7,6 +7,8 @@
  */
 package com.ktproject.stockpool.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述：题材新闻信息VO StockThemeVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.stockpool.model;
  * @version 0.1.0
  * @history 2014-5-23 vteamdell0723 创建StockThemeVO.java
  */
-public class StockThemeMessageVO {
+public class StockThemeMessageVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1782078757246806446L;
 	/**
 	 * 主键.
 	 */

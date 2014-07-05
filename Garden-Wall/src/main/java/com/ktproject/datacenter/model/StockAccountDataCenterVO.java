@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述：股票账户VO类 StockAccountVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014年6月21日 ZJJ 创建StockAccountVO.java
  */
-public class StockAccountDataCenterVO {
+public class StockAccountDataCenterVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6765691679543846320L;
 	private String startDate;
 	private String endDate;
 	private Float finalShEffAccNum;

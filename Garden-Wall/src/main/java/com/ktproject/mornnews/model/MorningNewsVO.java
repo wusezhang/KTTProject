@@ -7,13 +7,19 @@
  */
 package com.ktproject.mornnews.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： MorningNewsVO.java
  * @author ZJJ
  * @version 0.1.0
  * @history 2014年6月15日 ZJJ 创建MorningNewsVO.java
  */
-public class MorningNewsVO {
+public class MorningNewsVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3244121433320939972L;
 	/**
 	 * 主键.
 	 */

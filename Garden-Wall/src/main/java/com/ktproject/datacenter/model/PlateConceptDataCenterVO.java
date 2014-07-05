@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： PlateConceptDataCenterVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014-6-24 vteamdell0723 创建PlateConceptDataCenterVO.java
  */
-public class PlateConceptDataCenterVO {
+public class PlateConceptDataCenterVO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8200644069062179848L;
 	/**
 	 * 板块名称.
 	 */

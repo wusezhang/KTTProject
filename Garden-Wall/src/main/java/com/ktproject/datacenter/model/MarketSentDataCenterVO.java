@@ -7,6 +7,8 @@
  */
 package com.ktproject.datacenter.model;
 
+import java.io.Serializable;
+
 /**
  * 类功能描述： MarketSentDataCenterVO.java
  * 
@@ -14,7 +16,11 @@ package com.ktproject.datacenter.model;
  * @version 0.1.0
  * @history 2014-6-20 vteamdell0723 创建MarketSentDataCenterVO.java
  */
-public class MarketSentDataCenterVO {
+public class MarketSentDataCenterVO  implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2571497890222815437L;
 	/**
 	 * 当前时间.
 	 */
