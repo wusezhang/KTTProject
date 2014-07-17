@@ -49,10 +49,10 @@
 }
 .spreadPlatform{
    position:absolute;
-   top:55px;
+   top:0px;
    right:0px;
-   width:3.5%; 
-   height:75%;
+   width:3.3%; 
+   height:90%;
    background-image:url('../../imagelib/indexYM/bkImage.png');
 }
 .imageSize{
